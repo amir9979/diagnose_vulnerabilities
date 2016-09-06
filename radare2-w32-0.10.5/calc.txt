@@ -1,0 +1,373 @@
+0x01001000    1 4            sym.imp.SHELL32.dll_SHGetSpecialFolderPathW
+0x01001004    1 4            sym.imp.SHELL32.dll_SHGetFolderPathW
+0x01001008    1 4            sym.imp.SHELL32.dll_ShellAboutW
+0x0100100c    1 4            sym.imp.SHELL32.dll_Ordinal_165
+0x01001010    4 8    -> 16   sym.imp.SHELL32.dll_ShellExecuteExW
+0x01001018    6 8    -> 23   sym.imp.SHLWAPI.dll_Ordinal_225
+0x01001020    1 4            sym.imp.gdiplus.dll_GdipDrawLineI
+0x01001028    1 4            sym.imp.gdiplus.dll_GdipFillRectangleI
+0x0100102c    1 4            sym.imp.gdiplus.dll_GdipCloneBrush
+0x01001030    1 4            sym.imp.gdiplus.dll_GdipCloneImage
+0x01001034    1 4            sym.imp.gdiplus.dll_GdipCreateBitmapFromHBITMAP
+0x01001038    1 4            sym.imp.gdiplus.dll_GdipCreateFromHDC
+0x0100103c    1 4            sym.imp.gdiplus.dll_GdipDrawImageRectI
+0x01001040    1 4            sym.imp.gdiplus.dll_GdipSetInterpolationMode
+0x01001044    1 4            sym.imp.gdiplus.dll_GdipSetPageUnit
+0x01001048    2 4            sym.imp.gdiplus.dll_GdipCreateSolidFill
+0x0100104c    2 4            sym.imp.gdiplus.dll_GdipCreateBitmapFromScan0
+0x01001050    1 4            sym.imp.gdiplus.dll_GdipDisposeImage
+0x01001054    9 4    -> 79   sym.imp.gdiplus.dll_GdipDeleteGraphics
+0x01001058    1 4            sym.imp.gdiplus.dll_GdipDeletePen
+0x0100105c    9 4    -> 87   sym.imp.gdiplus.dll_GdipCreatePen1
+0x01001060    1 4            sym.imp.gdiplus.dll_GdipDeleteBrush
+0x01001064    1 4            sym.imp.gdiplus.dll_GdipAlloc
+0x01001068    1 4            sym.imp.gdiplus.dll_GdipFree
+0x0100106c    1 4            sym.imp.gdiplus.dll_GdiplusStartup
+0x01001070    1 4            sym.imp.gdiplus.dll_GdiplusShutdown
+0x01001074    1 4            sym.imp.gdiplus.dll_GdipGetImageGraphicsContext
+0x01001078    1 4            sym.imp.gdiplus.dll_GdipSetSmoothingMode
+0x0100107c   13 4    -> 130  sym.imp.gdiplus.dll_GdipCloneBitmapAreaI
+0x01001080   14 8    -> 136  sym.imp.gdiplus.dll_GdipCreateHBITMAPFromBitmap
+0x01001088    1 4            sym.imp.ADVAPI32.dll_RegEnumKeyExW
+0x0100108c    1 4            sym.imp.ADVAPI32.dll_RegOpenKeyExW
+0x01001090    1 2            sym.imp.ADVAPI32.dll_RegQueryInfoKeyW
+0x01001094    1 2            sym.imp.ADVAPI32.dll_RegGetValueW
+0x01001099    1 1            fcn.01001099
+0x0100109c    4 20   -> 67   sym.imp.ADVAPI32.dll_RegDeleteKeyW
+0x010010a0    1 2            sym.imp.ADVAPI32.dll_RegQueryValueExW
+0x010010a4    1 4            sym.imp.ADVAPI32.dll_RegSetValueExW
+0x010010a8    1 4            sym.imp.ADVAPI32.dll_OpenSCManagerW
+0x010010ac    1 4            sym.imp.ADVAPI32.dll_OpenServiceW
+0x010010b0    3 4    -> 69   sym.imp.ADVAPI32.dll_QueryServiceConfigW
+0x010010b4    1 1            sym.imp.ADVAPI32.dll_CloseServiceHandle
+0x010010b8    3 4    -> 60   sym.imp.ADVAPI32.dll_RegCreateKeyExW
+0x010010bc    1 2            sym.imp.ADVAPI32.dll_RegCloseKey
+0x010010c0    1 4            sym.imp.ADVAPI32.dll_EventWrite
+0x010010c4    1 4            sym.imp.ADVAPI32.dll_EventUnregister
+0x010010c8    2 8            sym.imp.ADVAPI32.dll_EventRegister
+0x010010d0    1 3            sym.imp.OLEAUT32.dll_Ordinal_2
+0x010010d4    1 4            sym.imp.OLEAUT32.dll_Ordinal_7
+0x010010d8    1 3            sym.imp.OLEAUT32.dll_Ordinal_8
+0x010010dc    1 4            sym.imp.OLEAUT32.dll_Ordinal_150
+0x010010e0    1 3            sym.imp.OLEAUT32.dll_Ordinal_6
+0x010010e4    1 3            sym.imp.OLEAUT32.dll_Ordinal_9
+0x010010ec    4 8    -> 17   sym.imp.UxTheme.dll_IsThemeActive
+0x010010f4    4 4    -> 13   sym.imp.ole32.dll_CoInitialize
+0x010010f8    3 4    -> 6    sym.imp.ole32.dll_CoUninitialize
+0x010010fc    3 8    -> 10   sym.imp.ole32.dll_CoCreateInstance
+0x01001104    4 4    -> 6    sym.imp.COMCTL32.dll_ImageList_Destroy
+0x01001108    3 4    -> 6    sym.imp.COMCTL32.dll_ImageList_Add
+0x0100110c    2 4            sym.imp.COMCTL32.dll_ImageList_Create
+0x01001110    1 4            sym.imp.COMCTL32.dll_Ordinal_413
+0x01001114    5 4    -> 8    sym.imp.COMCTL32.dll_CreatePropertySheetPageW
+0x0100111c    7 4    -> 16   sym.imp.COMCTL32.dll_Ordinal_380
+0x01001120    3 4    -> 6    sym.imp.COMCTL32.dll_Ordinal_410
+0x01001124    4 8    -> 10   sym.imp.COMCTL32.dll_Ordinal_392
+0x0100112c    3 4    -> 6    sym.imp.ntdll.dll_WinSqmAddToStreamEx
+0x01001130    3 4    -> 5    sym.imp.ntdll.dll_WinSqmIncrementDWORD
+0x01001134    5 4    -> 9    sym.imp.ntdll.dll_WinSqmAddToStream
+0x01001138    1 2            sym.imp.ntdll.dll_NtQueryLicenseValue
+0x0100113c    1 8            sym.imp.ntdll.dll_RtlInitUnicodeString
+0x01001144    1 4            sym.imp.KERNEL32.dll_lstrlenA
+0x01001148    1 4            sym.imp.KERNEL32.dll_WideCharToMultiByte
+0x0100114c    1 4            sym.imp.KERNEL32.dll_GetStartupInfoA
+0x01001150    1 3            sym.imp.KERNEL32.dll_OutputDebugStringA
+0x01001154   16 8    -> 63   sym.imp.KERNEL32.dll_SetUnhandledExceptionFilter
+0x01001158    1 2            sym.imp.KERNEL32.dll_GetModuleHandleA
+0x0100115c   16 4    -> 61   sym.imp.KERNEL32.dll_QueryPerformanceCounter
+0x01001160   16 4    -> 60   sym.imp.KERNEL32.dll_GetTickCount
+0x01001164   17 4    -> 61   sym.imp.KERNEL32.dll_GetCurrentThreadId
+0x01001168   20 4    -> 63   sym.imp.KERNEL32.dll_GetVersionExA
+0x0100116c   21 4    -> 67   sym.imp.KERNEL32.dll_DeleteCriticalSection
+0x01001170    1 4            sym.imp.KERNEL32.dll_InitializeCriticalSection
+0x01001174   21 4    -> 74   sym.imp.KERNEL32.dll_LeaveCriticalSection
+0x01001178    1 4            sym.imp.KERNEL32.dll_EnterCriticalSection
+0x01001180    3 4    -> 6    sym.imp.KERNEL32.dll_SizeofResource
+0x01001184    2 4    -> 6    sym.imp.KERNEL32.dll_LockResource
+0x01001188    2 4    -> 6    sym.imp.KERNEL32.dll_LoadResource
+0x0100118c    2 4    -> 6    sym.imp.KERNEL32.dll_FindResourceW
+0x01001190    1 4            sym.imp.KERNEL32.dll_FindResourceExW
+0x01001194    2 4    -> 6    sym.imp.KERNEL32.dll_GetModuleHandleW
+0x01001198    2 4    -> 6    sym.imp.KERNEL32.dll_GetSystemTime
+0x0100119d   49 171  -> 164  fcn.0100119d
+0x010011a0   52 172  -> 167  sym.imp.KERNEL32.dll_CloseHandle
+0x010011a5   53 175  -> 167  fcn.010011a5
+0x010011a8   54 180  -> 166  sym.imp.KERNEL32.dll_CreateThread
+0x010011ac   57 180  -> 167  sym.imp.KERNEL32.dll_CreateEventW
+0x010011b0   57 180  -> 169  sym.imp.KERNEL32.dll_ResetEvent
+0x010011b4   58 180  -> 171  sym.imp.KERNEL32.dll_lstrcmpW
+0x010011b8   46 160  -> 150  sym.imp.KERNEL32.dll_GlobalAlloc
+0x010011bc   51 176  -> 154  sym.imp.KERNEL32.dll_GlobalUnlock
+0x010011c0    1 7            sym.imp.KERNEL32.dll_GlobalLock
+0x010011c4    4 4    -> 13   sym.imp.KERNEL32.dll_GlobalSize
+0x010011c8    2 4    -> 6    sym.imp.KERNEL32.dll_MulDiv
+0x010011cc   51 164  -> 167  sym.imp.KERNEL32.dll_GlobalFindAtomW
+0x010011d0   53 164  -> 167  sym.imp.KERNEL32.dll_GetLastError
+0x010011d8   53 160  -> 159  sym.imp.KERNEL32.dll_MultiByteToWideChar
+0x010011dc   54 176  -> 159  sym.imp.KERNEL32.dll_GetLocalTime
+0x010011e0   55 176  -> 159  sym.imp.KERNEL32.dll_GetLocaleInfoW
+0x010011e4   52 176  -> 151  sym.imp.KERNEL32.dll_GetDateFormatW
+0x010011e8   49 176  -> 140  sym.imp.KERNEL32.dll_InterlockedIncrement
+0x010011ec   36 98   -> 108  sym.imp.KERNEL32.dll_WritePrivateProfileStringW
+0x010011f0   29 94   -> 95   sym.imp.KERNEL32.dll_GetPrivateProfileStringW
+0x010011f4   36 168  -> 103  sym.imp.KERNEL32.dll_lstrcmpiW
+0x010011f8   26 86   -> 93   sym.imp.KERNEL32.dll_GetLocaleInfoEx
+0x010011fc   28 82   -> 94   sym.imp.KERNEL32.dll_GetProcAddress
+0x01001200   27 78   -> 90   sym.imp.KERNEL32.dll_LoadLibraryW
+0x01001204    5 4    -> 15   sym.imp.KERNEL32.dll_FreeLibrary
+0x01001208   39 152  -> 119  sym.imp.KERNEL32.dll_DelayLoadFailureHook
+0x0100120c   39 156  -> 120  sym.imp.KERNEL32.dll_InterlockedCompareExchange
+0x01001210   40 156  -> 121  sym.imp.KERNEL32.dll_LoadLibraryExA
+0x01001214   31 156  -> 94   sym.imp.KERNEL32.dll_HeapFree
+0x01001218   17 54   -> 49   sym.imp.KERNEL32.dll_HeapAlloc
+0x0100121c   43 152  -> 124  sym.imp.KERNEL32.dll_GetProcessHeap
+0x01001220   15 46   -> 48   sym.imp.KERNEL32.dll_GetVersionExW
+0x01001224   21 42   -> 63   sym.imp.KERNEL32.dll_InterlockedExchange
+0x01001228   41 144  -> 125  sym.imp.KERNEL32.dll_FreeLibraryAndExitThread
+0x0100122c    1 4            sym.imp.KERNEL32.dll_GetFileAttributesW
+0x01001230   20 30   -> 59   sym.imp.KERNEL32.dll_Wow64RevertWow64FsRedirection
+0x01001234   19 26   -> 58   sym.imp.KERNEL32.dll_Wow64DisableWow64FsRedirection
+0x01001238   20 22   -> 61   sym.imp.KERNEL32.dll_IsWow64Process
+0x0100123c    1 1            sym.imp.KERNEL32.dll_GetCurrentProcess
+0x01001240   19 14   -> 59   sym.imp.KERNEL32.dll_GetModuleFileNameW
+0x01001244    1 4            sym.imp.KERNEL32.dll_LocalFree
+0x01001248   45 116  -> 161  sym.imp.KERNEL32.dll_LocalReAlloc
+0x0100124c    1 2            sym.imp.KERNEL32.dll_LocalAlloc
+0x0100124e   52 2    -> 173  int.0100124e
+0x01001250    5 38           sym.imp.KERNEL32.dll_GetProfileStringW
+0x01001254    5 34           sym.imp.KERNEL32.dll_lstrlenW
+0x01001258    5 30           sym.imp.KERNEL32.dll_CompareStringW
+0x0100125c    4 26           sym.imp.KERNEL32.dll_ApplicationRecoveryInProgress
+0x01001260    4 22           sym.imp.KERNEL32.dll_Sleep
+0x01001264   38 92   -> 128  sym.imp.KERNEL32.dll_ApplicationRecoveryFinished
+0x01001268    4 14           sym.imp.KERNEL32.dll_RegisterApplicationRecoveryCallback
+0x0100126c    3 10           sym.imp.KERNEL32.dll_RegisterApplicationRestart
+0x01001270    2 6            sym.imp.KERNEL32.dll_CompareFileTime
+0x01001274    1 1            sym.imp.KERNEL32.dll_SystemTimeToFileTime
+0x01001278    1 4            sym.imp.KERNEL32.dll_GetTempFileNameW
+0x01001280    2 124  -> 5    sym.imp.KERNEL32.dll_DeleteFileW
+0x01001284    1 2            sym.imp.KERNEL32.dll_CreateFileW
+0x01001288    8 80   -> 27   sym.imp.KERNEL32.dll_GetSystemTimeAsFileTime
+0x0100128c    9 80   -> 30   sym.imp.KERNEL32.dll_TerminateProcess
+0x01001290    8 80   -> 30   sym.imp.KERNEL32.dll_UnhandledExceptionFilter
+0x01001294    7 80   -> 30   sym.imp.KERNEL32.dll_HeapDestroy
+0x01001298    6 108  -> 18   sym.imp.KERNEL32.dll_HeapReAlloc
+0x0100129c    4 108  -> 14   sym.imp.KERNEL32.dll_HeapSize
+0x010012a0    1 3            sym.imp.KERNEL32.dll_RaiseException
+0x010012a8   36 28   -> 122  sym.imp.USER32.dll_GetSysColor
+0x010012ac   36 28   -> 124  sym.imp.USER32.dll_SetClassLongW
+0x010012b0   35 28   -> 128  sym.imp.USER32.dll_GetClassLongW
+0x010012b4    2 28           sym.imp.USER32.dll_DrawMenuBar
+0x010012b8    2 28           sym.imp.USER32.dll_SetMenuItemInfoW
+0x010012bc    4 44   -> 47   sym.imp.USER32.dll_AppendMenuW
+0x010012c0    3 44           sym.imp.USER32.dll_RemoveMenu
+0x010012c4    5 44   -> 46   sym.imp.USER32.dll_GetSubMenu
+0x010012c8    4 44           sym.imp.USER32.dll_GetWindowLongW
+0x010012cc    4 44           sym.imp.USER32.dll_InsertMenuItemW
+0x010012d0    7 48           sym.imp.USER32.dll_SetWindowLongW
+0x010012d4    9 56   -> 57   sym.imp.USER32.dll_IsWindowEnabled
+0x010012d8   12 72   -> 58   sym.imp.USER32.dll_PostMessageW
+0x010012dc   11 76   -> 53   sym.imp.USER32.dll_CharNextA
+0x010012e0   12 76   -> 54   sym.imp.USER32.dll_SetClipboardData
+0x010012e4   12 76   -> 53   sym.imp.USER32.dll_EmptyClipboard
+0x010012e8   12 76   -> 53   sym.imp.USER32.dll_CloseClipboard
+0x010012ec   12 76   -> 53   sym.imp.USER32.dll_GetClipboardData
+0x010012f0   13 76   -> 53   sym.imp.USER32.dll_OpenClipboard
+0x010012f4   13 76   -> 53   sym.imp.USER32.dll_GetMenuState
+0x010012f8   13 76   -> 53   sym.imp.USER32.dll_IsClipboardFormatAvailable
+0x010012fc   13 76   -> 53   sym.imp.USER32.dll_DefWindowProcW
+0x01001300    4 14           sym.imp.USER32.dll_InvalidateRect
+0x01001304    1 10           sym.imp.USER32.dll_PostQuitMessage
+0x01001308    1 6            sym.imp.USER32.dll_GetFocus
+0x0100130c    1 2            sym.imp.USER32.dll_DispatchMessageW
+0x01001314    3 4    -> 12   sym.imp.USER32.dll_GetMessageExtraInfo
+0x01001318    4 4    -> 12   sym.imp.USER32.dll_TranslateAcceleratorW
+0x0100131c    3 8    -> 16   sym.imp.USER32.dll_GetMessageW
+0x01001320   11 44   -> 52   sym.imp.USER32.dll_SetForegroundWindow
+0x01001324   10 44   -> 52   sym.imp.USER32.dll_SetWindowPlacement
+0x01001328   12 44   -> 55   sym.imp.USER32.dll_RegisterClassExW
+0x0100132c   14 44   -> 59   sym.imp.USER32.dll_DrawTextW
+0x01001330   17 52   -> 61   sym.imp.USER32.dll_ReleaseDC
+0x01001334   18 52   -> 65   sym.imp.USER32.dll_GetDC
+0x01001338    1 1            sym.imp.USER32.dll_GetSystemMetrics
+0x0100133c   20 52   -> 70   sym.imp.USER32.dll_EnumChildWindows
+0x01001340   17 28   -> 64   sym.imp.USER32.dll_SetPropW
+0x01001344   20 48   -> 74   sym.imp.USER32.dll_GetMenu
+0x01001348   21 48   -> 77   sym.imp.USER32.dll_CheckRadioButton
+0x0100134c   16 20   -> 68   sym.imp.USER32.dll_UpdateWindow
+0x01001350   20 44   -> 93   sym.imp.USER32.dll_SendDlgItemMessageW
+0x01001354    1 5            sym.imp.USER32.dll_IsDlgButtonChecked
+0x01001358    1 17           sym.imp.USER32.dll_MoveWindow
+0x0100135c    1 13           sym.imp.USER32.dll_GetDlgItemInt
+0x01001360    1 9            sym.imp.USER32.dll_SetDlgItemInt
+0x01001364    2 5            sym.imp.USER32.dll_CheckMenuItem
+0x01001368    1 1            sym.imp.USER32.dll_GetNextDlgTabItem
+0x0100136c   22 20   -> 86   sym.imp.USER32.dll_OffsetRect
+0x01001370    1 14           sym.imp.USER32.dll_GetMonitorInfoW
+0x01001374    1 10           sym.imp.USER32.dll_MonitorFromWindow
+0x0100137c   20 8    -> 84   sym.imp.USER32.dll_IntersectRect
+0x01001380    3 8    -> 14   sym.imp.USER32.dll_EnumDisplayMonitors
+0x01001384    3 8    -> 14   sym.imp.USER32.dll_EqualRect
+0x01001388    1 8            sym.imp.USER32.dll_MonitorFromRect
+0x0100138c   24 12   -> 93   sym.imp.USER32.dll_GetClassWord
+0x01001394   25 8    -> 106  sym.imp.USER32.dll_GetProcessDefaultLayout
+0x01001398   25 8    -> 102  sym.imp.USER32.dll_CreateDialogParamW
+0x0100139c   23 8    -> 104  sym.imp.USER32.dll_TrackPopupMenu
+0x010013a0   26 8    -> 109  sym.imp.USER32.dll_CreatePopupMenu
+0x010013a4   26 8    -> 113  sym.imp.USER32.dll_GetAncestor
+0x010013a8   27 8    -> 117  sym.imp.USER32.dll_FindWindowW
+0x010013ac    1 8            sym.imp.USER32.dll_EndDialog
+0x010013b0    4 8    -> 17   sym.imp.USER32.dll_EnableMenuItem
+0x010013b4    1 1            sym.imp.USER32.dll_DestroyWindow
+0x010013b8    2 4    -> 7    sym.imp.USER32.dll_MapWindowPoints
+0x010013bc    2 4    -> 7    sym.imp.USER32.dll_GetClassNameW
+0x010013c0    1 4            sym.imp.USER32.dll_GetDlgItem
+0x010013c4    2 4    -> 7    sym.imp.USER32.dll_GetWindowRect
+0x010013c8   33 4    -> 146  sym.imp.USER32.dll_SetWindowPos
+0x010013cc   35 4    -> 158  sym.imp.USER32.dll_SendMessageW
+0x010013d1   33 3    -> 153  fcn.010013d1
+0x010013d4    2 4            sym.imp.USER32.dll_SetCursor
+0x010013d8    1 4            sym.imp.USER32.dll_GetKeyState
+0x010013dc    1 4            sym.imp.USER32.dll_IsDialogMessageW
+0x010013e0    1 4            sym.imp.USER32.dll_LoadAcceleratorsW
+0x010013e4    1 4            sym.imp.USER32.dll_GetWindowTextLengthW
+0x010013e8   37 4    -> 179  sym.imp.USER32.dll_GetWindowTextW
+0x010013ec   37 4    -> 182  sym.imp.USER32.dll_EnableWindow
+0x010013f0   37 4    -> 182  sym.imp.USER32.dll_SetFocus
+0x010013f4    1 4            sym.imp.USER32.dll_LoadStringW
+0x010013f8   37 4    -> 182  sym.imp.USER32.dll_SetWindowTextW
+0x010013fc    2 4    -> 19   sym.imp.USER32.dll_GetParent
+0x01001400    1 4            sym.imp.USER32.dll_GetClientRect
+0x01001404    1 4            sym.imp.USER32.dll_ShowWindow
+0x01001408    1 4            sym.imp.USER32.dll_GetWindowPlacement
+0x0100140c   41 4    -> 196  sym.imp.USER32.dll_LoadImageW
+0x01001410   43 4    -> 199  sym.imp.USER32.dll_UnregisterClassA
+0x01001414   12 4    -> 64   sym.imp.USER32.dll_FillRect
+0x01001418   12 4    -> 64   sym.imp.USER32.dll_CheckMenuRadioItem
+0x0100141c   14 4    -> 68   sym.imp.USER32.dll_CreateWindowExW
+0x01001420    3 4    -> 6    sym.imp.USER32.dll_MessageBeep
+0x01001424    3 4    -> 6    sym.imp.USER32.dll_SystemParametersInfoW
+0x01001428    4 8    -> 10   sym.imp.USER32.dll_DialogBoxParamW
+0x01001430    3 4    -> 6    sym.imp.RPCRT4.dll_UuidCreate
+0x01001434    3 4    -> 6    sym.imp.RPCRT4.dll_UuidToStringW
+0x01001438    5 8    -> 10   sym.imp.RPCRT4.dll_RpcStringFreeW
+0x01001440    8 8    -> 18   sym.imp.WINMM.dll_timeGetTime
+0x01001448    7 4    -> 21   sym.imp.VERSION.dll_GetFileVersionInfoExW
+0x0100144c    1 4            sym.imp.VERSION.dll_GetFileVersionInfoSizeExW
+0x01001450    8 8    -> 33   sym.imp.VERSION.dll_VerQueryValueW
+0x01001458    8 4    -> 37   sym.imp.GDI32.dll_EqualRgn
+0x0100145c    8 4    -> 41   sym.imp.GDI32.dll_CreateDIBSection
+0x01001460    8 4    -> 48   sym.imp.GDI32.dll_DeleteObject
+0x01001464    9 4    -> 50   sym.imp.GDI32.dll_DeleteDC
+0x01001468   10 4    -> 53   sym.imp.GDI32.dll_GetTextExtentPointW
+0x0100146c   11 4    -> 58   sym.imp.GDI32.dll_CreateFontIndirectW
+0x01001470   11 4    -> 61   sym.imp.GDI32.dll_CreateCompatibleDC
+0x01001474   13 4    -> 66   sym.imp.GDI32.dll_GetDeviceCaps
+0x01001478   12 4    -> 69   sym.imp.GDI32.dll_GetRgnBox
+0x0100147c    9 4    -> 63   sym.imp.GDI32.dll_CreateSolidBrush
+0x01001484   14 4    -> 82   sym.imp.GDI32.dll_GetTextExtentPoint32W
+0x01001488   15 4    -> 86   sym.imp.GDI32.dll_GetObjectW
+0x0100148c   18 4    -> 90   sym.imp.GDI32.dll_LineTo
+0x01001490   18 4    -> 93   sym.imp.GDI32.dll_MoveToEx
+0x01001494    1 4            sym.imp.GDI32.dll_ExtCreatePen
+0x01001498   20 4    -> 102  sym.imp.GDI32.dll_CreateCompatibleBitmap
+0x0100149c    2 4            sym.imp.GDI32.dll_CreateRectRgn
+0x010014a0    1 4            sym.imp.GDI32.dll_CreateRectRgnIndirect
+0x010014a4    1 4            sym.imp.GDI32.dll_SetRectRgn
+0x010014a8    1 4            sym.imp.GDI32.dll_CombineRgn
+0x010014ac    1 4            sym.imp.GDI32.dll_SelectObject
+0x010014b0    1 4            sym.imp.GDI32.dll_CreatePatternBrush
+0x010014b4    1 4            sym.imp.GDI32.dll_SetTextColor
+0x010014b8    1 4            sym.imp.GDI32.dll_SetBkMode
+0x010014bc    1 4            sym.imp.GDI32.dll_GetStockObject
+0x010014c0    1 8            sym.imp.GDI32.dll_SetBkColor
+0x010014c8    1 4            sym.imp.msvcrt.dll_wcsncmp
+0x010014cc    2 4            sym.imp.msvcrt.dll__wcsnicmp
+0x010014d0    1 4            sym.imp.msvcrt.dll_iswdigit
+0x010014d4    1 4            sym.imp.msvcrt.dll__wcslwr_s
+0x010014d8    1 4            sym.imp.msvcrt.dll_iswalpha
+0x010014dc    1 1            sym.imp.msvcrt.dll___0bad_cast__QAE_ABV0__Z
+0x010014e0    2 4            sym.imp.msvcrt.dll___1bad_cast__UAE_XZ
+0x010014e4    2 4    -> 7    sym.imp.msvcrt.dll_localeconv
+0x010014e8    1 4            sym.imp.msvcrt.dll_memchr
+0x010014ec    1 4            sym.imp.msvcrt.dll_strcspn
+0x010014f0    1 4            sym.imp.msvcrt.dll_sprintf_s
+0x010014f4    1 4            sym.imp.msvcrt.dll__strtoi64
+0x010014f8    1 4            sym.imp.msvcrt.dll__strtoui64
+0x010014fc    1 4            sym.imp.msvcrt.dll__wcsdup
+0x01001500    1 4            sym.imp.msvcrt.dll__i64tow_s
+0x01001504    1 4            sym.imp.msvcrt.dll__wtoi64
+0x01001508    1 4            sym.imp.msvcrt.dll_wcsrchr
+0x0100150c    1 4            sym.imp.msvcrt.dll_wcstoul
+0x01001510    1 4            sym.imp.msvcrt.dll_isalpha
+0x01001514    1 4            sym.imp.msvcrt.dll_time
+0x01001518    1 4            sym.imp.msvcrt.dll_difftime
+0x0100151c    1 4            sym.imp.msvcrt.dll_memmove
+0x01001520    1 4            sym.imp.msvcrt.dll__callnewh
+0x01001524    1 4            sym.imp.msvcrt.dll___pctype_func
+0x01001528    1 4            sym.imp.msvcrt.dll____lc_codepage_func
+0x0100152c    1 4            sym.imp.msvcrt.dll____lc_handle_func
+0x01001530    1 4            sym.imp.msvcrt.dll__itow_s
+0x01001534    1 4            sym.imp.msvcrt.dll____mb_cur_max_func
+0x01001538    1 4            sym.imp.msvcrt.dll_setlocale
+0x0100153c    1 4            sym.imp.msvcrt.dll___crtGetStringTypeW
+0x01001540    1 4            sym.imp.msvcrt.dll___crtLCMapStringW
+0x01001544    1 4            sym.imp.msvcrt.dll___mb_cur_max
+0x0100154c    1 2            sym.imp.msvcrt.dll_isspace
+0x01001550    1 1            sym.imp.msvcrt.dll_abort
+0x01001554    2 4    -> 10   sym.imp.msvcrt.dll_isalnum
+0x01001558    2 4    -> 10   sym.imp.msvcrt.dll___getmainargs
+0x0100155c    2 4    -> 10   sym.imp.msvcrt.dll__cexit
+0x01001560    1 4            sym.imp.msvcrt.dll__exit
+0x01001564    3 4    -> 10   sym.imp.msvcrt.dll__XcptFilter
+0x01001568    1 4            sym.imp.msvcrt.dll__ismbblead
+0x0100156c    1 4            sym.imp.msvcrt.dll__acmdln
+0x01001570    1 4            sym.imp.msvcrt.dll__initterm
+0x01001574    1 4            sym.imp.msvcrt.dll__amsg_exit
+0x01001578    3 4            sym.imp.msvcrt.dll___setusermatherr
+0x0100157c    1 1            sym.imp.msvcrt.dll___p__commode
+0x01001580    1 1            sym.imp.msvcrt.dll___p__fmode
+0x01001584    1 4            sym.imp.msvcrt.dll___set_app_type
+0x01001588    1 4            sym.imp.msvcrt.dll___1type_info__UAE_XZ
+0x0100158c    1 4            sym.imp.msvcrt.dll__unlock
+0x01001590    1 4            sym.imp.msvcrt.dll___dllonexit
+0x01001594    1 4            sym.imp.msvcrt.dll__lock
+0x01001598    1 4            sym.imp.msvcrt.dll__onexit
+0x0100159c    1 1            sym.imp.msvcrt.dll__terminate__YAXXZ
+0x010015a0    1 4            sym.imp.msvcrt.dll___uncaught_exception
+0x010015a4    1 4            sym.imp.msvcrt.dll__except_handler4_common
+0x010015a8    5 4    -> 34   sym.imp.msvcrt.dll__controlfp
+0x010015ac    1 4            sym.imp.msvcrt.dll__wtoi
+0x010015b0    1 4            sym.imp.msvcrt.dll__itoa
+0x010015b4    1 1            sym.imp.msvcrt.dll_calloc
+0x010015b8    1 4            sym.imp.msvcrt.dll_wcschr
+0x010015bc    1 4            sym.imp.msvcrt.dll__wcsicmp
+0x010015c0    1 1            sym.imp.msvcrt.dll__vsnwprintf
+0x010015c4    1 4            sym.imp.msvcrt.dll_memcpy
+0x010015c8    1 4            sym.imp.msvcrt.dll_wcscat_s
+0x010015cc    1 4            sym.imp.msvcrt.dll_wcstol
+0x010015d0    1 4            sym.imp.msvcrt.dll_wcscpy_s
+0x010015d4    1 4            sym.imp.msvcrt.dll_exit
+0x010015d8    3 4    -> 11   sym.imp.msvcrt.dll_mbstowcs_s
+0x010015dc    1 4            sym.imp.msvcrt.dll_toupper
+0x010015e0    2 4            sym.imp.msvcrt.dll_isxdigit
+0x010015e4    1 4            sym.imp.msvcrt.dll_isdigit
+0x010015e8    1 4            sym.imp.msvcrt.dll__ftol2_sse
+0x010015ed    1 3            fcn.010015ed
+0x010015f0    1 4            sym.imp.msvcrt.dll__ftol2
+0x010015f4    1 4            sym.imp.msvcrt.dll_malloc
+0x010015f8    1 4            sym.imp.msvcrt.dll__purecall
+0x010015fc    1 4            sym.imp.msvcrt.dll_free
+0x01001600    1 4            sym.imp.msvcrt.dll___0exception__QAE_XZ
+0x01001604    1 4            sym.imp.msvcrt.dll__CxxThrowException
+0x01001608    1 4            sym.imp.msvcrt.dll___0exception__QAE_ABV0__Z
+0x0100160c    2 4            sym.imp.msvcrt.dll___1exception__UAE_XZ
+0x01001610    1 4            sym.imp.msvcrt.dll__what_exception__UBEPBDXZ
+0x01001614    1 4            sym.imp.msvcrt.dll___0exception__QAE_ABQBD_Z
+0x01001618    1 4            sym.imp.msvcrt.dll_memmove_s
+0x0100161c    1 4            sym.imp.msvcrt.dll_memcpy_s
+0x01001620    1 4            sym.imp.msvcrt.dll___CxxFrameHandler3
+0x01001624    1 4            sym.imp.msvcrt.dll__errno
+0x01001628   80 156045 -> 2535 sym.imp.msvcrt.dll__wcsrev
+0x01012d6c   43 110918 -> 626  entry0
+

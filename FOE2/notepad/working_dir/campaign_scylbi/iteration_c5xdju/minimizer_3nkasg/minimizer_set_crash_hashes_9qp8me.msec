@@ -1,0 +1,87 @@
+Opened log file 'C:\FOE2\notepad\working_dir\campaign_scylbi\iteration_c5xdju\minimizer_3nkasg\minimizer_set_crash_hashes_9qp8me.msec'
+
+Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: C:\windows\system32\notepad.exe C:\FOE2\notepad\working_dir\campaign_scylbi\iteration_c5xdju\minimizer_3nkasg\minimizer_fuzzed_file_q1qr1u.txt
+Symbol search path is: *** Invalid ***
+****************************************************************************
+* Symbol loading may be unreliable without a symbol search path.           *
+* Use .symfix to have the debugger choose a symbol path.                   *
+* After setting your symbol path, use .reload to refresh symbol locations. *
+****************************************************************************
+Executable search path is: 
+ModLoad: 00000001`00000000 00000001`00035000   notepad.exe
+ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll
+ModLoad: 00000000`78d20000 00000000`78e3f000   C:\Windows\system32\kernel32.dll
+ModLoad: 00000001`80000000 00000001`80033000   C:\Program Files (x86)\AVG\Av\avghooka.dll
+ModLoad: 000007ff`38880000 000007ff`388ea000   C:\Windows\system32\KERNELBASE.dll
+ModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\Windows\system32\ADVAPI32.dll
+ModLoad: 000007ff`756a0000 000007ff`7573f000   C:\Windows\system32\msvcrt.dll
+ModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\Windows\SYSTEM32\sechost.dll
+ModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\Windows\system32\RPCRT4.dll
+ModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\Windows\system32\GDI32.dll
+ModLoad: 00000000`78c20000 00000000`78d1a000   C:\Windows\system32\USER32.dll
+ModLoad: 000007ff`70410000 000007ff`7041e000   C:\Windows\system32\LPK.dll
+ModLoad: 000007ff`760c0000 000007ff`7618a000   C:\Windows\system32\USP10.dll
+ModLoad: 000007ff`75550000 000007ff`755e7000   C:\Windows\system32\COMDLG32.dll
+ModLoad: 000007ff`74180000 000007ff`741f1000   C:\Windows\system32\SHLWAPI.dll
+ModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+ModLoad: 000007ff`788c0000 000007ff`7964c000   C:\Windows\system32\SHELL32.dll
+ModLoad: 000007ff`73f00000 000007ff`73f71000   C:\windows\system32\WINSPOOL.DRV
+ModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\Windows\system32\ole32.dll
+ModLoad: 000007ff`76880000 000007ff`76958000   C:\Windows\system32\OLEAUT32.dll
+ModLoad: 000007ff`700f0000 000007ff`700fc000   C:\windows\system32\VERSION.dll
+(1460.106c): Break instruction exception - code 80000003 (first chance)
+ModLoad: 000007ff`718f0000 000007ff`7191e000   C:\Windows\system32\IMM32.DLL
+ModLoad: 000007ff`774b0000 000007ff`775b9000   C:\Windows\system32\MSCTF.dll
+ModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\windows\system32\CRYPTBASE.dll
+ModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\Windows\system32\uxtheme.dll
+ModLoad: 000007ff`70f60000 000007ff`70f78000   C:\windows\system32\dwmapi.dll
+(1460.1984): Break instruction exception - code 80000003 (first chance)
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for ntdll.dll - 
+ntdll!DbgBreakPoint:
+00000000`78e9ae10 cc              int     3
+0:001> $$Found_with_CERT_FOE;r;!exploitable -v;q
+rax=000007fffffdc000 rbx=0000000000000000 rcx=000007fffffd4000
+rdx=0000000078f42c50 rsi=0000000000000000 rdi=0000000000000000
+rip=0000000078e9ae10 rsp=000000000209ff28 rbp=0000000000000000
+ r8=0000000000000000  r9=0000000078f42c50 r10=0000000000000000
+r11=0000000000000000 r12=0000000000000000 r13=0000000000000000
+r14=0000000000000000 r15=0000000000000000
+iopl=0         nv up ei pl zr na po nc
+cs=0033  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00000246
+ntdll!DbgBreakPoint:
+00000000`78e9ae10 cc              int     3
+
+!exploitable 1.6.0.0
+HostMachine\HostUser
+Executing Processor Architecture is x64
+Debuggee is in User Mode
+Debuggee is a live user mode debugging session on the local machine
+Event Type: Exception
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for C:\Windows\system32\kernel32.dll - 
+Exception Faulting Address: 0x78e9ae10
+First Chance Exception Type: STATUS_BREAKPOINT (0x80000003)
+
+Faulting Instruction:00000000`78e9ae10 int 3
+
+Basic Block:
+    00000000`78e9ae10 int 3
+
+Exception Hash (Major/Minor): 0xa6d8d53b.0x711c9369
+
+ Hash Usage : Stack Trace:
+Excluded    : ntdll!DbgBreakPoint+0x0
+Excluded    : ntdll!DbgUiRemoteBreakin+0x38
+Major+Minor : kernel32!BaseThreadInitThunk+0xd
+Major+Minor : ntdll!RtlUserThreadStart+0x21
+Instruction Address: 0x0000000078e9ae10
+
+Description: Breakpoint
+Short Description: Breakpoint
+Exploitability Classification: UNKNOWN
+Recommended Bug Title: Breakpoint starting at ntdll!DbgBreakPoint+0x0000000000000000 called from kernel32!BaseThreadInitThunk+0x000000000000000d (Hash=0xa6d8d53b.0x711c9369)
+
+While a breakpoint itself is probably not exploitable, it may also be an indication that an attacker is testing a target. In either case breakpoints should not exist in production code.
+quit:
