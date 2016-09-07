@@ -51,9 +51,9 @@ target:
 # results_dir: Location of fuzzing results (relative to foe2.py)
 #####################################################################
 directories:
-    seedfile_dir: C:\FOE2\notepad\seedfiles
-    working_dir:  C:\FOE2\notepad\working_dir
-    results_dir:  C:\FOE2\notepad\results
+    seedfile_dir: C:\diagnose_vulnerabilities\FOE2\notepad\seedfiles
+    working_dir:  C:\diagnose_vulnerabilities\FOE2\notepad\working_dir
+    results_dir:  C:\diagnose_vulnerabilities\FOE2\notepad\results
 
 #####################################################################
 # Fuzz run options

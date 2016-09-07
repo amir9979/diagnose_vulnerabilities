@@ -8575,3 +8575,1150 @@
 2016-09-07 00:48:20,280 WARNING certfuzz.campaign.campaign - Keyboard interrupt - exiting
 2016-09-07 00:48:20,280 WARNING certfuzz.campaign.campaign - Unable to remove campaign working dir: C:\FOE2\notepad\working_dir\campaign_scylbi
 2016-09-07 00:48:20,280 INFO root - Campaign complete
+2016-09-07 01:13:23,403 INFO root - Welcome to C:\diagnose_vulnerabilities\FOE2\foe2.py version 2.1
+2016-09-07 01:13:23,404 DEBUG root - Instantiating embedded rpdb2 debugger with password "foe"...
+2016-09-07 01:13:23,404 DEBUG root - Error importing rpdb2. Is Winpdb installed?
+2016-09-07 01:13:23,405 DEBUG root - Enabling heapy remote monitoring...
+2016-09-07 01:13:23,407 DEBUG root - Error importing heapy. Is Guppy-PE installed?
+2016-09-07 01:13:23,407 DEBUG certfuzz.campaign.campaign - initialize WindowsCampaign
+2016-09-07 01:13:23,426 DEBUG certfuzz.campaign.campaign - outdir=C:\diagnose_vulnerabilities\FOE2\notepad\results\convert v5.5.7
+2016-09-07 01:13:23,426 DEBUG certfuzz.campaign.campaign - winrun is not compatible with Windows 6 AMD64. Overriding.
+2016-09-07 01:13:23,427 INFO certfuzz.campaign.campaign - No cached campaign found, using new campaign
+2016-09-07 01:13:23,427 DEBUG certfuzz.campaign.campaign - Importing module certfuzz.fuzzers.bytemut
+2016-09-07 01:13:23,428 DEBUG certfuzz.campaign.campaign - Importing module certfuzz.debuggers.msec
+2016-09-07 01:13:23,464 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2016-09-07 01:13:23,466 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\results\convert v5.5.7\version.txt
+2016-09-07 01:13:23,467 DEBUG certfuzz.file_handlers.seedfile_set - SeedfileSet output_dir: C:\diagnose_vulnerabilities\FOE2\notepad\results\convert v5.5.7\seedfiles
+2016-09-07 01:13:23,476 DEBUG certfuzz.fuzztools.rangefinder - Rangefinder log: C:\diagnose_vulnerabilities\FOE2\notepad\results\convert v5.5.7\seedfiles\677271d56999ae96a9fe55fdf4a2a202\rangefinder.log
+2016-09-07 01:13:23,477 INFO certfuzz.file_handlers.seedfile_set - Adding file to set: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:23,479 DEBUG certfuzz.fuzztools.rangefinder - Rangefinder log: C:\diagnose_vulnerabilities\FOE2\notepad\results\convert v5.5.7\seedfiles\d32dfc6844d1243eacc5e05de6877078\rangefinder.log
+2016-09-07 01:13:23,480 INFO certfuzz.file_handlers.seedfile_set - Adding file to set: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\seedfiles\sf_d32dfc6844d1243eacc5e05de6877078.txt
+2016-09-07 01:13:23,480 DEBUG certfuzz.campaign.campaign - Caching application C:\windows\system32\notepad.exe and determining if we need to watch the CPU...
+2016-09-07 01:13:23,490 DEBUG certfuzz.campaign.campaign - ...Timer: 5.000000
+2016-09-07 01:13:23,492 DEBUG certfuzz.campaign.campaign - ...timer start
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - This seems to be a GUI application.
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - Enabling runner CPU monitoring for dynamic timeout
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - kill runner watchcpu: True
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - Enabling debugger CPU monitoring for dynamic timeout
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - kill debugger watchcpu: True
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - kill <certfuzz.runners.killableprocess.Popen object at 0x03A2ACB0>
+2016-09-07 01:13:28,493 DEBUG certfuzz.campaign.campaign - ...timer stop
+2016-09-07 01:13:28,493 INFO root - Initiating campaign
+2016-09-07 01:13:28,493 DEBUG certfuzz.file_handlers.seedfile_set - Thing count: 2
+2016-09-07 01:13:28,493 DEBUG certfuzz.scoring.scorable_set - probability(677271d56999ae96a9fe55fdf4a2a202)=0.500000
+2016-09-07 01:13:28,493 DEBUG certfuzz.scoring.scorable_set - probability(d32dfc6844d1243eacc5e05de6877078)=0.500000
+2016-09-07 01:13:28,493 DEBUG certfuzz.scoring.scorable_set - next_key=677271d56999ae96a9fe55fdf4a2a202
+2016-09-07 01:13:28,493 INFO certfuzz.campaign.campaign - Selected seedfile: sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:28,493 DEBUG certfuzz.fuzztools.object_caching - Wrote WindowsCampaign to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_convert_v5_5_7.pkl
+2016-09-07 01:13:28,493 INFO certfuzz.campaign.iteration - Iteration: 0 File: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:28,493 INFO certfuzz.campaign.iteration - ...fuzzing
+2016-09-07 01:13:28,493 DEBUG certfuzz.fuzzers.fuzzer_base - Initialize Fuzzer
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base - {'basename_fuzzed': 'sf_677271d56999ae96a9fe55fdf4a2a202-0.txt',
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed': None,
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed_changes_input': True,
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'input': None,
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'iteration': 0,
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'options': {'fuzz_zip_container': False, 'fuzzer': 'bytemut'},
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'output_file_path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt',
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'range': None,
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'rng_seed': 137504714228284849588477640694909018626L,
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'saved_arcinfo': OrderedDict(),
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'sf': {'a': 1, 'b': 1, 'probability': 0.5, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 0, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A2ACF0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.fuzzer_base -  'tmpdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon'}
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.000322-0.000522)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.000076-0.000123)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.000123-0.000199)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.039650-0.064155)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.001366-0.002210)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.711492-0.999924)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.002210-0.003575)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.064155-0.103805)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.000844-0.001366)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.003575-0.005785)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.000199-0.000322)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.024505-0.039650)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.271766-0.439726)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.005785-0.009360)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.167960-0.271766)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.009360-0.015145)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.103805-0.167960)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.000522-0.000844)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.015145-0.024505)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - probability(0.439726-0.711492)=0.050000
+2016-09-07 01:13:28,509 DEBUG certfuzz.scoring.scorable_set - next_key=0.711492-0.999924
+2016-09-07 01:13:28,509 DEBUG root - fuzz params: 137504714228284849588477640694909018626 0 0.711492 0.999924 None
+2016-09-07 01:13:28,509 DEBUG certfuzz.fuzzers.bytemut - ratio=0.843558 len=13140
+2016-09-07 01:13:28,525 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_18uuon\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt
+2016-09-07 01:13:28,525 INFO certfuzz.campaign.iteration - Selected r: 0.711492-0.999924
+2016-09-07 01:13:28,525 INFO certfuzz.campaign.iteration - ...analyzing
+2016-09-07 01:13:28,525 DEBUG certfuzz.campaign.iteration - Building crash object
+2016-09-07 01:13:28,525 DEBUG certfuzz.crash.crash_base - Inititalize Crash
+2016-09-07 01:13:28,525 DEBUG certfuzz.crash.foe_crash - tries left: 0
+2016-09-07 01:13:28,525 DEBUG certfuzz.debuggers.debugger_base - Initialize Debugger
+2016-09-07 01:13:28,525 DEBUG certfuzz.debuggers.debugger_base - DBG OPTS {'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr'}
+2016-09-07 01:13:28,525 DEBUG certfuzz.debuggers.debugger_base - DEBUGGER: {'debugheap': False, 'killprocname': None, 'input_file': '', 'debugger_output': '', 'type': 'msec', 'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr', 'faddr': None, 'outfile': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec', 'program': 'C:\\windows\\system32\\notepad.exe', 'result': {'debug_crash': None, 'crash_hash': None, 'dbg_type': None, 'faddr': None, 'exp': None, 'output': None}, 'timeout': 10, 'cmd_args': ['C:\\windows\\system32\\notepad.exe', 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt'], 'seed': None}
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args: ['cdb',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-amsec.dll',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-hd',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  'gp',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-logo',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  'bpe',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  'wob',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-o',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-G',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '-c',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  '$$Found_with_CERT_FOE;r;!exploitable -v;q',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:28,540 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt']
+2016-09-07 01:13:28,665 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9016
+2016-09-07 01:13:28,667 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9560
+2016-09-07 01:13:29,071 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 1.90278861511e-09
+2016-09-07 01:13:29,335 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:29,601 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:29,851 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:30,099 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:30,352 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:30,601 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:30,851 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:31,104 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:31,351 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:31,611 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:31,868 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:32,117 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:32,367 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:32,615 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:32,865 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:33,118 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:33,367 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:33,617 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:33,865 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:34,147 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 29.4118977905
+2016-09-07 01:13:34,411 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 11.7647635524
+2016-09-07 01:13:34,661 DEBUG certfuzz.debuggers.msec - Process 9560 CPU usage: 0.0
+2016-09-07 01:13:34,661 DEBUG certfuzz.debuggers.msec - killing 7652 due to CPU inactivity
+2016-09-07 01:13:34,661 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - initializing C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_18uuon\foe-crash-jh9gnr\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec
+2016-09-07 01:13:34,661 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _read_file
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _process_lines
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.msec - parsed: {'backtrace': [],
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.msec - parsed:  'backtrace_without_questionmarks': [],
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.msec - parsed:  'crash_hash': None,
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_missed_stack_corruption': False,
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_output': "Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec'\n\nMicrosoft (R) Windows Debugger Version 6.11.0001.404 AMD64\nCopyright (c) Microsoft Corporation. All rights reserved.\n\nCommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt\nSymbol search path is: *** Invalid ***\n****************************************************************************\n* Symbol loading may be unreliable without a symbol search path.           *\n* Use .symfix to have the debugger choose a symbol path.                   *\n* After setting your symbol path, use .reload to refresh symbol locations. *\n****************************************************************************\nExecutable search path is: \nModLoad: 00000001`00000000 00000001`00035000   notepad.exe\nModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll\nModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll\nModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll\nModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll\nModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll\nModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll\nModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll\nModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll\nModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll\nModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll\nModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll\nModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll\nModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll\nModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll\nModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll\nModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll\nModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV\nModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll\nModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll\nModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll\n(2558.1c90): Break instruction exception - code 80000003 (first chance)\nModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL\nModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll\nModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll\nModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll\nModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll\n",
+2016-09-07 01:13:34,677 DEBUG certfuzz.debuggers.msec - parsed:  'exclude_unmapped_frames': True,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'exit_code': None,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'exp': None,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'faddr': None,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace': [],
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace_string': '',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'is_64bit': False,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'is_assert_fail': False,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'is_corrupt_stack': False,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'is_crash': False,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'is_debugbuild': False,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'keep_uniq_faddr': False,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'libc_end_addr': 0,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'libc_start_addr': 0,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_end_addr': 0,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_start_addr': 0,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'line_callbacks': [<bound method MsecFile._find_exploitability of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A35630>>,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_efa of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A35630>>,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_hash of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A35630>>,
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_secondchance of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A35630>>],
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:  'lines': ["Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec'",
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'Copyright (c) Microsoft Corporation. All rights reserved.',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'CommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'Symbol search path is: *** Invalid ***',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '* Symbol loading may be unreliable without a symbol search path.           *',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '* Use .symfix to have the debugger choose a symbol path.                   *',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '* After setting your symbol path, use .reload to refresh symbol locations. *',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'Executable search path is:',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`00000000 00000001`00035000   notepad.exe',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll',
+2016-09-07 01:13:34,693 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            '(2558.1c90): Break instruction exception - code 80000003 (first chance)',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll'],
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'module_map': [],
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'passed': set(),
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'pc_in_function': False,
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'pc_name': 'eip',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'registers': {},
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'registers_hex': {},
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'registers_sought': ['eax',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'ecx',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'edx',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'ebx',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'esp',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'ebp',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'esi',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'edi',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'eip',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'cs',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'ss',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'ds',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'es',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'fs',
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:                       'gs'],
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'secondchance': False,
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'signal': None,
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'total_stack_corruption': False,
+2016-09-07 01:13:34,709 DEBUG certfuzz.debuggers.msec - parsed:  'used_pc': False}
+2016-09-07 01:13:34,709 DEBUG certfuzz.crash.foe_crash - heisenbug found
+2016-09-07 01:13:34,709 DEBUG certfuzz.fuzztools.filetools - move C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_18uuon\foe-crash-jh9gnr\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec -> C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_18uuon\foe-crash-jh9gnr\sf_677271d56999ae96a9fe55fdf4a2a202-0-HSB.txt.msec
+2016-09-07 01:13:34,709 DEBUG certfuzz.campaign.iteration - Crash:
+2016-09-07 01:13:34,709 DEBUG certfuzz.campaign.iteration - ... {'cmd_template': <string.Template object at 0x03A2ACB0>,
+2016-09-07 01:13:34,709 DEBUG certfuzz.campaign.iteration - ...  'cmdargs': ['C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:34,709 DEBUG certfuzz.campaign.iteration - ...              'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt'],
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'copy_fuzzedfile': True,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'crash_hash': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'dbg_class': <class 'certfuzz.debuggers.msec.MsecDebugger'>,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'dbg_file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0-HSB.txt.msec',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'dbg_opts': {'debugger': 'msec',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...               'debugheap': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...               'max_handled_exceptions': 6,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...               'runtimeout': 10,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...               'watchcpu': True},
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'dbg_result': {},
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'dbg_type': 'msec',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'debugger_file': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'debugger_missed_stack_corruption': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'debugger_template': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'debugger_timeout': 10,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'exception_depth': 0,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'exp': 'HEISENBUG',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'faddr': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'fuzzedfile': {'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202-0.txt', 'len': 13140, 'ext': '.txt', 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202-0', 'md5': 'fc16efad13cb3003da46441b9a543b81'},
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'hd_bits': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'hd_bytes': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'is_corrupt_stack': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'is_crash': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'is_heisenbug': True,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'is_unique': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'keep_uniq_faddr': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'logger': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'max_depth': 0,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'max_handled_exceptions': 6,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'parsed_outputs': [<certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A35630>],
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'pc': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'pc_in_function': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'program': 'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'reached_secondchance': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'result_dir': None,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'seedfile': {'a': 1, 'b': 1, 'probability': 0.5, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 0, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A2ACF0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'signature': 'fc16efad13cb3003da46441b9a543b81',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'tempdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon\\foe-crash-jh9gnr',
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'total_stack_corruption': False,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'watchcpu': True,
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - ...  'workdir_base': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_18uuon'}
+2016-09-07 01:13:34,723 INFO certfuzz.campaign.iteration - Candidate crash rejected: not a crash
+2016-09-07 01:13:34,723 INFO certfuzz.campaign.iteration - Done with iteration 0
+2016-09-07 01:13:34,723 DEBUG certfuzz.campaign.iteration - Cleanup iteration 0
+2016-09-07 01:13:34,723 INFO certfuzz.campaign.campaign - Iteration: 0 Crashes found: 0
+2016-09-07 01:13:34,723 INFO certfuzz.campaign.campaign - Seedfile Set Status:
+2016-09-07 01:13:34,723 INFO certfuzz.campaign.campaign - 677271d56999ae96a9fe55fdf4a2a202 0.500000 0 1 0.333333
+2016-09-07 01:13:34,723 INFO certfuzz.campaign.campaign - d32dfc6844d1243eacc5e05de6877078 0.500000 0 0 0.500000
+2016-09-07 01:13:34,744 DEBUG certfuzz.file_handlers.seedfile_set - Thing count: 2
+2016-09-07 01:13:34,744 DEBUG certfuzz.scoring.scorable_set - probability(677271d56999ae96a9fe55fdf4a2a202)=0.400000
+2016-09-07 01:13:34,744 DEBUG certfuzz.scoring.scorable_set - probability(d32dfc6844d1243eacc5e05de6877078)=0.600000
+2016-09-07 01:13:34,746 DEBUG certfuzz.scoring.scorable_set - next_key=677271d56999ae96a9fe55fdf4a2a202
+2016-09-07 01:13:34,746 INFO certfuzz.campaign.campaign - Selected seedfile: sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:34,746 INFO certfuzz.campaign.iteration - Iteration: 1 File: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:34,746 INFO certfuzz.campaign.iteration - ...fuzzing
+2016-09-07 01:13:34,746 DEBUG certfuzz.fuzzers.fuzzer_base - Initialize Fuzzer
+2016-09-07 01:13:34,747 DEBUG certfuzz.fuzzers.fuzzer_base - {'basename_fuzzed': 'sf_677271d56999ae96a9fe55fdf4a2a202-1.txt',
+2016-09-07 01:13:34,747 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed': None,
+2016-09-07 01:13:34,747 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed_changes_input': True,
+2016-09-07 01:13:34,747 DEBUG certfuzz.fuzzers.fuzzer_base -  'input': None,
+2016-09-07 01:13:34,749 DEBUG certfuzz.fuzzers.fuzzer_base -  'iteration': 1,
+2016-09-07 01:13:34,749 DEBUG certfuzz.fuzzers.fuzzer_base -  'options': {'fuzz_zip_container': False, 'fuzzer': 'bytemut'},
+2016-09-07 01:13:34,749 DEBUG certfuzz.fuzzers.fuzzer_base -  'output_file_path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt',
+2016-09-07 01:13:34,749 DEBUG certfuzz.fuzzers.fuzzer_base -  'range': None,
+2016-09-07 01:13:34,750 DEBUG certfuzz.fuzzers.fuzzer_base -  'rng_seed': 137504714228284849588477640694909018626L,
+2016-09-07 01:13:34,750 DEBUG certfuzz.fuzzers.fuzzer_base -  'saved_arcinfo': OrderedDict(),
+2016-09-07 01:13:34,750 DEBUG certfuzz.fuzzers.fuzzer_base -  'sf': {'a': 1, 'b': 2, 'probability': 0.3333333333333333, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 1, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A2ACF0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:13:34,750 DEBUG certfuzz.fuzzers.fuzzer_base -  'tmpdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj'}
+2016-09-07 01:13:34,750 DEBUG certfuzz.scoring.scorable_set - probability(0.000322-0.000522)=0.050847
+2016-09-07 01:13:34,752 DEBUG certfuzz.scoring.scorable_set - probability(0.000076-0.000123)=0.050847
+2016-09-07 01:13:34,752 DEBUG certfuzz.scoring.scorable_set - probability(0.000123-0.000199)=0.050847
+2016-09-07 01:13:34,752 DEBUG certfuzz.scoring.scorable_set - probability(0.039650-0.064155)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.001366-0.002210)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.711492-0.999924)=0.033898
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.002210-0.003575)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.064155-0.103805)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.000844-0.001366)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.003575-0.005785)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.000199-0.000322)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.024505-0.039650)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.271766-0.439726)=0.050847
+2016-09-07 01:13:34,753 DEBUG certfuzz.scoring.scorable_set - probability(0.005785-0.009360)=0.050847
+2016-09-07 01:13:34,755 DEBUG certfuzz.scoring.scorable_set - probability(0.167960-0.271766)=0.050847
+2016-09-07 01:13:34,755 DEBUG certfuzz.scoring.scorable_set - probability(0.009360-0.015145)=0.050847
+2016-09-07 01:13:34,755 DEBUG certfuzz.scoring.scorable_set - probability(0.103805-0.167960)=0.050847
+2016-09-07 01:13:34,755 DEBUG certfuzz.scoring.scorable_set - probability(0.000522-0.000844)=0.050847
+2016-09-07 01:13:34,756 DEBUG certfuzz.scoring.scorable_set - probability(0.015145-0.024505)=0.050847
+2016-09-07 01:13:34,756 DEBUG certfuzz.scoring.scorable_set - probability(0.439726-0.711492)=0.050847
+2016-09-07 01:13:34,756 DEBUG certfuzz.scoring.scorable_set - next_key=0.005785-0.009360
+2016-09-07 01:13:34,756 DEBUG root - fuzz params: 137504714228284849588477640694909018626 1 0.005785 0.009360 None
+2016-09-07 01:13:34,756 DEBUG certfuzz.fuzzers.bytemut - ratio=0.007297 len=13140
+2016-09-07 01:13:34,756 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_isiabj\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt
+2016-09-07 01:13:34,757 INFO certfuzz.campaign.iteration - Selected r: 0.005785-0.009360
+2016-09-07 01:13:34,759 INFO certfuzz.campaign.iteration - ...analyzing
+2016-09-07 01:13:34,759 DEBUG certfuzz.campaign.iteration - Building crash object
+2016-09-07 01:13:34,759 DEBUG certfuzz.crash.crash_base - Inititalize Crash
+2016-09-07 01:13:34,763 DEBUG certfuzz.crash.foe_crash - tries left: 0
+2016-09-07 01:13:34,763 DEBUG certfuzz.debuggers.debugger_base - Initialize Debugger
+2016-09-07 01:13:34,765 DEBUG certfuzz.debuggers.debugger_base - DBG OPTS {'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj'}
+2016-09-07 01:13:34,765 DEBUG certfuzz.debuggers.debugger_base - DEBUGGER: {'debugheap': False, 'killprocname': None, 'input_file': '', 'debugger_output': '', 'type': 'msec', 'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj', 'faddr': None, 'outfile': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec', 'program': 'C:\\windows\\system32\\notepad.exe', 'result': {'debug_crash': None, 'crash_hash': None, 'dbg_type': None, 'faddr': None, 'exp': None, 'output': None}, 'timeout': 10, 'cmd_args': ['C:\\windows\\system32\\notepad.exe', 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt'], 'seed': None}
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args: ['cdb',
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args:  '-amsec.dll',
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args:  '-hd',
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args:  'gp',
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args:  '-logo',
+2016-09-07 01:13:34,766 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec',
+2016-09-07 01:13:34,767 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:34,767 DEBUG certfuzz.debuggers.msec - dbg_args:  'bpe',
+2016-09-07 01:13:34,767 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:34,767 DEBUG certfuzz.debuggers.msec - dbg_args:  'wob',
+2016-09-07 01:13:34,769 DEBUG certfuzz.debuggers.msec - dbg_args:  '-o',
+2016-09-07 01:13:34,769 DEBUG certfuzz.debuggers.msec - dbg_args:  '-G',
+2016-09-07 01:13:34,769 DEBUG certfuzz.debuggers.msec - dbg_args:  '-c',
+2016-09-07 01:13:34,769 DEBUG certfuzz.debuggers.msec - dbg_args:  '$$Found_with_CERT_FOE;r;!exploitable -v;q',
+2016-09-07 01:13:34,769 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:34,769 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt']
+2016-09-07 01:13:34,880 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9016
+2016-09-07 01:13:34,880 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 1900
+2016-09-07 01:13:34,957 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 4.75697153564e-10
+2016-09-07 01:13:35,206 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:35,456 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:35,707 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:35,971 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:36,236 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:36,486 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:36,752 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:37,015 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:37,282 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:37,530 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:37,780 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:38,049 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:38,302 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:38,568 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:38,828 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:39,092 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:39,342 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:39,592 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 12.5000600961
+2016-09-07 01:13:39,848 DEBUG certfuzz.debuggers.msec - Process 1900 CPU usage: 0.0
+2016-09-07 01:13:39,848 DEBUG certfuzz.debuggers.msec - killing 8596 due to CPU inactivity
+2016-09-07 01:13:39,848 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - initializing C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_isiabj\foe-crash-nhnxsj\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _read_file
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _process_lines
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.msec - parsed: {'backtrace': [],
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.msec - parsed:  'backtrace_without_questionmarks': [],
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.msec - parsed:  'crash_hash': None,
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_missed_stack_corruption': False,
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_output': "Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec'\n\nMicrosoft (R) Windows Debugger Version 6.11.0001.404 AMD64\nCopyright (c) Microsoft Corporation. All rights reserved.\n\nCommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt\nSymbol search path is: *** Invalid ***\n****************************************************************************\n* Symbol loading may be unreliable without a symbol search path.           *\n* Use .symfix to have the debugger choose a symbol path.                   *\n* After setting your symbol path, use .reload to refresh symbol locations. *\n****************************************************************************\nExecutable search path is: \nModLoad: 00000001`00000000 00000001`00035000   notepad.exe\nModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll\nModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll\nModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll\nModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll\nModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll\nModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll\nModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll\nModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll\nModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll\nModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll\nModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll\nModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll\nModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll\nModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll\nModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll\nModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll\nModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV\nModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll\nModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll\nModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll\n(76c.13c8): Break instruction exception - code 80000003 (first chance)\nModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL\nModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll\nModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll\nModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll\nModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll\n",
+2016-09-07 01:13:39,864 DEBUG certfuzz.debuggers.msec - parsed:  'exclude_unmapped_frames': True,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'exit_code': None,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'exp': None,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'faddr': None,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace': [],
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace_string': '',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'is_64bit': False,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'is_assert_fail': False,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'is_corrupt_stack': False,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'is_crash': False,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'is_debugbuild': False,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'keep_uniq_faddr': False,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'libc_end_addr': 0,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'libc_start_addr': 0,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_end_addr': 0,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_start_addr': 0,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'line_callbacks': [<bound method MsecFile._find_exploitability of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49EF0>>,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_efa of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49EF0>>,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_hash of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49EF0>>,
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_secondchance of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49EF0>>],
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:  'lines': ["Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec'",
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'Copyright (c) Microsoft Corporation. All rights reserved.',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'CommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'Symbol search path is: *** Invalid ***',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '* Symbol loading may be unreliable without a symbol search path.           *',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '* Use .symfix to have the debugger choose a symbol path.                   *',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '* After setting your symbol path, use .reload to refresh symbol locations. *',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'Executable search path is:',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`00000000 00000001`00035000   notepad.exe',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll',
+2016-09-07 01:13:39,878 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            '(76c.13c8): Break instruction exception - code 80000003 (first chance)',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll'],
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'module_map': [],
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'passed': set(),
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'pc_in_function': False,
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'pc_name': 'eip',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'registers': {},
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'registers_hex': {},
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'registers_sought': ['eax',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'ecx',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'edx',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'ebx',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'esp',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'ebp',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'esi',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'edi',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'eip',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'cs',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'ss',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'ds',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'es',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'fs',
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:                       'gs'],
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'secondchance': False,
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'signal': None,
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'total_stack_corruption': False,
+2016-09-07 01:13:39,894 DEBUG certfuzz.debuggers.msec - parsed:  'used_pc': False}
+2016-09-07 01:13:39,894 DEBUG certfuzz.crash.foe_crash - heisenbug found
+2016-09-07 01:13:39,894 DEBUG certfuzz.fuzztools.filetools - move C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_isiabj\foe-crash-nhnxsj\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec -> C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_isiabj\foe-crash-nhnxsj\sf_677271d56999ae96a9fe55fdf4a2a202-1-HSB.txt.msec
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - Crash:
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - ... {'cmd_template': <string.Template object at 0x03A49D70>,
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - ...  'cmdargs': ['C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - ...              'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt'],
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - ...  'copy_fuzzedfile': True,
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - ...  'crash_hash': None,
+2016-09-07 01:13:39,894 DEBUG certfuzz.campaign.iteration - ...  'dbg_class': <class 'certfuzz.debuggers.msec.MsecDebugger'>,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'dbg_file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1-HSB.txt.msec',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'dbg_opts': {'debugger': 'msec',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...               'debugheap': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...               'max_handled_exceptions': 6,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...               'runtimeout': 10,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...               'watchcpu': True},
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'dbg_result': {},
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'dbg_type': 'msec',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'debugger_file': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'debugger_missed_stack_corruption': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'debugger_template': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'debugger_timeout': 10,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'exception_depth': 0,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'exp': 'HEISENBUG',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'faddr': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'fuzzedfile': {'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202-1.txt', 'len': 13140, 'ext': '.txt', 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202-1', 'md5': '7660c285adbc933de8a51dbc4fa44979'},
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'hd_bits': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'hd_bytes': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'is_corrupt_stack': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'is_crash': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'is_heisenbug': True,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'is_unique': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'keep_uniq_faddr': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'logger': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'max_depth': 0,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'max_handled_exceptions': 6,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'parsed_outputs': [<certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49EF0>],
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'pc': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'pc_in_function': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'program': 'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'reached_secondchance': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'result_dir': None,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'seedfile': {'a': 1, 'b': 2, 'probability': 0.3333333333333333, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 1, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A2ACF0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'signature': '7660c285adbc933de8a51dbc4fa44979',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'tempdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj\\foe-crash-nhnxsj',
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'total_stack_corruption': False,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'watchcpu': True,
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - ...  'workdir_base': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_isiabj'}
+2016-09-07 01:13:39,910 INFO certfuzz.campaign.iteration - Candidate crash rejected: not a crash
+2016-09-07 01:13:39,910 INFO certfuzz.campaign.iteration - Done with iteration 1
+2016-09-07 01:13:39,910 DEBUG certfuzz.campaign.iteration - Cleanup iteration 1
+2016-09-07 01:13:39,926 DEBUG certfuzz.file_handlers.seedfile_set - Thing count: 2
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(677271d56999ae96a9fe55fdf4a2a202)=0.333333
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(d32dfc6844d1243eacc5e05de6877078)=0.666667
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - next_key=677271d56999ae96a9fe55fdf4a2a202
+2016-09-07 01:13:39,926 INFO certfuzz.campaign.campaign - Selected seedfile: sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:39,926 INFO certfuzz.campaign.iteration - Iteration: 2 File: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:13:39,926 INFO certfuzz.campaign.iteration - ...fuzzing
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base - Initialize Fuzzer
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base - {'basename_fuzzed': 'sf_677271d56999ae96a9fe55fdf4a2a202-2.txt',
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed': None,
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed_changes_input': True,
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'input': None,
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'iteration': 2,
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'options': {'fuzz_zip_container': False, 'fuzzer': 'bytemut'},
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'output_file_path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt',
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'range': None,
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'rng_seed': 137504714228284849588477640694909018626L,
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'saved_arcinfo': OrderedDict(),
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'sf': {'a': 1, 'b': 3, 'probability': 0.25, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 2, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A2ACF0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:13:39,926 DEBUG certfuzz.fuzzers.fuzzer_base -  'tmpdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih'}
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.000322-0.000522)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.000076-0.000123)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.000123-0.000199)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.039650-0.064155)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.001366-0.002210)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.711492-0.999924)=0.034483
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.002210-0.003575)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.064155-0.103805)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.000844-0.001366)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.003575-0.005785)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.000199-0.000322)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.024505-0.039650)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.271766-0.439726)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.005785-0.009360)=0.034483
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.167960-0.271766)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.009360-0.015145)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.103805-0.167960)=0.051724
+2016-09-07 01:13:39,926 DEBUG certfuzz.scoring.scorable_set - probability(0.000522-0.000844)=0.051724
+2016-09-07 01:13:39,941 DEBUG certfuzz.scoring.scorable_set - probability(0.015145-0.024505)=0.051724
+2016-09-07 01:13:39,941 DEBUG certfuzz.scoring.scorable_set - probability(0.439726-0.711492)=0.051724
+2016-09-07 01:13:39,941 DEBUG certfuzz.scoring.scorable_set - next_key=0.001366-0.002210
+2016-09-07 01:13:39,941 DEBUG root - fuzz params: 137504714228284849588477640694909018626 2 0.001366 0.002210 None
+2016-09-07 01:13:39,943 DEBUG certfuzz.fuzzers.bytemut - ratio=0.001752 len=13140
+2016-09-07 01:13:39,943 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_ky8aih\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt
+2016-09-07 01:13:39,944 INFO certfuzz.campaign.iteration - Selected r: 0.001366-0.002210
+2016-09-07 01:13:39,944 INFO certfuzz.campaign.iteration - ...analyzing
+2016-09-07 01:13:39,944 DEBUG certfuzz.campaign.iteration - Building crash object
+2016-09-07 01:13:39,944 DEBUG certfuzz.crash.crash_base - Inititalize Crash
+2016-09-07 01:13:39,948 DEBUG certfuzz.crash.foe_crash - tries left: 0
+2016-09-07 01:13:39,948 DEBUG certfuzz.debuggers.debugger_base - Initialize Debugger
+2016-09-07 01:13:39,948 DEBUG certfuzz.debuggers.debugger_base - DBG OPTS {'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn'}
+2016-09-07 01:13:39,950 DEBUG certfuzz.debuggers.debugger_base - DEBUGGER: {'debugheap': False, 'killprocname': None, 'input_file': '', 'debugger_output': '', 'type': 'msec', 'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn', 'faddr': None, 'outfile': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec', 'program': 'C:\\windows\\system32\\notepad.exe', 'result': {'debug_crash': None, 'crash_hash': None, 'dbg_type': None, 'faddr': None, 'exp': None, 'output': None}, 'timeout': 10, 'cmd_args': ['C:\\windows\\system32\\notepad.exe', 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt'], 'seed': None}
+2016-09-07 01:13:39,950 DEBUG certfuzz.debuggers.msec - dbg_args: ['cdb',
+2016-09-07 01:13:39,950 DEBUG certfuzz.debuggers.msec - dbg_args:  '-amsec.dll',
+2016-09-07 01:13:39,950 DEBUG certfuzz.debuggers.msec - dbg_args:  '-hd',
+2016-09-07 01:13:39,951 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:39,951 DEBUG certfuzz.debuggers.msec - dbg_args:  'gp',
+2016-09-07 01:13:39,951 DEBUG certfuzz.debuggers.msec - dbg_args:  '-logo',
+2016-09-07 01:13:39,951 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  'bpe',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  'wob',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  '-o',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  '-G',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  '-c',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  '$$Found_with_CERT_FOE;r;!exploitable -v;q',
+2016-09-07 01:13:39,953 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:39,954 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt']
+2016-09-07 01:13:40,061 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9016
+2016-09-07 01:13:40,062 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 6516
+2016-09-07 01:13:40,128 DEBUG certfuzz.debuggers.msec - Process 6516 CPU usage: 3.56772865032e-10
+2016-09-07 01:13:40,398 DEBUG certfuzz.debuggers.msec - Process 6516 CPU usage: 6.03250027359
+2016-09-07 01:13:40,648 DEBUG certfuzz.debuggers.msec - Process 6516 CPU usage: 0.0
+2016-09-07 01:13:40,648 DEBUG certfuzz.debuggers.msec - killing 9580 due to CPU inactivity
+2016-09-07 01:13:40,648 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - initializing C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_ky8aih\foe-crash-pdspkn\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _read_file
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _process_lines
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.msec - parsed: {'backtrace': [],
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.msec - parsed:  'backtrace_without_questionmarks': [],
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.msec - parsed:  'crash_hash': None,
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_missed_stack_corruption': False,
+2016-09-07 01:13:40,664 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_output': "Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec'\n\nMicrosoft (R) Windows Debugger Version 6.11.0001.404 AMD64\nCopyright (c) Microsoft Corporation. All rights reserved.\n\nCommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt\nSymbol search path is: *** Invalid ***\n****************************************************************************\n* Symbol loading may be unreliable without a symbol search path.           *\n* Use .symfix to have the debugger choose a symbol path.                   *\n* After setting your symbol path, use .reload to refresh symbol locations. *\n****************************************************************************\nExecutable search path is: \nModLoad: 00000001`00000000 00000001`00035000   notepad.exe\nModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll\nModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll\nModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll\nModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll\nModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll\nModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll\nModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll\nModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll\nModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll\nModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll\nModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll\nModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll\nModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll\nModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll\nModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll\nModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll\nModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV\nModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll\nModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll\nModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll\n(1974.2234): Break instruction exception - code 80000003 (first chance)\nModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL\nModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll\nModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll\nModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll\nModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll\n",
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'exclude_unmapped_frames': True,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'exit_code': None,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'exp': None,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'faddr': None,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace': [],
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace_string': '',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'is_64bit': False,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'is_assert_fail': False,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'is_corrupt_stack': False,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'is_crash': False,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'is_debugbuild': False,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'keep_uniq_faddr': False,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'libc_end_addr': 0,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'libc_start_addr': 0,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_end_addr': 0,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_start_addr': 0,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'line_callbacks': [<bound method MsecFile._find_exploitability of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49D90>>,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_efa of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49D90>>,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_hash of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49D90>>,
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_secondchance of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49D90>>],
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:  'lines': ["Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec'",
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'Copyright (c) Microsoft Corporation. All rights reserved.',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'CommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'Symbol search path is: *** Invalid ***',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '* Symbol loading may be unreliable without a symbol search path.           *',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '* Use .symfix to have the debugger choose a symbol path.                   *',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '* After setting your symbol path, use .reload to refresh symbol locations. *',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'Executable search path is:',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`00000000 00000001`00035000   notepad.exe',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll',
+2016-09-07 01:13:40,680 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll',
+2016-09-07 01:13:40,694 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll',
+2016-09-07 01:13:40,694 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll',
+2016-09-07 01:13:40,694 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll',
+2016-09-07 01:13:40,696 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll',
+2016-09-07 01:13:40,696 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll',
+2016-09-07 01:13:40,696 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll',
+2016-09-07 01:13:40,697 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll',
+2016-09-07 01:13:40,697 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV',
+2016-09-07 01:13:40,697 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll',
+2016-09-07 01:13:40,697 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll',
+2016-09-07 01:13:40,697 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll',
+2016-09-07 01:13:40,697 DEBUG certfuzz.debuggers.msec - parsed:            '(1974.2234): Break instruction exception - code 80000003 (first chance)',
+2016-09-07 01:13:40,698 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL',
+2016-09-07 01:13:40,698 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll',
+2016-09-07 01:13:40,698 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll',
+2016-09-07 01:13:40,700 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll',
+2016-09-07 01:13:40,700 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll'],
+2016-09-07 01:13:40,700 DEBUG certfuzz.debuggers.msec - parsed:  'module_map': [],
+2016-09-07 01:13:40,700 DEBUG certfuzz.debuggers.msec - parsed:  'passed': set(),
+2016-09-07 01:13:40,700 DEBUG certfuzz.debuggers.msec - parsed:  'pc_in_function': False,
+2016-09-07 01:13:40,700 DEBUG certfuzz.debuggers.msec - parsed:  'pc_name': 'eip',
+2016-09-07 01:13:40,701 DEBUG certfuzz.debuggers.msec - parsed:  'registers': {},
+2016-09-07 01:13:40,701 DEBUG certfuzz.debuggers.msec - parsed:  'registers_hex': {},
+2016-09-07 01:13:40,701 DEBUG certfuzz.debuggers.msec - parsed:  'registers_sought': ['eax',
+2016-09-07 01:13:40,701 DEBUG certfuzz.debuggers.msec - parsed:                       'ecx',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'edx',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'ebx',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'esp',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'ebp',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'esi',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'edi',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'eip',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'cs',
+2016-09-07 01:13:40,703 DEBUG certfuzz.debuggers.msec - parsed:                       'ss',
+2016-09-07 01:13:40,704 DEBUG certfuzz.debuggers.msec - parsed:                       'ds',
+2016-09-07 01:13:40,704 DEBUG certfuzz.debuggers.msec - parsed:                       'es',
+2016-09-07 01:13:40,704 DEBUG certfuzz.debuggers.msec - parsed:                       'fs',
+2016-09-07 01:13:40,706 DEBUG certfuzz.debuggers.msec - parsed:                       'gs'],
+2016-09-07 01:13:40,706 DEBUG certfuzz.debuggers.msec - parsed:  'secondchance': False,
+2016-09-07 01:13:40,706 DEBUG certfuzz.debuggers.msec - parsed:  'signal': None,
+2016-09-07 01:13:40,706 DEBUG certfuzz.debuggers.msec - parsed:  'total_stack_corruption': False,
+2016-09-07 01:13:40,707 DEBUG certfuzz.debuggers.msec - parsed:  'used_pc': False}
+2016-09-07 01:13:40,707 DEBUG certfuzz.crash.foe_crash - heisenbug found
+2016-09-07 01:13:40,707 DEBUG certfuzz.fuzztools.filetools - move C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_ky8aih\foe-crash-pdspkn\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt.msec -> C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_ky8aih\foe-crash-pdspkn\sf_677271d56999ae96a9fe55fdf4a2a202-2-HSB.txt.msec
+2016-09-07 01:13:40,709 DEBUG certfuzz.campaign.iteration - Crash:
+2016-09-07 01:13:40,710 DEBUG certfuzz.campaign.iteration - ... {'cmd_template': <string.Template object at 0x03A49E10>,
+2016-09-07 01:13:40,710 DEBUG certfuzz.campaign.iteration - ...  'cmdargs': ['C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:40,710 DEBUG certfuzz.campaign.iteration - ...              'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt'],
+2016-09-07 01:13:40,710 DEBUG certfuzz.campaign.iteration - ...  'copy_fuzzedfile': True,
+2016-09-07 01:13:40,710 DEBUG certfuzz.campaign.iteration - ...  'crash_hash': None,
+2016-09-07 01:13:40,711 DEBUG certfuzz.campaign.iteration - ...  'dbg_class': <class 'certfuzz.debuggers.msec.MsecDebugger'>,
+2016-09-07 01:13:40,711 DEBUG certfuzz.campaign.iteration - ...  'dbg_file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2-HSB.txt.msec',
+2016-09-07 01:13:40,711 DEBUG certfuzz.campaign.iteration - ...  'dbg_opts': {'debugger': 'msec',
+2016-09-07 01:13:40,711 DEBUG certfuzz.campaign.iteration - ...               'debugheap': False,
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...               'max_handled_exceptions': 6,
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...               'runtimeout': 10,
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...               'watchcpu': True},
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...  'dbg_result': {},
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...  'dbg_type': 'msec',
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...  'debugger_file': None,
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...  'debugger_missed_stack_corruption': False,
+2016-09-07 01:13:40,713 DEBUG certfuzz.campaign.iteration - ...  'debugger_template': None,
+2016-09-07 01:13:40,714 DEBUG certfuzz.campaign.iteration - ...  'debugger_timeout': 10,
+2016-09-07 01:13:40,714 DEBUG certfuzz.campaign.iteration - ...  'exception_depth': 0,
+2016-09-07 01:13:40,714 DEBUG certfuzz.campaign.iteration - ...  'exp': 'HEISENBUG',
+2016-09-07 01:13:40,714 DEBUG certfuzz.campaign.iteration - ...  'faddr': None,
+2016-09-07 01:13:40,714 DEBUG certfuzz.campaign.iteration - ...  'fuzzedfile': {'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202-2.txt', 'len': 13140, 'ext': '.txt', 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn\\sf_677271d56999ae96a9fe55fdf4a2a202-2.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202-2', 'md5': 'f7dd8ce09a40a06364ae1131ef0e49f3'},
+2016-09-07 01:13:40,716 DEBUG certfuzz.campaign.iteration - ...  'hd_bits': None,
+2016-09-07 01:13:40,716 DEBUG certfuzz.campaign.iteration - ...  'hd_bytes': None,
+2016-09-07 01:13:40,716 DEBUG certfuzz.campaign.iteration - ...  'is_corrupt_stack': False,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'is_crash': False,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'is_heisenbug': True,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'is_unique': False,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'keep_uniq_faddr': False,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'logger': None,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'max_depth': 0,
+2016-09-07 01:13:40,717 DEBUG certfuzz.campaign.iteration - ...  'max_handled_exceptions': 6,
+2016-09-07 01:13:40,719 DEBUG certfuzz.campaign.iteration - ...  'parsed_outputs': [<certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A49D90>],
+2016-09-07 01:13:40,719 DEBUG certfuzz.campaign.iteration - ...  'pc': None,
+2016-09-07 01:13:40,719 DEBUG certfuzz.campaign.iteration - ...  'pc_in_function': False,
+2016-09-07 01:13:40,720 DEBUG certfuzz.campaign.iteration - ...  'program': 'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:40,720 DEBUG certfuzz.campaign.iteration - ...  'reached_secondchance': False,
+2016-09-07 01:13:40,720 DEBUG certfuzz.campaign.iteration - ...  'result_dir': None,
+2016-09-07 01:13:40,720 DEBUG certfuzz.campaign.iteration - ...  'seedfile': {'a': 1, 'b': 3, 'probability': 0.25, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 2, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A2ACF0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:13:40,720 DEBUG certfuzz.campaign.iteration - ...  'signature': 'f7dd8ce09a40a06364ae1131ef0e49f3',
+2016-09-07 01:13:40,720 DEBUG certfuzz.campaign.iteration - ...  'tempdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih\\foe-crash-pdspkn',
+2016-09-07 01:13:40,721 DEBUG certfuzz.campaign.iteration - ...  'total_stack_corruption': False,
+2016-09-07 01:13:40,721 DEBUG certfuzz.campaign.iteration - ...  'watchcpu': True,
+2016-09-07 01:13:40,721 DEBUG certfuzz.campaign.iteration - ...  'workdir_base': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_ky8aih'}
+2016-09-07 01:13:40,723 INFO certfuzz.campaign.iteration - Candidate crash rejected: not a crash
+2016-09-07 01:13:40,723 INFO certfuzz.campaign.iteration - Done with iteration 2
+2016-09-07 01:13:40,723 DEBUG certfuzz.campaign.iteration - Cleanup iteration 2
+2016-09-07 01:13:40,729 DEBUG certfuzz.file_handlers.seedfile_set - Thing count: 2
+2016-09-07 01:13:40,730 DEBUG certfuzz.scoring.scorable_set - probability(677271d56999ae96a9fe55fdf4a2a202)=0.285714
+2016-09-07 01:13:40,730 DEBUG certfuzz.scoring.scorable_set - probability(d32dfc6844d1243eacc5e05de6877078)=0.714286
+2016-09-07 01:13:40,730 DEBUG certfuzz.scoring.scorable_set - next_key=d32dfc6844d1243eacc5e05de6877078
+2016-09-07 01:13:40,730 INFO certfuzz.campaign.campaign - Selected seedfile: sf_d32dfc6844d1243eacc5e05de6877078.txt
+2016-09-07 01:13:40,730 INFO certfuzz.campaign.iteration - Iteration: 3 File: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\seedfiles\sf_d32dfc6844d1243eacc5e05de6877078.txt
+2016-09-07 01:13:40,732 INFO certfuzz.campaign.iteration - ...fuzzing
+2016-09-07 01:13:40,732 DEBUG certfuzz.fuzzers.fuzzer_base - Initialize Fuzzer
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base - {'basename_fuzzed': 'sf_d32dfc6844d1243eacc5e05de6877078-3.txt',
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed': None,
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed_changes_input': True,
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'input': None,
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'iteration': 3,
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'options': {'fuzz_zip_container': False, 'fuzzer': 'bytemut'},
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'output_file_path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\sf_d32dfc6844d1243eacc5e05de6877078-3.txt',
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'range': None,
+2016-09-07 01:13:40,733 DEBUG certfuzz.fuzzers.fuzzer_base -  'rng_seed': 280705879897498155455917147976720937080L,
+2016-09-07 01:13:40,734 DEBUG certfuzz.fuzzers.fuzzer_base -  'saved_arcinfo': OrderedDict(),
+2016-09-07 01:13:40,734 DEBUG certfuzz.fuzzers.fuzzer_base -  'sf': {'a': 1, 'b': 1, 'probability': 0.5, 'range_min': 0.0005858230814294083, 'successes': 0, 'range_max': 0.9994141769185706, 'basename': 'sf_d32dfc6844d1243eacc5e05de6877078.txt', 'uniques_only': True, 'len': 1707, 'tries': 0, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A352F0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\convert v5.5.7\\seedfiles\\d32dfc6844d1243eacc5e05de6877078', 'key': 'd32dfc6844d1243eacc5e05de6877078', 'seen': {}, 'bitlen': 13656, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles\\sf_d32dfc6844d1243eacc5e05de6877078.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\seedfiles', 'root': 'sf_d32dfc6844d1243eacc5e05de6877078', 'md5': 'd32dfc6844d1243eacc5e05de6877078'},
+2016-09-07 01:13:40,736 DEBUG certfuzz.fuzzers.fuzzer_base -  'tmpdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk'}
+2016-09-07 01:13:40,736 DEBUG certfuzz.scoring.scorable_set - probability(0.001534-0.002482)=0.066667
+2016-09-07 01:13:40,736 DEBUG certfuzz.scoring.scorable_set - probability(0.027521-0.044530)=0.066667
+2016-09-07 01:13:40,736 DEBUG certfuzz.scoring.scorable_set - probability(0.188633-0.305215)=0.066667
+2016-09-07 01:13:40,736 DEBUG certfuzz.scoring.scorable_set - probability(0.017009-0.027521)=0.066667
+2016-09-07 01:13:40,736 DEBUG certfuzz.scoring.scorable_set - probability(0.006497-0.010512)=0.066667
+2016-09-07 01:13:40,737 DEBUG certfuzz.scoring.scorable_set - probability(0.000948-0.001534)=0.066667
+2016-09-07 01:13:40,737 DEBUG certfuzz.scoring.scorable_set - probability(0.305215-0.493848)=0.066667
+2016-09-07 01:13:40,737 DEBUG certfuzz.scoring.scorable_set - probability(0.002482-0.004015)=0.066667
+2016-09-07 01:13:40,739 DEBUG certfuzz.scoring.scorable_set - probability(0.000586-0.000948)=0.066667
+2016-09-07 01:13:40,739 DEBUG certfuzz.scoring.scorable_set - probability(0.116582-0.188633)=0.066667
+2016-09-07 01:13:40,739 DEBUG certfuzz.scoring.scorable_set - probability(0.004015-0.006497)=0.066667
+2016-09-07 01:13:40,740 DEBUG certfuzz.scoring.scorable_set - probability(0.072051-0.116582)=0.066667
+2016-09-07 01:13:40,740 DEBUG certfuzz.scoring.scorable_set - probability(0.493848-0.999414)=0.066667
+2016-09-07 01:13:40,740 DEBUG certfuzz.scoring.scorable_set - probability(0.010512-0.017009)=0.066667
+2016-09-07 01:13:40,740 DEBUG certfuzz.scoring.scorable_set - probability(0.044530-0.072051)=0.066667
+2016-09-07 01:13:40,740 DEBUG certfuzz.scoring.scorable_set - next_key=0.188633-0.305215
+2016-09-07 01:13:40,740 DEBUG root - fuzz params: 280705879897498155455917147976720937080 3 0.188633 0.305215 None
+2016-09-07 01:13:40,740 DEBUG certfuzz.fuzzers.bytemut - ratio=0.218775 len=1707
+2016-09-07 01:13:40,742 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt\iteration_kyiqkk\sf_d32dfc6844d1243eacc5e05de6877078-3.txt
+2016-09-07 01:13:40,743 INFO certfuzz.campaign.iteration - Selected r: 0.188633-0.305215
+2016-09-07 01:13:40,743 INFO certfuzz.campaign.iteration - ...analyzing
+2016-09-07 01:13:40,743 DEBUG certfuzz.campaign.iteration - Building crash object
+2016-09-07 01:13:40,743 DEBUG certfuzz.crash.crash_base - Inititalize Crash
+2016-09-07 01:13:40,746 DEBUG certfuzz.crash.foe_crash - tries left: 0
+2016-09-07 01:13:40,747 DEBUG certfuzz.debuggers.debugger_base - Initialize Debugger
+2016-09-07 01:13:40,747 DEBUG certfuzz.debuggers.debugger_base - DBG OPTS {'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\foe-crash-k9mllx'}
+2016-09-07 01:13:40,747 DEBUG certfuzz.debuggers.debugger_base - DEBUGGER: {'debugheap': False, 'killprocname': None, 'input_file': '', 'debugger_output': '', 'type': 'msec', 'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\foe-crash-k9mllx', 'faddr': None, 'outfile': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\foe-crash-k9mllx\\sf_d32dfc6844d1243eacc5e05de6877078-3.txt.msec', 'program': 'C:\\windows\\system32\\notepad.exe', 'result': {'debug_crash': None, 'crash_hash': None, 'dbg_type': None, 'faddr': None, 'exp': None, 'output': None}, 'timeout': 10, 'cmd_args': ['C:\\windows\\system32\\notepad.exe', 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\foe-crash-k9mllx\\sf_d32dfc6844d1243eacc5e05de6877078-3.txt'], 'seed': None}
+2016-09-07 01:13:40,749 DEBUG certfuzz.debuggers.msec - dbg_args: ['cdb',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  '-amsec.dll',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  '-hd',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  'gp',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  '-logo',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\foe-crash-k9mllx\\sf_d32dfc6844d1243eacc5e05de6877078-3.txt.msec',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:40,750 DEBUG certfuzz.debuggers.msec - dbg_args:  'bpe',
+2016-09-07 01:13:40,752 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:13:40,752 DEBUG certfuzz.debuggers.msec - dbg_args:  'wob',
+2016-09-07 01:13:40,752 DEBUG certfuzz.debuggers.msec - dbg_args:  '-o',
+2016-09-07 01:13:40,752 DEBUG certfuzz.debuggers.msec - dbg_args:  '-G',
+2016-09-07 01:13:40,753 DEBUG certfuzz.debuggers.msec - dbg_args:  '-c',
+2016-09-07 01:13:40,753 DEBUG certfuzz.debuggers.msec - dbg_args:  '$$Found_with_CERT_FOE;r;!exploitable -v;q',
+2016-09-07 01:13:40,753 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:13:40,753 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_da9dyt\\iteration_kyiqkk\\foe-crash-k9mllx\\sf_d32dfc6844d1243eacc5e05de6877078-3.txt']
+2016-09-07 01:13:40,865 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9016
+2016-09-07 01:13:40,865 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9256
+2016-09-07 01:13:40,936 DEBUG certfuzz.debuggers.msec - Process 9256 CPU usage: 2.37848576674e-10
+2016-09-07 01:13:41,207 DEBUG certfuzz.debuggers.msec - Process 9256 CPU usage: 0.0
+2016-09-07 01:13:41,460 DEBUG certfuzz.debuggers.msec - Process 9256 CPU usage: 5.77767144297
+2016-09-07 01:13:41,584 WARNING certfuzz.campaign.iteration - Iteration terminating abnormally due to KeyboardInterrupt: 
+2016-09-07 01:13:41,584 DEBUG certfuzz.campaign.iteration - Skipping cleanup since we are in debug mode.
+2016-09-07 01:13:41,584 WARNING certfuzz.campaign.campaign - Keyboard interrupt - exiting
+2016-09-07 01:13:41,584 WARNING certfuzz.campaign.campaign - Unable to remove campaign working dir: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_da9dyt
+2016-09-07 01:13:41,584 INFO root - Campaign complete
+2016-09-07 01:15:07,938 INFO root - Welcome to C:\diagnose_vulnerabilities\FOE2\foe2.py version 2.1
+2016-09-07 01:15:07,938 DEBUG root - Instantiating embedded rpdb2 debugger with password "foe"...
+2016-09-07 01:15:07,954 DEBUG root - Error importing rpdb2. Is Winpdb installed?
+2016-09-07 01:15:07,954 DEBUG root - Enabling heapy remote monitoring...
+2016-09-07 01:15:07,954 DEBUG root - Error importing heapy. Is Guppy-PE installed?
+2016-09-07 01:15:07,954 DEBUG certfuzz.campaign.campaign - initialize WindowsCampaign
+2016-09-07 01:15:07,970 DEBUG certfuzz.campaign.campaign - outdir=C:\diagnose_vulnerabilities\FOE2\notepad\results\notepad
+2016-09-07 01:15:07,970 DEBUG certfuzz.campaign.campaign - winrun is not compatible with Windows 6 AMD64. Overriding.
+2016-09-07 01:15:07,970 INFO certfuzz.campaign.campaign - No cached campaign found, using new campaign
+2016-09-07 01:15:07,970 DEBUG certfuzz.campaign.campaign - Importing module certfuzz.fuzzers.bytemut
+2016-09-07 01:15:07,970 DEBUG certfuzz.campaign.campaign - Importing module certfuzz.debuggers.msec
+2016-09-07 01:15:08,000 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2016-09-07 01:15:08,000 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\results\notepad\version.txt
+2016-09-07 01:15:08,000 DEBUG certfuzz.file_handlers.seedfile_set - SeedfileSet output_dir: C:\diagnose_vulnerabilities\FOE2\notepad\results\notepad\seedfiles
+2016-09-07 01:15:08,016 DEBUG certfuzz.fuzztools.rangefinder - Rangefinder log: C:\diagnose_vulnerabilities\FOE2\notepad\results\notepad\seedfiles\677271d56999ae96a9fe55fdf4a2a202\rangefinder.log
+2016-09-07 01:15:08,017 INFO certfuzz.file_handlers.seedfile_set - Adding file to set: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:15:08,019 DEBUG certfuzz.fuzztools.rangefinder - Rangefinder log: C:\diagnose_vulnerabilities\FOE2\notepad\results\notepad\seedfiles\d32dfc6844d1243eacc5e05de6877078\rangefinder.log
+2016-09-07 01:15:08,019 INFO certfuzz.file_handlers.seedfile_set - Adding file to set: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\seedfiles\sf_d32dfc6844d1243eacc5e05de6877078.txt
+2016-09-07 01:15:08,019 DEBUG certfuzz.campaign.campaign - Caching application C:\windows\system32\notepad.exe and determining if we need to watch the CPU...
+2016-09-07 01:15:08,029 DEBUG certfuzz.campaign.campaign - ...Timer: 5.000000
+2016-09-07 01:15:08,030 DEBUG certfuzz.campaign.campaign - ...timer start
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - This seems to be a GUI application.
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - Enabling runner CPU monitoring for dynamic timeout
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - kill runner watchcpu: True
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - Enabling debugger CPU monitoring for dynamic timeout
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - kill debugger watchcpu: True
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - kill <certfuzz.runners.killableprocess.Popen object at 0x03A09D90>
+2016-09-07 01:15:13,042 DEBUG certfuzz.campaign.campaign - ...timer stop
+2016-09-07 01:15:13,042 INFO root - Initiating campaign
+2016-09-07 01:15:13,042 DEBUG certfuzz.file_handlers.seedfile_set - Thing count: 2
+2016-09-07 01:15:13,042 DEBUG certfuzz.scoring.scorable_set - probability(677271d56999ae96a9fe55fdf4a2a202)=0.500000
+2016-09-07 01:15:13,042 DEBUG certfuzz.scoring.scorable_set - probability(d32dfc6844d1243eacc5e05de6877078)=0.500000
+2016-09-07 01:15:13,042 DEBUG certfuzz.scoring.scorable_set - next_key=677271d56999ae96a9fe55fdf4a2a202
+2016-09-07 01:15:13,042 INFO certfuzz.campaign.campaign - Selected seedfile: sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzztools.object_caching - Wrote WindowsCampaign to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_notepad.pkl
+2016-09-07 01:15:13,042 INFO certfuzz.campaign.iteration - Iteration: 0 File: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:15:13,042 INFO certfuzz.campaign.iteration - ...fuzzing
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base - Initialize Fuzzer
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base - {'basename_fuzzed': 'sf_677271d56999ae96a9fe55fdf4a2a202-0.txt',
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed': None,
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed_changes_input': True,
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base -  'input': None,
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base -  'iteration': 0,
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base -  'options': {'fuzz_zip_container': False, 'fuzzer': 'bytemut'},
+2016-09-07 01:15:13,042 DEBUG certfuzz.fuzzers.fuzzer_base -  'output_file_path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt',
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzzers.fuzzer_base -  'range': None,
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzzers.fuzzer_base -  'rng_seed': 137504714228284849588477640694909018626L,
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzzers.fuzzer_base -  'saved_arcinfo': OrderedDict(),
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzzers.fuzzer_base -  'sf': {'a': 1, 'b': 1, 'probability': 0.5, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 0, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A09DD0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\notepad\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzzers.fuzzer_base -  'tmpdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr'}
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.000322-0.000522)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.000076-0.000123)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.000123-0.000199)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.039650-0.064155)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.001366-0.002210)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.711492-0.999924)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.002210-0.003575)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.064155-0.103805)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.000844-0.001366)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.003575-0.005785)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.000199-0.000322)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.024505-0.039650)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.271766-0.439726)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.005785-0.009360)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.167960-0.271766)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.009360-0.015145)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.103805-0.167960)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.000522-0.000844)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.015145-0.024505)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - probability(0.439726-0.711492)=0.050000
+2016-09-07 01:15:13,059 DEBUG certfuzz.scoring.scorable_set - next_key=0.167960-0.271766
+2016-09-07 01:15:13,059 DEBUG root - fuzz params: 137504714228284849588477640694909018626 0 0.167960 0.271766 None
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzzers.bytemut - ratio=0.215491 len=13140
+2016-09-07 01:15:13,059 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\iteration_ssrisr\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt
+2016-09-07 01:15:13,059 INFO certfuzz.campaign.iteration - Selected r: 0.167960-0.271766
+2016-09-07 01:15:13,059 INFO certfuzz.campaign.iteration - ...analyzing
+2016-09-07 01:15:13,059 DEBUG certfuzz.campaign.iteration - Building crash object
+2016-09-07 01:15:13,059 DEBUG certfuzz.crash.crash_base - Inititalize Crash
+2016-09-07 01:15:13,073 DEBUG certfuzz.crash.foe_crash - tries left: 0
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.debugger_base - Initialize Debugger
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.debugger_base - DBG OPTS {'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to'}
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.debugger_base - DEBUGGER: {'debugheap': False, 'killprocname': None, 'input_file': '', 'debugger_output': '', 'type': 'msec', 'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to', 'faddr': None, 'outfile': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec', 'program': 'C:\\windows\\system32\\notepad.exe', 'result': {'debug_crash': None, 'crash_hash': None, 'dbg_type': None, 'faddr': None, 'exp': None, 'output': None}, 'timeout': 10, 'cmd_args': ['C:\\windows\\system32\\notepad.exe', 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt'], 'seed': None}
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args: ['cdb',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-amsec.dll',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-hd',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  'gp',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-logo',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  'bpe',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  'wob',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-o',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-G',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '-c',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  '$$Found_with_CERT_FOE;r;!exploitable -v;q',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:15:13,073 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt']
+2016-09-07 01:15:13,207 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9016
+2016-09-07 01:15:13,209 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9168
+2016-09-07 01:15:13,569 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 7.13545724983e-10
+2016-09-07 01:15:13,821 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:14,085 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:14,335 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:14,585 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:14,851 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:15,099 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:15,352 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:15,601 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:15,851 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:16,101 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:16,352 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:16,602 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 6.25002754402
+2016-09-07 01:15:16,851 DEBUG certfuzz.debuggers.msec - Process 9168 CPU usage: 0.0
+2016-09-07 01:15:16,851 DEBUG certfuzz.debuggers.msec - killing 6672 due to CPU inactivity
+2016-09-07 01:15:16,851 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - initializing C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\iteration_ssrisr\foe-crash-ygd6to\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec
+2016-09-07 01:15:16,851 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _read_file
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.output_parsers.debugger_file_base - _process_lines
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed: {'backtrace': [],
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'backtrace_without_questionmarks': [],
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'crash_hash': None,
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_missed_stack_corruption': False,
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'debugger_output': "Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec'\n\nMicrosoft (R) Windows Debugger Version 6.11.0001.404 AMD64\nCopyright (c) Microsoft Corporation. All rights reserved.\n\nCommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt\nSymbol search path is: *** Invalid ***\n****************************************************************************\n* Symbol loading may be unreliable without a symbol search path.           *\n* Use .symfix to have the debugger choose a symbol path.                   *\n* After setting your symbol path, use .reload to refresh symbol locations. *\n****************************************************************************\nExecutable search path is: \nModLoad: 00000001`00000000 00000001`00035000   notepad.exe\nModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll\nModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll\nModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll\nModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll\nModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll\nModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll\nModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll\nModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll\nModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll\nModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll\nModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll\nModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll\nModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll\nModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll\nModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll\nModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll\nModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV\nModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll\nModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll\nModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll\n(23d0.1640): Break instruction exception - code 80000003 (first chance)\nModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL\nModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll\nModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll\nModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll\nModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll\n",
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'exclude_unmapped_frames': True,
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'exit_code': None,
+2016-09-07 01:15:16,868 DEBUG certfuzz.debuggers.msec - parsed:  'exp': None,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'faddr': None,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace': [],
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'hashable_backtrace_string': '',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'is_64bit': False,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'is_assert_fail': False,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'is_corrupt_stack': False,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'is_crash': False,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'is_debugbuild': False,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'keep_uniq_faddr': False,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'libc_end_addr': 0,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'libc_start_addr': 0,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_end_addr': 0,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'libgcc_start_addr': 0,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'line_callbacks': [<bound method MsecFile._find_exploitability of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A13610>>,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_efa of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A13610>>,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_hash of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A13610>>,
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:                     <bound method MsecFile._find_secondchance of <certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A13610>>],
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:  'lines': ["Opened log file 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec'",
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'Copyright (c) Microsoft Corporation. All rights reserved.',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'CommandLine: C:\\windows\\system32\\notepad.exe C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'Symbol search path is: *** Invalid ***',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '* Symbol loading may be unreliable without a symbol search path.           *',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '* Use .symfix to have the debugger choose a symbol path.                   *',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '* After setting your symbol path, use .reload to refresh symbol locations. *',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '****************************************************************************',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'Executable search path is:',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`00000000 00000001`00035000   notepad.exe',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78d20000 00000000`78e3f000   C:\\Windows\\system32\\kernel32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000001`80000000 00000001`80033000   C:\\Program Files (x86)\\AVG\\Av\\avghooka.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`38880000 000007ff`388ea000   C:\\Windows\\system32\\KERNELBASE.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7ff10000 000007ff`7ffeb000   C:\\Windows\\system32\\ADVAPI32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`756a0000 000007ff`7573f000   C:\\Windows\\system32\\msvcrt.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2d2e0000 000007ff`2d2ff000   C:\\Windows\\SYSTEM32\\sechost.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fde0000 000007ff`7ff0d000   C:\\Windows\\system32\\RPCRT4.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7fd70000 000007ff`7fdd7000   C:\\Windows\\system32\\GDI32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 00000000`78c20000 00000000`78d1a000   C:\\Windows\\system32\\USER32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70410000 000007ff`7041e000   C:\\Windows\\system32\\LPK.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`760c0000 000007ff`7618a000   C:\\Windows\\system32\\USP10.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`75550000 000007ff`755e7000   C:\\Windows\\system32\\COMDLG32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`74180000 000007ff`741f1000   C:\\Windows\\system32\\SHLWAPI.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a200000 000007ff`7a3f4000   C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\COMCTL32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`788c0000 000007ff`7964c000   C:\\Windows\\system32\\SHELL32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`73f00000 000007ff`73f71000   C:\\windows\\system32\\WINSPOOL.DRV',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`7a5f0000 000007ff`7a7f3000   C:\\Windows\\system32\\ole32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`76880000 000007ff`76958000   C:\\Windows\\system32\\OLEAUT32.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`700f0000 000007ff`700fc000   C:\\windows\\system32\\VERSION.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            '(23d0.1640): Break instruction exception - code 80000003 (first chance)',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`718f0000 000007ff`7191e000   C:\\Windows\\system32\\IMM32.DLL',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`774b0000 000007ff`775b9000   C:\\Windows\\system32\\MSCTF.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`2ade0000 000007ff`2adef000   C:\\windows\\system32\\CRYPTBASE.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`72ee0000 000007ff`72f36000   C:\\Windows\\system32\\uxtheme.dll',
+2016-09-07 01:15:16,884 DEBUG certfuzz.debuggers.msec - parsed:            'ModLoad: 000007ff`70f60000 000007ff`70f78000   C:\\windows\\system32\\dwmapi.dll'],
+2016-09-07 01:15:16,898 DEBUG certfuzz.debuggers.msec - parsed:  'module_map': [],
+2016-09-07 01:15:16,898 DEBUG certfuzz.debuggers.msec - parsed:  'passed': set(),
+2016-09-07 01:15:16,898 DEBUG certfuzz.debuggers.msec - parsed:  'pc_in_function': False,
+2016-09-07 01:15:16,898 DEBUG certfuzz.debuggers.msec - parsed:  'pc_name': 'eip',
+2016-09-07 01:15:16,900 DEBUG certfuzz.debuggers.msec - parsed:  'registers': {},
+2016-09-07 01:15:16,900 DEBUG certfuzz.debuggers.msec - parsed:  'registers_hex': {},
+2016-09-07 01:15:16,900 DEBUG certfuzz.debuggers.msec - parsed:  'registers_sought': ['eax',
+2016-09-07 01:15:16,900 DEBUG certfuzz.debuggers.msec - parsed:                       'ecx',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'edx',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'ebx',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'esp',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'ebp',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'esi',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'edi',
+2016-09-07 01:15:16,901 DEBUG certfuzz.debuggers.msec - parsed:                       'eip',
+2016-09-07 01:15:16,903 DEBUG certfuzz.debuggers.msec - parsed:                       'cs',
+2016-09-07 01:15:16,903 DEBUG certfuzz.debuggers.msec - parsed:                       'ss',
+2016-09-07 01:15:16,903 DEBUG certfuzz.debuggers.msec - parsed:                       'ds',
+2016-09-07 01:15:16,903 DEBUG certfuzz.debuggers.msec - parsed:                       'es',
+2016-09-07 01:15:16,904 DEBUG certfuzz.debuggers.msec - parsed:                       'fs',
+2016-09-07 01:15:16,904 DEBUG certfuzz.debuggers.msec - parsed:                       'gs'],
+2016-09-07 01:15:16,904 DEBUG certfuzz.debuggers.msec - parsed:  'secondchance': False,
+2016-09-07 01:15:16,904 DEBUG certfuzz.debuggers.msec - parsed:  'signal': None,
+2016-09-07 01:15:16,904 DEBUG certfuzz.debuggers.msec - parsed:  'total_stack_corruption': False,
+2016-09-07 01:15:16,904 DEBUG certfuzz.debuggers.msec - parsed:  'used_pc': False}
+2016-09-07 01:15:16,904 DEBUG certfuzz.crash.foe_crash - heisenbug found
+2016-09-07 01:15:16,904 DEBUG certfuzz.fuzztools.filetools - move C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\iteration_ssrisr\foe-crash-ygd6to\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt.msec -> C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\iteration_ssrisr\foe-crash-ygd6to\sf_677271d56999ae96a9fe55fdf4a2a202-0-HSB.txt.msec
+2016-09-07 01:15:16,907 DEBUG certfuzz.campaign.iteration - Crash:
+2016-09-07 01:15:16,908 DEBUG certfuzz.campaign.iteration - ... {'cmd_template': <string.Template object at 0x03A09D90>,
+2016-09-07 01:15:16,908 DEBUG certfuzz.campaign.iteration - ...  'cmdargs': ['C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:15:16,908 DEBUG certfuzz.campaign.iteration - ...              'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt'],
+2016-09-07 01:15:16,910 DEBUG certfuzz.campaign.iteration - ...  'copy_fuzzedfile': True,
+2016-09-07 01:15:16,910 DEBUG certfuzz.campaign.iteration - ...  'crash_hash': None,
+2016-09-07 01:15:16,910 DEBUG certfuzz.campaign.iteration - ...  'dbg_class': <class 'certfuzz.debuggers.msec.MsecDebugger'>,
+2016-09-07 01:15:16,910 DEBUG certfuzz.campaign.iteration - ...  'dbg_file': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0-HSB.txt.msec',
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...  'dbg_opts': {'debugger': 'msec',
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...               'debugheap': False,
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...               'max_handled_exceptions': 6,
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...               'runtimeout': 10,
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...               'watchcpu': True},
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...  'dbg_result': {},
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...  'dbg_type': 'msec',
+2016-09-07 01:15:16,911 DEBUG certfuzz.campaign.iteration - ...  'debugger_file': None,
+2016-09-07 01:15:16,913 DEBUG certfuzz.campaign.iteration - ...  'debugger_missed_stack_corruption': False,
+2016-09-07 01:15:16,913 DEBUG certfuzz.campaign.iteration - ...  'debugger_template': None,
+2016-09-07 01:15:16,913 DEBUG certfuzz.campaign.iteration - ...  'debugger_timeout': 10,
+2016-09-07 01:15:16,913 DEBUG certfuzz.campaign.iteration - ...  'exception_depth': 0,
+2016-09-07 01:15:16,913 DEBUG certfuzz.campaign.iteration - ...  'exp': 'HEISENBUG',
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'faddr': None,
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'fuzzedfile': {'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202-0.txt', 'len': 13140, 'ext': '.txt', 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to\\sf_677271d56999ae96a9fe55fdf4a2a202-0.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202-0', 'md5': '55d3f989dab5b59bf7703cfabf11f288'},
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'hd_bits': None,
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'hd_bytes': None,
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'is_corrupt_stack': False,
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'is_crash': False,
+2016-09-07 01:15:16,914 DEBUG certfuzz.campaign.iteration - ...  'is_heisenbug': True,
+2016-09-07 01:15:16,915 DEBUG certfuzz.campaign.iteration - ...  'is_unique': False,
+2016-09-07 01:15:16,915 DEBUG certfuzz.campaign.iteration - ...  'keep_uniq_faddr': False,
+2016-09-07 01:15:16,915 DEBUG certfuzz.campaign.iteration - ...  'logger': None,
+2016-09-07 01:15:16,917 DEBUG certfuzz.campaign.iteration - ...  'max_depth': 0,
+2016-09-07 01:15:16,917 DEBUG certfuzz.campaign.iteration - ...  'max_handled_exceptions': 6,
+2016-09-07 01:15:16,917 DEBUG certfuzz.campaign.iteration - ...  'parsed_outputs': [<certfuzz.debuggers.output_parsers.msec_file.MsecFile object at 0x03A13610>],
+2016-09-07 01:15:16,917 DEBUG certfuzz.campaign.iteration - ...  'pc': None,
+2016-09-07 01:15:16,917 DEBUG certfuzz.campaign.iteration - ...  'pc_in_function': False,
+2016-09-07 01:15:16,918 DEBUG certfuzz.campaign.iteration - ...  'program': 'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:15:16,918 DEBUG certfuzz.campaign.iteration - ...  'reached_secondchance': False,
+2016-09-07 01:15:16,918 DEBUG certfuzz.campaign.iteration - ...  'result_dir': None,
+2016-09-07 01:15:16,920 DEBUG certfuzz.campaign.iteration - ...  'seedfile': {'a': 1, 'b': 1, 'probability': 0.5, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 0, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A09DD0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\notepad\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:15:16,920 DEBUG certfuzz.campaign.iteration - ...  'signature': '55d3f989dab5b59bf7703cfabf11f288',
+2016-09-07 01:15:16,920 DEBUG certfuzz.campaign.iteration - ...  'tempdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr\\foe-crash-ygd6to',
+2016-09-07 01:15:16,921 DEBUG certfuzz.campaign.iteration - ...  'total_stack_corruption': False,
+2016-09-07 01:15:16,921 DEBUG certfuzz.campaign.iteration - ...  'watchcpu': True,
+2016-09-07 01:15:16,921 DEBUG certfuzz.campaign.iteration - ...  'workdir_base': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_ssrisr'}
+2016-09-07 01:15:16,921 INFO certfuzz.campaign.iteration - Candidate crash rejected: not a crash
+2016-09-07 01:15:16,923 INFO certfuzz.campaign.iteration - Done with iteration 0
+2016-09-07 01:15:16,923 DEBUG certfuzz.campaign.iteration - Cleanup iteration 0
+2016-09-07 01:15:16,924 INFO certfuzz.campaign.campaign - Iteration: 0 Crashes found: 0
+2016-09-07 01:15:16,926 INFO certfuzz.campaign.campaign - Seedfile Set Status:
+2016-09-07 01:15:16,926 INFO certfuzz.campaign.campaign - 677271d56999ae96a9fe55fdf4a2a202 0.500000 0 1 0.333333
+2016-09-07 01:15:16,926 INFO certfuzz.campaign.campaign - d32dfc6844d1243eacc5e05de6877078 0.500000 0 0 0.500000
+2016-09-07 01:15:16,930 DEBUG certfuzz.file_handlers.seedfile_set - Thing count: 2
+2016-09-07 01:15:16,931 DEBUG certfuzz.scoring.scorable_set - probability(677271d56999ae96a9fe55fdf4a2a202)=0.400000
+2016-09-07 01:15:16,931 DEBUG certfuzz.scoring.scorable_set - probability(d32dfc6844d1243eacc5e05de6877078)=0.600000
+2016-09-07 01:15:16,931 DEBUG certfuzz.scoring.scorable_set - next_key=677271d56999ae96a9fe55fdf4a2a202
+2016-09-07 01:15:16,933 INFO certfuzz.campaign.campaign - Selected seedfile: sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:15:16,933 INFO certfuzz.campaign.iteration - Iteration: 1 File: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\seedfiles\sf_677271d56999ae96a9fe55fdf4a2a202.txt
+2016-09-07 01:15:16,934 INFO certfuzz.campaign.iteration - ...fuzzing
+2016-09-07 01:15:16,934 DEBUG certfuzz.fuzzers.fuzzer_base - Initialize Fuzzer
+2016-09-07 01:15:16,934 DEBUG certfuzz.fuzzers.fuzzer_base - {'basename_fuzzed': 'sf_677271d56999ae96a9fe55fdf4a2a202-1.txt',
+2016-09-07 01:15:16,936 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed': None,
+2016-09-07 01:15:16,936 DEBUG certfuzz.fuzzers.fuzzer_base -  'fuzzed_changes_input': True,
+2016-09-07 01:15:16,937 DEBUG certfuzz.fuzzers.fuzzer_base -  'input': None,
+2016-09-07 01:15:16,937 DEBUG certfuzz.fuzzers.fuzzer_base -  'iteration': 1,
+2016-09-07 01:15:16,937 DEBUG certfuzz.fuzzers.fuzzer_base -  'options': {'fuzz_zip_container': False, 'fuzzer': 'bytemut'},
+2016-09-07 01:15:16,937 DEBUG certfuzz.fuzzers.fuzzer_base -  'output_file_path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt',
+2016-09-07 01:15:16,937 DEBUG certfuzz.fuzzers.fuzzer_base -  'range': None,
+2016-09-07 01:15:16,937 DEBUG certfuzz.fuzzers.fuzzer_base -  'rng_seed': 137504714228284849588477640694909018626L,
+2016-09-07 01:15:16,938 DEBUG certfuzz.fuzzers.fuzzer_base -  'saved_arcinfo': OrderedDict(),
+2016-09-07 01:15:16,938 DEBUG certfuzz.fuzzers.fuzzer_base -  'sf': {'a': 1, 'b': 2, 'probability': 0.3333333333333333, 'range_min': 7.610350076103501e-05, 'successes': 0, 'range_max': 0.999923896499239, 'basename': 'sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'uniques_only': True, 'len': 13140, 'tries': 1, 'ext': '.txt', 'rangefinder': <certfuzz.fuzztools.rangefinder.RangeFinder object at 0x03A09DD0>, 'output_dir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\results\\notepad\\seedfiles\\677271d56999ae96a9fe55fdf4a2a202', 'key': '677271d56999ae96a9fe55fdf4a2a202', 'seen': {}, 'bitlen': 105120, 'path': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\seedfiles\\sf_677271d56999ae96a9fe55fdf4a2a202.txt', 'is_zip': False, 'dirname': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\seedfiles', 'root': 'sf_677271d56999ae96a9fe55fdf4a2a202', 'md5': '677271d56999ae96a9fe55fdf4a2a202'},
+2016-09-07 01:15:16,940 DEBUG certfuzz.fuzzers.fuzzer_base -  'tmpdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw'}
+2016-09-07 01:15:16,940 DEBUG certfuzz.scoring.scorable_set - probability(0.000322-0.000522)=0.050847
+2016-09-07 01:15:16,940 DEBUG certfuzz.scoring.scorable_set - probability(0.000076-0.000123)=0.050847
+2016-09-07 01:15:16,940 DEBUG certfuzz.scoring.scorable_set - probability(0.000123-0.000199)=0.050847
+2016-09-07 01:15:16,940 DEBUG certfuzz.scoring.scorable_set - probability(0.039650-0.064155)=0.050847
+2016-09-07 01:15:16,941 DEBUG certfuzz.scoring.scorable_set - probability(0.001366-0.002210)=0.050847
+2016-09-07 01:15:16,941 DEBUG certfuzz.scoring.scorable_set - probability(0.711492-0.999924)=0.050847
+2016-09-07 01:15:16,941 DEBUG certfuzz.scoring.scorable_set - probability(0.002210-0.003575)=0.050847
+2016-09-07 01:15:16,941 DEBUG certfuzz.scoring.scorable_set - probability(0.064155-0.103805)=0.050847
+2016-09-07 01:15:16,943 DEBUG certfuzz.scoring.scorable_set - probability(0.000844-0.001366)=0.050847
+2016-09-07 01:15:16,943 DEBUG certfuzz.scoring.scorable_set - probability(0.003575-0.005785)=0.050847
+2016-09-07 01:15:16,943 DEBUG certfuzz.scoring.scorable_set - probability(0.000199-0.000322)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.024505-0.039650)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.271766-0.439726)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.005785-0.009360)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.167960-0.271766)=0.033898
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.009360-0.015145)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.103805-0.167960)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.000522-0.000844)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.015145-0.024505)=0.050847
+2016-09-07 01:15:16,944 DEBUG certfuzz.scoring.scorable_set - probability(0.439726-0.711492)=0.050847
+2016-09-07 01:15:16,946 DEBUG certfuzz.scoring.scorable_set - next_key=0.001366-0.002210
+2016-09-07 01:15:16,946 DEBUG root - fuzz params: 137504714228284849588477640694909018626 1 0.001366 0.002210 None
+2016-09-07 01:15:16,946 DEBUG certfuzz.fuzzers.bytemut - ratio=0.001723 len=13140
+2016-09-07 01:15:16,947 DEBUG certfuzz.fuzztools.filetools - Write to C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63\iteration_q5txpw\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt
+2016-09-07 01:15:16,947 INFO certfuzz.campaign.iteration - Selected r: 0.001366-0.002210
+2016-09-07 01:15:16,947 INFO certfuzz.campaign.iteration - ...analyzing
+2016-09-07 01:15:16,948 DEBUG certfuzz.campaign.iteration - Building crash object
+2016-09-07 01:15:16,948 DEBUG certfuzz.crash.crash_base - Inititalize Crash
+2016-09-07 01:15:16,953 DEBUG certfuzz.crash.foe_crash - tries left: 0
+2016-09-07 01:15:16,953 DEBUG certfuzz.debuggers.debugger_base - Initialize Debugger
+2016-09-07 01:15:16,953 DEBUG certfuzz.debuggers.debugger_base - DBG OPTS {'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\foe-crash-6w7isb'}
+2016-09-07 01:15:16,953 DEBUG certfuzz.debuggers.debugger_base - DEBUGGER: {'debugheap': False, 'killprocname': None, 'input_file': '', 'debugger_output': '', 'type': 'msec', 'workingdir': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\foe-crash-6w7isb', 'faddr': None, 'outfile': 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\foe-crash-6w7isb\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec', 'program': 'C:\\windows\\system32\\notepad.exe', 'result': {'debug_crash': None, 'crash_hash': None, 'dbg_type': None, 'faddr': None, 'exp': None, 'output': None}, 'timeout': 10, 'cmd_args': ['C:\\windows\\system32\\notepad.exe', 'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\foe-crash-6w7isb\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt'], 'seed': None}
+2016-09-07 01:15:16,956 DEBUG certfuzz.debuggers.msec - dbg_args: ['cdb',
+2016-09-07 01:15:16,956 DEBUG certfuzz.debuggers.msec - dbg_args:  '-amsec.dll',
+2016-09-07 01:15:16,956 DEBUG certfuzz.debuggers.msec - dbg_args:  '-hd',
+2016-09-07 01:15:16,956 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  'gp',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  '-logo',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\foe-crash-6w7isb\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt.msec',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  'bpe',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  '-xd',
+2016-09-07 01:15:16,957 DEBUG certfuzz.debuggers.msec - dbg_args:  'wob',
+2016-09-07 01:15:16,959 DEBUG certfuzz.debuggers.msec - dbg_args:  '-o',
+2016-09-07 01:15:16,959 DEBUG certfuzz.debuggers.msec - dbg_args:  '-G',
+2016-09-07 01:15:16,959 DEBUG certfuzz.debuggers.msec - dbg_args:  '-c',
+2016-09-07 01:15:16,959 DEBUG certfuzz.debuggers.msec - dbg_args:  '$$Found_with_CERT_FOE;r;!exploitable -v;q',
+2016-09-07 01:15:16,960 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\windows\\system32\\notepad.exe',
+2016-09-07 01:15:16,960 DEBUG certfuzz.debuggers.msec - dbg_args:  'C:\\diagnose_vulnerabilities\\FOE2\\notepad\\working_dir\\campaign_t4sn63\\iteration_q5txpw\\foe-crash-6w7isb\\sf_677271d56999ae96a9fe55fdf4a2a202-1.txt']
+2016-09-07 01:15:17,069 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 9016
+2016-09-07 01:15:17,069 DEBUG certfuzz.debuggers.msec - Found notepad.exe PID: 8752
+2016-09-07 01:15:17,148 DEBUG certfuzz.debuggers.msec - Process 8752 CPU usage: 4.75697149858e-10
+2016-09-07 01:15:17,407 DEBUG certfuzz.debuggers.msec - Process 8752 CPU usage: 0.0
+2016-09-07 01:15:17,671 DEBUG certfuzz.debuggers.msec - Process 8752 CPU usage: 0.0
+2016-09-07 01:15:17,921 DEBUG certfuzz.debuggers.msec - Process 8752 CPU usage: 0.0
+2016-09-07 01:15:18,188 DEBUG certfuzz.debuggers.msec - Process 8752 CPU usage: 0.0
+2016-09-07 01:15:18,443 WARNING certfuzz.campaign.iteration - Iteration terminating abnormally due to KeyboardInterrupt: 
+2016-09-07 01:15:18,443 DEBUG certfuzz.campaign.iteration - Skipping cleanup since we are in debug mode.
+2016-09-07 01:15:18,443 WARNING certfuzz.campaign.campaign - Keyboard interrupt - exiting
+2016-09-07 01:15:18,443 DEBUG certfuzz.campaign.campaign - Removed campaign working dir: C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_t4sn63
+2016-09-07 01:15:18,443 INFO root - Campaign complete
