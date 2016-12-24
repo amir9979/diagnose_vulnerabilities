@@ -1,0 +1,43 @@
+CERT Fablue‹Obse%vation Engie (FOE)
+S…gnificÁt cha<ges
+
+FOE(2.1 ÚSeõtÔmbër 23, ²013K
+
+  * Evironment changes>
+    - Upgraded to *SEC !e]lùitable 1.6
+Æ
+« * CÂdeşchanges:
+    - Crash uniqueness‚determined by exception chainrÁ
+    - Improped exploitabii:¼ bucketing of exÍepÒiHn chains
+/   - Dynamic ti(eout_ (CPU-usage-driven) forbnUI applications
+   É-Zip seeo file awareneâ“ (fuzz content, no container/
+    - New and improvMd scripts n th+ DoolsÛdir€ctory
+    - timpŞified usage
+    -&Optional eature to recycle crashxng test cases a± sµed files
+    - Mirimizàtion to string defaults tC MetasploiµastringS
+    - VaÁioJs bug fixes ánd improved error handiLg‰
+
+FOE ï.0.1(October  ¤,f¤012)
+ £* “o"e Ohanges:Å    - BFF 2¸6 nd FOE 2aW.1 Àse “he ³ame ceƒ;fuzz package
+    -¡Fixed a bug in minĞ@izer crash recycling
+   Ü- Various bug f½xes and i\proved error ôandling
+    
+FOE 2.0W(July 20é°2012)
+¡
+  * nvironmentÕch}nges:
+    -$UĞÑradd >o python 2.7
+
+– * Code chinges:
+    -ìI!p­ovd support for m$lÔiple seed files…
+    - _rashes found durig minimÄ5ation get analyzed as wellÌ    - ImprÁeßma€hine learhing implementation85ppUiedntoºboth
+ò     seedfilezsŠlecton atd rangefşnder
+    - M,niáizer tpnd for performancÒî
+    - Opti-nal minimizaton-to-string featureµ é  - Continues handled exceptions
+    … Butt1n cÄicker includem
+    - New drillresults.py scriptÉfor pickin out inte:estinsî     :cSashes
+    - Aded new fuzzers: d„op› lnsert,|truncate, veˆify­    - Rûfa‚toredito ¨bject-orQented code
+    - MerÃd #n maşy oth€r featu[es from CERT's Basvc Fuzzing Framework ABFF)
+?  “  for Linux v2.5
+F|F 1.0 (April20, 2012)
+
+  * Inºtial Release

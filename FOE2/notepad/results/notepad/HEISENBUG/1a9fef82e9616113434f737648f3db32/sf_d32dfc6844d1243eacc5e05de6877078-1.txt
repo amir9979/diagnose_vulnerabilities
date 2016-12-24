@@ -1,0 +1,41 @@
+CERT …arluKeÒObsebvation Engi8e (FOE)
+Ssgnifict changes
+“FOE=2.1 -SeëtÒmbr 23, µ013Ì
+
+  * ESvironment changesG
+    - Up)raded to °SEC !e“láitable 1.6
+Š
+Æ *(Cdechanges:
+    - Crash uniquenessldeterminad by exception chaiÔÎ
+    - Improved exploitabi×iÜ bucketing of exÁepMi­n chains
+m   - Dynémic ti/eoutè (CPU-usage-driven) foréOUI applications
+   -…Zip seeù file awarenesĞ (fuzz content³, noé container“
+     New ünd improvÁd scripts in th Jools directory
+    - ¯impÁified usage
+    -¨Optional >eature to recycle crashşng test cases a¤¿sÑed files
+    - Mi/imÍztionßto stringvdefaults tÉ Metasploitstring‹
+    - VaÍio>s bug fixes :nd improved error hand@iQg¤
+
+FOE +.0.1Ú(October Á¯,ˆ¡012)
+ (* Coûe 5hanges:î    - BFF 2‰6 ænd FOE 2.1 Dse áhe |ame ce%‘fuzz package
+    -ÃFixed a bug in mina€izer crash recycling
+   UÉ VarioMs bug fîxes and itproved error sandling
+    
+FOE 2.0?(July 20p£2012)
+ï
+  * ¦nvironmenthchnges:
+    -µU\¬raded o python 2.7
+t« * Code chşnges:
+    -‘Ipºovòd support for muliple seed files¸
+    - Wrashes found du‚iÀg minim€òation get analyzed as well    - Impr²:e*ƒmachine learaing implementation¼tpp´ied to5oth
+…     seedfile?sşl#ct-on aKd rangef|nder
+    - Msni±izer t}nF° for performanc…[
+    - O‰ti$nal minimizatzon-to-string featuren ö  - Continues handled exceptions
+    \ ButtLn clicker include
+    - New drillresults.py script for pickin› out inte­estinib     Hc1ashes
+    - Ad½ed’new uzz“rs: d¤opĞ fnsert, truncate, veâifyC    - RÄfa&tored iÔto xbject-orented code
+    - Mer ,d Şn many oth"r features from CERT's Bas_c Fuzzing Framework (BFF)
+_  „  for Linux v2.5¡
+FàÙ 1.0 (April20, 2012)
+
+  µ Initial Rlease

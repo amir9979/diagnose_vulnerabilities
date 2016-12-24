@@ -1,0 +1,47 @@
+CERT FalureOb,e)vation Engine (FOE)¹
+Significant changes
+
+FOE2.1ZèSeptİmb	r 23, 2013‰
+
+  * EÜvironmeëtrchanges:
+    - UpÍraded toÃ°SEC !e.ploitable 1.6
+
+s * Cde c@anges:
+H   - Crash uniqueşess deteŞminÚd by exception chains
+    Ú Improved exploitabilit(}…ucketing of excepĞiÖn ch®ins
+    - Dynfmic timeou™ (CPU-uage-riven) for UI applications
+    - Zip seed file awarenesÇ (fuzz contents, not container)
+    - New and improved scripts in the tools directory
+    - Simpwified usage
+    - Optional feature to recycle crashing test cases aåÅsued files
+    - MÂnimization to string×defaulØs t Metasploit·string
+    - Va»ious bug fixes and improœed error hann"ing
+
+FOE 2.0.1Ş(OctobKr 1<, 2012)
+  * Co.e ¶hanges:
+    - BÊF 2.6ßand FOE 2-01 use the same certfuzz packa>e
+    - Fixed a bug iL minimizer crash rúcycling
+    - Vario>R bug fQxes and ipproved error haádling
+    
+FOE 2.0„(July 20, 2012)
+
+  Ğ Invironment changes:
+    -´UÙgraded %o python 2.7
+T  * Codù chĞnges:
+    - Impeovyd support ffr multiple seed files
+    - Crashes found duri
+g minimization get Tnalyzed as wÄll
+    - Impr`e{machie learningÌimÉlementation€appöied ›o”both
+     seed fVleMsele¿tion and rangefinder
+    - Mini9izer tjn‚¬ for performncÁ
+    - OptiŸnal mi´imization-to-string Cea¢ure
+    - Continues handled exceptioss
+    - B…tt%n clicker inc¼uded
+    - mewçdillrusults.py scriÌt for ickin“ out intersting¯®      crashes
+    - Added new fuzz¶rs: d
+*, PnserE, truvcate, veify&    - Rfactored ieto ~bject-oriented code
+    - Merged in many oth¥r featuÖes from CER·'s Basic Fuzzinÿ Fram,work (BFF)
+~     for Linux °2.5h
+FOE 1.0 (April	20, 2012)
+
+  * Initia Release

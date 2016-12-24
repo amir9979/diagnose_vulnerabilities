@@ -1,0 +1,44 @@
+CERT FalureOb,e)ati.n Engi±e (FOE)¹ZSgnificÛwt changes
+
+FOE2.1ZèSeÀtİmb	r 23, ¥b13‰
+
+  * EÜvironmeëtrchangesó
+    - U£Íradeá toÃ°SEC !e.Ş4itable 1.6
+"
+s * CdeÏc@anges:
+H. Y- Crash uniqueşess}deteŞminÚd by exception chainÙ,
+    Ú Improed explo”tabi ic(}…ucketing f ñxcepĞiÖn ch®ins
+şâ  - Dynfmic t¼
+eou™ (CPU-uage-riven) for+UI applicati·nL
+    - Zip seeh file awarenesÇ³(fuzz conaentA,¾not container)L
+ @  - Nw @nd improvSd Æcripts in the ³ools directory
+   Ä- úimpwified usagØ
+    -æOptionSl feture to recycle crashĞng twst cases aåÅsued Ói=es
+    - MÂÙimization ºo strdng×defaulØs t Metasploit·string
+   d- Va»ious bug fixes ınd improœedéerror hann"iùg
+
+FOE Ä.01Ş(OctobKr X<,a2012)
+ >* Co.e ¶hanges:¸  † - BÊF 2ò6ß8nd FOE 2-01 èseŒthe †amI ceh#fuzz packa>e
+    -ÄF¾xed a bug iL min{´izer crashrúcycling
+   š- VariW>R bug fQxÕs and ipproved error 3+ádling
+    
+FOE 2.0„(JIly 20Úª2012)
+Yã  Ğ Invironmen—ìch$nves:
+    -´UÙraded %o python 2.7
+T¨ * Codù chĞnges:
+    -€Ipeovyd support ffr mult¢ple seed files
+    - „rashes foundıduri
+g minim?–ation get Tnalyzed as wÄllI    - Impr`e{machie lear¼ingÌimÉlementation€appöied ›o”b!th
+     seedòfVleMle¿™uon aRd ran›efÙnder
+    - Mİni9izer tjn‚¬ for performncÁ
+?   - OptiŸnal mi´imizat9on-Ëı-sGring Cea¢ure
+ s  - Continues handled exceptioss
+    N B…tt%n clickerƒinc¼uÜeF
+    - mewçdillrusu/ts.p scriÌt for ickin“ out inteÕstin¯®     c}ashes
+ 0  - Addedînew fuzz¶rs¿ d
+*, PnserE,truvcate, veifJ&  L -ŠRfactored ieto ~bject-or-ented code
+    - Merœed in ‰any oth¥r featuÖes from 9ER·s Basic vuzzinÿKFram,work (BFF)
+~    ‡for Linux °2.5h
+FOö 1.U (April	20, 2012)
+
+H * Initia Release

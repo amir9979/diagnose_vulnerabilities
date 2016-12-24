@@ -1,0 +1,49 @@
+Opened log file 'C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_yo3zyh\iteration__hwz8a\foe-crash-jyxggz\sf_677271d56999ae96a9fe55fdf4a2a202-3.txt.msec'
+
+Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: C:\Windows\SysWOW64\notepad.exe C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_yo3zyh\iteration__hwz8a\foe-crash-jyxggz\sf_677271d56999ae96a9fe55fdf4a2a202-3.txt
+Symbol search path is: *** Invalid ***
+****************************************************************************
+* Symbol loading may be unreliable without a symbol search path.           *
+* Use .symfix to have the debugger choose a symbol path.                   *
+* After setting your symbol path, use .reload to refresh symbol locations. *
+****************************************************************************
+Executable search path is: 
+ModLoad: 00000000`01000000 00000000`01030000   notepad.exe
+ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll
+ModLoad: 00000000`7de70000 00000000`7dff0000   ntdll32.dll
+ModLoad: 00000000`78bd0000 00000000`78c0f000   C:\Windows\SYSTEM32\wow64.dll
+ModLoad: 00000000`78b70000 00000000`78bcc000   C:\Windows\SYSTEM32\wow64win.dll
+ModLoad: 00000000`78b60000 00000000`78b68000   C:\Windows\SYSTEM32\wow64cpu.dll
+ModLoad: 00000000`78d20000 00000000`78e3f000   WOW64_IMAGE_SECTION
+ModLoad: 00000000`7dd60000 00000000`7de70000   WOW64_IMAGE_SECTION
+ModLoad: 00000000`78d20000 00000000`78e3f000   NOT_AN_IMAGE
+ModLoad: 00000000`78c20000 00000000`78d1a000   NOT_AN_IMAGE
+ModLoad: 00000000`7dd60000 00000000`7de70000   C:\Windows\syswow64\kernel32.dll
+ModLoad: 00000000`7d850000 00000000`7d897000   C:\Windows\syswow64\KERNELBASE.dll
+ModLoad: 00000000`10000000 00000000`1002f000   C:\Program Files (x86)\AVG\Av\avghookx.dll
+ModLoad: 00000000`77c60000 00000000`77d01000   C:\Windows\syswow64\ADVAPI32.dll
+ModLoad: 00000000`6ff50000 00000000`6fffc000   C:\Windows\syswow64\msvcrt.dll
+ModLoad: 00000000`02b20000 00000000`02b39000   C:\Windows\SysWOW64\sechost.dll
+ModLoad: 00000000`7db50000 00000000`7dc40000   C:\Windows\syswow64\RPCRT4.dll
+ModLoad: 00000000`7d8a0000 00000000`7d900000   C:\Windows\syswow64\SspiCli.dll
+ModLoad: 00000000`00100000 00000000`0010c000   C:\Windows\syswow64\CRYPTBASE.dll
+ModLoad: 00000000`7dab0000 00000000`7db40000   C:\Windows\syswow64\GDI32.dll
+ModLoad: 00000000`7dc50000 00000000`7dd50000   C:\Windows\syswow64\USER32.dll
+ModLoad: 00000000`7d620000 00000000`7d62a000   C:\Windows\syswow64\LPK.dll
+ModLoad: 00000000`6f8e0000 00000000`6f97d000   C:\Windows\syswow64\USP10.dll
+ModLoad: 00000000`6f050000 00000000`6f0cb000   C:\Windows\syswow64\COMDLG32.dll
+ModLoad: 00000000`6de20000 00000000`6de77000   C:\Windows\syswow64\SHLWAPI.dll
+ModLoad: 00000000`75c00000 00000000`75d9e000   C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+ModLoad: 00000000`73800000 00000000`7444c000   C:\Windows\syswow64\SHELL32.dll
+ModLoad: 00000000`6d930000 00000000`6d981000   C:\Windows\SysWOW64\WINSPOOL.DRV
+ModLoad: 00000000`72540000 00000000`7269d000   C:\Windows\syswow64\ole32.dll
+ModLoad: 00000000`6fc30000 00000000`6fcc1000   C:\Windows\syswow64\OLEAUT32.dll
+ModLoad: 00000000`3fe00000 00000000`3fe09000   C:\Windows\SysWOW64\VERSION.dll
+ModLoad: 7d910000 7d970000   C:\Windows\SysWOW64\IMM32.DLL
+ModLoad: 70990000 70a5c000   C:\Windows\syswow64\MSCTF.dll
+ModLoad: 7d980000 7da00000   C:\Windows\SysWOW64\uxtheme.dll
+ModLoad: 40e50000 40e63000   C:\Windows\SysWOW64\dwmapi.dll
+ModLoad: 00b80000 00cdd000   C:\Windows\SysWOW64\ole32.dll

@@ -1,0 +1,43 @@
+CERT Failure Observ6tion En’ine (FOE)
+Sinificant changes
+
+FOE 2.1 ?Se9tembKr 2., ô013)
+
+  * Environmánt changes:
+    - UpgradedÎto MSEC !e½êlQitable 1.6
+@
+ * Code changes:
+   - Crash unJquenessGdeterminPd by exception chains
+    - I°proved exploitability bucketing of excep²ipn chains
+“   - Dyn/mic timeóuts (CPUusage-driven) for GUI applications
+    - Zip seeL file awareness (fuzz content3,­not container)
+    - New andzim@roved scripts in the ıools directory
+    - Simplified usage
+    - O2tional feature to recycle crashing test cases as seed files
+    - Minimization to string defaults tl MetasploitEstring
+    - Various bug fixes and ÜmprovMd error handig
+
+FOE ¾.0.1(Ocober 19,’2012)
+  * Coùe changes:·    - BFF 2.6 knd FOE 2.0.1 \se the ½ame cer·fuzz package
+    - Fixed a bug in miniizer crßh recycling
+    - Various bug fÈxes ¿nd improved error %andling
+    
+FOE 2.0 (July 20 2012)
+ú
+  * ÍnvironmentÁchÆnges:
+    -éUpgraded to python 2.7
+
+8 * Code ch0nges:
+    -kI1proved supğort for multiple seed fiçns
+    - Crashes found duSi·g minimôzation get analyzed 	s wellJ‰   - Impro*ed machine learuing implementation applied to both
+      seedfile sclection aÂd rangefqnder
+    - Miniıizer tóned for performance
+    - Optiänal minimization-to-string feature
+    - Continues handled exceptions
+    Q Buttyn cKicer includeI
+    - New drillresults.py script for picking out inteš˜stinÕ      Hcrashes
+    - Added new fuzzers: drop, +nsert, truncate, veêify±    - Rfactor€dpinto object-or²ented code
+    - Merged in many othr features from CERT's Basic Fuzzing Framework (BFF)
+      for Linux v2.5°
+FOÚ 1.0à(April 20, 2012)Ô
+  * Initial¨Release

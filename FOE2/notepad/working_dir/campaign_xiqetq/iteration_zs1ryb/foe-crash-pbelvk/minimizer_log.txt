@@ -1,0 +1,365 @@
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_zs1ryb\foe-crash-pbelvk\sf_d32dfc6844d1243eacc5e05de6877078-40-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1
+Unable to minimize: Already minimized
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_pbtvg0\foe-crash-1mxbke\sf_677271d56999ae96a9fe55fdf4a2a202-41-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 8185
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=8185 min=8185 target_guess=1 curr=4160 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_tc6rge\foe-crash-ddyoy9\sf_d32dfc6844d1243eacc5e05de6877078-42-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 620
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=620 min=620 target_guess=1 curr=319 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_omcdxl\foe-crash-gxkglu\sf_677271d56999ae96a9fe55fdf4a2a202-43-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 249
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=249 min=249 target_guess=1 curr=133 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_4jihfk\foe-crash-6r660e\sf_d32dfc6844d1243eacc5e05de6877078-44-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 2
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=2 min=2 target_guess=1 curr=2 chance=0.00000 miss=0/0 total_misses=0/0 u_crashes=0
+We were looking for [0x42680853.0x78a87885] ...
+Bytemap: [340, 488]
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_g6usvh\foe-crash-vrofeq\sf_d32dfc6844d1243eacc5e05de6877078-45-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 4
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=4 min=4 target_guess=1 curr=1 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_4czm9u\foe-crash-i5xrms\sf_d32dfc6844d1243eacc5e05de6877078-46-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 16
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=16 min=16 target_guess=1 curr=7 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_toqj1k\foe-crash-icarna\sf_677271d56999ae96a9fe55fdf4a2a202-47-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 189
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=189 min=189 target_guess=1 curr=91 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_xrkxsi\foe-crash-4qrt8a\sf_677271d56999ae96a9fe55fdf4a2a202-48-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 257
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=257 min=257 target_guess=1 curr=141 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_hk77st\foe-crash-ztnzvq\sf_677271d56999ae96a9fe55fdf4a2a202-49-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1566
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=1566 min=1566 target_guess=1 curr=814 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_xsy7rl\foe-crash-8iiswm\sf_d32dfc6844d1243eacc5e05de6877078-50-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 193
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=193 min=193 target_guess=1 curr=92 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_cmq3p3\foe-crash-_lhrte\sf_677271d56999ae96a9fe55fdf4a2a202-51-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 785
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=785 min=785 target_guess=1 curr=405 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_tb4jnz\foe-crash-kliyln\sf_d32dfc6844d1243eacc5e05de6877078-52-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 814
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=814 min=814 target_guess=1 curr=411 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_cmug3r\foe-crash-bcomtn\sf_d32dfc6844d1243eacc5e05de6877078-53-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 166
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=166 min=166 target_guess=1 curr=84 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_hvp3om\foe-crash-cnh3up\sf_d32dfc6844d1243eacc5e05de6877078-54-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 301
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=301 min=301 target_guess=1 curr=146 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_il8txl\foe-crash-882dxr\sf_677271d56999ae96a9fe55fdf4a2a202-55-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 6
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=6 min=6 target_guess=1 curr=4 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_lgzufz\foe-crash-e2ehxi\sf_677271d56999ae96a9fe55fdf4a2a202-56-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 45
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=45 min=45 target_guess=1 curr=24 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_f1tdfu\foe-crash-tfxdop\sf_d32dfc6844d1243eacc5e05de6877078-57-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 501
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=501 min=501 target_guess=1 curr=250 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_u1u7wn\foe-crash-q0dzka\sf_d32dfc6844d1243eacc5e05de6877078-58-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 39
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=39 min=39 target_guess=1 curr=21 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_e6mxxq\foe-crash-rvxyay\sf_677271d56999ae96a9fe55fdf4a2a202-59-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 12404
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=12404 min=12404 target_guess=1 curr=6237 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_t8da1r\foe-crash-0lrdf7\sf_677271d56999ae96a9fe55fdf4a2a202-60-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 8
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=8 min=8 target_guess=1 curr=2 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_pclz8y\foe-crash-hurrwc\sf_d32dfc6844d1243eacc5e05de6877078-61-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 2
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=2 min=2 target_guess=1 curr=2 chance=0.00000 miss=0/0 total_misses=0/0 u_crashes=0
+We were looking for [0x42680853.0x78a87885] ...
+Bytemap: [70, 1362]
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration__f4ov7\foe-crash-hwxy53\sf_d32dfc6844d1243eacc5e05de6877078-62-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 62
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=62 min=62 target_guess=1 curr=31 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_7r9yja\foe-crash-tovru1\sf_677271d56999ae96a9fe55fdf4a2a202-63-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 6
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=6 min=6 target_guess=1 curr=3 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_ldbcvv\foe-crash-nywdxv\sf_677271d56999ae96a9fe55fdf4a2a202-64-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 8501
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=8501 min=8501 target_guess=1 curr=4222 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_vmryl7\foe-crash-bvv1qo\sf_677271d56999ae96a9fe55fdf4a2a202-65-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 10
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=10 min=10 target_guess=1 curr=6 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_0rmsqp\foe-crash-rkotu7\sf_d32dfc6844d1243eacc5e05de6877078-66-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 71
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=71 min=71 target_guess=1 curr=40 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_nlfune\foe-crash-bojyaj\sf_d32dfc6844d1243eacc5e05de6877078-67-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1167
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=1167 min=1167 target_guess=1 curr=574 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_eraxxe\foe-crash-bpznj1\sf_677271d56999ae96a9fe55fdf4a2a202-68-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 193
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=193 min=193 target_guess=1 curr=105 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_rztbmy\foe-crash-xm4wez\sf_d32dfc6844d1243eacc5e05de6877078-69-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 14
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=14 min=14 target_guess=1 curr=8 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_aro0ox\foe-crash-ccye76\sf_d32dfc6844d1243eacc5e05de6877078-70-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1246
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=1246 min=1246 target_guess=1 curr=633 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_rcj2is\foe-crash-ix8tjh\sf_d32dfc6844d1243eacc5e05de6877078-71-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 98
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=98 min=98 target_guess=1 curr=44 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_fbjaif\foe-crash-_ytp5g\sf_677271d56999ae96a9fe55fdf4a2a202-72-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 8695
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=8695 min=8695 target_guess=1 curr=4327 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_pg8qvo\foe-crash-lam0rq\sf_d32dfc6844d1243eacc5e05de6877078-73-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 214
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=214 min=214 target_guess=1 curr=108 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_omfkr_\foe-crash-fodyen\sf_677271d56999ae96a9fe55fdf4a2a202-74-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1141
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=1141 min=1141 target_guess=1 curr=595 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_ijx1r7\foe-crash-0jv_6a\sf_d32dfc6844d1243eacc5e05de6877078-75-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 16
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=16 min=16 target_guess=1 curr=11 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_6io0my\foe-crash-pz72uo\sf_677271d56999ae96a9fe55fdf4a2a202-76-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 2985
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=2985 min=2985 target_guess=1 curr=1460 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_ebm2bt\foe-crash-asfyg3\sf_d32dfc6844d1243eacc5e05de6877078-77-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 523
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=523 min=523 target_guess=1 curr=265 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_jvvhzv\foe-crash-vrj5sk\sf_d32dfc6844d1243eacc5e05de6877078-78-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 8
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=8 min=8 target_guess=1 curr=5 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_8rxn0w\foe-crash-pgh042\sf_677271d56999ae96a9fe55fdf4a2a202-79-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 2
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=2 min=2 target_guess=1 curr=2 chance=0.00000 miss=0/0 total_misses=0/0 u_crashes=0
+We were looking for [0x42680853.0x78a87885] ...
+Bytemap: [2998, 12017]
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_gtxswf\foe-crash-h5dfv8\sf_d32dfc6844d1243eacc5e05de6877078-80-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 107
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=107 min=107 target_guess=1 curr=50 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_uekhtg\foe-crash-fb86c6\sf_677271d56999ae96a9fe55fdf4a2a202-81-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 3442
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=3442 min=3442 target_guess=1 curr=1683 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_wenpbi\foe-crash-kbfkge\sf_677271d56999ae96a9fe55fdf4a2a202-82-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 67
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=67 min=67 target_guess=1 curr=35 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_dlbow3\foe-crash-ia1g0g\sf_d32dfc6844d1243eacc5e05de6877078-83-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 25
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=25 min=25 target_guess=1 curr=13 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_20vexh\foe-crash-jiuwh_\sf_d32dfc6844d1243eacc5e05de6877078-84-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 2
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=2 min=2 target_guess=1 curr=2 chance=0.00000 miss=0/0 total_misses=0/0 u_crashes=0
+We were looking for [0x42680853.0x78a87885] ...
+Bytemap: [923, 1542]
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_iawvet\foe-crash-oxndda\sf_d32dfc6844d1243eacc5e05de6877078-85-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1
+Unable to minimize: Already minimized
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_dvcsue\foe-crash-gp26vl\sf_677271d56999ae96a9fe55fdf4a2a202-86-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 4864
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=4864 min=4864 target_guess=1 curr=2436 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_55qn2_\foe-crash-0wv0gc\sf_d32dfc6844d1243eacc5e05de6877078-87-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 9
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=9 min=9 target_guess=1 curr=6 chance=0.50000 miss=0/12 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_hgde81\foe-crash-ja2js6\sf_677271d56999ae96a9fe55fdf4a2a202-88-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 3
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=3 min=3 target_guess=1 curr=2 chance=0.50000 miss=0/18 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_ixaqw9\foe-crash-eb4gih\sf_677271d56999ae96a9fe55fdf4a2a202-89-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 421
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=421 min=421 target_guess=1 curr=199 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_ur01me\foe-crash-iuxeiq\sf_677271d56999ae96a9fe55fdf4a2a202-90-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1
+Unable to minimize: Already minimized
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_uhmcyr\foe-crash-iazs3x\sf_677271d56999ae96a9fe55fdf4a2a202-91-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 116
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=116 min=116 target_guess=1 curr=54 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_fbkvlq\foe-crash-umbwda\sf_677271d56999ae96a9fe55fdf4a2a202-92-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 308
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=308 min=308 target_guess=1 curr=156 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_qskmwq\foe-crash-ztjoyo\sf_677271d56999ae96a9fe55fdf4a2a202-93-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 521
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=521 min=521 target_guess=1 curr=256 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_zuezdl\foe-crash-krqy_t\sf_d32dfc6844d1243eacc5e05de6877078-94-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 5
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=5 min=5 target_guess=1 curr=1 chance=0.50000 miss=0/14 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_yvvhka\foe-crash-vr1faq\sf_677271d56999ae96a9fe55fdf4a2a202-95-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 390
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=390 min=390 target_guess=1 curr=193 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_bh54qo\foe-crash-zfd72_\sf_677271d56999ae96a9fe55fdf4a2a202-96-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 3341
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=3341 min=3341 target_guess=1 curr=1651 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_x9lmej\foe-crash-fdh1yt\sf_d32dfc6844d1243eacc5e05de6877078-97-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 460
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=460 min=460 target_guess=1 curr=240 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_q5q_uo\foe-crash-rqoc6l\sf_677271d56999ae96a9fe55fdf4a2a202-98-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 15
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=15 min=15 target_guess=1 curr=4 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_bqum1y\foe-crash-tfp0ac\sf_677271d56999ae96a9fe55fdf4a2a202-99-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 9
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=9 min=9 target_guess=1 curr=5 chance=0.50000 miss=0/12 total_misses=0/1 u_crashes=0

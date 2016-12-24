@@ -1,0 +1,59 @@
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_ur01me\foe-crash-iuxeiq\sf_677271d56999ae96a9fe55fdf4a2a202-90-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 1
+Unable to minimize: Already minimized
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_uhmcyr\foe-crash-iazs3x\sf_677271d56999ae96a9fe55fdf4a2a202-91-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 116
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=116 min=116 target_guess=1 curr=54 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_fbkvlq\foe-crash-umbwda\sf_677271d56999ae96a9fe55fdf4a2a202-92-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 308
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=308 min=308 target_guess=1 curr=156 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_qskmwq\foe-crash-ztjoyo\sf_677271d56999ae96a9fe55fdf4a2a202-93-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 521
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=521 min=521 target_guess=1 curr=256 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_zuezdl\foe-crash-krqy_t\sf_d32dfc6844d1243eacc5e05de6877078-94-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 5
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=5 min=5 target_guess=1 curr=1 chance=0.50000 miss=0/14 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_yvvhka\foe-crash-vr1faq\sf_677271d56999ae96a9fe55fdf4a2a202-95-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 390
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=390 min=390 target_guess=1 curr=193 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_bh54qo\foe-crash-zfd72_\sf_677271d56999ae96a9fe55fdf4a2a202-96-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 3341
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=3341 min=3341 target_guess=1 curr=1651 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_x9lmej\foe-crash-fdh1yt\sf_d32dfc6844d1243eacc5e05de6877078-97-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 460
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=460 min=460 target_guess=1 curr=240 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_q5q_uo\foe-crash-rqoc6l\sf_677271d56999ae96a9fe55fdf4a2a202-98-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 15
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=15 min=15 target_guess=1 curr=4 chance=0.50000 miss=0/11 total_misses=0/1 u_crashes=0
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_bqum1y\foe-crash-tfp0ac\sf_677271d56999ae96a9fe55fdf4a2a202-99-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 9
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=9 min=9 target_guess=1 curr=5 chance=0.50000 miss=0/12 total_misses=0/1 u_crashes=0

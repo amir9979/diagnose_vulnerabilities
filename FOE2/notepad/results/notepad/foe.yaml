@@ -19,7 +19,7 @@ campaign:
 # the target
 #####################################################################
 target:
-    program: C:\windows\system32\notepad.exe
+    program: C:\Temp\notepad.exe
     cmdline_template: $PROGRAM $SEEDFILE
     # With the default ImageMagick fuzz run, the above target options
     # will result in the following invocation of ImageMagick:
@@ -79,7 +79,7 @@ directories:
 runoptions:
     first_iteration: 0
     last_iteration: 0
-    seed_interval: 1
+    seed_interval: 0
     minimize: True
     minimizer_timeout: 3600
     keep_unique_faddr: False

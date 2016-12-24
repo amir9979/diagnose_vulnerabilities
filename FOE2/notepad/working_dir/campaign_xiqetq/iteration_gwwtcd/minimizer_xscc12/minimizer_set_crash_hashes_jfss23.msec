@@ -1,0 +1,299 @@
+Opened log file 'C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_gwwtcd\minimizer_xscc12\minimizer_set_crash_hashes_jfss23.msec'
+
+Microsoft (R) Windows Debugger Version 6.11.0001.404 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: C:\Temp\notepad.exe C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_gwwtcd\minimizer_xscc12\minimizer_fuzzed_file_jvu_dc.txt
+Symbol search path is: *** Invalid ***
+****************************************************************************
+* Symbol loading may be unreliable without a symbol search path.           *
+* Use .symfix to have the debugger choose a symbol path.                   *
+* After setting your symbol path, use .reload to refresh symbol locations. *
+****************************************************************************
+Executable search path is: 
+ModLoad: 00000000`01000000 00000000`01030000   notepad.exe
+ModLoad: 00000000`78e50000 00000000`78ffa000   ntdll.dll
+ModLoad: 00000000`7de70000 00000000`7dff0000   ntdll32.dll
+ModLoad: 00000000`78bd0000 00000000`78c0f000   C:\Windows\SYSTEM32\wow64.dll
+ModLoad: 00000000`78b70000 00000000`78bcc000   C:\Windows\SYSTEM32\wow64win.dll
+ModLoad: 00000000`78b60000 00000000`78b68000   C:\Windows\SYSTEM32\wow64cpu.dll
+(1dec.1084): Break instruction exception - code 80000003 (first chance)
+ModLoad: 00000000`78d20000 00000000`78e3f000   WOW64_IMAGE_SECTION
+ModLoad: 00000000`7dd60000 00000000`7de70000   WOW64_IMAGE_SECTION
+ModLoad: 00000000`78d20000 00000000`78e3f000   NOT_AN_IMAGE
+ModLoad: 00000000`78c20000 00000000`78d1a000   NOT_AN_IMAGE
+ModLoad: 00000000`7dd60000 00000000`7de70000   C:\Windows\syswow64\kernel32.dll
+ModLoad: 00000000`7d850000 00000000`7d897000   C:\Windows\syswow64\KERNELBASE.dll
+ModLoad: 00000000`10000000 00000000`1004e000   C:\Program Files (x86)\AVG\Av\avghookx.dll
+ModLoad: 00000000`77c60000 00000000`77d01000   C:\Windows\syswow64\ADVAPI32.dll
+ModLoad: 00000000`6ff50000 00000000`6fffc000   C:\Windows\syswow64\msvcrt.dll
+ModLoad: 00000000`02b20000 00000000`02b39000   C:\Windows\SysWOW64\sechost.dll
+ModLoad: 00000000`7db50000 00000000`7dc40000   C:\Windows\syswow64\RPCRT4.dll
+ModLoad: 00000000`7d8a0000 00000000`7d900000   C:\Windows\syswow64\SspiCli.dll
+ModLoad: 00000000`00100000 00000000`0010c000   C:\Windows\syswow64\CRYPTBASE.dll
+ModLoad: 00000000`7dab0000 00000000`7db40000   C:\Windows\syswow64\GDI32.dll
+ModLoad: 00000000`7dc50000 00000000`7dd50000   C:\Windows\syswow64\USER32.dll
+ModLoad: 00000000`7d620000 00000000`7d62a000   C:\Windows\syswow64\LPK.dll
+ModLoad: 00000000`6f8e0000 00000000`6f97d000   C:\Windows\syswow64\USP10.dll
+ModLoad: 00000000`6f050000 00000000`6f0cb000   C:\Windows\syswow64\COMDLG32.dll
+ModLoad: 00000000`6de20000 00000000`6de77000   C:\Windows\syswow64\SHLWAPI.dll
+ModLoad: 00000000`75c00000 00000000`75d9e000   C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+ModLoad: 00000000`73800000 00000000`7444c000   C:\Windows\syswow64\SHELL32.dll
+ModLoad: 00000000`6d930000 00000000`6d981000   C:\Windows\SysWOW64\WINSPOOL.DRV
+ModLoad: 00000000`72540000 00000000`7269d000   C:\Windows\syswow64\ole32.dll
+ModLoad: 00000000`6fc30000 00000000`6fcc1000   C:\Windows\syswow64\OLEAUT32.dll
+ModLoad: 00000000`3fe00000 00000000`3fe09000   C:\Windows\SysWOW64\VERSION.dll
+(1dec.1084): WOW64 breakpoint - code 4000001f (first chance)
+First chance exceptions are reported before any exception handling.
+This exception may be expected and handled.
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for ntdll32.dll - 
+ntdll32!LdrVerifyImageMatchesChecksum+0xf1f:
+7df10ed4 cc              int     3
+0:000:x86> $$<c:\temp\startup_script.txt
+0:000:x86> bp /1 0x1001409 ".echo BPMAGIC_0x1001409;g"
+0:000:x86> bp /1 0x10014E2 ".echo BPMAGIC_0x10014E2;g"
+0:000:x86> bp /1 0x1001568 ".echo BPMAGIC_0x1001568;g"
+0:000:x86> bp /1 0x10015B9 ".echo BPMAGIC_0x10015B9;g"
+0:000:x86> bp /1 0x10015C7 ".echo BPMAGIC_0x10015C7;g"
+0:000:x86> bp /1 0x1001678 ".echo BPMAGIC_0x1001678;g"
+0:000:x86> bp /1 0x10016C6 ".echo BPMAGIC_0x10016C6;g"
+0:000:x86> bp /1 0x10017E5 ".echo BPMAGIC_0x10017E5;g"
+0:000:x86> bp /1 0x1001886 ".echo BPMAGIC_0x1001886;g"
+0:000:x86> bp /1 0x1001927 ".echo BPMAGIC_0x1001927;g"
+0:000:x86> bp /1 0x100195F ".echo BPMAGIC_0x100195F;g"
+0:000:x86> bp /1 0x1001E38 ".echo BPMAGIC_0x1001E38;g"
+0:000:x86> bp /1 0x1001E7A ".echo BPMAGIC_0x1001E7A;g"
+0:000:x86> bp /1 0x1001ED7 ".echo BPMAGIC_0x1001ED7;g"
+0:000:x86> bp /1 0x1001F98 ".echo BPMAGIC_0x1001F98;g"
+0:000:x86> bp /1 0x1002186 ".echo BPMAGIC_0x1002186;g"
+0:000:x86> bp /1 0x100223F ".echo BPMAGIC_0x100223F;g"
+0:000:x86> bp /1 0x1002295 ".echo BPMAGIC_0x1002295;g"
+0:000:x86> bp /1 0x10022A9 ".echo BPMAGIC_0x10022A9;g"
+0:000:x86> bp /1 0x1002725 ".echo BPMAGIC_0x1002725;g"
+0:000:x86> bp /1 0x1002749 ".echo BPMAGIC_0x1002749;g"
+0:000:x86> bp /1 0x100278D ".echo BPMAGIC_0x100278D;g"
+0:000:x86> bp /1 0x10027E5 ".echo BPMAGIC_0x10027E5;g"
+0:000:x86> bp /1 0x1002831 ".echo BPMAGIC_0x1002831;g"
+0:000:x86> bp /1 0x100283C ".echo BPMAGIC_0x100283C;g"
+0:000:x86> bp /1 0x100293E ".echo BPMAGIC_0x100293E;g"
+0:000:x86> bp /1 0x1002AD3 ".echo BPMAGIC_0x1002AD3;g"
+0:000:x86> bp /1 0x1002B3A ".echo BPMAGIC_0x1002B3A;g"
+0:000:x86> bp /1 0x1002B72 ".echo BPMAGIC_0x1002B72;g"
+0:000:x86> bp /1 0x1002B85 ".echo BPMAGIC_0x1002B85;g"
+0:000:x86> bp /1 0x1002B90 ".echo BPMAGIC_0x1002B90;g"
+0:000:x86> bp /1 0x1002B98 ".echo BPMAGIC_0x1002B98;g"
+0:000:x86> bp /1 0x1002C27 ".echo BPMAGIC_0x1002C27;g"
+0:000:x86> bp /1 0x100309B ".echo BPMAGIC_0x100309B;g"
+0:000:x86> bp /1 0x10030F0 ".echo BPMAGIC_0x10030F0;g"
+0:000:x86> bp /1 0x100314C ".echo BPMAGIC_0x100314C;g"
+0:000:x86> bp /1 0x10031A0 ".echo BPMAGIC_0x10031A0;g"
+0:000:x86> bp /1 0x10031C9 ".echo BPMAGIC_0x10031C9;g"
+0:000:x86> bp /1 0x100332F ".echo BPMAGIC_0x100332F;g"
+0:000:x86> bp /1 0x10033C1 ".echo BPMAGIC_0x10033C1;g"
+0:000:x86> bp /1 0x100346D ".echo BPMAGIC_0x100346D;g"
+0:000:x86> bp /1 0x10034DE ".echo BPMAGIC_0x10034DE;g"
+0:000:x86> bp /1 0x1003588 ".echo BPMAGIC_0x1003588;g"
+0:000:x86> bp /1 0x10035A0 ".echo BPMAGIC_0x10035A0;g"
+0:000:x86> bp /1 0x10035D8 ".echo BPMAGIC_0x10035D8;g"
+0:000:x86> bp /1 0x100364C ".echo BPMAGIC_0x100364C;g"
+0:000:x86> bp /1 0x1003696 ".echo BPMAGIC_0x1003696;g"
+0:000:x86> bp /1 0x10039E4 ".echo BPMAGIC_0x10039E4;g"
+0:000:x86> bp /1 0x1003A9A ".echo BPMAGIC_0x1003A9A;g"
+0:000:x86> bp /1 0x1003BE8 ".echo BPMAGIC_0x1003BE8;g"
+0:000:x86> bp /1 0x1003C61 ".echo BPMAGIC_0x1003C61;g"
+0:000:x86> bp /1 0x1003C7C ".echo BPMAGIC_0x1003C7C;g"
+0:000:x86> bp /1 0x1003CA1 ".echo BPMAGIC_0x1003CA1;g"
+0:000:x86> bp /1 0x1003D33 ".echo BPMAGIC_0x1003D33;g"
+0:000:x86> bp /1 0x1003D85 ".echo BPMAGIC_0x1003D85;g"
+0:000:x86> bp /1 0x1003E8D ".echo BPMAGIC_0x1003E8D;g"
+0:000:x86> bp /1 0x1003EBE ".echo BPMAGIC_0x1003EBE;g"
+0:000:x86> bp /1 0x1003F39 ".echo BPMAGIC_0x1003F39;g"
+0:000:x86> bp /1 0x1004065 ".echo BPMAGIC_0x1004065;g"
+0:000:x86> bp /1 0x1004072 ".echo BPMAGIC_0x1004072;g"
+0:000:x86> bp /1 0x100408B ".echo BPMAGIC_0x100408B;g"
+0:000:x86> bp /1 0x10040DC ".echo BPMAGIC_0x10040DC;g"
+0:000:x86> bp /1 0x1004113 ".echo BPMAGIC_0x1004113;g"
+0:000:x86> bp /1 0x100412E ".echo BPMAGIC_0x100412E;g"
+0:000:x86> bp /1 0x1004166 ".echo BPMAGIC_0x1004166;g"
+0:000:x86> bp /1 0x10041AC ".echo BPMAGIC_0x10041AC;g"
+0:000:x86> bp /1 0x1004258 ".echo BPMAGIC_0x1004258;g"
+0:000:x86> bp /1 0x1004343 ".echo BPMAGIC_0x1004343;g"
+0:000:x86> bp /1 0x100440D ".echo BPMAGIC_0x100440D;g"
+0:000:x86> bp /1 0x10044B5 ".echo BPMAGIC_0x10044B5;g"
+0:000:x86> bp /1 0x10045BF ".echo BPMAGIC_0x10045BF;g"
+0:000:x86> bp /1 0x10045F9 ".echo BPMAGIC_0x10045F9;g"
+0:000:x86> bp /1 0x1004640 ".echo BPMAGIC_0x1004640;g"
+0:000:x86> bp /1 0x10047A3 ".echo BPMAGIC_0x10047A3;g"
+0:000:x86> bp /1 0x10047D2 ".echo BPMAGIC_0x10047D2;g"
+0:000:x86> bp /1 0x10049A6 ".echo BPMAGIC_0x10049A6;g"
+0:000:x86> bp /1 0x1005D49 ".echo BPMAGIC_0x1005D49;g"
+0:000:x86> bp /1 0x1006DC9 ".echo BPMAGIC_0x1006DC9;g"
+0:000:x86> bp /1 0x1006DD3 ".echo BPMAGIC_0x1006DD3;g"
+0:000:x86> bp /1 0x1006DE0 ".echo BPMAGIC_0x1006DE0;g"
+0:000:x86> bp /1 0x1006DFA ".echo BPMAGIC_0x1006DFA;g"
+0:000:x86> bp /1 0x1006E14 ".echo BPMAGIC_0x1006E14;g"
+0:000:x86> bp /1 0x1006E32 ".echo BPMAGIC_0x1006E32;g"
+0:000:x86> bp /1 0x1006E52 ".echo BPMAGIC_0x1006E52;g"
+0:000:x86> bp /1 0x1006F7C ".echo BPMAGIC_0x1006F7C;g"
+0:000:x86> bp /1 0x1006FD9 ".echo BPMAGIC_0x1006FD9;g"
+0:000:x86> bp /1 0x1007028 ".echo BPMAGIC_0x1007028;g"
+0:000:x86> bp /1 0x1007071 ".echo BPMAGIC_0x1007071;g"
+0:000:x86> bp /1 0x10070F3 ".echo BPMAGIC_0x10070F3;g"
+0:000:x86> bp /1 0x10071E2 ".echo BPMAGIC_0x10071E2;g"
+0:000:x86> bp /1 0x100724E ".echo BPMAGIC_0x100724E;g"
+0:000:x86> bp /1 0x10073BB ".echo BPMAGIC_0x10073BB;g"
+0:000:x86> bp /1 0x100767B ".echo BPMAGIC_0x100767B;g"
+0:000:x86> bp /1 0x1007813 ".echo BPMAGIC_0x1007813;g"
+0:000:x86> bp /1 0x1007843 ".echo BPMAGIC_0x1007843;g"
+0:000:x86> bp /1 0x10078F3 ".echo BPMAGIC_0x10078F3;g"
+0:000:x86> bp /1 0x10079A5 ".echo BPMAGIC_0x10079A5;g"
+0:000:x86> bp /1 0x1007A03 ".echo BPMAGIC_0x1007A03;g"
+0:000:x86> bp /1 0x1007A5C ".echo BPMAGIC_0x1007A5C;g"
+0:000:x86> bp /1 0x1007A78 ".echo BPMAGIC_0x1007A78;g"
+0:000:x86> bp /1 0x1007AAC ".echo BPMAGIC_0x1007AAC;g"
+0:000:x86> bp /1 0x1007AE4 ".echo BPMAGIC_0x1007AE4;g"
+0:000:x86> bp /1 0x1007B94 ".echo BPMAGIC_0x1007B94;g"
+0:000:x86> bp /1 0x1007BF6 ".echo BPMAGIC_0x1007BF6;g"
+0:000:x86> bp /1 0x1007C4A ".echo BPMAGIC_0x1007C4A;g"
+0:000:x86> bp /1 0x1007CD4 ".echo BPMAGIC_0x1007CD4;g"
+0:000:x86> bp /1 0x1007F96 ".echo BPMAGIC_0x1007F96;g"
+0:000:x86> bp /1 0x100800C ".echo BPMAGIC_0x100800C;g"
+0:000:x86> bp /1 0x10080E1 ".echo BPMAGIC_0x10080E1;g"
+0:000:x86> bp /1 0x1008143 ".echo BPMAGIC_0x1008143;g"
+0:000:x86> bp /1 0x100818F ".echo BPMAGIC_0x100818F;g"
+0:000:x86> bp /1 0x10081DB ".echo BPMAGIC_0x10081DB;g"
+0:000:x86> bp /1 0x1008383 ".echo BPMAGIC_0x1008383;g"
+0:000:x86> bp /1 0x10085E5 ".echo BPMAGIC_0x10085E5;g"
+0:000:x86> bp /1 0x1008639 ".echo BPMAGIC_0x1008639;g"
+0:000:x86> bp /1 0x10087C5 ".echo BPMAGIC_0x10087C5;g"
+0:000:x86> bp /1 0x100882E ".echo BPMAGIC_0x100882E;g"
+0:000:x86> bp /1 0x100888F ".echo BPMAGIC_0x100888F;g"
+0:000:x86> bp /1 0x10088B6 ".echo BPMAGIC_0x10088B6;g"
+0:000:x86> bp /1 0x1008987 ".echo BPMAGIC_0x1008987;g"
+0:000:x86> bp /1 0x1008A63 ".echo BPMAGIC_0x1008A63;g"
+0:000:x86> bp /1 0x1008ABA ".echo BPMAGIC_0x1008ABA;g"
+0:000:x86> bp /1 0x1008B46 ".echo BPMAGIC_0x1008B46;g"
+0:000:x86> bp /1 0x1008B95 ".echo BPMAGIC_0x1008B95;g"
+0:000:x86> bp /1 0x1008F49 ".echo BPMAGIC_0x1008F49;g"
+0:000:x86> bp /1 0x1009064 ".echo BPMAGIC_0x1009064;g"
+0:000:x86> bp /1 0x1009705 ".echo BPMAGIC_0x1009705;g"
+0:000:x86> bp /1 0x100974F ".echo BPMAGIC_0x100974F;g"
+0:000:x86> bp /1 0x1009791 ".echo BPMAGIC_0x1009791;g"
+0:000:x86> bp /1 0x10097E1 ".echo BPMAGIC_0x10097E1;g"
+0:000:x86> bp /1 0x100991F ".echo BPMAGIC_0x100991F;g"
+0:000:x86> bp /1 0x1009975 ".echo BPMAGIC_0x1009975;g"
+0:000:x86> bp /1 0x10099AA ".echo BPMAGIC_0x10099AA;g"
+0:000:x86> bp /1 0x10099E1 ".echo BPMAGIC_0x10099E1;g"
+0:000:x86> bp /1 0x1009C82 ".echo BPMAGIC_0x1009C82;g"
+0:000:x86> bp /1 0x1009D37 ".echo BPMAGIC_0x1009D37;g"
+0:000:x86> bp /1 0x1009D71 ".echo BPMAGIC_0x1009D71;g"
+0:000:x86> bp /1 0x1009DCB ".echo BPMAGIC_0x1009DCB;g"
+0:000:x86> bp /1 0x1009DF5 ".echo BPMAGIC_0x1009DF5;g"
+0:000:x86> bp /1 0x1009E3D ".echo BPMAGIC_0x1009E3D;g"
+0:000:x86> bp /1 0x1009E48 ".echo BPMAGIC_0x1009E48;g"
+0:000:x86> bp /1 0x1009E82 ".echo BPMAGIC_0x1009E82;g"
+0:000:x86> bp /1 0x1009ECB ".echo BPMAGIC_0x1009ECB;g"
+0:000:x86> bp /1 0x1009F59 ".echo BPMAGIC_0x1009F59;g"
+0:000:x86> bp /1 0x1009F61 ".echo BPMAGIC_0x1009F61;g"
+0:000:x86> bp /1 0x100A04D ".echo BPMAGIC_0x100A04D;g"
+0:000:x86> bp /1 0x100A058 ".echo BPMAGIC_0x100A058;g"
+0:000:x86> bp /1 0x100A063 ".echo BPMAGIC_0x100A063;g"
+0:000:x86> bp /1 0x100A06E ".echo BPMAGIC_0x100A06E;g"
+0:000:x86> bp /1 0x100A079 ".echo BPMAGIC_0x100A079;g"
+0:000:x86> bp /1 0x100A084 ".echo BPMAGIC_0x100A084;g"
+0:000:x86> bp /1 0x100A08F ".echo BPMAGIC_0x100A08F;g"
+0:000:x86> bp /1 0x100A09A ".echo BPMAGIC_0x100A09A;g"
+0:000:x86> $$Found_with_CERT_FOE
+0:000:x86> r
+eax=00000000 ebx=00000000 ecx=28c40000 edx=0008e3c8 esi=fffffffe edi=00000000
+eip=7df10ed4 esp=000cfb08 ebp=000cfb34 iopl=0         nv up ei pl zr na pe nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00000246
+ntdll32!LdrVerifyImageMatchesChecksum+0xf1f:
+7df10ed4 cc              int     3
+0:000:x86> !exploitable -v
+
+!exploitable 1.6.0.0
+HostMachine\HostUser
+Executing Processor Architecture is x86
+Debuggee is in User Mode
+Debuggee is a live user mode debugging session on the local machine
+Event Type: Exception
+*** ERROR: Symbol file could not be found.  Defaulted to export symbols for ntdll.dll - 
+Exception Faulting Address: 0x7df10ed4
+First Chance Exception Type: STATUS_WX86_BREAKPOINT (0x4000001F)
+
+Faulting Instruction:7df10ed4 int 3
+
+Basic Block:
+    7df10ed4 int 3
+
+Exception Hash (Major/Minor): 0x42680853.0x78a87885
+
+ Hash Usage : Stack Trace:
+Major+Minor : ntdll32!LdrVerifyImageMatchesChecksum+0xf1f
+Major+Minor : ntdll32!RtlUlonglongByteSwap+0x4217
+Excluded    : ntdll32!RtlSetUnhandledExceptionFilter+0x50
+Major+Minor : ntdll32!LdrInitializeThunk+0x10
+Major+Minor : ntdll!RtlInitializeCriticalSectionEx+0x106e
+Instruction Address: 0x000000007df10ed4
+
+Description: Breakpoint
+Short Description: Breakpoint
+Exploitability Classification: UNKNOWN
+Recommended Bug Title: Breakpoint starting at ntdll32!LdrVerifyImageMatchesChecksum+0x0000000000000f1f (Hash=0x42680853.0x78a87885)
+
+While a breakpoint itself is probably not exploitable, it may also be an indication that an attacker is testing a target. In either case breakpoints should not exist in production code.
+0:000:x86> g
+ModLoad: 7d910000 7d970000   C:\Windows\SysWOW64\IMM32.DLL
+ModLoad: 70990000 70a5d000   C:\Windows\syswow64\MSCTF.dll
+BPMAGIC_0x10031C9
+BPMAGIC_0x1002B98
+BPMAGIC_0x100364C
+BPMAGIC_0x10031A0
+BPMAGIC_0x10034DE
+BPMAGIC_0x10035A0
+BPMAGIC_0x10035D8
+BPMAGIC_0x1001927
+BPMAGIC_0x1002B90
+BPMAGIC_0x1003588
+BPMAGIC_0x1002B72
+BPMAGIC_0x1002B85
+BPMAGIC_0x1002B3A
+BPMAGIC_0x1001409
+ModLoad: 7d980000 7da00000   C:\Windows\SysWOW64\uxtheme.dll
+BPMAGIC_0x100314C
+BPMAGIC_0x10022A9
+BPMAGIC_0x10033C1
+BPMAGIC_0x100346D
+BPMAGIC_0x100293E
+BPMAGIC_0x100332F
+BPMAGIC_0x10015B9
+BPMAGIC_0x1002AD3
+BPMAGIC_0x1002C27
+BPMAGIC_0x100309B
+BPMAGIC_0x10030F0
+BPMAGIC_0x1002831
+BPMAGIC_0x1001568
+BPMAGIC_0x10014E2
+ModLoad: 40e50000 40e63000   C:\Windows\SysWOW64\dwmapi.dll
+BPMAGIC_0x10015C7
+BPMAGIC_0x10017E5
+BPMAGIC_0x100283C
+ModLoad: 00dc0000 00f1d000   C:\Windows\SysWOW64\ole32.dll
+BPMAGIC_0x10016C6
+BPMAGIC_0x1001E38
+BPMAGIC_0x1002725
+BPMAGIC_0x10027E5
+BPMAGIC_0x1007A78
+BPMAGIC_0x1002749
+BPMAGIC_0x100278D
+BPMAGIC_0x1003A9A
+BPMAGIC_0x1003696
+BPMAGIC_0x10039E4
+BPMAGIC_0x1009975
+BPMAGIC_0x100991F
+BPMAGIC_0x1002295
+BPMAGIC_0x1001E7A
+BPMAGIC_0x1001ED7
+BPMAGIC_0x1001F98
+BPMAGIC_0x1001678

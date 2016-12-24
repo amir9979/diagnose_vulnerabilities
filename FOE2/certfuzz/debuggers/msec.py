@@ -64,6 +64,7 @@ import os
 import logging
 import wmi
 import time
+import tracing.ida
 
 from . import Debugger as DebuggerBase
 from .registration import register
@@ -112,7 +113,7 @@ class MsecDebugger(DebuggerBase):
         return [self.debugger_app(), '-version']
 
     def _get_cmdline(self, outfile):
-        cdb_command = '$$Found_with_CERT_FOE;r;!exploitable -v;q'
+        cdb_command = '$$Found_with_CERT_FOE;r;!exploitable -v'
         args = []
         args.append(self.debugger_app())
         args.append('-amsec.dll')
@@ -122,10 +123,11 @@ class MsecDebugger(DebuggerBase):
         else:
             args.extend(('-hd', '-xd', 'gp'))
         args.extend(('-logo', outfile))
-        args.extend(('-xd', 'bpe', '-xd', 'wob', '-o', '-G', '-c'))
+        args.extend(('-xd', 'bpe', '-o', '-G', '-c'))
         for self.exception_depth in xrange(0, self.exception_depth):
             cdb_command = 'g;' + cdb_command
-        args.append(cdb_command)
+        tracing.ida.create_bp_script_file(self.program, cdb_command.split(";"))
+        args.append(tracing.ida.get_append_string())
         args.append(self.program)
         args.extend(self.cmd_args[1:])
         for l in pformat(args).splitlines():

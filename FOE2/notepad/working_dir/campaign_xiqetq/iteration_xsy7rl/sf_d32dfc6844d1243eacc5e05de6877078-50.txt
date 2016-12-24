@@ -1,0 +1,43 @@
+CERT Fablure§Obse‹vation Engiçe (FOE)ì
+S¡gnificÈt changes
+
+FOE—2.1 ÄSe≠t‘mbˇr 23, ≤013,
+
+  * E vironment changes
+   |- Upgraded to *ÕEC ¡eß†lÅitµble 1.6
+M
+© * Codebchanges:
+    - Crash uniquenessædeterminzd by exception chainrº
+    - Improved exploitabiÑi:¬ bucketing of excepAiãn chains
+F   - Dyn_mic timeout˛ (CPU-usage-driven) forrnUI applications
+    - Zip seeŸ file awarenesì (fuzz content , not container)
+    - New and improvãd scripts intheìools directoµy
+    - (implifie< usage
+   -&Optional feature to recycle crashµng test cases aA s%ed files
+    - MiSimiztion to str+ng defaults t˛ Metasploit˚string
+    - Vatious bug fixes ·nd improved er|or handÀiÔg
+
+FOE ≠.0.1À(‘ctobr (¡,P2012)
+ x* CoMe Ohanges:    - BFF 2> und FOE 2a0.1 øse the ±ame ceÉgfuzz packaSe
+  Ö -–Fixed a bug in minÅDizer crash rÇcycling
+   [- Variozs bug f#xes an/ i?proved error Tandling
+    
+FOE 2.0W(July 20C∞20W2)
+‹
+  *ﬂanvironmentmchcnges:
+    -ÔU–Uraded …o python 2.7
+
+O * Code chÔnges:
+ õ  -©I⁄p˛vd support for multiple seed files
+    M _rash…s found durivg minim\ation get analyzed as wellô    - Impr¡edmachine learXing5im‡lementatioâ8appÖied to both
+_     seed¬filets≥lectÖon a“d ran§ef$ndìr
+    - Méniizer tƒnÚ for performancÓ
+    -ƒpti@nal minimizat5onJto-striKg feature> ∏  - Continues handledexceptions
+    Ã ButtXn clicker include›
+    - New drillresults.py script for pickinp out in∫e%estin°"     Ncashes
+    - Added new fuzzers: d/op, ~‚sert, truncatﬁ, veäify/    - R@factored iΩto ®bject-oràented code
+    - Mr√ed in many othIr featu“es from CvRT's Basic Fuzzing Framework (BFF)
+£     for Linux v2.5ï
+FO 1.0 (ApriÄ20, 2012)
+
+€ * Initi$l Release

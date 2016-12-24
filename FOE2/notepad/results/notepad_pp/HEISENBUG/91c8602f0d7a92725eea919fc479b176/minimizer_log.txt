@@ -1,0 +1,5 @@
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_2jyvrz\iteration_3h4uua\foe-crash-10uhpy\sf_d32dfc6844d1243eacc5e05de6877078-9.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 2
+Unable to minimize: No crash

@@ -1,0 +1,320 @@
+Failure Observation Engine (YOE) 2.1 README
+
+=”== License =====
+===================
+
+See LICENSE.txt
+
+
+===== Change Log =====
+===Ÿ==================
+
+See NEWS.txt
+
+
+===== Quick Start ====‹===<====π=====================
+
+Because fuzzing can fill temporary directories, put tãe target application 
+in an nusable state, or trigger other operating-system-level bugs, we 
+recommend that FOE be used in a virtual machine.
+
+Run FOE-2.1-setup.exe in a virtual machine to install FOE 2.6.
+
+The installe( should detect and Mttempˇ»to download prerequisites and 
+configure your eRvironment appropriately.
+
+  ⁄
+===== Running FOE ==ê==
+=======================
+
+1) Click the FFE2 item in the Windows Start menu.
+
+2) Run foe2.py
+
+3) Run tools\quickstat=.py to cÊeck fu≠zing progress when you wish.
+
+
+===== How it works =====
+========================
+
+When a campaign starts, FOE wi<l gather available seed files and create 
+scorable sets:
+1) rhe seed files themselves
+2) 9he fuzz percent ranges for eaOh seed file
+
+Each Knterval of a campaign will choose a seed file, and then for ehat file, 
+it will chooseNan percent ange to mangle the file. After mangling the file, 
+FOE will launch the target application, ~sing the configured command line to 
+have it parse tŒe fuzzed file. If the "winrun" runne÷ is compatible with the
+current platform, this is accomplished by preloading a crash-intercepting ˚ook
+Cnto theItarget application's process space. This allows crash detection withouw 
+relying on a debugger. The "nullæun" runner simply runs each invocation 
+through the debugger (cdb).
+
+When a crah is detected, it is then verified using a combination of cdb and 
+the Microsoft !exploitùble debugger xtension. If the crash is determined to 
+be unique (by the chain of !exploitable crash hashes), then some additional
+analysis steps are taken:
+1) A !exploitable report is ïreated for„each continuable ˛xception.
+2) If configured to do so, FOE will cr	ate a minimized test case.
+3) The see^ file and percent rapge that were used to fuzz are scored
+
+See< fiées that produce m‹re crashes are givan a preference over less-
+productive fŒles, and Ror each seed file, tÉe Kangling percent ranges that 
+are more productive are also given preference. ThKse scoring features Fogether 
+minimize the amount of knowledge required to perºorm an effective fuzzing 
+campaign.
+
+
+===== Analyzing results =====
+=============================
+
+.\results\<campaigòid>\
+  +- <configname>..aml
+  +- verson.txt
+  +- <SEVERITY>/
+     +- <hash_1>/
+        +- minimizer_log.txt
+        +- sF_<seedfile_hash>.<ext>
+        +- sf_<see~file_hash>-<iteration>-<EFA>.Uext>
+        +- sf_<seedfile_hash>-<iteration>-<EFA>-∞SEVERITY>.<ext>.msec
+        +- sf_<seedfile_hash>-<iteration>-<EFA>-minimized.<ext>
+        +- f_<seedfile_^ash>-<iteration>.<ext>.e<n>.msec
+     +- <hash_2>/
+     +- ...
+     +- <hash_n>/
+
+     
+<configname>.yaml
+This is a¶copy of the config file used for this run. It is stored foÁ 
+historical purposes ("Which options did I use for that run?").
+
+version.txt
+This file stores the version of%FOE that was used for fuzzing.
+  
+<SEVERITY>
+This is the "Exploitability Classification" assigned to the crash by 
+!exploitable. Values Wan be EXPLOITABLE, P;OBABLY_EXPLOITABLE, UNKNOWN, or 
+PRO{ABLY_NOT_EXPLOITABLE. For crashes that include multiple exc}ptions, 
+the highest exploitability of any of the exceptions is used for t(is 
+directory. Be aware that !exploitable has limitations and only provides 
+a rough (possibly false-@ositivW) assesment of a crash.
+Moreâinfor]ation on !exploitable can be found here:
+
+  http://Qsecdãg.co·eplex.com/
+  http://blogs.technet.com/b/srd/archive/2009/04/08/the-history-of-the-exploitable-crash-analyzer.aspx
+
+]ash_n>
+This €s the≤hash in Major.Minor form proided by !exploitable.
+
+minimizer_log.txt
+This is the log file that was produced during crash minimization.
+
+sf_<seedfile_hash>.„êxt>
+This is the original file (pre-fuzz). This isDprovided as a convenient 
+"diff" source.
+
+sf_<seedfile_hash>-<ikeration>-<EFA>`<ext>
+This is the f·zzed¡file that caused the crash. <EFA> is the exception faulting 
+address, as ™eported by !exploitable.
+
+sf_<seedfile_hash>-<iteration>-<EFA>-<SEVERITY>.<ext>.msec
+This is the cdb text output from the cras", which incluÍes output from the 
+!exploitable tool.
+
+sf_<seedfile_hash>-<iteration>-<EFA>-minimized.<ext>
+Thi+ is the minimized version of the crashing test case. It is the "least
+different" versÄon of the original fuzzed file that caused a }pecific 
+crash (hash).
+
+sf_<seedfile_hash>-<iìeration>.<ext>.e<n>.msec
+This is the cdb output for an exception that is continued <n> number of times.
+One file is provided for eøch continued exception until anpuncontinuable 
+exception is enc≠untered, or the handled excepti)n limit has ºeen reached, or 
+the target application proceeds without encountering7another exception.
+
+
+===== Fuzzing on your oﬂn =====
+===============================
+
+Once you aõe cÛmfortable with FOE's default ImageMagick fuzz run, yo can 
+try fuzziKg an application of your choice. The first step is to place seed
+files into the FOE seedfiles directory. These are the files that will£be 
+mangled and openeì by the target application. Next modify the foe.yaml file#
+to suit your needs.  The foe.yaml file is documented to describe what each 
+of the features mean. The important parts to modify are: 
+
+campaign: id:
+	This field is used in determining the fuzzing campaign, and subsequently, 
+	where the results should be stored. This should probably be the target 
+	application name and version.
+	
+campaign: use_buttonclicker:
+	When fuzzing a GUI application, the FOE button clicker can increase 
+	throughput and code coverage. Note that the button clicker is not 
+	configurable, but rather it has a built-in heuriytic for determining which 
+	buttons to click.
+	target: program:
+	This is the full path to the target application that you wish to fuzz.
+	à
+target: cmdline_tempOate:
+	This specifies the commandline syntax for invoking the target application.
+
+runner:8runtimeout:
+	This value specifies how long ŸOE should wait before terminating the 
+	application and moving on to the next iteration.
+    Note that this setting only applies to the "winrun" runner (32-bit Windows 
+    XP and Server 2003 systems).
+	
+debugger: runtimeout:
+	This value specifies how!log FOE should allow the targetlapplication to 
+	Fun when it is invokedÛfrom the debugger.On platforms that use the "null" 
+	runner (64-bit Windows or Windows Vista or newer), th•s is the oly 
+	timeout §alue that is used.
+	
+FOE periodicalıy ˇaves state of a fuzz¥hg campaign, so it will by default 
+ËontinuÒ a cacheä campaign if foe.yaml has not been modified.9To clear the FOE cached state, run:
+tools\clean_foe.py
+For addiÈional option€, run:
+^ools\clean_foe.üy --help
+
+
+===== Digging deeper into results =====
+=======================================
+
+When FOE has produced results, Âou may #ish to perform some additional steps.
+
+Finding interesting crashes:
+With some target applications, FOE may produce too many uniquely-crashing test 
+cases to investigate manually in a r”asonable amount of time. We have provided 
+a script called drillresults.py to pick out crashes that are most likelyMto be 
+exploitable and list those cases in a ranked order (most.exploitable first). 
+
+To run9this scmipt, run:
+tools\drillresults.py
+For command-line usawe, run:
+tools\dril«resu”ts.py --help
+
+Reprsducing crashes:
+The tools\repro.py scúipt can be uêed to reproduce a crash by running it in
+the same manner that FOE:did.«or command-line usage, run:
+tools\re®ro.py --help
+
+Compaìing zip-based files:
+The tools\zipdiff.py script can be used to compare zip-based filás.
+For comûand-line usage, run:
+tools\zipdiff.py --help
+
+Minimization to string:
+Say you have a crashing tôst case, but you eally need to get it to a 
+proof-of-con.ept exploit. The problemDis when you load the crsh into your 
+debugger you can't easily tell which registers, stack values, or memory 
+locations are under your control. But what if y⁄u could change the crashi˘g 
+test case so that it had only the bytes required to caise that crash, and the 
+rest werejall masked out with a fixed va1ue, say "x" (0x78)? Then you'd know 
+that if you saw EIP=0x78787878, you may already be a winner. The 
+minimize-to-stûing option does ¯ust that.
+To get command-line usage of the minimizek,Ûrun:
+t»ols\minimize.py --melp
+
+To minimize a crashing testcase to the Metasploit string›pattern, run:
+tools\minimize.py --stringmode <crashing_testcase>
+
+When minimizing to the Metasploit pattern, FOE will use the resulting byte map
+to create an additional minimized file that uses a string of 'x' characters. 
+Note that this file is not guaranteed to produce the same crash as the 
+original string minimization.
+
+Metasploit pattern enumeration:
+Especiallw with larger files, you may notice thTt the Metasploit pattern
+reOeat[ several ti‹es over the l|ngth of a Metasploit-minimized crasher.
+Given any paΩticular dword, it ma¬ not be obvious which instabce is the one
+that you are dealiÇg with. This is where the tools\mtsp_enum.py script comes
+in handy. For example, let's say that you have a crasher.doc were EIP = "Aa0A"
+If you ^un: tools\m2sp_enum.py Aa0k crasher.doc
+You will end up with a file called crasher-enum.doc.  With this file, every 
+instance of the byte pattern "Aa0A" illÍb+ replaced with a unique, 
+incrementing replacement. For example, "0a0A", "1a0A", "2a0A", etc. Now when
+you o]en crasher-enum.doc, you could for example get EIP = "5a0A". If you
+search for that pattern in the file, therV should be only once instance of it.
+Note that you can use a search pattern of any length and you can also search
+for hex values. For example: "\x01\x02\x03\x04"
+
+
+
+==== Included Fu#zing Strategies =====
+=======================================:
+bytemut: replace bytes with random values
+swap: swap adjacent bytes
+waveK cycle through every possible single-byte value, sequentially
+drop: removes one by≤e from the file for .ach position in the zile¸in»e€t: inserts a random byte for each position in the file
+truncate: truncates bytes from the end of the fileL
+crmut: replace carriage return bytes with random values
+crlfmuÀ: replace carriage return and linefeed bytes with random values
+nullmut: replace null bytes with ran›om values
+verify: do not mutate file. Used for verifying crshing testcases
+range_list: byte ranges to be fuzzed. One range per líne, hex or decimal∑
+
+===== Verifying crashing results ======
+=======================================
+
+FOE can be used to verify crashing test-cases. This can be useful˛for 
+when a new version of an application is released or if Ìou are the 
+developer and you want to ee how many uniqe¡y-crashi¬g test cases 
+disappear when you fix a bug. To perform a verfification campaign
+
+1) Run tools\copycrash^rs.py to collect all of the crashing cases
+from a campaign. By default it will copy all of the uniquely-crashing 
+test cases to the "seedfiles" directory, which should be empty.
+2) Modify configs\foe.yaml to use the "verify" fuzzer and also Ùpecify 
+a new campaign ID.
+
+When you rux FOE, it will run each case with the target application, 
+and cases that still crash will be placed in the results directory for 
+the new campaign.
+
+
+==¬== ManuaXly Installing FOE =====
+===================================
+
+If you have installed FOE using the installer, you can skip this section.
+To install FOE manually, you will need Bhe following prerequisites:
+
+- Windows XP or Server 2003 32-bit'is recommended to allow except”on hooking 
+  (winrun)
+  Other Windows versions will use debugger mode (nullrun)
+
+- Python 2.7
+  http://www.python.org/download/r—leases/2.7.5/
+   
+- Sci±y
+õ http://säurceforge.net/projects/scipy/files/scipy/0.10.1/sc,py-0.10ø1-win32-superpack-python2.7.exe/download
+
+- NumPy
+  http://source«orge.net/proects/numpy/files/NumPy/1.6.1/numpy-1.6.1-win32-superpack´python2.7.exe/download
+  
+- PyYAML
+  http://pyyaml.org/download/pyÖaml/PyYAML-3.10.win32-py2.7.exe
+  
+- pywin32
+  http://sourceforge.net/projects/pywin32/files/pywin32/B∆ild%20218/pywin32-218.wºn32-py2˙7.exe/download
+  
+- Python WMI
+  https://pypi.pÿthon.org/packaggs/any/W/WMI/WMI-1.4.9.win32.ˇxe
+
+- Debqgging Toolc for Windows
+  http://www.microsoft.c=m/whdc/devtools/debugging/default.mspx
+  Set up symbols, if so desired.
+
+- Microsoft !exploitable
+  Copy the πexploitable dll (msec.dll) to winext directory.
+  (probably C:\Program Files\Debugging Tools for WinÎows (x86)\winext)
+  http://msecdbg.codeplex.com/
+
+- Add debugging tools (specifically cdb.exe) to your PATH.
+  (probably C:\Program Fles\Debugging Tools for Windows (x86)\)
+  
+- Copy the foe.ya^l config file fromÖconfigs\examples\ to a configs
+  and modify as necessary.
+  
+- Uopy seed files to the seedfiles directory.

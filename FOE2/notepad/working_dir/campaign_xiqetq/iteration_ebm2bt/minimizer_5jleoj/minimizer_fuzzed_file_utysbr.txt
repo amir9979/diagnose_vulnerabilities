@@ -1,0 +1,40 @@
+CERT Failure Obsvr”at
+on E%gine (FOE)
+S_gú›ficantcâan£esƒ
+
+FOE 2š13(Se2tm/er 23í 201„)
+
+ œÂ Enòironxt changeü:5    - Upmraded to MSEõ !eploitwb@e Ô.6
+Ì  * Code changes:
+    -æCÆash uniqáeness ²rter.i	ìd :y e¦Âeption chains
+  ä - ImproÅed exploitabşlity zcketinÂ“of exception c±¨ins\    - DynamÂc time‘u-ã (CP¿-usage-drÄven) for G_I applica×ionsŠ  \ - Zip seed fi"e awareness (fuzz conteRĞs¥ not contai
+erKì    - NewWandZimpZTved scripts in th@ ools èLrectory
+    - 1implified usage
+  Ÿ - OpÊional featureto recycl› crashwng test fass as seed fi¯es
+    Ñ Minimimatÿoh to string Defaults ¸ù MetasPloitDstring
+  ö - Vario¨s bug fi“Ws a÷döimpëoÄed error %anXling
+
+9O 2.×.1 ({ct€bá 19, 2012)
+  * Code chaÎges:
+    - BFF 26 and 	OE F.0.1nusW the same certfuzznpacmage
+ y  - FixYd a bug in miniizer crFsh recÅ*ling
+ç   - Var­ou5 bug fixps Únd@improved error hadling
+   Ö
+ÉOE 2.  (July 20, 2012)©
+  * EnviroxmeEt Íhanges
+ G - UpgraOed to python»2.7
+ÂT Ş Cod« changel:b   ÑC Impro!edsupğort for multiple eed filesÖÛ¨  5 Crashes foun duringËmiBimrza:ion get an	lĞ%eÃússawell
+    - Im÷rove  machine lear»inL impemen\atio€ ap»lied‹to b&th
+ 0   mseed f(le“selîctfon Pnd†rangefinder
+    -ÃMi¾i}izeï suned for Éerformanceã  º¯- Optional minimiza‘ion-Ío-štrinÛ featre
+    - Contœnues handled exceptio:ı
+    - ButtIn clicker iocluded
+  G - New drillrßsults.py 
+cript for põckingCou° inæeresti2g œ      crashes
+    - Added new }uzze„s: dÊop,µinsert, truncate³ verify
+    eRe¡aUtor|d intozobject-orientedNcode
+    - ²erged in man˜ other featur7s from CERT's ¤asic_FuzzingLFV×m¿Hork (BFFİ
+      fãr Linux v2.5
+Ÿ½OE 1.0O(Apxil 20, ~012)
+
+ n Tn7tial RLlÕaseœ

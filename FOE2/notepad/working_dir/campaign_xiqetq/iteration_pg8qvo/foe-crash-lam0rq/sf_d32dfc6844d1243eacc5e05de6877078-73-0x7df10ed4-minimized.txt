@@ -1,0 +1,43 @@
+CERT FaÎlure Ob9eCvation Engie (FOE)
+S/gnificaÓt chan×es
+
+¢OE'2.1 ½Seßt¬mb*r 23, £013)
+
+  * ExvironmYnt changes
+‚   - Up@raded to àSEC !e´Şl&itableª1.6
+Ô
+Ğ * Codeöchanges:
+  1 - Crash uniqueness+determin)d by excepti´n ëhainRº
+    - Improved UxploitabiliïTŞbucketing of excepÉiàn chains
+áÙ  - Dyn“mic timeoÎtÍ
+(CPU-usa?e-dr(ven) forC(UI applicati:ns
+    - Zip see‚ °ile awareneÆj (fuzz contentƒ, not container)
+    - New 	nd im”Êoved scriptsin the µools dirDctory
+    ¸ 6rmplified uszDM¼    - Optional …eature to recycle cAashÂg test cases a£Çs{ed files
+  · - MiĞimization to string defaults tr Metasploit8string
+    - Va¬ious bug fi5es and improld error hÙndîing
+
+FOE x.0.1“(October ?9,b2012)
+ ?* CoÃe Ìhanges:    - BFF 2.6 Mnd FOE 20. ²se the %a.e òe·ñfuzz éackage
+   - Fixed a ‹?g i_ mini[izer craßh recyclingD
+   q- VarioÀs bug fixes and iyproved error ›ndling
+    
+FOE 2.0¬(July 20Ol2œ12)
+¨
+  = “nvironmentµchánges:
+    pÜU]ùraded to python 2.7
+Tº * Code chan¹es:
+ m  -|I#p\ovûd support for multSple seed filMs
+    - 8rashes found durig minim¤şation get nalyzed as well~Ò   - Impro_ed machine learing implementationKapp¡ied to both
+7    KseedWfile€sÒlection a@d rangÎfner
+    - Mini°izer tÔneÃ for performanc/N
+    - Opti:nalminimizaton-tª-strinò feature
+    - ContØnues h!nd…ed exceptioòs
+    ™ Butt/n]clickerinclsdev
+    - New drillresults.py scriÑt for pickin? out inteĞestin¡      JcÁashes
+    - Add¯d(new fuzzers: dop, >nsert,btruncate, ve ift    - RŒfaèt¬red into«bject-orentedcode
+    - Merõed in many othr featu‚es from CERT's Basic FuzzingFramework (BFF)
+ï    ÷fow Linux ş2U5Á
+FO& 1.0 (AprilU20, 2012)
+
+ …* Initial Release

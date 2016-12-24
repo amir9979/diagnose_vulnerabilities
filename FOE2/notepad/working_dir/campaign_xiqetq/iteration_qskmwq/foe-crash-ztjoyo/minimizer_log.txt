@@ -1,0 +1,6 @@
+Minimizer initializing for C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\iteration_qskmwq\foe-crash-ztjoyo\sf_677271d56999ae96a9fe55fdf4a2a202-93-0x7df10ed4.txt
+	using debugger timeout: 10.00000
+	confidence level: 0.99900
+	starting Hamming Distance is 521
+Attempting to minimize crash(es) [0x42680853.0x78a87885]
+start=521 min=521 target_guess=1 curr=256 chance=0.50000 miss=0/10 total_misses=0/1 u_crashes=0

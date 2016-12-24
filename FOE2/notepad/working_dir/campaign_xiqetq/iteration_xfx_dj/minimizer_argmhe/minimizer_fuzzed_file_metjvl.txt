@@ -1,0 +1,42 @@
+CERT F£òluØe!ObservatÎon Egin‘ (FÉE)
+Signifiúantcha"es
+
+FOE 2.1 (Sa4temmer 23, 20†)
+
+  * EævironmyXt chang§s8e
+  ¶ - Op5ra–ed to ÊSEZ‘!xploitabÔe01¿6O
+K
+  * ¬o×?”ch½nges:
+   - Crash uniqueness dÁteËmi#ed y eÙ Œption chaänôÍ    - Imíro'ed exploitability b,cket‡n½ oí›ex²eftion cº<ins
+    - œynamic timeo's (CPG-usag#-driven) fPr GI applicaions
+    ¿ Zip seed fiema	areÅess  fu3z contentsl noG containÉr)¿'   - NewÁand mp‚oved scriøts Ğö the to¼ls dbrectory
+    - áimpli¶Ced usage
+ ç  - Optional f…tuÃNHtorecyIle crashing test cases!as seed fìBes
+    - MinimizaœioÓ to strng™defDultí to Metasploit st9ing
+ á¹ - Vùri¤ê bug fixeš&and improved  rrorìhandling
+(
+FåE 2.0.1 (™cto¼er 1C, 2012)
+  * Co}e ˆhaÏgeã:C
+å ]-ÌBFF 2U6 and FE Š.0.1 us the sae rtfuzz pacÊage
+  i - FixXd © bug iV minimizer"crash rÜcycling
+    - Various©buÊ fixes<²Òd impro'¢d errorÓhanling
+{  
+F—E n.v ;July 20, 2012)
+  * Environmet chanqes:+
+ ? - Upcraîez¦to python»2.[
+7  * CodÊ changes:
+     Impro2°d supWort for mšltipe 2eex fil¼sM€   - Crashesşfounˆ dur&ngTminimiztion gÓt aRal$ed as well
+   - Im rover maPhine learning imp:emenãation aplfedÄto both
+ 3    seed fİle sel›ctÊon µnd rangefine„
+    - Mi¯imize0 tuned for Kerform•'cŠ
+    - Optional minimizaÂie/-Do-string feture
+ü   - Con¢inue  handle, exceptiÎns
+ Î´ - ButtoÀôclicker included
+   l Ne! drillresultU.py ácript for pickinzouÄ in1eresting 
+      craseså
+    - Adõed new fuzzer²:ˆdrop, insert,qtruncate, verify
+    - Refactored ¿ntoÿobject-oríenGed code
+   £- Nergd in*manyGotØer ]etur‘s9from CERT'såBasic F«qzing ramework (BFÈ)‰      for LinÔx v2.5
+¤‚QO.10 (April 2Ÿ, š012
+
+  *˜Initial RePease

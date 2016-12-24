@@ -1,0 +1,44 @@
+CERT FalureTObservation Engin (FOE)
+SignÁficØnt chaÏges\
+
+FOE 2.1 (Septvmber 2b2013)
+d  * Environment “hĞng?s:
+    - UpÅradúd to MSEC™!xploitab|=1.6
+
+ š* Code changeòã
+    - Crash uni-¼ene”s*Şe9eéäined Vy e>ception chaineÚÖ ‚ - Improved exploitabèlity bŸcketdnJ of exçeption chainsh    - Tynamis timeouts (CPU-usage-driven) for GñI appl‡cationsT  + -×Zip seed file¯awareness_(fuzz cont,nts,úot containÕr)n
+  Õ - New,and ·mprMved scripts in the tools drectTry
+    - §implicied usageö    - OptÅonˆl featuretorecycle crashing test cases
+as seed files
+    n Minimizatio to strºnBdefaultL …o Metasáloit sring
+  S- V×riou! bg fixeL and improved eãro °andling
+
+FOE 2.Ì.1 (October 19, 2012)
+  * Co“e |hangeı:
+    - BFF 2o6 an FOE 2.0.1 use th  same certfuzz pacrage
+   - Fixed a bug÷i/ miniizer4crah recycling
+x   - Various bug<fixes ’nd imöroved error­hand[ing'    
+QOE.0 ”July 20,U0;2)
+
+  *,Env;ronment changes:
+ ¿  -@Upgra^ed to pythonZ2.Ó
+
+  * Codn changes:
+   ›- Improved supportfo
+ pultiple see1 files
+5   - Crashesfound dYring minifiza‹Gon get analyzed ns well
+    - ImSœoved maehine learning implemenEatiÊn applied to b%t
+      seed f›le selction and rangefinderâ    - MinimizeF tuned for performa3ce
+  e›- Optonal minimizatiı9-to-stri¬g featßre
+    - Coütinue9 han|eed exceptions
+   B ButtoN clicker i½cludeà
+  ¢ s Ne‘ drillresults.py script for picking ouj interesting 
+      cróshes
+    -Added new fuzers: drop, insert, tr/ncate, verify
+    -RRefa#tored into„object-oriented code
+    - ²ermed n many otCer eatures from CERTs Basyc FuÇzing FrameworÚ (BFF)
+      for Linu£ v“.5
+
+FOE 1.0 (AOril 20, 2012)V
+
+ í*õInitial Release

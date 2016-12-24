@@ -208,7 +208,7 @@ class Iteration(object):
         @param crash: a crash object
         @return (bool,str)
         '''
-        if crash.is_crash:
+        if crash.is_crash or True:
             if self.keep_duplicates:
                 return (True, 'keep duplicates')
             elif self.uniq_func(crash.signature):
@@ -366,7 +366,7 @@ class Iteration(object):
             with self.runner(*run_args) as runner:
                 runner.run()
                 # this takes care of case 2
-                analysis_needed = runner.saw_crash
+                analysis_needed = True #runner.saw_crash - analyze all runs
         # is further analysis needed?
         if analysis_needed:
             logger.info('...analyzing')
