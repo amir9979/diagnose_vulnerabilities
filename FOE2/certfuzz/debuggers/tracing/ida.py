@@ -3,13 +3,16 @@ __author__ = 'amir'
 import subprocess
 import os
 
+current_path = os.path.realpath(__file__)
+project_root = os.path.realpath(os.path.join(current_path, "..\..\..\..\.."))
+
 IDA_EXE = r"c:\Program Files (x86)\IDA Demo 6.95\idaq.exe"
-IDA_SCRIPT = r"C:\diagnose_vulnerabilities\idc\dump_functions.idc"
-IDA_OUT_FILE = r"C:\diagnose_vulnerabilities\idc\functions.txt"
-PWD = r"C:\diagnose_vulnerabilities\idc"
+IDA_SCRIPT = os.path.join(project_root, r"idc\dump_functions.idc")
+IDA_OUT_FILE = r"c:\temp\functions.txt"
+PWD = os.path.join(project_root, r"idc")
 CDB_EXE = r"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe"
 TMP_FILE = r"c:\temp\startup_script.txt"
-DB_FILE = r"c:\temp\db.idb"
+DB_FILE = r"c:\temp\db2.idb"
 BREAKPOINT_MAGIC = r"BPMAGIC_"
 
 def extract_functions_list(ida_out):
@@ -27,7 +30,7 @@ def generate_breakpoints_list(addrs):
     :param addrs: list of addresses
     :return: str of one time trace breakpoints
     """
-    return map(lambda addr: r'bp /1 {0} ".echo {1}{0};g"'.format(addr, BREAKPOINT_MAGIC), addrs)
+    return map(lambda addr: r'bu /1 {0} ".echo {1}{0};g"'.format(addr, BREAKPOINT_MAGIC), addrs)
 
 def get_bp_traces(binary_file):
     """
@@ -76,4 +79,4 @@ def analyze_breakpoints(debugger_out):
 
 
 if __name__ == "__main__":
-    print create_bp_script_file(r"E:\notepad\notepad.exe", [])
+    print create_bp_script_file(r"C:\vulnerabilities\ImageMagick\CVE-2016-8866\vulnerable\ImageMagick-Windows\VisualMagick\bin\identify.exe", [])

@@ -1,0 +1,16 @@
+start "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe" identify.exe "C:\vulnerabilities\ImageMagick\CVE-2016-8866\exploit\178.crashes~0\178.crashes" -amsec.dll
+
+
+"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\ntsd.exe" identify.exe "C:\vulnerabilities\ImageMagick\CVE-2016-8866\exploit\178.crashes~0\178.crashes" -amsec.dll
+
+
+https://github.com/rrbranco/VDT
+
+
+  0: 00821000          @!"identify!MagickMain"
+  2: 008216a8          @!"identify!MagickCoreGenesis"
+  3: 00821702          @!"identify!MagickCommandGenesis"
+  4: 008216ae          @!"identify!MagickCoreTerminus"
+  5: 008216fc          @!"identify!MagickImageCommand"
+
+ 
