@@ -6,7 +6,7 @@ import glob
 
 BREAKPOINT_MAGIC = r"BPMAGIC_"
 EXPLOITABILITY_START = r"Exploitability Classification: "
-EXPLOITABILITY_ENUM = {"UNKNOWN" : 0, "Probably Not Exploitable" : 1, "Probably Exploitable" : 2, "Exploitable" : 3}
+EXPLOITABILITY_ENUM = {"NOT_AN_EXCEPTION" : 0, "PROBABLY_NOT_EXPLOITABLE" : 1, "PROBABLY_EXPLOITABLE" : 2, "EXPLOITABLE" : 3, "UNKNOWN" : 4}
 
 def get_matrix_for_campaign(campaign_dir, functions_file, out_file):
     all_funcs = read_function_list(functions_file)
@@ -23,7 +23,7 @@ def get_matrix_for_campaign(campaign_dir, functions_file, out_file):
 
 def read_function_list(functions_file):
     with open(functions_file) as f:
-        return map(lambda line: line.split("=")[0], f.readlines())
+        return map(lambda line: line.replace("\n","").split("=")[1], f.readlines())
 
 def read_msec_file(msec):
     """
@@ -43,8 +43,11 @@ def get_exploitability_of_instance(instance):
     :param instance: lines of msec file
     :return: exploitability of instance
     """
-    exploitability = filter(lambda line: line.startswith(EXPLOITABILITY_START), instance)[0].replace(EXPLOITABILITY_START, "")
-    return EXPLOITABILITY_ENUM[exploitability]
+    try:
+        exploitability = filter(lambda line: line.startswith(EXPLOITABILITY_START), instance)[0].replace(EXPLOITABILITY_START, "")
+        return EXPLOITABILITY_ENUM[exploitability]
+    except:
+        return EXPLOITABILITY_ENUM["NOT_AN_EXCEPTION"]
 
 
 def write_matrix_to_file(all_funcs, cases, out_file):
@@ -68,6 +71,6 @@ def cases_rows(all_funcs,cases):
     return ids,dets
 
 if __name__ == "__main__":
-    get_matrix_for_campaign(r"C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq",
-                            r"C:\diagnose_vulnerabilities\idc\functions_notepad.txt",
-                            r"C:\diagnose_vulnerabilities\FOE2\notepad\working_dir\campaign_xiqetq\instance.txt")
+    get_matrix_for_campaign(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5509\fuzzing\working_dir\campaign_m5x1_x",
+                            r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5509\fuzzing\out_file_itldfs",
+                            r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5509\fuzzing\matrix.txt")

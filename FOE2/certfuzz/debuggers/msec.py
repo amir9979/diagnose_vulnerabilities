@@ -100,7 +100,7 @@ class MsecDebugger(DebuggerBase):
         '''
         Returns the name of the debugger application to use in this class
         '''
-        typical = "C:\\Program Files\\Debugging Tools for Windows (x86)\\cdb.exe"
+        typical = r"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe"
         if os.path.exists(typical):
             return typical
         return 'cdb'
@@ -113,7 +113,7 @@ class MsecDebugger(DebuggerBase):
         return [self.debugger_app(), '-version']
 
     def _get_cmdline(self, outfile):
-        cdb_command = '$$Found_with_CERT_FOE;r;!exploitable -m'
+        cdb_command = '.load msec;!exploitable -v'
         args = []
         args.append(self.debugger_app())
         args.append('-amsec.dll')
@@ -123,7 +123,7 @@ class MsecDebugger(DebuggerBase):
         else:
             args.extend(('-hd', '-xd', 'gp'))
         args.extend(('-logo', outfile))
-        args.extend(('-xd', 'bpe', '-o', '-G', '-c'))
+        args.extend(('-o', '-c'))
         for self.exception_depth in xrange(0, self.exception_depth):
             cdb_command = 'g;' + cdb_command
         tracing.ida.create_bp_script_file(self.program, cdb_command.split(";"))
@@ -147,6 +147,7 @@ class MsecDebugger(DebuggerBase):
         foundpid = False
 
         args = self._get_cmdline(self.outfile)
+        print args
         p = Popen(args, stdout=open(os.devnull), stderr=open(os.devnull),
                   cwd=targetdir, universal_newlines=True)
 

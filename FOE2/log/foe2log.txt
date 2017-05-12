@@ -326,3 +326,1163 @@
 2016-12-21 15:48:00,822 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
 2016-12-21 15:58:46,721 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
 2016-12-21 16:16:39,553 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:14:07,831 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:15:33,816 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:16:21,895 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:18:34,138 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:19:07,471 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:19:34,165 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:20:38,881 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:21:28,111 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:43:23,253 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:45:31,005 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:45:49,887 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:45:50,086 WARNING certfuzz.campaign.iteration - Iteration terminating abnormally due to WindowsError: [Error 2] The system cannot find the file specified
+2017-04-28 01:46:31,845 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:46:31,891 WARNING certfuzz.campaign.iteration - Iteration terminating abnormally due to WindowsError: [Error 2] The system cannot find the file specified
+2017-04-28 01:46:42,348 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:48:30,371 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:48:41,566 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:48:50,676 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:48:52,829 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:16,240 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:50,720 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:51,415 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:53,269 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:50:53,470 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:54,539 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:50:54,971 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:56,841 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:50:57,273 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:50:58,907 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:50:59,243 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:00,877 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:01,207 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:02,861 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:03,046 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:03,993 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:04,177 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:04,930 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:05,209 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:06,147 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:06,362 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:07,032 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:07,480 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:09,266 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:09,698 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:11,315 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:11,500 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:12,415 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:12,700 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:13,635 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:13,786 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:14,339 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:14,486 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:14,940 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:15,187 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:15,887 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:16,155 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:17,040 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:17,345 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:18,240 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:18,680 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:20,275 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:20,575 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:21,543 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:21,744 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:22,792 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:22,992 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:23,446 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:23,546 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:24,408 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:24,594 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:25,463 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:25,578 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:26,063 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:26,273 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:27,049 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:27,226 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:28,352 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:28,453 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:28,931 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:29,101 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:30,168 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:30,352 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:31,099 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:31,450 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:33,401 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:33,686 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:34,585 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:34,928 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:35,956 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:36,089 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:36,687 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:36,987 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:37,835 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:37,957 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:38,421 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:38,591 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:39,259 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:39,538 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:40,622 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:40,739 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:41,276 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:41,476 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:42,438 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:42,608 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:43,362 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:43,540 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:44,394 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:44,825 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:46,549 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:46,733 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:47,602 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:47,716 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:48,286 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:48,487 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:49,619 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:49,750 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:50,335 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:50,536 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:51,720 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:51,836 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:52,290 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:52,506 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:53,454 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:53,622 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:54,640 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:54,872 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:55,440 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:55,724 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:56,710 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:56,926 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:51:57,927 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:51:58,378 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:00,013 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:00,313 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:01,382 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:01,683 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:02,700 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:03,000 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:04,048 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:04,180 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:04,848 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:05,033 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:05,818 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:06,003 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:07,019 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:07,203 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:08,359 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:08,559 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:09,308 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:09,608 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:10,710 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:10,825 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:11,525 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:11,696 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:12,459 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:12,743 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:13,660 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:13,845 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:14,828 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:15,059 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:15,596 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:15,796 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:16,828 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:17,029 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:18,246 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:18,815 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:19,263 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 01:52:19,448 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:52:29,641 WARNING certfuzz.campaign.iteration - Iteration terminating abnormally due to KeyboardInterrupt: 
+2017-04-28 01:52:29,641 WARNING certfuzz.campaign.campaign - Keyboard interrupt - exiting
+2017-04-28 01:52:29,641 WARNING certfuzz.campaign.campaign - Unable to remove campaign working dir: C:\vulnerabilities\ImageMagick\CVE-2016-8866\fuzzing\working_dir\campaign_2wd2w5
+2017-04-28 01:56:51,236 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 01:59:52,644 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:26,486 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:26,694 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:27,770 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:04:27,948 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:28,934 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:04:29,150 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:29,635 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:04:29,736 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:30,404 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:04:30,519 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:31,118 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:04:31,305 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:04:34,528 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:07:49,447 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:26,496 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:26,766 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:27,907 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:28,108 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:29,177 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:29,345 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:30,309 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:30,763 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:32,648 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:32,864 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:33,450 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:33,565 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:34,296 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:34,434 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:35,098 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:35,513 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:37,515 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:37,999 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:39,753 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:39,970 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:40,855 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:41,339 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:43,339 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:43,440 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:44,240 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:44,739 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:46,486 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:46,671 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:47,687 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:48,056 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:49,943 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:50,121 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:51,022 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:51,190 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:52,043 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:52,345 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:53,276 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:53,460 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:54,424 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:54,525 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:55,089 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:55,463 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:57,311 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:57,480 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:12:58,448 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:12:58,865 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:00,713 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:01,015 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:01,970 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:02,168 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:02,670 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:02,852 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:03,854 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:04,017 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:04,970 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:05,155 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:06,019 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:06,131 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:06,819 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:06,918 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:07,456 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:07,772 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:08,803 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:08,920 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:09,503 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:09,936 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:11,859 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:12,059 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:13,107 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:13,259 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:13,859 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:14,091 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:15,049 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:15,223 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:16,408 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:16,525 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:17,058 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:17,194 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:17,979 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:18,279 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:19,226 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:19,410 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:20,526 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:20,895 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:22,766 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:22,967 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:23,868 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:24,069 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:24,986 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:25,170 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:26,107 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:26,385 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:27,243 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:27,618 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:29,470 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:29,650 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:30,650 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:30,819 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:31,703 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:31,904 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:32,950 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:33,144 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:33,970 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:34,375 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:36,309 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:36,493 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:37,371 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:37,740 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:39,660 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:39,828 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:40,914 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:41,183 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:42,147 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:42,331 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:43,101 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:43,585 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:45,420 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:45,803 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:48,230 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:48,384 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:49,099 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:49,223 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:49,913 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:50,246 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:51,385 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:51,502 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:52,101 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:52,431 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:53,486 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:53,605 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:54,246 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:54,377 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:55,010 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:55,210 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:56,111 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:56,292 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:57,111 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:57,387 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:13:58,289 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:13:58,671 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:00,704 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:00,888 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:01,921 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:02,118 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:02,805 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:03,092 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:03,957 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:04,358 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:06,395 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:06,828 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:08,931 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:09,154 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:10,180 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:10,635 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:12,938 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:13,134 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:14,023 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:14,509 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:16,625 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:16,809 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:17,809 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:17,915 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:18,779 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:19,081 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:19,948 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:20,059 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:20,612 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:20,782 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:21,828 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:21,960 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:22,598 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:22,881 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:23,815 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:24,200 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:26,030 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:26,216 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:27,096 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:27,206 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:27,749 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:27,864 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:28,549 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:28,664 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:29,265 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:29,634 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:31,401 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:31,586 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:32,549 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:32,766 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:33,286 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:33,663 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:35,506 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:35,790 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:36,921 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:37,105 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:37,882 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:38,053 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:39,108 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:39,572 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:41,529 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:41,812 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:14:42,559 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:14:42,601 WARNING certfuzz.campaign.campaign - Unable to remove campaign working dir: C:\vulnerabilities\ImageMagick\CVE-2016-8866\fuzzing\working_dir\campaign_lbgxfw
+2017-04-28 02:22:50,421 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:22:50,865 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:22:51,812 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:22:51,927 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:22:52,474 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:22:52,874 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:22:54,828 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:22:55,036 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:22:55,614 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:22:55,976 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:22:57,980 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:22:58,364 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:00,280 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:00,464 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:01,233 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:01,450 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:02,236 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:02,499 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:03,483 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:03,621 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:04,151 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:04,653 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:06,707 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:07,105 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:08,855 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:09,055 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:10,088 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:10,272 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:11,226 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:11,411 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:19,602 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:19,859 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:20,914 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:21,431 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:23,585 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:23,696 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:24,280 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:24,381 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:25,092 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:25,319 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:25,818 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:26,217 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:28,236 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:28,421 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:29,316 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:29,523 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:30,700 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:30,884 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:31,930 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:32,115 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:33,053 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:33,252 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:34,395 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:34,710 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:35,948 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:36,358 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:38,298 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:38,773 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:41,061 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:41,348 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:42,586 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:42,713 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:43,576 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:44,085 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:46,154 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:46,365 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:47,082 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:47,279 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:48,311 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:48,497 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:49,448 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:49,641 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:50,565 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:50,753 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:51,877 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:52,086 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:52,973 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:53,099 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:53,990 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:54,487 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:56,877 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:57,117 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:23:58,392 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:23:58,638 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:00,030 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:00,174 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:00,865 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:01,105 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:02,269 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:02,654 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:03,957 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:04,084 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:04,668 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:04,882 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:06,062 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:06,260 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:07,246 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:07,391 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:08,012 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:08,213 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:09,260 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:09,380 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:09,946 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:10,357 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:12,680 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:12,917 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:14,078 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:14,609 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:16,875 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:17,236 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:18,427 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:18,546 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:19,243 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:19,367 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:19,937 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:20,154 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:21,198 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:21,401 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:22,270 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:22,694 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:24,911 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:25,107 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:25,996 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:26,246 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:27,328 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:27,576 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:28,736 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:28,905 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:29,805 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:29,984 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:31,029 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:31,565 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:33,589 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:34,013 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:36,145 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:36,329 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:37,453 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:37,647 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:38,404 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:38,494 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:39,084 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:39,180 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:39,779 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:39,977 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:40,887 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:41,095 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:42,196 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:42,499 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:43,519 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:43,621 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:44,184 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:44,286 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:44,854 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:45,023 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:46,124 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:47,688 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:54,430 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:54,859 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:56,977 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:57,161 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:57,940 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:58,079 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:58,864 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:58,963 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:24:59,447 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:24:59,611 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:00,437 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:00,713 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:01,779 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:02,048 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:03,010 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:03,196 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:03,964 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:04,134 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:05,112 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:05,296 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:06,214 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:06,329 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:07,036 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:07,414 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:09,178 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:09,552 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:11,538 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:11,716 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:12,617 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:12,917 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:13,786 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:13,956 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:15,055 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:15,155 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:15,825 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:15,944 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:16,632 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:16,874 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:17,558 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:17,858 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:18,743 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:18,960 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:19,650 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:19,772 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:20,561 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:20,924 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:22,763 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:22,878 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:23,463 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:23,992 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:26,020 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:26,326 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:27,309 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:27,598 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:28,568 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:29,052 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:31,101 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:31,270 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:32,187 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:32,309 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:32,855 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:33,233 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:35,381 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:35,750 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:37,655 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:37,868 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:38,568 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:38,739 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:39,687 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:39,971 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:40,871 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:41,033 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:41,904 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:42,293 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 02:25:44,174 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 02:25:44,206 WARNING certfuzz.campaign.campaign - Unable to remove campaign working dir: C:\vulnerabilities\ImageMagick\CVE-2016-8866\fuzzing\working_dir\campaign_7inhwb
+2017-04-28 03:12:31,835 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:12:37,891 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:12:57,125 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:12:59,161 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:13:08,766 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:13:10,658 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:13:18,191 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:13:19,976 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:13:30,007 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:13:32,308 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:13:43,595 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:13:45,999 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:13:54,900 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:13:57,053 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:14:03,752 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:14:05,575 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:14:13,933 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:14:16,286 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:14:24,101 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:14:26,424 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:14:34,877 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:14:36,645 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:14:42,232 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:14:44,203 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:14:53,575 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:14:55,292 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:03,578 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:15:05,316 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:13,605 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:15:15,394 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:20,109 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:15:21,763 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:28,706 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:15:30,357 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:37,153 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:15:39,174 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:46,604 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:15:49,040 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:15:58,132 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:16:00,447 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:16:09,275 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:16:11,124 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:16:20,367 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:16:22,220 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:16:29,323 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:16:31,532 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:16:40,063 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:16:41,934 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 03:16:51,105 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 03:17:15,006 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 10:45:00,362 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 10:45:10,082 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:37,362 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:37,628 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:38,173 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:38,391 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:39,351 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:40,032 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:42,128 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:42,640 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:44,763 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:45,190 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:47,101 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:47,250 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:47,986 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:48,107 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:48,730 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:48,953 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:49,674 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:49,885 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:50,993 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:51,207 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:52,115 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:52,407 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:53,364 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:53,549 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:54,401 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:54,698 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:55,648 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:55,838 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:56,871 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:57,075 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:58,118 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:58,417 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:30:59,252 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:30:59,460 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:00,548 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:00,743 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:01,584 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:01,880 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:02,818 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:03,007 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:03,954 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:04,256 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:05,450 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:05,572 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:06,276 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:06,694 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:08,785 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:09,210 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:10,359 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:10,476 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:11,121 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:11,328 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:12,441 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:12,865 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:14,831 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:15,273 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:17,352 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 11:31:17,680 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:31:21,404 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 11:34:45,545 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:05:14,667 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:05:24,812 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:06:25,299 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:06:35,407 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:07:25,821 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 12:07:35,933 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:08:36,460 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:08:46,563 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:09:47,082 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 12:09:57,198 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:10:57,696 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:11:07,793 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:11:58,219 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 12:12:08,338 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:13:08,907 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:13:19,026 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:14:19,582 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:14:29,698 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:15:30,273 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:15:40,392 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:16:40,986 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:16:51,122 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:17:41,596 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 12:17:51,717 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:18:52,309 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:19:02,446 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:20:02,980 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:20:13,128 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:21:13,696 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 12:21:23,815 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:22:24,438 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:22:34,552 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:23:35,098 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:23:45,269 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:24:45,783 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:24:55,908 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:25:56,461 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:26:06,575 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:27:07,092 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:27:17,226 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:28:17,776 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:28:27,888 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:29:28,407 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:29:38,540 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:30:49,232 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:31:49,720 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:31:59,836 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:33:00,344 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:33:10,467 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:34:10,976 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:34:21,094 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:35:11,500 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 12:35:21,618 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:36:22,161 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:36:32,275 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:37:22,698 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 12:37:32,806 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:38:33,311 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 12:38:43,421 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:39:43,937 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:39:54,052 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:40:54,549 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:41:04,651 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:42:05,164 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:42:15,276 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:43:15,842 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:43:25,957 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:44:36,615 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:45:37,168 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:45:47,285 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:46:47,786 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:46:57,900 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:47:58,519 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:48:08,628 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:49:09,158 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:49:19,313 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:50:19,844 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:50:29,966 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:51:30,506 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:51:40,641 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:52:41,204 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:52:51,331 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:53:51,881 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:54:02,035 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 12:55:12,644 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 12:55:22,755 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:28:27,022 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:28:37,144 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:29:07,088 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:29:17,273 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:30:07,947 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 13:30:18,102 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:31:08,763 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 13:31:18,881 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:32:19,381 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:32:29,482 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:33:29,951 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:33:40,069 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:34:40,608 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:34:50,726 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:35:51,187 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:36:01,285 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:37:01,769 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:37:11,878 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:38:12,364 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:38:22,519 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:39:13,148 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 13:39:23,270 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:40:23,747 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:40:33,855 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:41:34,329 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:41:44,424 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:42:44,898 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:42:54,994 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:43:55,454 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:44:05,568 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:45:06,059 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 13:45:16,157 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:46:16,657 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:46:26,762 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:47:27,236 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:47:37,332 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:48:37,786 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:48:47,885 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:49:48,361 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:49:58,460 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:50:58,960 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:51:09,059 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:52:09,523 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:52:19,638 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:53:20,128 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:53:30,236 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:54:30,710 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:54:40,819 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:55:41,303 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:55:51,459 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:56:42,085 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 13:56:52,209 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:57:52,683 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 13:58:02,796 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 13:59:03,289 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 13:59:13,395 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:00:24,007 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:01:24,483 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:01:34,654 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:02:25,288 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: No crash
+2017-04-28 14:02:35,407 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:03:35,969 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:03:46,092 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:04:46,605 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:04:52,765 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:05:03,427 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:05:13,543 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:06:24,132 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:07:24,596 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:07:34,717 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:08:35,174 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:08:45,279 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:09:45,750 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:09:55,859 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:10:56,312 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:11:06,417 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:12:06,901 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:12:17,013 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:13:17,490 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:13:27,618 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:14:28,121 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:14:38,243 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:15:38,740 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:15:59,002 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:16:59,713 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:17:09,821 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:18:10,336 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:18:20,450 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:19:20,917 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:19:31,016 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:20:31,473 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:20:41,588 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:21:42,072 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:21:52,211 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:22:52,706 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:23:02,832 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:24:03,335 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:24:13,443 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:25:14,022 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:25:24,167 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:26:24,648 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:26:34,766 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:27:35,226 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:27:45,325 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:28:45,782 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:28:55,884 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:29:56,365 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:30:06,464 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:31:06,914 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:31:17,013 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:32:17,471 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:32:27,651 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:33:28,118 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:33:48,361 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:34:48,994 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 14:34:59,092 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:35:59,595 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:36:19,842 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:37:20,556 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:37:40,809 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:38:41,657 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:38:51,746 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:39:52,278 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 14:40:02,411 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:41:02,940 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:41:13,042 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:42:23,651 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:43:24,141 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:43:34,255 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:44:34,740 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-28 14:44:44,851 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:45:45,348 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:45:55,473 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:46:56,098 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:47:06,233 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:48:06,713 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:48:26,957 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:49:27,713 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:49:37,796 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:50:38,279 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:50:48,394 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:51:48,864 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:51:58,969 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:52:59,438 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:53:09,536 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:54:10,017 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:54:20,131 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:55:20,598 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:55:30,704 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:56:00,053 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:56:20,342 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:57:21,030 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:57:41,286 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 14:58:42,040 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 14:59:02,280 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 15:00:03,046 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 15:00:23,312 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 15:01:24,063 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 15:01:34,161 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 15:02:34,644 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-28 15:02:54,855 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-28 15:03:55,640 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:46:20,186 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:47:21,374 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:47:31,486 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:48:32,000 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:48:52,246 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:49:53,078 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-30 18:50:13,372 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:51:14,255 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:51:24,375 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:52:24,954 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:52:45,359 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:53:46,101 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:53:56,200 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:54:56,733 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:55:17,081 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:56:18,029 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:56:28,127 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:57:28,671 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:57:38,786 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 18:58:39,286 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 18:58:59,525 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:00:10,382 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:01:10,953 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:01:31,250 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:02:32,069 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:02:52,516 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:04:44,075 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:05:04,318 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:06:05,052 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:06:15,154 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:07:15,595 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:07:35,838 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:08:36,584 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:08:56,806 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:09:57,516 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:10:17,746 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:11:18,450 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-30 19:11:38,687 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:12:39,430 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:12:59,648 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:14:00,397 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:14:10,489 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:15:10,973 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:15:21,081 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:16:21,539 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:16:31,644 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:17:32,108 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:17:42,210 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:18:42,653 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:18:52,760 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:19:53,233 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:20:03,351 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:21:03,802 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:21:13,904 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:22:14,354 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:22:24,459 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:23:24,920 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:23:45,168 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:25:06,124 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:26:06,835 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:26:27,065 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:27:27,788 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:27:37,881 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:28:38,325 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:28:48,480 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:29:48,990 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:30:09,257 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:31:20,049 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:32:30,625 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:32:40,739 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:33:41,200 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:34:01,466 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:35:02,198 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:35:12,302 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:36:12,756 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:36:32,960 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:37:33,727 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:37:53,964 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:39:14,918 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:40:15,713 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:40:35,943 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:41:56,934 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:42:58,009 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:43:18,365 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:44:29,453 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:45:30,062 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:45:50,342 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:46:51,453 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:47:11,717 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:48:12,482 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:48:32,760 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:49:33,571 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-30 19:49:53,823 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:50:54,940 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:51:15,267 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:52:26,469 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:53:27,059 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:53:47,292 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:54:48,147 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:54:58,262 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:55:58,779 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:56:19,102 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:57:20,052 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:57:30,362 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:58:30,921 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:58:41,048 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 19:59:41,634 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 19:59:51,786 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:00:52,278 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:01:02,391 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:02:02,957 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:02:13,279 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:03:13,857 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:03:23,983 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:04:24,509 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:04:34,634 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:05:35,201 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:05:45,331 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:06:45,871 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:07:06,184 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:08:07,012 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:08:17,131 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:09:17,684 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:09:37,974 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:10:38,805 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-04-30 20:10:48,921 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:11:49,436 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:12:09,707 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:13:10,483 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:13:30,755 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:14:31,599 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:14:41,729 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:15:42,276 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:16:02,513 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-04-30 20:17:03,316 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-04-30 20:17:23,542 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:20:13,858 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:20:18,111 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:21:18,713 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:21:39,045 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:22:39,973 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:23:00,430 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:24:21,802 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:25:22,766 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:25:43,065 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:26:44,104 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to minimize: Already minimized
+2017-05-01 11:26:54,236 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:27:54,790 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:28:15,071 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:29:16,068 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:29:26,187 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:30:26,799 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:30:47,085 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:31:47,937 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:31:58,043 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:32:58,530 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:33:18,823 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:34:19,568 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:34:39,816 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:36:00,835 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:37:11,651 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:38:12,137 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:38:32,401 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:39:33,201 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:39:43,296 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:40:43,765 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:41:04,030 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:42:04,831 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:42:14,913 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:43:15,365 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:43:35,615 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:44:36,421 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:44:46,526 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:45:47,012 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:45:57,125 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:46:57,598 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:47:17,845 WARNING certfuzz.debuggers.registration - Skipping debugger test for debugger msec
+2017-05-01 11:48:18,558 WARNING certfuzz.campaign.iteration - Caught minimizer error: Unable to get temporary debug file
+2017-05-01 11:48:18,950 WARNING certfuzz.campaign.campaign - Unable to remove campaign working dir: C:\vulnerabilities\ImageMagick\CVE-2016-8866\fuzzing\working_dir\campaign_ou4bvy

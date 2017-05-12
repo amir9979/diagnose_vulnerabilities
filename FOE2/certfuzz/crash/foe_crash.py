@@ -79,6 +79,7 @@ short_exp = {
              'PROBABLY_EXPLOITABLE': 'PEX',
              'EXPLOITABLE': 'EXP',
              'HEISENBUG': 'HSB',
+             'NOT_AN_EXCEPTION' : 'NAE'
              }
 
 exp_rank = {
@@ -87,6 +88,7 @@ exp_rank = {
             'UNKNOWN': 3,
             'PROBABLY_NOT_EXPLOITABLE': 4,
             'HEISENBUG': 5,
+            'NOT_AN_EXCEPTION': 6,
             }
 
 class FoeCrash(Crash):
