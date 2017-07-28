@@ -60,10 +60,12 @@ Created on Feb 3, 2012
 @organization: cert.org
 '''
 import os
+import sys
 import logging
 import StringIO
 import zipfile
 import collections
+import random
 
 from ..fuzztools.hamming import bytewise_hd, bitwise_hd
 from ..fuzztools.filetools import write_file
@@ -125,7 +127,7 @@ class Fuzzer(object):
         self.options = options
 
         # set up some file name related attributes
-        self.basename_fuzzed = '%s-%d%s' % (self.sf.root, self.iteration, self.sf.ext)
+        self.basename_fuzzed = '%s-%d-%d%s' % (self.sf.root, self.iteration, random.randint(0, sys.maxint), self.sf.ext)
         self.output_file_path = os.path.join(self.tmpdir, self.basename_fuzzed)
 
         self.input = None

@@ -64,7 +64,7 @@ import os
 import logging
 import wmi
 import time
-import tracing.ida
+import tracing.ida.ida
 
 from . import Debugger as DebuggerBase
 from .registration import register
@@ -113,7 +113,7 @@ class MsecDebugger(DebuggerBase):
         return [self.debugger_app(), '-version']
 
     def _get_cmdline(self, outfile):
-        cdb_command = '.load msec;!exploitable -v'
+        cdb_command = '.echo BEGIN_BLOCK;lm1m;.echo END_BLOCK;.load msec;!exploitable -v'
         args = []
         args.append(self.debugger_app())
         args.append('-amsec.dll')
@@ -126,8 +126,8 @@ class MsecDebugger(DebuggerBase):
         args.extend(('-o', '-c'))
         for self.exception_depth in xrange(0, self.exception_depth):
             cdb_command = 'g;' + cdb_command
-        tracing.ida.create_bp_script_file(self.program, cdb_command.split(";"))
-        args.append(tracing.ida.get_append_string())
+        tracing.ida.ida.create_bp_script_file(self.binary_to_diagnose, cdb_command.split(";"), self.granularity)
+        args.append(tracing.ida.ida.get_append_string())
         args.append(self.program)
         args.extend(self.cmd_args[1:])
         for l in pformat(args).splitlines():

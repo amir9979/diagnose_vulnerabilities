@@ -63,6 +63,7 @@ import logging
 from .registration import get_debug_file
 from .registration import result_fields, allowed_exploitability_values
 from .errors import DebuggerError
+from tracing.ida.ida_consts import DLL_GRANULARITY
 
 logger = logging.getLogger(__name__)
 
@@ -74,15 +75,21 @@ class Debugger(object):
     _key = 'debugger'
     _ext = 'debug'
 
-    def __init__(self, program=None, cmd_args=None, outfile_base=None, timeout=None, killprocname=None, **options):
+    def __init__(self, program=None, cmd_args=None, outfile_base=None, timeout=None, killprocname=None,
+                 granularity=DLL_GRANULARITY, binary_to_diagnose=None, **options):
         '''
         Default initializer for the base Debugger class.
         '''
         logger.debug('Initialize Debugger')
         self.program = program
+        if binary_to_diagnose == None:
+            self.binary_to_diagnose = self.program
+        else:
+            self.binary_to_diagnose = binary_to_diagnose
         self.cmd_args = cmd_args
         self.outfile = get_debug_file(outfile_base, self._ext)
         self.timeout = timeout
+        self.granularity = granularity
         self.killprocname = killprocname
         self.input_file = ''
         self.debugger_output = None
