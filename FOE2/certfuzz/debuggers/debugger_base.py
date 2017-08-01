@@ -90,6 +90,7 @@ class Debugger(object):
         self.outfile = get_debug_file(outfile_base, self._ext)
         self.timeout = timeout
         self.granularity = granularity
+        self.tracing_data = options.get("tracing_data", None)
         self.killprocname = killprocname
         self.input_file = ''
         self.debugger_output = None

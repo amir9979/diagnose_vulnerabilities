@@ -1,6 +1,6 @@
 #include <idc.idc>
 
-static int to_hex(str) {
+static to_hex(str) {
 	auto val = 0;
 	auto index = 0;
 	auto len = strlen(str);
@@ -15,7 +15,7 @@ static int to_hex(str) {
 	val = (val << 4) | (byte & 0xF);
 	index = index + 1;
 	}
-	return val
+	return val;
 }
 
 static ChunksDump() {
@@ -26,12 +26,12 @@ static ChunksDump() {
 		default_load_address = 268435456;
 	}
 	auto line = readstr(input_file);
-	while (IsString(retvalue)) {
-		auto function_name = substr(line,0,strstr(line, "="));
-		auto function_addr = to_hex(function_name);
-		auto current_chunk = FirstFuncFchunk(function_addr);
+	while (IsString(line)) {
+		auto function_addr = to_hex(line[2:]);
+		auto function_start = NextFunction(function_addr - 1);
+		auto current_chunk = FirstFuncFchunk(function_start);
 			while (current_chunk != BADADDR){
-				fprintf(out_file, "CHUNK 0x%X=%s_%X\n", current_chunk - default_load_address, title, current_chunk - default_load_address);
+				fprintf(out_file, "CHUNK 0x%X=%X\n", current_chunk - default_load_address, current_chunk - default_load_address);
 				current_chunk = NextFchunk(current_chunk);
 			}
 		line = readstr(input_file);

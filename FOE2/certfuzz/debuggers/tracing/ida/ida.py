@@ -49,8 +49,9 @@ def get_command_on_breakpoint(address, image_name, granularity = ida_consts.DLL_
         command.append(".echo {0}".format(ida_consts.BEGIN_BREAKPOINT_BLOCK))
         command.append("lm1m")
         command.append(".echo {0}".format(ida_consts.END_BREAKPOINT_BLOCK))
-    else:
+    elif granularity == ida_consts.FUNCTION_GRANULARITY:
         command.append(".echo {0}{1}{2}".format(ida_consts.BEGIN_BREAKPOINT_BLOCK, address, ida_consts.END_BREAKPOINT_BLOCK))
+
     command.append('g')
     return ";".join(command)
 
@@ -67,8 +68,18 @@ def create_breakpoint_list_for_modules(modules):
                                                                                  ida_consts.BEGIN_BREAKPOINT_BLOCK,
                                                                                  ida_consts.END_BREAKPOINT_BLOCK), modules)
 
+def get_ida_script_and_params(granularity, ida_out_file, module_name, tracing_data):
+    if granularity == ida_consts.CHUNK_GRANULARITY and module_name in tracing_data:
+        functions_file = tempfile.mktemp()
+        with open(functions_file, "wb") as f:
+            f.writelines(tracing_data[module_name])
+        return "{0} {1} {2} {3}".format(ida_consts.IDA_CHUNKS_SCRIPT, functions_file, ida_out_file,
+                                        module_name.split(".")[1])
+    else:
+        return "{0} {1} {2}".format(ida_consts.IDA_SCRIPT, ida_out_file, module_name.split(".")[1])
 
-def get_bp_traces(binary_file, break_on_dlls, granularity):
+
+def get_bp_traces(binary_file, break_on_dlls, granularity, tracing_data):
     """
     run radare to extract breakpoints to functions
     :param binary_file: path to binary file to use
@@ -78,12 +89,12 @@ def get_bp_traces(binary_file, break_on_dlls, granularity):
     # return create_breakpoint_list_for_modules(modules)
     breakpoints = []
     funcs = {}
-    for pe in modules:
-        image_name = os.path.basename(pe)
+    for module in modules:
+        image_name = os.path.basename(module)
         ida_out_file = make_tmp_file(r"out_file_" + image_name.replace(".dll", "") + "_")
-        ida_call_script = "{0} {1} {2}".format(ida_consts.IDA_SCRIPT, ida_out_file, os.path.basename(pe).split(".")[1])
+        ida_call_script = get_ida_script_and_params(granularity, ida_out_file, os.path.basename(module), tracing_data)
         db_file = make_tmp_file(r"db_file_")
-        command = r'"{0}" -T"Portable executable for 80386" -R -o"{1}" -S"{2}" "{3}"'.format(ida_consts.IDA_EXE, db_file, ida_call_script, pe)
+        command = r'"{0}" -T"Portable executable for 80386" -R -o"{1}" -S"{2}" "{3}"'.format(ida_consts.IDA_EXE, db_file, ida_call_script, module)
         print command
         p = subprocess.Popen(command, stdout=open(os.devnull), stderr=open(os.devnull),
                              cwd=ida_consts.PWD, universal_newlines=True)
@@ -109,7 +120,7 @@ def get_bp_traces(binary_file, break_on_dlls, granularity):
     return breakpoints
 
 
-def create_bp_script_file(binary_file, commands, granularity):
+def create_bp_script_file(binary_file, commands, granularity, tracing_data):
     """
     create script file that contains breakpoint for binary_file
     :param binary_file: program to analyze
@@ -120,7 +131,7 @@ def create_bp_script_file(binary_file, commands, granularity):
     ida_consts.STARTUP_SCRIPT = tempfile.mktemp(prefix=r"script_file_", dir=os.path.dirname(binary_file))
     init_tmp_dir(binary_file)
     print ida_consts.STARTUP_SCRIPT
-    traces = get_bp_traces(binary_file, ida_consts.BREAK_ON_DLLS, granularity)
+    traces = get_bp_traces(binary_file, ida_consts.BREAK_ON_DLLS, granularity, tracing_data)
     all_bps = make_tmp_file(r"all_bps_")
     with open(all_bps, "w") as f:
         f.write("\n".join(traces))
@@ -164,5 +175,9 @@ def analyze_breakpoints(debugger_out):
 
 if __name__ == "__main__":
     # print create_bp_script_file(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5511\vulnerable\ImageMagick-Windows\VisualMagick\bin\magick.exe", [])
-    print create_bp_script_file(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5511\vulnerable\ImageMagick-Windows\VisualMagick\bin\IM_MOD_DB_psd_.dll", [], ida_consts.FUNCTION_GRANULARITY)
+        print create_bp_script_file(
+            r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5511\vulnerable\ImageMagick-Windows\VisualMagick\bin\IM_MOD_DB_psd_.dll",
+            [],
+            ida_consts.CHUNK_GRANULARITY,
+            {"IM_MOD_DB_psd_.dll" : "0x10009890"})
     # print create_bp_script_file(r"C:\Users\User\Documents\Visual Studio 2015\Projects\Project1\Debug\Project1.exe", [])

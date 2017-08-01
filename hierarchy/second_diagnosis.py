@@ -19,7 +19,7 @@ FUZING_OUTPUT_DIR = r"fuzzed_seedfiles"
 FUZING_WORKING_DIR = r"fuzzed_working_dir"
 FUZZERS = [BitMutFuzzer, ByteMutFuzzer, CopyFuzzer, CRLFMutFuzzer, CRMutFuzzer, DropFuzzer, InsertFuzzer, NullMutFuzzer,
            SwapFuzzer, TruncateFuzzer, WaveFuzzer]
-FUZZERS = [ByteMutFuzzer]
+# FUZZERS = [ByteMutFuzzer]
 ITERATIONS = 100
 
 def fuzz_sedd_file(example_file, output_dir, iterations):

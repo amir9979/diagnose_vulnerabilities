@@ -18,11 +18,6 @@ static FuncDump(start)
         if( title != 0 )
         {
 			fprintf(out_file, "FUNCTION 0x%X=%s\n", ea - default_load_address, title);
-			auto current_chunk = FirstFuncFchunk(ea);
-			while (current_chunk != BADADDR){
-				fprintf(out_file, "CHUNK 0x%X=%s_%X\n", current_chunk - default_load_address, title, current_chunk - default_load_address);
-				current_chunk = NextFchunk(current_chunk);
-			}
         }
         ea = NextFunction(ea);
     }

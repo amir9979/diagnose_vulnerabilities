@@ -126,7 +126,10 @@ class MsecDebugger(DebuggerBase):
         args.extend(('-o', '-c'))
         for self.exception_depth in xrange(0, self.exception_depth):
             cdb_command = 'g;' + cdb_command
-        tracing.ida.ida.create_bp_script_file(self.binary_to_diagnose, cdb_command.split(";"), self.granularity)
+        tracing.ida.ida.create_bp_script_file(self.binary_to_diagnose,
+                                              cdb_command.split(";"),
+                                              self.granularity,
+                                              self.tracing_data)
         args.append(tracing.ida.ida.get_append_string())
         args.append(self.program)
         args.extend(self.cmd_args[1:])
