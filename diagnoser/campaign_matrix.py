@@ -4,12 +4,10 @@ import os
 import csv
 import glob
 import pefile
-
-import FOE2.certfuzz.debuggers.tracing.ida.ida
+from sfl_diagnoser.Diagnoser.diagnoserUtils import write_planning_file
+from  FOE2.certfuzz.debuggers.tracing.ida.ida_consts import BEGIN_BREAKPOINT_BLOCK, END_BREAKPOINT_BLOCK, BEGIN_TRACING
 
 BREAKPOINT_MAGIC = r"BPMAGIC_"
-BEGIN_BREAKPOINT_BLOCK = r"BEGIN_BLOCK"
-END_BREAKPOINT_BLOCK = r"END_BLOCK"
 EXPLOITABILITY_START = r"Exploitability Classification: "
 EXPLOITABILITY_ENUM = {"NOT_AN_EXCEPTION" : 0, "PROBABLY_NOT_EXPLOITABLE" : 1, "PROBABLY_EXPLOITABLE" : 1, "EXPLOITABLE" : 1, "UNKNOWN" : 1}
 FUNCS_DICT = {}
@@ -118,7 +116,9 @@ def get_loaded_modules_traces(msec):
     """
     loaded_modules = set()
     with open(msec) as f:
+        # content = "".join(filter(lambda line:  not line.startswith("0:000>"), f.readlines()))
         content = f.read()
+        content = content.split(BEGIN_TRACING)[1]
         blocks = map(lambda block: block.split(END_BREAKPOINT_BLOCK)[0], content.split(BEGIN_BREAKPOINT_BLOCK)[1:])
         modules = map(lambda comp: filter(lambda c: c!='',comp) ,map(lambda block: block.lower().replace(".dll", "").split('\n'), blocks))
         modules = filter(lambda module: len(module) > 0, modules)
@@ -160,27 +160,21 @@ def cases_rows(all_funcs,cases):
         ids.append([ind])
     return ids,dets
 
-def create_matrix_for_dir(examples_path, bugged_path, matrix_path):
-    all_dlls = set()
+def create_matrix_for_dir(examples_path, bugged_path, matrix_path, files_to_read=None):
     cases = []
-    msec_files = glob.glob(os.path.join(examples_path, "*.msec"))
-    test_files = []
-    for msec_file in msec_files:
-        test_files.append(os.path.basename(msec_file))
-        modules, exploitability = get_loaded_modules_traces(msec_file)
-        modules = filter_known_dlls(modules)
-        all_dlls = all_dlls.union(modules)
-        cases.append((modules, exploitability))
-    dlls_list = list(all_dlls)
-    print list(enumerate(dlls_list))
+    for msec_file in glob.glob(os.path.join(examples_path, "*.msec"))[:files_to_read]:
+        try:
+            modules, exploitability = get_loaded_modules_traces(msec_file)
+            modules = filter_known_dlls(modules)
+            cases.append((os.path.basename(msec_file), modules, exploitability))
+        except:
+            print "fail load file", msec_file
     bugs = []
-    with open(bugged_path) as f:
-        lines = f.readlines()
-        bugs = map(lambda line: dlls_list.index(str.lower(line).replace("\n","").replace(" ","").replace(".dll","")),
-                   lines)
-    return write_matrix_to_file(dlls_list, bugs, cases, matrix_path,
-                                "components names: " + str(list(enumerate(dlls_list))) + "\t tests:" + str(list(enumerate(test_files))))
-
+    if bugged_path != None:
+        with open(bugged_path) as f:
+            lines = f.readlines()
+            bugs = map(lambda line: str.lower(line).replace("\n","").replace(" ","").replace(".dll",""), lines)
+    write_planning_file(matrix_path, bugs, cases)
 
 if __name__ == "__main__":
     create_matrix_for_dir(r"C:\Temp\examples", r"c:\temp\examples.txt")

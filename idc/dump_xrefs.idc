@@ -17,7 +17,7 @@ static to_hex(str) {
 	return val;
 }
 
-static ChunksDump() {
+static xrefsDump() {
     auto input_file = fopen(ARGV[1], "r");
 	auto out_file = fopen(ARGV[2], "w");
 	auto default_load_address = 4194304; // REMOVE DEFAULT LOAD ADDRESS 0x400000
@@ -27,18 +27,21 @@ static ChunksDump() {
 	auto line = readstr(input_file);
 	while (IsString(line)) {
 		auto function_addr = to_hex(line[2:]) + default_load_address;
+		//fprintf(out_file, "0x%X=0x%X$%s\n", function_addr - default_load_address, function_addr - default_load_address, GetFunctionName(function_addr));
 		auto end = FindFuncEnd(function_addr);
 		auto ref = function_addr;
-		while(ref < end) {
-			auto xref = FirstFuncFchunk(ref);
+		while(ref <= end) {
+			auto xref = Rfirst(ref);
+			auto xref_flags = XrefType() & 31;
 			if (Rnext(ref, xref) != -1) {
 				// if there is more than one ref write all refs, otherwise it just trivial ref
 				while (xref != -1) {
 					auto flags = GetFunctionFlags(xref);
-					if(!(FUNC_FAR & flags)) {
+					if(!(FUNC_FAR & flags) && (xref_flags == fl_JN || xref_flags == fl_F)) {
 						fprintf(out_file, "0x%X=0x%X$%s\n", xref - default_load_address, xref - default_load_address, GetFunctionName(xref));
 					}
-					xref = NextFchunk(xref);
+					xref = Rnext(ref, xref);
+					xref_flags = XrefType() & 31;
 				}
 			}
 			ref = NextAddr(ref);
@@ -51,6 +54,6 @@ static ChunksDump() {
 
 static main()  {
     Wait();
-    ChunksDump();
+    xrefsDump();
     Exit(0); 
 }

@@ -76,16 +76,16 @@ class Debugger(object):
     _ext = 'debug'
 
     def __init__(self, program=None, cmd_args=None, outfile_base=None, timeout=None, killprocname=None,
-                 granularity=DLL_GRANULARITY, binary_to_diagnose=None, **options):
+                 granularity=DLL_GRANULARITY, binaries_to_diagnose=None, **options):
         '''
         Default initializer for the base Debugger class.
         '''
         logger.debug('Initialize Debugger')
         self.program = program
-        if binary_to_diagnose == None:
-            self.binary_to_diagnose = self.program
+        if binaries_to_diagnose == None:
+            self.binaries_to_diagnose = [self.program]
         else:
-            self.binary_to_diagnose = binary_to_diagnose
+            self.binaries_to_diagnose = binaries_to_diagnose
         self.cmd_args = cmd_args
         self.outfile = get_debug_file(outfile_base, self._ext)
         self.timeout = timeout

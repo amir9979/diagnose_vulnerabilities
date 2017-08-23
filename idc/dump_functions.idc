@@ -17,7 +17,7 @@ static FuncDump(start)
 		flags = GetFunctionFlags(ea);
         if( title != 0 )
         {
-			fprintf(out_file, "FUNCTION 0x%X=%s\n", ea - default_load_address, title);
+			fprintf(out_file, "0x%X=%s\n", ea - default_load_address, title);
         }
         ea = NextFunction(ea);
     }

@@ -113,7 +113,7 @@ class MsecDebugger(DebuggerBase):
         return [self.debugger_app(), '-version']
 
     def _get_cmdline(self, outfile):
-        cdb_command = '.echo BEGIN_BLOCK;lm1m;.echo END_BLOCK;.load msec;!exploitable -v'
+        cdb_command = '.load msec;!exploitable -v'
         args = []
         args.append(self.debugger_app())
         args.append('-amsec.dll')
@@ -126,11 +126,11 @@ class MsecDebugger(DebuggerBase):
         args.extend(('-o', '-c'))
         for self.exception_depth in xrange(0, self.exception_depth):
             cdb_command = 'g;' + cdb_command
-        tracing.ida.ida.create_bp_script_file(self.binary_to_diagnose,
+        tracing.ida.ida.create_bp_script_file(self.binaries_to_diagnose,
                                               cdb_command.split(";"),
                                               self.granularity,
                                               self.tracing_data)
-        args.append(tracing.ida.ida.get_append_string())
+        args.append(tracing.ida.ida.get_append_string(self.granularity))
         args.append(self.program)
         args.extend(self.cmd_args[1:])
         for l in pformat(args).splitlines():
@@ -172,6 +172,7 @@ class MsecDebugger(DebuggerBase):
                 return
 
         # create a timer that calls kill() when it expires
+        print "timer", self.timeout
         t = Timer(self.timeout, self.kill, args=[p.pid, 99])
         t.start()
         if self.watchcpu == True:
