@@ -1,5 +1,6 @@
 from sfl_diagnoser.Diagnoser.ExperimentInstance import ExperimentInstance
 from sfl_diagnoser.Diagnoser.Experiment_Data import Experiment_Data
+from sfl_diagnoser.Diagnoser.Diagnosis import Diagnosis
 import sfl_diagnoser.Diagnoser.ExperimentInstance
 from sfl_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile, save_ds_to_matrix_file, write_merged_matrix
 from sfl_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
@@ -100,16 +101,23 @@ def get_results_objects_for_instance(instance_file):
 
     save_ds_to_matrix_file(base_instance.initials_to_DS().optimize(), optimized_matrix)
     optimized_instance = readPlanningFile(optimized_matrix)
-    optimized_results = Diagnosis_Results(optimized_instance)
+    optimized_instance.diagnose()
+    optimized_results = Diagnosis_Results(optimized_instance.diagnoses, optimized_instance.initial_tests, optimized_instance.error)
 
     save_ds_to_matrix_file(optimized_instance.initials_to_DS().remove_duplicate_tests(), reduced_matrix)
     write_merged_matrix(optimized_instance, merged_matrix)
-    reduced_results = Diagnosis_Results(readPlanningFile(reduced_matrix))
+    reduced_instance = readPlanningFile(reduced_matrix)
+    reduced_instance.diagnose()
+    reduced_results = Diagnosis_Results(reduced_instance.diagnoses, reduced_instance.initial_tests, reduced_instance.error)
 
     merged_instance = readPlanningFile(merged_matrix)
-    merged_results = Diagnosis_Results(merged_instance)
+    merged_instance.diagnose()
+    merged_results = Diagnosis_Results(merged_instance.diagnoses, merged_instance.initial_tests, merged_instance.error)
+
     save_ds_to_matrix_file(merged_instance.initials_to_DS().remove_duplicate_tests(), merged_reduced_matrix)
-    merged_reduced_results = Diagnosis_Results(readPlanningFile(merged_reduced_matrix))
+    merged_reduced_instance = readPlanningFile(merged_reduced_matrix)
+    merged_reduced_instance.diagnose()
+    merged_reduced_results = Diagnosis_Results(merged_reduced_instance.diagnoses, merged_reduced_instance.initial_tests, merged_reduced_instance.error)
     return optimized_results, reduced_results, merged_results, merged_reduced_results
 
 
@@ -159,6 +167,29 @@ def check_fuzzing_influence(fuzzing_dir, results_file_name):
     with open(results_file_name, "wb") as f:
         writer = csv.writer(f)
         writer.writerows(results)
+
+def get_xref_diagnoses(instance, seperator="$"):
+    def xref_comp_to_function(xref_comp):
+        return xref_comp.split(seperator)[1]
+    instance.diagnose()
+    diagnoses = map(lambda diagnosis: map(xref_comp_to_function, diagnosis), instance.diagnoses)
+    for diagnosis in diagnoses:
+        diagnosis.diagnosis = list(set(diagnosis))
+    return diagnoses
+
+def get_xref_results(instance, seperator="$"):
+    def xref_comp_to_function(xref_comp):
+        return xref_comp.split(seperator)[1]
+
+    instance.diagnose()
+    diagnoses = []
+    for diagnosis in diagnoses:
+        d = Diagnosis()
+        d.diagnosis = map(xref_to_function, diagnosis.diagnosis)
+        d.probability = diagnosis.probability
+    bugs = map(xref_comp_to_function, Experiment_Data().BUGS)
+    return Diagnosis_Results(diagnoses, instance.initial_tests, instance.error, bugs=bugs)
+
 
 if __name__=="__main__":
     check_fuzzing_influence(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2016-7531_Copy\fuzzing",

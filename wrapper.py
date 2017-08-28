@@ -7,6 +7,7 @@ import utils
 from  FOE2.certfuzz.debuggers.msec import MsecDebugger
 from FOE2.certfuzz.debuggers.tracing.ida.ida_consts import *
 import consts
+import evaluation
 from fuzzing_utils import fuzz_project_dir
 
 
@@ -121,7 +122,7 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
 
     # function diagnosis
     named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD,
-                             entry_points_instance.get_named_diagnoses())
+                             evaluation.get_xref_diagnoses(entry_points_instance.get_named_diagnoses(),"#"))
     diagnosed_components = reduce(list.__add__, [diagnosis.diagnosis for diagnosis in named_diagnoses], [])
     function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
     run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), function_working_dir, config, FUNCTION_GRANULARITY,
