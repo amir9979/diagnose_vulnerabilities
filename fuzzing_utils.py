@@ -27,7 +27,6 @@ def fuzz_sedd_file(example_file, output_dir, iterations):
             range_seed = random.randint(0, sys.maxint)
             seedfile = SeedFile(output_dir, example_file)
             with fuzzer_class(seedfile, output_dir, range_seed, seed, {}) as fuzzer:
-                print fuzzer.__class__, range_seed
                 fuzzer.fuzz()
 
 

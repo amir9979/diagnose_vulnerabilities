@@ -2,9 +2,13 @@ import os
 import utils
 import subprocess
 import shutil
+import consts
+import glob
+from fuzzing_utils import fuzz_sedd_file
 
 DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
 BUILD = r'/Build'
+DEBUG = r'Debug|x86'
 CLEAN = r'/Clean'
 CMAKE = r"cmake ."
 CDB_EXE = r"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe"
@@ -21,10 +25,11 @@ class Reproducer(object):
         self.git_path = git_path
         self.bin_path = bin_path
 
-    def copy_and_overwrite(self, from_path, to_path):
-        if os.path.exists(to_path):
-            shutil.rmtree(to_path)
-        shutil.copytree(from_path, to_path)
+    def copy_and_overwrite(self, src_path, dst_path):
+        if os.path.exists(dst_path):
+            shutil.rmtree(dst_path)
+        # subprocess.Popen("XCOPY {src} {dst} /s /e".format(src=src_path,dst=dst_path))
+        shutil.copytree(src_path, dst_path)
 
     def compile(self, sln_path):
         p = subprocess.Popen(CMAKE, cwd=os.path.dirname(sln_path))
@@ -70,14 +75,16 @@ class Reproducer(object):
         self.copy_and_overwrite(sources_dir, os.path.join(base_dir, "vulnerable", os.path.basename(sources_dir)))
 
     def reproduce(self, cve_number, git_commit, exploit, bin_file_to_run, cmd_line="{PROGRAM} {SEEDFILE} NUL"):
-        try:
-            base_dir = os.path.join(self.exploits_dir, cve_number)
-            self.create_dirs(base_dir, self.sources_dir)
-            self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
-            self.compile(os.path.join(base_dir, "vulnerable", self.sln_path))
-
+        base_dir = os.path.join(self.exploits_dir, cve_number)
+        self.create_dirs(base_dir, self.sources_dir)
+        self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
+        self.compile(os.path.join(base_dir, "vulnerable", self.sln_path))
+        exploit_path = self.save_exploit_file(base_dir, exploit)
+        exploit_dir = os.path.dirname(exploit_path)
+        # fuzz_sedd_file(exploit_path, exploit_dir, consts.FUZZ_ITERATIONS)
+        for seedfile in glob.glob(os.path.join(exploit_dir, "*")):
             run_line = cmd_line.format(PROGRAM=self.get_bin_file_path(base_dir, bin_file_to_run),
-                                       SEEDFILE=self.save_exploit_file(base_dir, exploit),
+                                       SEEDFILE=seedfile,
                                        TMP_FILE=r"C:\temp\tempfile")
             print run_line
             windbg_run = [CDB_EXE, "-amsec.dll", "-hd", "-xd", "gp", "-logo", self.get_log_file(base_dir), "-o", "-c",
@@ -86,8 +93,6 @@ class Reproducer(object):
             p = subprocess.Popen(windbg_run)
             p.wait()
             self.check_success(base_dir)
-        except Exception as e:
-            print "failed", e
 
 IMAGEMAGICK_DIR =r"C:\vulnerabilities\ImageMagick_exploited"
 SOURCES =r"C:\vulnerabilities\ImageMagick_exploited\clean\ImageMagick-Windows"
@@ -164,7 +169,7 @@ def libarchive_reproduce():
     libarchive_reproducer.reproduce("CVE-2015-8933", "3c7a6dc", r"C:\Users\User\Downloads\libarchive-undefined-signed-overflow.tar",
                                     "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
     libarchive_reproducer.reproduce("CVE-2016-8689_2", "7f17c79", r"C:\Users\User\Downloads\118.crashes.zip",
-                                    "bsdtar", "{PROGRAM} -t {SEEDFILE}")
+                                    "bsdtar", "{PROGRAM} -t -f {SEEDFILE}")
     libarchive_reproducer.reproduce("CVE-2016-8688", "eec077f", r"C:\Users\User\Downloads\crash.bz2\crash.bz2",
                                     "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
     libarchive_reproducer.reproduce("760", "eec077f", r"C:\Users\User\Downloads\113.crashes.zip",
@@ -237,10 +242,53 @@ def libarchive_reproduce():
                                     "bsdtar", "{PROGRAM} -x -v -f {SEEDFILE}")
 
 
+def yara_reproduce():
+    yara_reproducer = Reproducer(r"C:\vulnerabilities\yara",
+                                       r"C:\vulnerabilities\yara\yara",
+                                       r"yara\windows\vs2015\yara.sln",
+                                       r"yara",
+                                       r"yara\windows\vs2015\Debug")
+    yara_reproducer.reproduce("CVE-2017-9465", "992480c", r"C:\Users\User\Downloads\yara_ir_yr_arena_write_data.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-9465_1", "f0a98fb", r"C:\Users\User\Downloads\yara_ir_yr_arena_write_data.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-9465_2", "a8f58d2", r"C:\Users\User\Downloads\yara_ir_yr_arena_write_data.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+
+    yara_reproducer.reproduce("CVE-2017-9438", "58f72d4", r"C:\Users\User\Downloads\yara_so_yr_re_emit.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-9438_1", "925bcf3", r"C:\Users\User\Downloads\yara_so_yr_re_emit.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-9304", "10e8bd3", r"C:\Users\User\Downloads\yara_so_yr_re_emit2.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-9304_1", "1aaac7b", r"C:\Users\User\Downloads\yara_so_yr_re_emit2.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+
+    yara_reproducer.reproduce("CVE-2017-8929", "053e67e", r"C:\Users\User\Downloads\yara_uaf_sized_string_cmp.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-8929_1", "49fc70e", r"C:\Users\User\Downloads\yara_uaf_sized_string_cmp.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+
+    yara_reproducer.reproduce("CVE-2017-8294", "4cab5b3", r"C:\Users\User\Downloads\yara_oobr_yr_re_exec.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-8294_1", "83d7998", r"C:\Users\User\Downloads\yara_oobr_yr_re_exec.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-8294_2", "d438c8a", r"C:\Users\User\Downloads\yara_oobr_yr_re_exec.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+
+    yara_reproducer.reproduce("CVE-2017-5924", "7f02eca", r"C:\Users\User\Downloads\yara_uaf_yr_compiler_destroy.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2017-5923", "ab906da", r"C:\Users\User\Downloads\yara_hoobr_yyparse_l833.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2016-10211", "890c3f8", r"C:\Users\User\Downloads\yara_uaf.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+    yara_reproducer.reproduce("CVE-2016-10210", "eb491e0", r"C:\Users\User\Downloads\yara_null_ptr.txt",
+                              "yara32", "{PROGRAM} {SEEDFILE} C:\Users\User\Downloads\SysinternalsSuite\strings.exe")
+
 
 
 if __name__ == "__main__":
-    libarchive_reproduce()
+    yara_reproduce()
 
     # other_cve()
     # reproduce("CVE-0000-0000", "91cc3f3", r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5510\exploit\18.psb", "magick", "{PROGRAM} {SEEDFILE} NUL")

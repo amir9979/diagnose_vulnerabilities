@@ -1,5 +1,6 @@
 import github3
 import re
+import json
 import xml.etree.ElementTree as ET
 
 def extract_reproduce_issues(description, cve):
@@ -17,7 +18,7 @@ def parse_vulnerability_tag(vulnerability):
     """
     cve_id = list(vulnerability.iter("{http://www.icasi.org/CVRF/schema/vuln/1.1}CVE"))[0].text
     descriptions = vulnerability.iter('{http://www.icasi.org/CVRF/schema/vuln/1.1}Description')
-    is_github_issue = lambda x: "confirm:" in x and "//github" in x and "issues" in x
+    is_github_issue = lambda x: "github" in x and "issues" in x
     wanted_descriptions = filter(is_github_issue, map(lambda x: x.text.lower(), descriptions))
     if len(wanted_descriptions) > 0:
         return extract_reproduce_issues(wanted_descriptions[0], cve_id)
@@ -95,5 +96,10 @@ def get_repos_data(repos_issues):
 
 if __name__ == "__main__":
     d = parse_cve_xml(r"C:\Users\User\Downloads\allitems-cvrf.xml")
-    get_repos_data(d)
+    # get_repos_data(d)
     print d.keys()
+    with open(r'C:\temp\data3.json', 'w') as fp:
+        d2 = {}
+        for key in d:
+            d2[str(key)] = d[key]
+        json.dump(d2, fp)
