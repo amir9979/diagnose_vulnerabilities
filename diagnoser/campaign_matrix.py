@@ -65,7 +65,7 @@ def filter_known_dlls(modules_list):
                   'WINMMBASE_1790000', 'profapi', 'cfgmgr32', 'NSI', "WS2_32", 'rsaenh', 'winmmbase'
                     , 'CRYPTSP', 'bcrypt', 'USP10.dll', 'winhttp', 'ondemandconnroutehelper'
         , 'apphelp', 'MSIMG32.dll', "msasn1", "oleaut32", "psapi", "comctl32", "avicap32", "crypt32",
-                  "msvfw32", "ffmpeg", "msvcp_win"]
+                  "msvfw32", "ffmpeg", "msvcp_win", "core_db_glib_", "core_db_zlib_"]
     dlls = map(str.lower, known_dlls + map(lambda x: x.replace(".dll", ""), known_dlls))
     return filter(lambda module: module not in dlls  and "winmmbase" not in module, modules_list)
 

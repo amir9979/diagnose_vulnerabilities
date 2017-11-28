@@ -23,75 +23,46 @@
       <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="87" column="65" selection-start-line="87" selection-start-column="65" selection-end-line="88" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="look_for_projects.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/look_for_projects.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            <state relative-caret-position="2669">
+              <caret line="167" column="81" selection-start-line="167" selection-start-column="81" selection-end-line="167" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reproduce_imagemagick.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/evaluation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reproduce_imagemagick.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2078">
-              <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+            <state relative-caret-position="245">
+              <caret line="286" column="91" selection-start-line="286" selection-start-column="80" selection-end-line="286" selection-end-column="91" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1504274279033" expanded="true" signature="3083:3232" ph="..." />
+                <element signature="e#10985#15880#0" expanded="false" />
+                <element signature="e#24262#28280#0" expanded="false" />
+                <element signature="e#28310#31314#0" expanded="false" />
+                <marker date="1511904115553" expanded="true" signature="9308:9493" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fuzzing_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
+      <file leaf-file-name="gdl2nx.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/call_graph/gdl2nx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="find_cves.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reproduce/find_cves.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ida_consts.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="2125">
+              <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -107,21 +78,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation.py">
+      <file leaf-file-name="fuzzing_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="64" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="msec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
+      <file leaf-file-name="FullMatrix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/FullMatrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1955">
-              <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="look_for_projects.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/look_for_projects.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -147,8 +138,6 @@
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/dll_tracing.py" />
         <option value="$PROJECT_DIR$/hierarchy/first_diagnosis.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/campaign/campaign.py" />
-        <option value="$PROJECT_DIR$/call_graph/gdl2nx.py" />
-        <option value="$PROJECT_DIR$/look_for_projects.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py" />
         <option value="$PROJECT_DIR$/basic_debuggers/run_examples.py" />
         <option value="$PROJECT_DIR$/utils.py" />
@@ -156,18 +145,22 @@
         <option value="$PROJECT_DIR$/hierarchy/second_diagnosis.py" />
         <option value="$PROJECT_DIR$/create_examples.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/diagnoserUtils.py" />
-        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py" />
-        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py" />
-        <option value="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
-        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" />
-        <option value="$PROJECT_DIR$/wrapper.py" />
-        <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/fuzzing_utils.py" />
         <option value="$PROJECT_DIR$/reproduce/find_cves.py" />
-        <option value="$PROJECT_DIR$/reproduce_imagemagick.py" />
+        <option value="$PROJECT_DIR$/reproduce/find_sln.py" />
+        <option value="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
+        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Experiment_Data.py" />
+        <option value="$PROJECT_DIR$/wrapper.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
+        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py" />
+        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py" />
+        <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/consts.py" />
+        <option value="$PROJECT_DIR$/call_graph/gdl2nx.py" />
+        <option value="$PROJECT_DIR$/look_for_projects.py" />
+        <option value="$PROJECT_DIR$/reproduce_imagemagick.py" />
       </list>
     </option>
   </component>
@@ -205,6 +198,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,23 +218,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diagnose_vulnerabilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diagnose_vulnerabilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reproduce" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,24 +247,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="diagnose_vulnerabilities" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrapper.py" />
-      <option name="PARAMETERS" value="C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5506_Copy\vulnerable\ImageMagick-Windows\VisualMagick\bin\magick.exe C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5506_Copy\fuzzing" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ida" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="diagnose_vulnerabilities" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5506\vulnerable\ImageMagick-Windows\VisualMagick\bin\magick.exe C:\vulnerabilities\exported\CVE-2017-5506\fuzzing" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -323,19 +285,36 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="find_cves" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="look_for_projects" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\User\Anaconda2\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reproduce" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="diagnose_vulnerabilities" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reproduce/find_cves.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/look_for_projects.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="gdl2nx" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/call_graph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="diagnose_vulnerabilities" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/call_graph/gdl2nx.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -476,18 +455,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.wrapper" />
-      <item index="1" class="java.lang.String" itemvalue="Python.ida" />
-      <item index="2" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
-      <item index="3" class="java.lang.String" itemvalue="Python.evaluation" />
-      <item index="4" class="java.lang.String" itemvalue="Python.find_cves" />
+      <item index="1" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
+      <item index="2" class="java.lang.String" itemvalue="Python.evaluation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.look_for_projects" />
+      <item index="4" class="java.lang.String" itemvalue="Python.gdl2nx" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
-        <item index="1" class="java.lang.String" itemvalue="Python.find_cves" />
-        <item index="2" class="java.lang.String" itemvalue="Python.wrapper" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ida" />
-        <item index="4" class="java.lang.String" itemvalue="Python.evaluation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.look_for_projects" />
+        <item index="2" class="java.lang.String" itemvalue="Python.gdl2nx" />
+        <item index="3" class="java.lang.String" itemvalue="Python.evaluation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.wrapper" />
       </list>
     </recent_temporary>
   </component>
@@ -511,43 +490,24 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2591508" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20497803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32018927" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27602524" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3961039" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39589906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22986823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34858045" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -625,7 +585,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/look_for_projects.py</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -639,14 +599,19 @@
           <option name="timeStamp" value="262" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>123</line>
-          <option name="timeStamp" value="318" />
+          <url>file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py</url>
+          <line>139</line>
+          <option name="timeStamp" value="345" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="320" />
+          <url>file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="346" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
+          <line>530</line>
+          <option name="timeStamp" value="350" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -656,7 +621,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="328" />
+      <option name="time" value="352" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -665,41 +630,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/campaign/config/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/hooks/winxp/dllmain.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/foe2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/campaign/campaign_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="71" column="25" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diagnoser/peAnalyze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/campaign/iteration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6426">
@@ -793,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/call_graph/gdl2nx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="88" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic_debuggers/run_examples.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -856,45 +779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/diagnoserUtils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/ExperimentInstance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="242" column="0" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Barinel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/FullMatrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -927,35 +815,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda2/Lib/site-packages/requests/adapters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8024">
+          <caret line="499" column="0" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Temp/apache_projects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reproduce/find_cves.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reproduce/find_sln.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="164" column="69" selection-start-line="164" selection-start-column="21" selection-end-line="164" selection-end-column="69" />
+        <state relative-caret-position="1054">
+          <caret line="67" column="85" selection-start-line="67" selection-start-column="85" selection-end-line="67" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="1513">
+          <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Experiment_Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/ExperimentInstance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4063">
+          <caret line="249" column="55" selection-start-line="249" selection-start-column="55" selection-end-line="249" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/diagnoserUtils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2227">
+          <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#37#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="3230">
+          <caret line="195" column="61" selection-start-line="195" selection-start-column="61" selection-end-line="195" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="833">
+          <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Staccato.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/FullMatrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2669">
+          <caret line="167" column="81" selection-start-line="167" selection-start-column="81" selection-end-line="167" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="99" column="83" selection-start-line="99" selection-start-column="83" selection-end-line="99" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -968,82 +961,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation.py">
+    <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="64" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
+    <entry file="file://$PROJECT_DIR$/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+        <state relative-caret-position="85">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/call_graph/gdl2nx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="127" column="20" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/look_for_projects.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="264">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reproduce/find_cves.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2078">
-          <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="286" column="91" selection-start-line="286" selection-start-column="80" selection-end-line="286" selection-end-column="91" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1504274279033" expanded="true" signature="3083:3232" ph="..." />
+            <element signature="e#10985#15880#0" expanded="false" />
+            <element signature="e#24262#28280#0" expanded="false" />
+            <element signature="e#28310#31314#0" expanded="false" />
+            <marker date="1511904115553" expanded="true" signature="9308:9493" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1479">
-          <caret line="87" column="65" selection-start-line="87" selection-start-column="65" selection-end-line="88" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

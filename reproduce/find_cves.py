@@ -81,25 +81,28 @@ def get_issue_properties(repo, issue_id):
 
 def get_repos_data(repos_issues):
     gh = github3.GitHub("amir9979@gmail.com", "192837465a")
-    detailed_issues = {}
+    filtered_issues = {}
     for owner, repo in repos_issues:
         repository = gh.repository(owner, repo)
+        if repository is not None and repository.language is not None:
+            print repository.language.lower()
         if repository is None or repository.language is None or repository.language.lower() not in ["c", "cpp", "c++"]:
             continue
-        for cve, issue in repos_issues[(owner, repo)]:
-            try:
-                body_links, fix_commit = get_issue_properties(repository, issue)
-                if body_links != [] :
-                    print body_links, fix_commit
-            except:
-                pass
+        filtered_issues[(owner, repo)] = repos_issues[(owner, repo)]
+        # for cve, issue in repos_issues[(owner, repo)]:
+        #     try:
+        #         body_links, fix_commit = get_issue_properties(repository, issue)
+        #         if body_links != [] :
+        #             print body_links, fix_commit
+        #     except:
+        #         pass
+    return filtered_issues
 
 if __name__ == "__main__":
     d = parse_cve_xml(r"C:\Users\User\Downloads\allitems-cvrf.xml")
-    # get_repos_data(d)
-    print d.keys()
-    with open(r'C:\temp\data3.json', 'w') as fp:
+    repos = get_repos_data(d)
+    with open(r'C:\temp\data4.json', 'w') as fp:
         d2 = {}
-        for key in d:
+        for key in repos:
             d2[str(key)] = d[key]
         json.dump(d2, fp)

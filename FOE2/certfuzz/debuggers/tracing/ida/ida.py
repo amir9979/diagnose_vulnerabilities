@@ -197,6 +197,6 @@ if __name__ == "__main__":
         create_bp_script_file(
             [r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5510-Copy\vulnerable\ImageMagick-Windows\VisualMagick\bin\im_mod_db_psd_.dll"],
             [],
-            ida_consts.ENTRY_POINTS_GRANULARITY,
+            ida_consts.XREF_GRANULARITY,
             {'IM_MOD_DB_psd_': [ '0x3420']})
     # print create_bp_script_file(r"C:\Users\User\Documents\Visual Studio 2015\Projects\Project1\Debug\Project1.exe", [])

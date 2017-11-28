@@ -92,7 +92,7 @@ def summarize_results(cve_list, bugged_dll_file, bugged_function_file, dll_matri
         writer = csv.writer(f)
         writer.writerows(csv_lines)
 
-def get_results_objects_for_instance(instance_file):
+def get_results_objects_for_instance(instance_file, sep):
     base_instance = readPlanningFile(instance_file)
     optimized_matrix = tempfile.mktemp(prefix="optimized_")
     reduced_matrix = tempfile.mktemp(prefix="reduced_")
@@ -102,37 +102,39 @@ def get_results_objects_for_instance(instance_file):
     save_ds_to_matrix_file(base_instance.initials_to_DS().optimize(), optimized_matrix)
     optimized_instance = readPlanningFile(optimized_matrix)
     optimized_instance.diagnose()
-    optimized_results = Diagnosis_Results(optimized_instance.diagnoses, optimized_instance.initial_tests, optimized_instance.error)
-
+    optimized_results = get_results_by_sep(optimized_instance, sep)
     save_ds_to_matrix_file(optimized_instance.initials_to_DS().remove_duplicate_tests(), reduced_matrix)
     write_merged_matrix(optimized_instance, merged_matrix)
     reduced_instance = readPlanningFile(reduced_matrix)
     reduced_instance.diagnose()
-    reduced_results = Diagnosis_Results(reduced_instance.diagnoses, reduced_instance.initial_tests, reduced_instance.error)
+    reduced_results = get_results_by_sep(reduced_instance, sep)
 
     merged_instance = readPlanningFile(merged_matrix)
     merged_instance.diagnose()
-    merged_results = Diagnosis_Results(merged_instance.diagnoses, merged_instance.initial_tests, merged_instance.error)
+    merged_results = get_results_by_sep(merged_instance, sep)
 
     save_ds_to_matrix_file(merged_instance.initials_to_DS().remove_duplicate_tests(), merged_reduced_matrix)
     merged_reduced_instance = readPlanningFile(merged_reduced_matrix)
     merged_reduced_instance.diagnose()
-    merged_reduced_results = Diagnosis_Results(merged_reduced_instance.diagnoses, merged_reduced_instance.initial_tests, merged_reduced_instance.error)
+    merged_reduced_results = get_results_by_sep(merged_reduced_instance, sep)
+
     return optimized_results, reduced_results, merged_results, merged_reduced_results
 
 
-def full_results(cve_list, dll_matrix_file_name, function_matrix_file_name, xref_matrix_file_name, results_file_name):
+def full_results(cve_list, dll_matrix_file_name, entry_matrix_file_name, function_matrix_file_name, xref_matrix_file_name, results_file_name):
     header = ["cve_number", "granularity", "matrix_type"]
     csv_lines = []
     added_results_header = False
     for cve in cve_list:
-        fuzzing_dir = os.path.join(r"C:\vulnerabilities\ImageMagick_exploited", cve, "fuzzing")
+        fuzzing_dir = os.path.join(r"C:\vulnerabilities\exported", cve, "fuzzing")
         dll_matrix = os.path.join(fuzzing_dir, dll_matrix_file_name)
+        entry_matrix = os.path.join(fuzzing_dir, entry_matrix_file_name)
         function_matrix = os.path.join(fuzzing_dir, function_matrix_file_name)
         xref_matrix = os.path.join(fuzzing_dir, xref_matrix_file_name)
-        for granularity, instance_file in zip(["dll", "function", "xref"], [dll_matrix, function_matrix, xref_matrix]):
+        for granularity, instance_file, sep in zip(["dll", "entry_points", "function", "xref"], [dll_matrix, entry_matrix, function_matrix, xref_matrix], [None, "#", None, "$"]):
+        # for granularity, instance_file, sep in zip(["dll", "entry_points", "function", "xref"], [dll_matrix, entry_matrix, function_matrix, xref_matrix], [None, None, None, "$"]):
             print cve, granularity
-            base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(instance_file)
+            base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(instance_file, sep)
             if not added_results_header:
                 header += base_results.get_metrics_names()
                 csv_lines.append(header)
@@ -146,48 +148,52 @@ def full_results(cve_list, dll_matrix_file_name, function_matrix_file_name, xref
         writer.writerows(csv_lines)
 
 
-def check_fuzzing_for_dir(working_dir, results_file, number_files_to_read, matrix_path):
+def check_fuzzing_for_dir(working_dir, results_file, number_files_to_read, matrix_path, sep):
     results = []
     for number in number_files_to_read:
         diagnoser.campaign_matrix.create_matrix_for_dir(working_dir, results_file, matrix_path, number)
-        base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(matrix_path)
+        base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(matrix_path, sep)
         results.append([number, base_results.precision, base_results.recall, base_results.wasted, base_results.num_comps, reduced_results.num_tests])
     return results
 
 def check_fuzzing_influence(fuzzing_dir, results_file_name):
-    number_files_to_read = [5] + range(50, 1001, 50)
+    number_files_to_read = [ 5, 10, 20, 50, 100, 250 , 500, 750]
     dll_matrix = tempfile.mktemp(dir=r"C:\temp", prefix= "dll")
+    print dll_matrix
     results = [["granularity", "num_fuzzed_files", "precision", "recall", "wasted", "#comps", "distinct_tests"]]
     results.extend(map(lambda result : ["dll"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix)))
+                          os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, None)))
+    results.extend(map(lambda result : ["entry_points"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR),
+                          os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, None)))
     results.extend(map(lambda result : ["function"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.FUNCTION_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix)))
+                          os.path.join(fuzzing_dir,consts.FUNCTION_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, None)))
     results.extend(map(lambda result : ["xref"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.XREF_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.FUNCTION_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix)))
+                          os.path.join(fuzzing_dir,consts.FUNCTION_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, "$")))
     with open(results_file_name, "wb") as f:
         writer = csv.writer(f)
         writer.writerows(results)
 
-def get_xref_diagnoses(instance, seperator="$"):
+def get_results_by_sep(instance, seperator=None):
+    def filter_comps(xref_comp):
+        return seperator in xref_comp
     def xref_comp_to_function(xref_comp):
+        if "^" in xref_comp:
+            return "^".join(list_to_comps(xref_comp.split("^")))
         return xref_comp.split(seperator)[1]
+    def list_to_comps(lst):
+        return list(set(map(xref_comp_to_function, filter(filter_comps, lst))))
     instance.diagnose()
-    diagnoses = map(lambda diagnosis: map(xref_comp_to_function, diagnosis), instance.diagnoses)
-    for diagnosis in diagnoses:
-        diagnosis.diagnosis = list(set(diagnosis))
-    return diagnoses
-
-def get_xref_results(instance, seperator="$"):
-    def xref_comp_to_function(xref_comp):
-        return xref_comp.split(seperator)[1]
-
-    instance.diagnose()
+    if seperator is None:
+        return Diagnosis_Results(instance.diagnoses, instance.initial_tests, instance.error)
     diagnoses = []
-    for diagnosis in diagnoses:
+    for diagnosis in instance.get_named_diagnoses():
         d = Diagnosis()
-        d.diagnosis = map(xref_to_function, diagnosis.diagnosis)
+        d.diagnosis = list_to_comps(diagnosis.diagnosis)
+        if len(d.diagnosis) == 0:
+            continue
         d.probability = diagnosis.probability
-    bugs = map(xref_comp_to_function, Experiment_Data().BUGS)
+        diagnoses.append(d)
+    bugs = list_to_comps( Experiment_Data().get_named_bugs())
     return Diagnosis_Results(diagnoses, instance.initial_tests, instance.error, bugs=bugs)
 
 
@@ -195,9 +201,12 @@ if __name__=="__main__":
     check_fuzzing_influence(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2016-7531_Copy\fuzzing",
                             r"C:\vulnerabilities\ImageMagick_exploited\fuzzing_influence.csv")
     exit()
+    dirs = ["fuzzing5506", "fuzzing5508", "fuzzing5509", "fuzzing5510", "fuzzing5511", "fuzzing7531", "fuzzing7533",
+     "fuzzing7535", "fuzzing7906", "fuzzing8866", "fuzzing9556"]
     full_results(["CVE-2016-7531", "CVE-2016-7533", "CVE-2016-8866", "CVE-2017-5506", "CVE-2017-5508", "CVE-2017-5509", "CVE-2017-5510",
                      "CVE-2017-5511"],
                       "dll_matrix.txt",
+                      "entry_points_matrix.txt",
                       "function_matrix.txt",
                       "xref_matrix.txt",
-                      r"C:\temp\full_results.csv")
+                      r"C:\temp\full_results_done2.csv")

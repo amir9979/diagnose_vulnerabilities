@@ -64,6 +64,38 @@ def init_dirs(fuzzing_dir):
             shutil.rmtree(path)
         utils.mkdir_if_not_exists(path)
 
+def get_diagnoses_by_sep(instance_diagnoses, seperator="$"):
+    def filter_comps(xref_comp):
+        return seperator in xref_comp
+    def xref_comp_to_function(xref_comp):
+        return xref_comp.split(seperator)[1]
+    diagnoses_probabilities = {}
+    for diagnosis in instance_diagnoses:
+        comps = filter(filter_comps, diagnosis.diagnosis)
+        if len(comps) > 0:
+            diagnosis.diagnosis = sorted(list(set(map(xref_comp_to_function, comps))))
+            key = str(diagnosis.diagnosis)
+            if key in diagnoses_probabilities:
+                diagnoses_probabilities[key].probability += diagnosis.probability
+            else:
+                diagnoses_probabilities[key] = diagnosis
+    return diagnoses_probabilities.values()
+
+def get_binaries_to_diagnose(diagnoses, config):
+    diagnosed_components = reduce(list.__add__, [diagnosis.diagnosis for diagnosis in diagnoses], [])
+    bin_dir = os.path.dirname(config['target']['program'])
+    binaries_to_diagnose = []
+    print "diagnosed_components", diagnosed_components
+    for component in diagnosed_components:
+        dll = os.path.join(bin_dir, component + ".dll")
+        exe = os.path.join(bin_dir, component + ".exe")
+        if os.path.exists(exe):
+            binaries_to_diagnose.append(exe)
+        elif os.path.exists(dll):
+            binaries_to_diagnose.append(dll)
+    return binaries_to_diagnose
+
+
 def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     """
     diagnose the program in few hierarchical steps:
@@ -89,47 +121,36 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     fuzz_project_dir(seedfiles_dir, instances_dir, consts.FUZZ_ITERATIONS)
 
     # dll diagnoses
-    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), dll_working_dir, config, DLL_GRANULARITY,
-                          None, None)
-    diagnoser.campaign_matrix.create_matrix_for_dir(dll_working_dir, os.path.join(fuzzing_dir, consts.DLL_DIAGNOSIS_RESULT),
-                                                    dll_matrix_file)
-    dll_instance = readPlanningFile(dll_matrix_file)
-    dll_instance.diagnose()
+    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), dll_working_dir, config, DLL_GRANULARITY,
+    #                       None, None)
+    # diagnoser.campaign_matrix.create_matrix_for_dir(dll_working_dir, os.path.join(fuzzing_dir, consts.DLL_DIAGNOSIS_RESULT),
+    #                                                 dll_matrix_file)
+    # dll_instance = readPlanningFile(dll_matrix_file)
+    # dll_instance.diagnose()
 
     # entry points diagnoses
-    named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
-                             dll_instance.get_named_diagnoses())
-    diagnosed_components = reduce(list.__add__, [diagnosis.diagnosis for diagnosis in named_diagnoses], [])
-    bin_dir = os.path.dirname(config['target']['program'])
-    binaries_to_diagnose = []
-    print "diagnosed_components", diagnosed_components
-    for component in diagnosed_components:
-        dll = os.path.join(bin_dir, component + ".dll")
-        exe = os.path.join(bin_dir, component + ".exe")
-        if os.path.exists(exe):
-            binaries_to_diagnose.append(exe)
-        elif os.path.exists(dll):
-            binaries_to_diagnose.append(dll)
-    entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
-    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
-                          ENTRY_POINTS_GRANULARITY,
-                          binaries_to_diagnose, None)
-    diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
-                                                    os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
-                                                    entry_points_file)
-    entry_points_instance = readPlanningFile(function_matrix_file)
+    # named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
+    #                          dll_instance.get_named_diagnoses())
+    # entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
+    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
+    #                       ENTRY_POINTS_GRANULARITY,
+    #                       get_binaries_to_diagnose(named_diagnoses, config), None)
+    # diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
+    #                                                 os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
+    #                                                 entry_points_file)
+    entry_points_instance = readPlanningFile(entry_points_file)
     entry_points_instance.diagnose()
 
     # function diagnosis
     named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD,
-                             evaluation.get_xref_diagnoses(entry_points_instance.get_named_diagnoses(),"#"))
-    diagnosed_components = reduce(list.__add__, [diagnosis.diagnosis for diagnosis in named_diagnoses], [])
-    function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
-    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), function_working_dir, config, FUNCTION_GRANULARITY,
-                          binaries_to_diagnose, None)
-    diagnoser.campaign_matrix.create_matrix_for_dir(function_working_dir, os.path.join(fuzzing_dir,
-                                                                                       consts.FUNCTION_DIAGNOSIS_RESULT),
-                                                    function_matrix_file)
+                             get_diagnoses_by_sep(entry_points_instance.get_named_diagnoses(),"#"))
+    # function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
+    binaries_to_diagnose = get_binaries_to_diagnose(named_diagnoses, config)
+    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), function_working_dir, config, FUNCTION_GRANULARITY,
+    #                       binaries_to_diagnose, None)
+    # diagnoser.campaign_matrix.create_matrix_for_dir(function_working_dir, os.path.join(fuzzing_dir,
+    #                                                                                    consts.FUNCTION_DIAGNOSIS_RESULT),
+    #                                                 function_matrix_file)
 
     function_instance = readPlanningFile(function_matrix_file)
     function_instance.diagnose()
