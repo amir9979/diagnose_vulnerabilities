@@ -121,36 +121,36 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     fuzz_project_dir(seedfiles_dir, instances_dir, consts.FUZZ_ITERATIONS)
 
     # dll diagnoses
-    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), dll_working_dir, config, DLL_GRANULARITY,
-    #                       None, None)
-    # diagnoser.campaign_matrix.create_matrix_for_dir(dll_working_dir, os.path.join(fuzzing_dir, consts.DLL_DIAGNOSIS_RESULT),
-    #                                                 dll_matrix_file)
-    # dll_instance = readPlanningFile(dll_matrix_file)
-    # dll_instance.diagnose()
+    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), dll_working_dir, config, DLL_GRANULARITY,
+                          None, None)
+    diagnoser.campaign_matrix.create_matrix_for_dir(dll_working_dir, os.path.join(fuzzing_dir, consts.DLL_DIAGNOSIS_RESULT),
+                                                    dll_matrix_file)
+    dll_instance = readPlanningFile(dll_matrix_file)
+    dll_instance.diagnose()
 
     # entry points diagnoses
-    # named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
-    #                          dll_instance.get_named_diagnoses())
-    # entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
-    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
-    #                       ENTRY_POINTS_GRANULARITY,
-    #                       get_binaries_to_diagnose(named_diagnoses, config), None)
-    # diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
-    #                                                 os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
-    #                                                 entry_points_file)
+    named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
+                             dll_instance.get_named_diagnoses())
+    entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
+    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
+                          ENTRY_POINTS_GRANULARITY,
+                          get_binaries_to_diagnose(named_diagnoses, config), None)
+    diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
+                                                    os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
+                                                    entry_points_file)
     entry_points_instance = readPlanningFile(entry_points_file)
     entry_points_instance.diagnose()
 
     # function diagnosis
     named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD,
                              get_diagnoses_by_sep(entry_points_instance.get_named_diagnoses(),"#"))
-    # function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
+    function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
     binaries_to_diagnose = get_binaries_to_diagnose(named_diagnoses, config)
-    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), function_working_dir, config, FUNCTION_GRANULARITY,
-    #                       binaries_to_diagnose, None)
-    # diagnoser.campaign_matrix.create_matrix_for_dir(function_working_dir, os.path.join(fuzzing_dir,
-    #                                                                                    consts.FUNCTION_DIAGNOSIS_RESULT),
-    #                                                 function_matrix_file)
+    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), function_working_dir, config, FUNCTION_GRANULARITY,
+                          binaries_to_diagnose, None)
+    diagnoser.campaign_matrix.create_matrix_for_dir(function_working_dir, os.path.join(fuzzing_dir,
+                                                                                       consts.FUNCTION_DIAGNOSIS_RESULT),
+                                                    function_matrix_file)
 
     function_instance = readPlanningFile(function_matrix_file)
     function_instance.diagnose()

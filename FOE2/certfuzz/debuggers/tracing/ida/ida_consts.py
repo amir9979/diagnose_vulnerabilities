@@ -2,7 +2,7 @@ import os
 
 current_path = os.path.realpath(__file__)
 project_root = os.path.realpath(os.path.join(current_path, "..\..\..\..\..\.."))
-IDA_EXE = r"c:\Program Files (x86)\IDA Demo 6.95\idaq.exe"
+IDA_EXE = r"c:\Program Files\IDA Demo 7.0\ida.exe"
 IDA_SCRIPT = os.path.join(project_root, r"idc\dump_functions.idc")
 IDA_CHUNKS_SCRIPT = os.path.join(project_root, r"idc\dump_chunks.idc")
 IDA_XREFS_SCRIPT = os.path.join(project_root, r"idc\dump_xrefs.idc")
