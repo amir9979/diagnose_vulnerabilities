@@ -1,4 +1,5 @@
 import os
+import csv
 import utils
 import subprocess
 import shutil
@@ -19,7 +20,8 @@ UPGRADE = r"/Upgrade"
 # CMAKE = r'cmake -E env CXXFLAGS="-fsanitize=address" ADDITIONAL_LIBS="clang_rt.asan_dynamic-i386.lib" cmake -G "Visual Studio 14" -T LLVM-vs2014'
 # CMAKE = r'cmake -E env CMAKE_C_FLAGS ="-fsanitize=address" cmake -G "Visual Studio 14" -T LLVM-vs2014'
 CMAKE = r'cmake .. -G "Visual Studio 14" -T LLVM-vs2014'
-# CMAKE = r'cmake -G "Visual Studio 14"'
+CMAKE = r'cmake -DENABLE_ZLIB=OFF -DBUILD_wireshark_gtk=ON -G "Visual Studio 14"'
+# CMAKE = r'cmake .. -G "Visual Studio 14"'
 CDB_EXE = r"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe"
 CDB_COMMAND = ".load msec;g;!exploitable -v;q"
 EXPLOITABILITY_START = r"Exploitability Classification:"
@@ -130,14 +132,23 @@ class Reproducer(object):
             with open(vcsproj, "r") as f:
                 data = f.read()
             with open(vcsproj, "wb") as f:
-                f.write(data.replace("</AdditionalOptions>", " -fsanitize=address</AdditionalOptions>")
+                f.write(data#.replace("</AdditionalOptions>", " -fsanitize=address</AdditionalOptions>")
                         .replace(r"jansson.lib",r"C:\include\jansson.lib")
                         .replace(r"libcrypto.lib",r"C:\OpenSSL-Win32\lib\libcrypto.lib")
-                        .replace("</AdditionalDependencies>", ' ;"C:\Temp\windows\clang_rt.asan-i386.lib";"C:\Temp\windows\clang_rt.asan_dynamic_runtime_thunk-i386.lib";"C:\Temp\windows\clang_rt.asan_dynamic-i386.lib";"C:\Temp\windows\clang_rt.asan-preinit-i386.lib";"C:\Temp\windows\clang_rt.builtins-i386.lib";"C:\Temp\windows\clang_rt.profile-i386.lib";"C:\Temp\windows\clang_rt.stats_client-i386.lib";"C:\Temp\windows\clang_rt.stats-i386.lib";"C:\Temp\windows\clang_rt.ubsan_standalone_cxx_dynamic-i386.lib";"C:\Temp\windows\clang_rt.ubsan_standalone_dynamic-i386.lib";"C:\include\GL\glut32.lib";"Bcrypt.lib";"C:\include\jansson.lib";"C:\OpenSSL-Win32\lib\libcrypto.lib";"C:\OpenSSL-Win32\lib\libssl.lib";"C:\OpenSSL-Win32\lib\openssl.lib"</AdditionalDependencies><ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>')
+                        #.replace("</AdditionalDependencies>", ' ;"C:\Temp\windows\clang_rt.asan-i386.lib";"C:\Temp\windows\clang_rt.asan_dynamic_runtime_thunk-i386.lib";"C:\Temp\windows\clang_rt.asan_dynamic-i386.lib";"C:\Temp\windows\clang_rt.asan-preinit-i386.lib";"C:\Temp\windows\clang_rt.builtins-i386.lib";"C:\Temp\windows\clang_rt.profile-i386.lib";"C:\Temp\windows\clang_rt.stats_client-i386.lib";"C:\Temp\windows\clang_rt.stats-i386.lib";"C:\Temp\windows\clang_rt.ubsan_standalone_cxx_dynamic-i386.lib";"C:\Temp\windows\clang_rt.ubsan_standalone_dynamic-i386.lib";"C:\include\GL\glut32.lib";"Bcrypt.lib";"C:\include\jansson.lib";"C:\OpenSSL-Win32\lib\libcrypto.lib";"C:\OpenSSL-Win32\lib\libssl.lib";"C:\OpenSSL-Win32\lib\openssl.lib"</AdditionalDependencies><ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>')
                         .replace(r"C:\Users\User\Anaconda2\Library\lib\tiff.lib", r'"C:\Program Files (x86)\GnuWin32\lib\libtiff.lib"')
                         .replace(r"C:\Users\User\Anaconda2\Library\lib\jpeg.lib", r'"C:\Program Files (x86)\GnuWin32\lib\jpeg.lib"')
-                        .replace(r"</ClCompile>", "<AdditionalOptions>-fsanitize=address %(AdditionalOptions)</AdditionalOptions></ClCompile>")
-                        .replace(r"<PlatformToolset>v140</PlatformToolset>", r"<PlatformToolset>LLVM-vs2014_xp</PlatformToolset>")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5PrintSupport.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5PrintSupport.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5Multimedia.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5Multimedia.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5Svg.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5Svg.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5WinExtras.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5WinExtras.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5Network.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5Network.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5Widgets.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5Widgets.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5Gui.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5Gui.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\Qt5Core.lib", r"C:\Qt2\5.10.0\msvc2015\lib\Qt5Core.lib")
+                        .replace(r"C:\Users\User\Anaconda2\Library\lib\qtmain.lib", r"C:\Qt2\5.10.0\msvc2015\lib\qtmain.lib")
+                        #.replace(r"</ClCompile>", "<AdditionalOptions>-fsanitize=address %(AdditionalOptions)</AdditionalOptions></ClCompile>")
+                        #.replace(r"<PlatformToolset>v140</PlatformToolset>", r"<PlatformToolset>LLVM-vs2014_xp</PlatformToolset>")
                         .replace(r"<GenerateDebugInformation>false</GenerateDebugInformation>", r"<GenerateDebugInformation>true</GenerateDebugInformation>")
                         .replace(r"</Link>", r"<FullProgramDatabaseFile>true</FullProgramDatabaseFile></Link>")
                         .replace(r"<AdditionalIncludeDirectories>", r"<AdditionalIncludeDirectories>C:\include;")
@@ -230,7 +241,7 @@ class Reproducer(object):
         base_dir = os.path.join(self.exploits_dir, cve_number)
         self.create_dirs(base_dir, self.sources_dir)
         self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
-        self.fixes(base_dir)
+        # self.fixes(base_dir)
         self.compile(base_dir)
         program = self.get_bin_file_path(base_dir, bin_file_to_run)
         self.create_config(base_dir, cmd_line, program)
@@ -736,7 +747,7 @@ def imageworsener_reproduce():
 
 
 def opencv_reproduce():
-    opencv_reproducer = Reproducer(r"C:\vulnerabilities\opencv_reproduce",
+    opencv_reproducer = Reproducer(r"C:\vulnerabilities\opencv_reproduce2",
                                        r"C:\vulnerabilities\clean\opencv",
                                        r"opencv\bin\OpenCV.sln",
                                        r"opencv",
@@ -744,15 +755,27 @@ def opencv_reproduce():
     opencv_reproducer.reproduce("CVE-2017-14136", "aacae2065744adb05e858d327198c7bbe7f452b0",
                                  r"C:\Users\User\Downloads\pocs-master\pocs-master\opencv\12-opencv-outbound-write-FillColorRow1",
                                  "opencv_test", "{PROGRAM} {SEEDFILE}")
-    opencv_reproducer.reproduce("CVE-2017-14136", "aacae2065744adb05e858d327198c7bbe7f452b0",
-                                 r"C:\Users\User\Downloads\pocs-master\pocs-master\opencv\12-opencv-outbound-write-FillColorRow1",
-                                 "opencv_test", "{PROGRAM} {SEEDFILE}")
+
+def wireshark_reproduce():
+    wireshark_reproducer = Reproducer(r"C:\vulnerabilities\wireshark_reproduce",
+                                       r"C:\vulnerabilities\clean\wireshark",
+                                       r"wireshark\wireshark.sln",
+                                       r"wireshark",
+                                       r"wireshark\run\Release",
+                                      dsw_path=r"wireshark\wireshark.sln")
+    wireshark_data_file = r"C:\temp\wireshark.csv"
+    data = []
+    with open(wireshark_data_file) as f:
+        data = list(csv.reader(f))[1:]
+    for cve, reproduce_file_name, commit in reversed(data):
+        wireshark_reproducer.reproduce(cve, commit, reproduce_file_name, "tshark", "{PROGRAM} -r {SEEDFILE}")
 
 if __name__ == "__main__":
     # opencv_reproduce()
+    wireshark_reproduce()
     # yara_reproduce()
     # lepton_reproduce()
-    image_magick_reproduce()
+    # image_magick_reproduce()
     # jasper_reproduce()
     # libarchive_reproduce()
     # openjpeg_reproduce()
