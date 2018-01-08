@@ -1,9 +1,9 @@
-from sfl_diagnoser.Diagnoser.ExperimentInstance import ExperimentInstance
-from sfl_diagnoser.Diagnoser.Experiment_Data import Experiment_Data
-from sfl_diagnoser.Diagnoser.Diagnosis import Diagnosis
-import sfl_diagnoser.Diagnoser.ExperimentInstance
-from sfl_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile, save_ds_to_matrix_file, write_merged_matrix
-from sfl_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
+from SFL_diagnoser.Diagnoser.ExperimentInstance import ExperimentInstance
+from SFL_diagnoser.Diagnoser.Experiment_Data import Experiment_Data
+from SFL_diagnoser.Diagnoser.Diagnosis import Diagnosis
+import SFL_diagnoser.Diagnoser.ExperimentInstance
+from SFL_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile, save_ds_to_matrix_file, write_merged_matrix
+from SFL_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
 import diagnoser.campaign_matrix
 import os
 import csv
@@ -39,10 +39,10 @@ def xref_to_function(xref):
         return xref
 
 def xref_diagnose(xref_instance):
-    components_indices = range(max(reduce(list.__add__, sfl_diagnoser.Diagnoser.ExperimentInstance.POOL.values())))
-    components = list(set([xref_to_function(sfl_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[x]) for x in
+    components_indices = range(max(reduce(list.__add__, SFL_diagnoser.Diagnoser.ExperimentInstance.POOL.values())))
+    components = list(set([xref_to_function(SFL_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[x]) for x in
                            components_indices]))
-    bugged_components = [xref_to_function(sfl_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[b]) for b in sfl_diagnoser.Diagnoser.ExperimentInstance.BUGS]
+    bugged_components = [xref_to_function(SFL_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[b]) for b in SFL_diagnoser.Diagnoser.ExperimentInstance.BUGS]
     validComps = [x for x in components if x not in bugged_components]
     recall_accum = 0
     precision_accum = 0

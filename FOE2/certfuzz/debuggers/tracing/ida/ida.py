@@ -58,7 +58,7 @@ def get_command_on_breakpoint(address, function_name, image_name, granularity = 
     command = []
     command.append(".echo {0}".format(ida_consts.BEGIN_BREAKPOINT_BLOCK))
     if granularity == ida_consts.DLL_GRANULARITY:
-        command.append("lm1m")
+        command.append("lmf")
     if granularity != ida_consts.DLL_GRANULARITY:
         command.append(".echo {0}&{1}#{2}".format(address,function_name,image_name))
     command.append(".echo {0}".format(ida_consts.END_BREAKPOINT_BLOCK))
@@ -85,10 +85,10 @@ def create_breakpoint_list_for_modules(modules):
 
 def get_ida_script_and_params(granularity, ida_out_file, module_name, tracing_data):
     if granularity in [ida_consts.CHUNK_GRANULARITY, ida_consts.XREF_GRANULARITY] and \
-                    tracing_data != None and module_name.split(".")[0] in tracing_data:
+                    tracing_data != None and module_name in tracing_data:
         functions_file = tempfile.mktemp()
         with open(functions_file, "wb") as f:
-            f.writelines("\n".join(tracing_data[module_name.split(".")[0]]))
+            f.writelines("\n".join(tracing_data[module_name]))
         script = ida_consts.IDA_CHUNKS_SCRIPT if granularity == ida_consts.CHUNK_GRANULARITY else ida_consts.IDA_XREFS_SCRIPT
         return "{0} {1} {2} {3}".format(script, functions_file, ida_out_file,
                                         module_name.split(".")[1])
@@ -142,7 +142,7 @@ def create_bp_script_file(binaries, commands, granularity, tracing_data):
     if ida_consts.STARTUP_SCRIPTS[granularity] is not None:
         return
     if granularity == ida_consts.DLL_GRANULARITY:
-        commands.extend(".echo {BEGIN_BLOCK};lm1m;.echo {END_BLOCK}".format(BEGIN_BLOCK=ida_consts.BEGIN_BREAKPOINT_BLOCK,
+        commands.extend(".echo {BEGIN_BLOCK};lmf;.echo {END_BLOCK}".format(BEGIN_BLOCK=ida_consts.BEGIN_BREAKPOINT_BLOCK,
                                                                             END_BLOCK=ida_consts.END_BREAKPOINT_BLOCK).split(';'))
     print granularity, binaries
     ida_consts.STARTUP_SCRIPTS[granularity] = tempfile.mktemp(prefix=r"script_file_", dir=os.path.dirname(binaries[0]))

@@ -4,7 +4,7 @@ import os
 import csv
 import glob
 import pefile
-from sfl_diagnoser.Diagnoser.diagnoserUtils import write_planning_file
+from SFL_diagnoser.Diagnoser.diagnoserUtils import write_planning_file
 from  FOE2.certfuzz.debuggers.tracing.ida.ida_consts import BEGIN_BREAKPOINT_BLOCK, END_BREAKPOINT_BLOCK, BEGIN_TRACING
 
 BREAKPOINT_MAGIC = r"BPMAGIC_"
@@ -55,7 +55,7 @@ def get_matrix_for_campaign(campaign_dir, functions_file, binary_file, split_by_
 
 def filter_known_dlls(modules_list):
     known_dlls = ["kernel_appcore", "KERNEL32", "shlwapi", 'windows_storage', 'msvcrt', 'WINMMBASE_e60000', 'DNSAPI',
-                  'RPCRT4', 'ADVAPI32', 'WINMMBASE_13c0000', 'WINMMBASE_a40000', 'powrprof',
+                  'RPCRT4', 'ADVAPI32', 'WINMMBASE_13c0000', 'WINMMBASE_a40000', 'WINMMBASE', 'powrprof',
                   'WINMMBASE_cf0000', 'WINMMBASE_f20000', 'WINMMBASE_1800000', 'WINMMBASE_10b0000', 'VCOMP140D',
                   'WINMMBASE_1520000', 'WINMMBASE_1020000', 'WINMMBASE',
                   'IMM32', 'USER32', 'combase', 'ole32', 'WINMMBASE_71c70000', 'VCRUNTIME140D',
@@ -65,9 +65,10 @@ def filter_known_dlls(modules_list):
                   'WINMMBASE_1790000', 'profapi', 'cfgmgr32', 'NSI', "WS2_32", 'rsaenh', 'winmmbase'
                     , 'CRYPTSP', 'bcrypt', 'USP10.dll', 'winhttp', 'ondemandconnroutehelper'
         , 'apphelp', 'MSIMG32.dll', "msasn1", "oleaut32", "psapi", "comctl32", "avicap32", "crypt32",
-                  "msvfw32", "ffmpeg", "msvcp_win", "core_db_glib_", "core_db_zlib_"]
+                  "msvfw32", "ffmpeg", "msvcp_win", "core_db_glib_", "core_db_zlib_", "dbghelp", "name",
+                  'vcruntime140', 'libpng12', 'zlib1', 'kernel.appcore', 'jpeg62', 'clang_rt.asan_dynamic-i386']
     dlls = map(str.lower, known_dlls + map(lambda x: x.replace(".dll", ""), known_dlls))
-    return filter(lambda module: module not in dlls  and "winmmbase" not in module, modules_list)
+    return filter(lambda x: all(map(lambda y: y not in x, dlls)), modules_list)
 
 def get_matrix_for_dll_diagnosing(campaign_dir, out_file):
     all_dlls = set()
@@ -120,7 +121,8 @@ def get_loaded_modules_traces(msec):
         content = f.read()
         content = content.split(BEGIN_TRACING)[1]
         blocks = map(lambda block: block.split(END_BREAKPOINT_BLOCK)[0], content.split(BEGIN_BREAKPOINT_BLOCK)[1:])
-        modules = map(lambda comp: filter(lambda c: c!='',comp) ,map(lambda block: block.lower().replace(".dll", "").split('\n'), blocks))
+        modules = map(lambda comp: filter(lambda c: c!='',comp) ,map(lambda block: block.lower().split('\n'), blocks))
+        modules = map(lambda x: map(lambda y: y.split()[-1], x), modules)
         modules = filter(lambda module: len(module) > 0, modules)
         for module_list in modules:
             loaded_modules = loaded_modules.union(set(module_list))
