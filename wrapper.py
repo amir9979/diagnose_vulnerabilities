@@ -61,7 +61,7 @@ def init_dirs(fuzzing_dir):
                 consts.FUNCTION_WORKING_DIR, consts.XREF_WORKING_DIR]:
         path = os.path.join(fuzzing_dir, dir)
         if os.path.exists(path):
-            shutil.rmtree(path)
+            pass #shutil.rmtree(path)
         utils.mkdir_if_not_exists(path)
 
 def get_diagnoses_by_sep(instance_diagnoses, seperator="$"):
@@ -156,8 +156,8 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     function_instance.diagnose()
 
     # xref diagnosis
-    diagnosed_components = filter(lambda x: '&' in x,
-                                  map(lambda x: x[0], function_instance.get_components_probabilities_by_name()))
+    diagnosed_components = filter(lambda x: '&' in x #and "iwcmd_main" not in x
+                                  ,map(lambda x: x[0], function_instance.get_components_probabilities_by_name()))
     tracing_data = {}
     for comp in diagnosed_components:
         dll = comp.split('#')[1]

@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a4c4c07-72e1-4f89-9b15-3fd1924d265b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/diagnose_vulnerabilities.iml" afterPath="$PROJECT_DIR$/.idea/diagnose_vulnerabilities.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
       <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
-      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" />
-      <change beforePath="$PROJECT_DIR$/consts.py" afterPath="$PROJECT_DIR$/consts.py" />
-      <change beforePath="$PROJECT_DIR$/diagnoser/campaign_matrix.py" afterPath="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
-      <change beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/evaluation.py" />
-      <change beforePath="$PROJECT_DIR$/reproduce_imagemagick.py" afterPath="$PROJECT_DIR$/reproduce_imagemagick.py" />
+      <change beforePath="$PROJECT_DIR$/idc/dump_xrefs.idc" afterPath="$PROJECT_DIR$/idc/dump_xrefs.idc" />
       <change beforePath="$PROJECT_DIR$/wrapper.py" afterPath="$PROJECT_DIR$/wrapper.py" />
     </list>
     <ignored path="diagnose_vulnerabilities.iws" />
@@ -38,8 +29,8 @@
       <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="164" column="20" lean-forward="false" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="20" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -70,8 +61,8 @@
       <file leaf-file-name="ida.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+            <state relative-caret-position="207">
+              <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -86,18 +77,6 @@
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#36917#39853#0" expanded="false" />
                 <element signature="e#39886#43743#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wireshark_reproducer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wireshark_reproducer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="63" column="55" lean-forward="false" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +105,18 @@
       <file leaf-file-name="msec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+            <state relative-caret-position="167">
+              <caret line="176" column="17" lean-forward="true" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda2/Lib/threading.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="1036" column="4" lean-forward="false" selection-start-line="1036" selection-start-column="4" selection-end-line="1036" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -177,8 +166,12 @@
       <find>get_binaries_to_diagnose</find>
       <find>filter_known_dlls</find>
       <find>IDA_XREFS_SCRIPT</find>
-      <find>binaries_to_diagnose</find>
       <find>ida</find>
+      <find>xref</find>
+      <find>.go</find>
+      <find>binaries_to_diagnose</find>
+      <find>get_ida_script_and_params</find>
+      <find>extract_functions_list</find>
     </findStrings>
     <replaceStrings>
       <replace>C:\vulnerabilities\</replace>
@@ -558,12 +551,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34565917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34565917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -729,11 +722,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>158</line>
-          <option name="timeStamp" value="409" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/wrapper.py</url>
           <line>165</line>
           <option name="timeStamp" value="410" />
         </line-breakpoint>
@@ -741,6 +729,21 @@
           <url>file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py</url>
           <line>88</line>
           <option name="timeStamp" value="412" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/wrapper.py</url>
+          <line>160</line>
+          <option name="timeStamp" value="416" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="417" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="418" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -750,7 +753,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="416" />
+      <option name="time" value="424" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -760,6 +763,27 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>diagnosed_components</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tracing_data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>sorted(map(lambda x: x.split(&quot;&amp;&quot;)[1] , diagnosed_components))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filter(lambda x: '&amp;' in x and &quot;iwcmd_main&quot; not in x,
+                                  map(lambda x: x[0], function_instance.get_components_probabilities_by_name()))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>filter(lambda module: module not in dlls  and &quot;winmmbase&quot; not in module,
                   map(lambda x: os.path.basename(x).replace(&quot;.dll&quot;, &quot;&quot;), modules_list))</expression-string>
@@ -774,60 +798,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>module_name in tracing_data</expression-string>
+        <expression-string>len(set(ida_out))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>module_name.split(&quot;.&quot;)[0] in tracing_data</expression-string>
+        <expression-string>set(ida_out)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tracing_data != None</expression-string>
+        <expression-string>ida_out</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tracing_data != None and module_name.split(&quot;.&quot;)[0] in tracing_data</expression-string>
+        <expression-string>len(set(map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out)))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>granularity in [ida_consts.CHUNK_GRANULARITY, ida_consts.XREF_GRANULARITY]</expression-string>
+        <expression-string>set(map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>binaries = binaries + binaries</expression-string>
+        <expression-string>map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>ida_out_file</expression-string>
+        <expression-string>map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;).split(&quot;=&quot;), ida_out)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tracing_data</expression-string>
+        <expression-string>set(extract_functions_list(filter(lambda x: x!= '', open(ida_out_file,&quot;r&quot;).readlines())))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>binaries</expression-string>
+        <expression-string>extract_functions_list(filter(lambda x: x!= '', open(ida_out_file,&quot;r&quot;).readlines()))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/dll_tracing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="59" lean-forward="false" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1022,7 +1039,7 @@
         <state relative-caret-position="1020">
           <caret line="63" column="55" lean-forward="false" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1079,18 +1096,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda2/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="1036" column="4" lean-forward="false" selection-start-line="1036" selection-start-column="4" selection-end-line="1036" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="167">
+          <caret line="176" column="17" lean-forward="true" selection-start-line="176" selection-start-column="17" selection-end-line="176" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="164" column="20" lean-forward="false" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="20" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -1099,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="121" column="23" lean-forward="true" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+        <state relative-caret-position="207">
+          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
           <folding />
         </state>
       </provider>

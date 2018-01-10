@@ -46,7 +46,7 @@ def extract_functions_list(ida_out):
     extract functions list from script output
     :return: list of functions to break on
     """
-    return map(lambda x: x.replace("\n", "").split("="), ida_out)
+    return map(lambda x: x.replace("\n", "").split("="), set(ida_out))
 
 
 def get_command_on_breakpoint(address, function_name, image_name, granularity = ida_consts.DLL_GRANULARITY):
