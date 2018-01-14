@@ -137,6 +137,7 @@ class Reproducer(object):
                 data = f.read()
             with open(vcsproj, "wb") as f:
                 f.write(data.replace("</AdditionalOptions>", " -fsanitize=address</AdditionalOptions>")
+                        .replace(r"<Optimization>MaxSpeed</Optimization>",r"<Optimization>Disabled</Optimization>")
                         .replace(r"jansson.lib",r"C:\include\jansson.lib")
                         .replace(r"libcrypto.lib",r"C:\OpenSSL-Win32\lib\libcrypto.lib")
                         .replace("</AdditionalDependencies>", ' ;"C:\Temp\windows\clang_rt.asan_cxx-i386.lib";"C:\Temp\windows\clang_rt.asan_dynamic_runtime_thunk-i386.lib";"C:\Temp\windows\clang_rt.asan_dynamic-i386.lib";"C:\Temp\windows\clang_rt.asan-preinit-i386.lib";"C:\Temp\windows\clang_rt.builtins-i386.lib";"C:\Temp\windows\clang_rt.profile-i386.lib";"C:\Temp\windows\clang_rt.stats_client-i386.lib";"C:\Temp\windows\clang_rt.stats-i386.lib";"C:\Temp\windows\clang_rt.ubsan_standalone_cxx_dynamic-i386.lib";"C:\Temp\windows\clang_rt.ubsan_standalone_dynamic-i386.lib";"C:\include\GL\glut32.lib";"Bcrypt.lib";"C:\include\jansson.lib";"C:\OpenSSL-Win32\lib\libcrypto.lib";"C:\OpenSSL-Win32\lib\libssl.lib";"C:\OpenSSL-Win32\lib\openssl.lib"</AdditionalDependencies><ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>')
