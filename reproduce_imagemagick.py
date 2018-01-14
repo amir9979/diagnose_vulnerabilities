@@ -134,7 +134,7 @@ class Reproducer(object):
             print vcsproj
             data = ""
             with open(vcsproj, "r") as f:
-                data = f.read()
+                data = f.read()  
             with open(vcsproj, "wb") as f:
                 f.write(data.replace("</AdditionalOptions>", " -fsanitize=address</AdditionalOptions>")
                         .replace(r"<Optimization>MaxSpeed</Optimization>",r"<Optimization>Disabled</Optimization>")
