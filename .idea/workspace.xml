@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/reproduce_imagemagick.py" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a4c4c07-72e1-4f89-9b15-3fd1924d265b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
-      <change beforePath="$PROJECT_DIR$/idc/dump_xrefs.idc" afterPath="$PROJECT_DIR$/idc/dump_xrefs.idc" />
-      <change beforePath="$PROJECT_DIR$/wrapper.py" afterPath="$PROJECT_DIR$/wrapper.py" />
-    </list>
+    <list default="true" id="4a4c4c07-72e1-4f89-9b15-3fd1924d265b" name="Default" comment="" />
     <ignored path="diagnose_vulnerabilities.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+              <caret line="58" column="55" lean-forward="false" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -172,6 +168,7 @@
       <find>binaries_to_diagnose</find>
       <find>get_ida_script_and_params</find>
       <find>extract_functions_list</find>
+      <find>domina</find>
     </findStrings>
     <replaceStrings>
       <replace>C:\vulnerabilities\</replace>
@@ -1125,7 +1122,7 @@
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="52" column="7" lean-forward="true" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <caret line="58" column="55" lean-forward="false" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
           <folding />
         </state>
       </provider>
