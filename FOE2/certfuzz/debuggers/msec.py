@@ -65,6 +65,7 @@ import logging
 import wmi
 import time
 import tracing.ida.ida
+from tracing.ida.ida_consts import CDB_EXE
 
 from . import Debugger as DebuggerBase
 from .registration import register
@@ -100,7 +101,7 @@ class MsecDebugger(DebuggerBase):
         '''
         Returns the name of the debugger application to use in this class
         '''
-        typical = r"C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\cdb.exe"
+        typical = CDB_EXE
         if os.path.exists(typical):
             return typical
         return 'cdb'

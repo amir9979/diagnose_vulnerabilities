@@ -1,14 +1,17 @@
 import shutil
 import sys
 import yaml
-from SFL_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
 import diagnoser.campaign_matrix
 import utils
 from  FOE2.certfuzz.debuggers.msec import MsecDebugger
 from FOE2.certfuzz.debuggers.tracing.ida.ida_consts import *
 import consts
-import evaluation
 from fuzzing_utils import fuzz_project_dir
+try:
+    from SFL_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
+except:
+    from sfl_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
+
 
 
 def run_debugger_on_files(program, files, working_dir, config, granularity, binaries_to_diagnose, tracing_data):
@@ -116,7 +119,7 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     dll_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR))
     dll_matrix_file = os.path.join(fuzzing_dir, consts.DLL_MATRIX)
     function_matrix_file = os.path.join(fuzzing_dir, consts.FUNCTION_MATRIX)
-    entry_points_file = os.path.join(fuzzing_dir, consts.ENTRY_POINTS_MATRIX)
+    # entry_points_file = os.path.join(fuzzing_dir, consts.ENTRY_POINTS_MATRIX)
     utils.copy_files_to_dir(seedfiles_dir, instances_dir)
     # utils.copy_files_to_dir(consts.EXAMPLES_DIR, instances_dir)
     fuzz_project_dir(seedfiles_dir, instances_dir, consts.FUZZ_ITERATIONS)
@@ -128,21 +131,21 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
                                                     dll_matrix_file)
     dll_instance = readPlanningFile(dll_matrix_file)
     dll_instance.diagnose()
-
-    # # entry points diagnoses
-    # named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
-    #                          dll_instance.get_named_diagnoses())
-    # entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
-    # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
-    #                       ENTRY_POINTS_GRANULARITY,
-    #                       get_binaries_to_diagnose(named_diagnoses, config), None)
-    # diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
-    #                                                 os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
-    #                                                 entry_points_file)
-    # entry_points_instance = readPlanningFile(entry_points_file)
-    # entry_points_instance.diagnose()
-
-    # function diagnosis
+    #
+    # # # entry points diagnoses
+    # # named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
+    # #                          dll_instance.get_named_diagnoses())
+    # # entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
+    # # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
+    # #                       ENTRY_POINTS_GRANULARITY,
+    # #                       get_binaries_to_diagnose(named_diagnoses, config), None)
+    # # diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
+    # #                                                 os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
+    # #                                                 entry_points_file)
+    # # entry_points_instance = readPlanningFile(entry_points_file)
+    # # entry_points_instance.diagnose()
+    #
+    # # function diagnosis
     named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD,dll_instance.get_named_diagnoses())
     function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
     binaries_to_diagnose = get_binaries_to_diagnose(named_diagnoses, config)
@@ -155,21 +158,36 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     function_instance = readPlanningFile(function_matrix_file)
     function_instance.diagnose()
 
-    # xref diagnosis
-    diagnosed_components = filter(lambda x: '&' in x #and "iwcmd_main" not in x
+    # dominators diagnosis
+    diagnosed_components = filter(lambda x: '&' in x
                                   ,map(lambda x: x[0], function_instance.get_components_probabilities_by_name()))
     tracing_data = {}
     for comp in diagnosed_components:
         dll = comp.split('#')[1]
         address = comp.split('&')[0]
         tracing_data.setdefault(dll, []).append(address)
+    dominator_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.DOMINATOR_WORKING_DIR))
+    run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), dominator_working_dir , config, DOMINATOR_GRANULARITY, binaries_to_diagnose, tracing_data)
+    dominator_matrix_file = os.path.join(fuzzing_dir, consts.DOMINATOR_MATRIX)
+    diagnoser.campaign_matrix.create_matrix_for_dir(dominator_working_dir, os.path.join(fuzzing_dir,
+                                                                                   consts.FUNCTION_DIAGNOSIS_RESULT),
+                                                    dominator_matrix_file)
+    dominator_instance = readPlanningFile(dominator_matrix_file)
+    dominator_instance.diagnose()
+
+    # xref diagnosis
+    diagnosed_components = filter(lambda x: '&' in x
+                                  ,map(lambda x: x[0], dominator_instance.get_components_probabilities_by_name()))
+    tracing_data = {}
+    for comp in diagnosed_components:
+        address, function_dll = comp.split('&')
+        print function_dll
+        tracing_data.setdefault(function_dll, []).extend(address.split("+"))
     xref_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.XREF_WORKING_DIR))
     run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), xref_working_dir, config, XREF_GRANULARITY, binaries_to_diagnose, tracing_data)
     diagnoser.campaign_matrix.create_matrix_for_dir(xref_working_dir, os.path.join(fuzzing_dir,
                                                                                    consts.FUNCTION_DIAGNOSIS_RESULT),
                                                     os.path.join(fuzzing_dir, consts.XREF_MATRIX))
-
-
 
 if __name__ == "__main__":
     config = yaml.load(open(sys.argv[1]))
