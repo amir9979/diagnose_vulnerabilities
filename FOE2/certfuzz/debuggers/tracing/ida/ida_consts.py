@@ -1,4 +1,5 @@
 import os
+import tempfile
 
 current_path = os.path.realpath(__file__)
 project_root = os.path.realpath(os.path.join(current_path, "..\..\..\..\..\.."))
@@ -6,8 +7,11 @@ IDA_EXE = r"c:\Program Files\IDA Demo 7.0\ida.exe"
 IDA_SCRIPT = os.path.join(project_root, r"idc\dump_functions.idc")
 IDA_CHUNKS_SCRIPT = os.path.join(project_root, r"idc\dump_chunks.idc")
 IDA_XREFS_SCRIPT = os.path.join(project_root, r"idc\dump_xrefs.idc")
+IDA_GRAPHS_SCRIPT = os.path.join(project_root, r"idc\dump_graphs.idc")
 PWD = os.path.join(project_root, r"idc")
-CDB_EXE = r"C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\cdb.exe"
+CDB_EXE8 = r"C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\cdb.exe"
+CDB_EXE10 = r"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe"
+CDB_EXE = CDB_EXE10 if os.path.exists(CDB_EXE10) else CDB_EXE8
 BREAKPOINT_MAGIC = r"BPMAGIC_"
 BEGIN_BREAKPOINT_BLOCK = r"BEGIN_BLOCK"
 END_BREAKPOINT_BLOCK = r"END_BLOCK"
@@ -18,16 +22,20 @@ DLL_DIAGNOSIS = True
 DLL_GRANULARITY = "DLL"
 ENTRY_POINTS_GRANULARITY = "ENTRY_POINT"
 FUNCTION_GRANULARITY = "FUNCTION"
+DOMINATOR_GRANULARITY = "DOMINATOR"
 CHUNK_GRANULARITY = "CHUNK"
 XREF_GRANULARITY = "XREF"
 DLL_LOAD_ADDRESS = int('0x10000000', 16)
-STARTUP_SCRIPTS = dict().fromkeys([DLL_GRANULARITY, ENTRY_POINTS_GRANULARITY, FUNCTION_GRANULARITY, CHUNK_GRANULARITY, XREF_GRANULARITY])
+STARTUP_SCRIPTS = dict().fromkeys([DLL_GRANULARITY, ENTRY_POINTS_GRANULARITY, FUNCTION_GRANULARITY, DOMINATOR_GRANULARITY
+                                      , CHUNK_GRANULARITY, XREF_GRANULARITY])
 BREAK_ON_LOAD__IF_STRING = ".if ($sicmp(\\\"${module}\\\",\\\"MODULE_NAME\\\") == 0 & ${MODULE_NAME_ALIAS}) {$$>a<SCRIPT;.block{SET_ALIAS_FALSE}}"
 BREAK_ON_LOAD__FOREACH_STRING = ".foreach (module {lm1m} ) {IF_CLAUSES}"
 BREAK_ON_LOAD_STRING = "sxe -c \"FOREACH\" ld"
 SET_ALIAS = "as /x ${/v:MODULE_NAME_ALIAS} VALUE"
 ALIAS_FALSE = "0"
 ALIAS_TRUE = "1"
+DOMINATOR_SEP = "+"
+DOMINATOR_TMP_DIR = tempfile.mkdtemp(prefix="c:\\temp\\")
 
 def get_break_on_dll_string(module_commands):
     """

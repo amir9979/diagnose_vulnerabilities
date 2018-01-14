@@ -23,10 +23,11 @@ static genFunctionsGraphs(start, dirName)
 
 static main() 
 {
-	Message("Waiting for the end of the auto analysis...\n");
     Wait();
-	GenCallGdl(ARGV[1], "call graph", CHART_GEN_GDL | CHART_NOLIBFUNCS);
+	auto map_file_path = fopen(ARGV[1], "w");
+	gen_file(OFILE_MAP, map_file_path, 0x00000, 0xFFFFFFFF, GENFLG_MAPNAME | GENFLG_MAPDMNG | GENFLG_MAPLOC);
+	fclose(map_file_path);
 	genFunctionsGraphs(0x00000, ARGV[2]);
+	//GenCallGdl(ARGV[3], "call graph", CHART_GEN_GDL | CHART_NOLIBFUNCS);
     Exit(0); 
-
 }
