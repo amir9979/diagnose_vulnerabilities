@@ -1,3 +1,4 @@
+import sys
 from SFL_diagnoser.Diagnoser.ExperimentInstance import ExperimentInstance
 from SFL_diagnoser.Diagnoser.Experiment_Data import Experiment_Data
 from SFL_diagnoser.Diagnoser.Diagnosis import Diagnosis
@@ -121,17 +122,21 @@ def get_results_objects_for_instance(instance_file, sep):
     return optimized_results, reduced_results, merged_results, merged_reduced_results
 
 
-def full_results(cve_list, dll_matrix_file_name, entry_matrix_file_name, function_matrix_file_name, xref_matrix_file_name, results_file_name):
+def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
+                 function_matrix_file_name=consts.FUNCTION_MATRIX,
+                 dominator_matrix_file_name=consts.DOMINATOR_MATRIX,
+                 xref_matrix_file_name=consts.XREF_MATRIX,
+                 results_file_name=consts.RESULTS_FILE):
     header = ["cve_number", "granularity", "matrix_type"]
     csv_lines = []
     added_results_header = False
     for cve in cve_list:
-        fuzzing_dir = os.path.join(r"C:\vulnerabilities\exported", cve, "fuzzing")
+        fuzzing_dir = os.path.join(base_dir, cve, "fuzzing")
         dll_matrix = os.path.join(fuzzing_dir, dll_matrix_file_name)
-        entry_matrix = os.path.join(fuzzing_dir, entry_matrix_file_name)
         function_matrix = os.path.join(fuzzing_dir, function_matrix_file_name)
+        dominator_matrix = os.path.join(fuzzing_dir, dominator_matrix_file_name)
         xref_matrix = os.path.join(fuzzing_dir, xref_matrix_file_name)
-        for granularity, instance_file, sep in zip(["dll", "entry_points", "function", "xref"], [dll_matrix, entry_matrix, function_matrix, xref_matrix], [None, "#", None, "$"]):
+        for granularity, instance_file, sep in zip(["dll", "function", "dominator", "code blocks"], [dll_matrix, function_matrix, dominator_matrix, xref_matrix], [None, "#", "+", "$"]):
         # for granularity, instance_file, sep in zip(["dll", "entry_points", "function", "xref"], [dll_matrix, entry_matrix, function_matrix, xref_matrix], [None, None, None, "$"]):
             print cve, granularity
             base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(instance_file, sep)
@@ -197,10 +202,16 @@ def get_results_by_sep(instance, seperator=None):
     return Diagnosis_Results(diagnoses, instance.initial_tests, instance.error, bugs=bugs)
 
 
+def get_results_for_project(base_dir):
+    cves = os.listdir(base_dir)
+    full_results(base_dir, cves)
+
 if __name__=="__main__":
+    base_dir = sys.argv[1]
+    get_results_for_project(base_dir)
+    exit() 
     check_fuzzing_influence(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2016-7531_Copy\fuzzing",
                             r"C:\vulnerabilities\ImageMagick_exploited\fuzzing_influence.csv")
-    exit()
     dirs = ["fuzzing5506", "fuzzing5508", "fuzzing5509", "fuzzing5510", "fuzzing5511", "fuzzing7531", "fuzzing7533",
      "fuzzing7535", "fuzzing7906", "fuzzing8866", "fuzzing9556"]
     full_results(["CVE-2016-7531", "CVE-2016-7533", "CVE-2016-8866", "CVE-2017-5506", "CVE-2017-5508", "CVE-2017-5509", "CVE-2017-5510",
