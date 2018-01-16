@@ -159,6 +159,7 @@ a
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/workspace.xml
 
 # Gradle:
 .idea/**/gradle.xml
