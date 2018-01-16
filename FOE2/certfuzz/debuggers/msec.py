@@ -152,8 +152,11 @@ class MsecDebugger(DebuggerBase):
 
         args = self._get_cmdline(self.outfile)
         print args
+        new_env = os.environ.copy()
+        if self.extended_path:
+            new_env['PATH'] = self.extended_path + ";" + new_env['PATH']
         p = Popen(args, stdout=open(os.devnull), stderr=open(os.devnull),
-                  cwd=targetdir, universal_newlines=True)
+                  cwd=targetdir, universal_newlines=True, env=new_env)
 
         if self.watchcpu == True:
             wmiInterface = wmi.WMI()

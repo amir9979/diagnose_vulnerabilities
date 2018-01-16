@@ -154,7 +154,7 @@ def get_bp_traces(binary_file, break_on_dlls, granularity, tracing_data):
         if granularity == ida_consts.XREF_GRANULARITY:
             for key in tracing_data:
                 func, dll = key.split("#")
-                if dll == image_name.split(".")[0]:
+                if dll == image_name:
                     funcs.setdefault(image_name, []).extend(list(product(tracing_data[key], [func])))
             continue
         ida_out_file = make_tmp_file(r"out_file_" + image_name.replace(".dll", "") + "_")

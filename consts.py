@@ -16,6 +16,6 @@ FUNCTION_MATRIX = "function_matrix.txt"
 ENTRY_POINTS_MATRIX = "entry_points_matrix.txt"
 DOMINATOR_MATRIX = "dominator_matrix.txt"
 XREF_MATRIX = "xref_matrix.txt"
-FUZZ_ITERATIONS = 20
+FUZZ_ITERATIONS = 200
 DLL_DIAGNOSIS_THRESHOLD = 0.05
 FUNCTION_DIAGNOSIS_THRESHOLD = 0.02

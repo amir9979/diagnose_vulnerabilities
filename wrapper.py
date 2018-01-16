@@ -19,6 +19,9 @@ def run_debugger_on_files(program, files, working_dir, config, granularity, bina
         if not os.path.isfile(input_file):
             pass
         cmdargs = config['target']['cmdline_template'].replace("$PROGRAM", program).replace("$SEEDFILE", input_file).split()
+        extended_path = None
+        if 'extended_path' in config['target']:
+            extended_path = config['target']['extended_path']
         out_file = os.path.join(working_dir,os.path.basename(input_file))
         if os.path.exists(out_file):
             continue
@@ -32,7 +35,8 @@ def run_debugger_on_files(program, files, working_dir, config, granularity, bina
                                 watchcpu=False,
                                 granularity=granularity,
                                 binaries_to_diagnose=binaries_to_diagnose,
-                                tracing_data=tracing_data)
+                                tracing_data=tracing_data,
+                                extended_path=extended_path)
         debugger.go()
 
 def copy_examples_and_seedfiles(examples, fuzzing_dir):

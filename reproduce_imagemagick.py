@@ -115,6 +115,8 @@ class Reproducer(object):
         config['target']['cmdline_template'] = cmd_line.format(PROGRAM=r"$PROGRAM", SEEDFILE=r"$SEEDFILE",
                                                                TMP_FILE=r"C:\temp\tempfile")
         config['target']['program'] = program
+        if self.extended_path:
+            config['target']['extended_path'] = os.path.join(base_dir, os.path.join(r"vulnerable",self.extended_path))
         fuzzing_dir = os.path.join(base_dir, "fuzzing")
         utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.SEEDFILES))
         utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.INSTANCES))
@@ -268,12 +270,12 @@ class Reproducer(object):
 
     def reproduce(self, cve_number, git_commit, exploit, bin_file_to_run, cmd_line="{PROGRAM} {SEEDFILE} NUL"):
         base_dir = os.path.join(self.exploits_dir, cve_number)
+        program = self.get_bin_file_path(base_dir, bin_file_to_run)
         self.create_dirs(base_dir, self.sources_dir)
+        self.create_config(base_dir, cmd_line, program)
         self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
         self.fixes(base_dir)
         self.compile(base_dir)
-        program = self.get_bin_file_path(base_dir, bin_file_to_run)
-        self.create_config(base_dir, cmd_line, program)
         exploit_path = self.save_exploit_file(base_dir, exploit)
         exploit_dir = os.path.dirname(exploit_path)
         new_env = os.environ.copy()
@@ -553,12 +555,12 @@ def openjpeg_reproduce():
                                 "opj_compress", "{PROGRAM} -i {SEEDFILE} -o {TMP_FILE}.png")
 
 def jasper_reproduce():
-    # jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce4",
-    #                                    r"C:\vulnerabilities\clean\jasper",
-    #                                    r"jasper\src\msvc\JasPer.sln",
-    #                                    r"jasper",
-    #                                    r"jasper\src\msvc\Win32_Release",
-    #                                    dsw_path=r"jasper\src\msvc\jasper.dsw")
+    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce",
+                                       r"C:\vulnerabilities\clean\jasper",
+                                       r"jasper\src\msvc\JasPer.sln",
+                                       r"jasper",
+                                       r"jasper\src\msvc\Win32_Release",
+                                       dsw_path=r"jasper\src\msvc\jasper.dsw")
     # jasper_reproducer.reproduce("CVE-2016-9560", "1abc2e5", r"C:\vulnerabilities\attachments\00047-jasper-stackoverflow-jpc_tsfb_getbands2",
     #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
     # jasper_reproducer.reproduce("CVE-2016-9557", "d42b238", r"C:\vulnerabilities\attachments\00020-jasper-signedintoverflow-jas_image_c",
@@ -599,42 +601,42 @@ def jasper_reproduce():
     #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
     # jasper_reproducer.reproduce("CVE-2016-8884", "5d66894", r"C:\vulnerabilities\attachments\5.crashes",
     #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8883", "33cc2cf", r"C:\vulnerabilities\attachments\jasper-assert-jpc_dec_tiledecode.jp2",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8882", "69a1439", r"C:\vulnerabilities\attachments\jasper-nullptr-jpc_pi_destroy.jp2",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8693", "44a524e", r"C:\vulnerabilities\attachments\1.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8693_1", "668e682", r"C:\vulnerabilities\attachments\1.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8693_2", "668e682", r"C:\vulnerabilities\attachments\jasper-doublefree-mem_close.jpg",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8693_3", "44a524e", r"C:\vulnerabilities\attachments\jasper-doublefree-mem_close.jpg",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8692", "d8c2604", r"C:\vulnerabilities\attachments\11.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8692_1", "d8c2604", r"C:\vulnerabilities\attachments\12.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8691", "d8c2604", r"C:\vulnerabilities\attachments\12.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8691_1", "d8c2604", r"C:\vulnerabilities\attachments\11.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8690_1", "8f62b47", r"C:\vulnerabilities\attachments\9.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8690_2", "8f62b47", r"C:\vulnerabilities\attachments\10.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8690_3", "8f62b47", r"C:\vulnerabilities\attachments\11.crash",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8690", "5d66894", r"C:\vulnerabilities\attachments\5.crashes",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-10251", "1f0dfe5a", r"C:\vulnerabilities\attachments\00029-jasper-uninitvalue-jpc_pi_nextcprl",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-10250", "bdfe95a6e", r"C:\vulnerabilities\attachments\00002-jasper-NULLptr-jp2_colr_destroy",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-10249", "988f836", r"C:\vulnerabilities\attachments\00001-jasper-heapoverflow-jpc_dec_tiledecode",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8883", "33cc2cf", r"C:\vulnerabilities\attachments\jasper-assert-jpc_dec_tiledecode.jp2",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8882", "69a1439", r"C:\vulnerabilities\attachments\jasper-nullptr-jpc_pi_destroy.jp2",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8693", "44a524e", r"C:\vulnerabilities\attachments\1.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8693_1", "668e682", r"C:\vulnerabilities\attachments\1.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8693_2", "668e682", r"C:\vulnerabilities\attachments\jasper-doublefree-mem_close.jpg",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8693_3", "44a524e", r"C:\vulnerabilities\attachments\jasper-doublefree-mem_close.jpg",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8692", "d8c2604", r"C:\vulnerabilities\attachments\11.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8692_1", "d8c2604", r"C:\vulnerabilities\attachments\12.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8691", "d8c2604", r"C:\vulnerabilities\attachments\12.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8691_1", "d8c2604", r"C:\vulnerabilities\attachments\11.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8690_1", "8f62b47", r"C:\vulnerabilities\attachments\9.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8690_2", "8f62b47", r"C:\vulnerabilities\attachments\10.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8690_3", "8f62b47", r"C:\vulnerabilities\attachments\11.crash",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8690", "5d66894", r"C:\vulnerabilities\attachments\5.crashes",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-10251", "1f0dfe5a", r"C:\vulnerabilities\attachments\00029-jasper-uninitvalue-jpc_pi_nextcprl",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-10250", "bdfe95a6e", r"C:\vulnerabilities\attachments\00002-jasper-NULLptr-jp2_colr_destroy",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-10249", "988f836", r"C:\vulnerabilities\attachments\00001-jasper-heapoverflow-jpc_dec_tiledecode",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
 
-    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce4",
+    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce",
                                    r"C:\vulnerabilities\clean\jasper",
                                    r"jasper\bin\JasPer.sln",
                                    r"jasper",
@@ -802,15 +804,15 @@ def wireshark_reproduce():
 
 if __name__ == "__main__":
     # opencv_reproduce()
-    # wireshark_reproduce()
+    wireshark_reproduce()
     # yara_reproduce()
     # lepton_reproduce()
     # image_magick_reproduce()
     # jasper_reproduce()
     # libarchive_reproduce()
     # openjpeg_reproduce()
-    libtiff_reproduce()
-    imageworsener_reproduce()
+    # libtiff_reproduce()
+    # imageworsener_reproduce()
 
 
     # reproduce("CVE-0000-0000", "91cc3f3", r"C:\vulnerabilities\ImageMagick_exploited\CVE-2017-5510\exploit\18.psb", "magick", "{PROGRAM} {SEEDFILE} NUL")

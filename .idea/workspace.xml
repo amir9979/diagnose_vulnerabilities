@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a4c4c07-72e1-4f89-9b15-3fd1924d265b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/diagnose_vulnerabilities.iml" afterPath="$PROJECT_DIR$/.idea/diagnose_vulnerabilities.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" />
+      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
+      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
+      <change beforePath="$PROJECT_DIR$/consts.py" afterPath="$PROJECT_DIR$/consts.py" />
+      <change beforePath="$PROJECT_DIR$/reproduce_imagemagick.py" afterPath="$PROJECT_DIR$/reproduce_imagemagick.py" />
+      <change beforePath="$PROJECT_DIR$/wrapper.py" afterPath="$PROJECT_DIR$/wrapper.py" />
     </list>
     <ignored path="diagnose_vulnerabilities.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+            <state relative-caret-position="227">
+              <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -39,18 +43,18 @@
       <file leaf-file-name="campaign_matrix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="73" column="11" lean-forward="false" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="79" />
+            <state relative-caret-position="167">
+              <caret line="180" column="111" lean-forward="false" selection-start-line="180" selection-start-column="111" selection-end-line="180" selection-end-column="111" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExperimentInstance.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/ExperimentInstance.py">
+      <file leaf-file-name="wireshark_reproducer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wireshark_reproducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+            <state relative-caret-position="-932">
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -59,8 +63,8 @@
       <file leaf-file-name="ida.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3285">
-              <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+            <state relative-caret-position="-298">
+              <caret line="159" column="40" lean-forward="false" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
               <folding>
                 <element signature="e#20#37#0" expanded="true" />
               </folding>
@@ -71,32 +75,22 @@
       <file leaf-file-name="reproduce_imagemagick.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="708" column="4" lean-forward="false" selection-start-line="708" selection-start-column="4" selection-end-line="708" selection-end-column="4" />
+            <state relative-caret-position="159">
+              <caret line="793" column="66" lean-forward="false" selection-start-line="793" selection-start-column="66" selection-end-line="793" selection-end-column="66" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#36917#39853#0" expanded="false" />
-                <element signature="e#39886#43743#0" expanded="false" />
+                <element signature="e#37185#40121#0" expanded="false" />
+                <element signature="e#40154#44011#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
+      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ida_consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="-3077">
+              <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -105,8 +99,18 @@
       <file leaf-file-name="msec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="177" column="17" lean-forward="false" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
+            <state relative-caret-position="116">
+              <caret line="156" column="46" lean-forward="false" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="debugger_base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="93" column="55" lean-forward="false" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -126,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/consts.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -143,13 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>anacond</find>
-      <find>crypto</find>
-      <find>jpeg.l</find>
-      <find>&quot;C:\Temp\windows\clang_rt.asan</find>
-      <find>uint64</find>
-      <find>int64</find>
-      <find>TIFFT</find>
       <find>zlib</find>
       <find>bz</find>
       <find>HAVE_LIBCRYPTO</find>
@@ -163,16 +160,23 @@
       <find>lm</find>
       <find>lm1m</find>
       <find>get_binaries_to_diagnose</find>
-      <find>filter_known_dlls</find>
       <find>IDA_XREFS_SCRIPT</find>
       <find>ida</find>
-      <find>xref</find>
       <find>.go</find>
-      <find>binaries_to_diagnose</find>
       <find>get_ida_script_and_params</find>
       <find>extract_functions_list</find>
       <find>domina</find>
       <find>iwbmp_read_info_header</find>
+      <find>xref</find>
+      <find>timer 600</find>
+      <find>crashes</find>
+      <find>filter_known_dlls</find>
+      <find>imgi</find>
+      <find>binaries_to_diagnose</find>
+      <find>config.</find>
+      <find>extended_path</find>
+      <find>create_config</find>
+      <find>release</find>
     </findStrings>
     <replaceStrings>
       <replace>C:\vulnerabilities\</replace>
@@ -200,7 +204,6 @@
         <option value="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py" />
         <option value="$PROJECT_DIR$/basic_debuggers/run_examples.py" />
         <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" />
         <option value="$PROJECT_DIR$/hierarchy/second_diagnosis.py" />
         <option value="$PROJECT_DIR$/create_examples.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/diagnoserUtils.py" />
@@ -215,13 +218,14 @@
         <option value="$PROJECT_DIR$/cve_description.py" />
         <option value="$PROJECT_DIR$/look_for_projects.py" />
         <option value="$PROJECT_DIR$/wireshark_reproducer.py" />
-        <option value="$PROJECT_DIR$/reproduce_imagemagick.py" />
-        <option value="$PROJECT_DIR$/consts.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" />
-        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
         <option value="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
-        <option value="$PROJECT_DIR$/wrapper.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
+        <option value="$PROJECT_DIR$/consts.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
+        <option value="$PROJECT_DIR$/wrapper.py" />
+        <option value="$PROJECT_DIR$/reproduce_imagemagick.py" />
       </list>
     </option>
   </component>
@@ -286,7 +290,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.wrapper">
+  <component name="RunManager" selected="Python.reproduce_imagemagick">
     <configuration name="cve_description" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -520,8 +524,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.wrapper" />
-        <item index="1" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
+        <item index="0" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
+        <item index="1" class="java.lang.String" itemvalue="Python.wrapper" />
         <item index="2" class="java.lang.String" itemvalue="Python.wireshark_reproducer" />
         <item index="3" class="java.lang.String" itemvalue="Python.look_for_projects" />
         <item index="4" class="java.lang.String" itemvalue="Python.cve_description" />
@@ -546,12 +550,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20484582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -657,32 +662,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>666</line>
+          <line>669</line>
           <option name="timeStamp" value="359" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>288</line>
+          <line>291</line>
           <option name="timeStamp" value="362" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>285</line>
+          <line>288</line>
           <option name="timeStamp" value="363" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>168</line>
+          <line>171</line>
           <option name="timeStamp" value="366" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>783</line>
+          <line>786</line>
           <option name="timeStamp" value="368" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>272</line>
+          <line>277</line>
           <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -697,22 +702,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>239</line>
+          <line>242</line>
           <option name="timeStamp" value="392" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>174</line>
+          <line>177</line>
           <option name="timeStamp" value="393" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>273</line>
+          <line>272</line>
           <option name="timeStamp" value="394" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>47</line>
+          <line>51</line>
           <option name="timeStamp" value="400" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -722,7 +727,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>185</line>
+          <line>189</line>
           <option name="timeStamp" value="410" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -732,7 +737,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>163</line>
+          <line>167</line>
           <option name="timeStamp" value="416" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -745,6 +750,11 @@
           <line>97</line>
           <option name="timeStamp" value="418" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/wrapper.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="424" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -753,7 +763,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="424" />
+      <option name="time" value="428" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -798,6 +808,31 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>tracing_data</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filter(lambda x: &quot;iwbmp_read_info_header&quot; in x, modules)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>filter(lambda x: &quot;iwbmp_read_info_header&quot; in x, get_loaded_modules_traces(msec_file)[0])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_loaded_modules_traces(msec_file)[0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_loaded_modules_traces(msec_file)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>len(set(ida_out))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -814,31 +849,6 @@
       </expression>
       <expression>
         <expression-string>len(set(map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out)))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>set(map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;).split(&quot;=&quot;), ida_out)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>set(extract_functions_list(filter(lambda x: x!= '', open(ida_out_file,&quot;r&quot;).readlines())))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>extract_functions_list(filter(lambda x: x!= '', open(ida_out_file,&quot;r&quot;).readlines()))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -968,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="93" column="40" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Experiment_Data.py" />
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/diagnoserUtils.py" />
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/dynamicSpectrum.py" />
@@ -992,13 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1034,40 +1030,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wireshark_reproducer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="63" column="55" lean-forward="false" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="708" column="4" lean-forward="false" selection-start-line="708" selection-start-column="4" selection-end-line="708" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#36917#39853#0" expanded="false" />
-            <element signature="e#39886#43743#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1088,14 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="73" column="11" lean-forward="false" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda2/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
@@ -1104,28 +1062,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="177" column="17" lean-forward="false" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3285">
-          <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+        <state relative-caret-position="-298">
+          <caret line="159" column="40" lean-forward="false" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
           <folding>
             <element signature="e#20#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="180" column="111" lean-forward="false" selection-start-line="180" selection-start-column="111" selection-end-line="180" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="93" column="55" lean-forward="false" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="156" column="46" lean-forward="false" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+        <state relative-caret-position="227">
+          <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireshark_reproducer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-932">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="793" column="66" lean-forward="false" selection-start-line="793" selection-start-column="66" selection-end-line="793" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#37185#40121#0" expanded="false" />
+            <element signature="e#40154#44011#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3077">
+          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
           <folding />
         </state>
       </provider>
