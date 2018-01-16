@@ -209,7 +209,7 @@ def get_results_for_project(base_dir):
 if __name__=="__main__":
     base_dir = sys.argv[1]
     get_results_for_project(base_dir)
-    exit()
+    exit() 
     check_fuzzing_influence(r"C:\vulnerabilities\ImageMagick_exploited\CVE-2016-7531_Copy\fuzzing",
                             r"C:\vulnerabilities\ImageMagick_exploited\fuzzing_influence.csv")
     dirs = ["fuzzing5506", "fuzzing5508", "fuzzing5509", "fuzzing5510", "fuzzing5511", "fuzzing7531", "fuzzing7533",
