@@ -69,7 +69,8 @@ def filter_known_dlls(modules_list):
                     , 'CRYPTSP', 'bcrypt', 'USP10.dll', 'winhttp', 'ondemandconnroutehelper'
         , 'apphelp', 'MSIMG32.dll', "msasn1", "oleaut32", "psapi", "comctl32", "avicap32", "crypt32",
                   "msvfw32", "ffmpeg", "msvcp_win", "core_db_glib_", "core_db_zlib_", "dbghelp", "name",
-                  'vcruntime140', 'libpng12', 'zlib1', 'kernel.appcore', 'jpeg62', 'clang_rt.asan_dynamic-i386']
+                  'vcruntime140', 'libpng12', 'zlib1', 'kernel.appcore', 'jpeg62', 'clang_rt.asan_dynamic-i386',
+                  'wsock32', 'charset', 'iconv', 'libxml2', 'zlib', 'msvcr90', 'bzip2', 'asan', 'crt', 'scrt']
     dlls = map(str.lower, known_dlls + map(lambda x: x.replace(".dll", ""), known_dlls))
     return filter(lambda x: all(map(lambda y: y not in x, dlls)), modules_list)
 

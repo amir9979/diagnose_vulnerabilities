@@ -126,7 +126,7 @@ def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
                  function_matrix_file_name=consts.FUNCTION_MATRIX,
                  dominator_matrix_file_name=consts.DOMINATOR_MATRIX,
                  xref_matrix_file_name=consts.XREF_MATRIX,
-                 results_file_name=consts.RESULTS_FILE):
+                 results_file_name=None):
     header = ["cve_number", "granularity", "matrix_type"]
     csv_lines = []
     added_results_header = False
@@ -136,18 +136,23 @@ def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
         function_matrix = os.path.join(fuzzing_dir, function_matrix_file_name)
         dominator_matrix = os.path.join(fuzzing_dir, dominator_matrix_file_name)
         xref_matrix = os.path.join(fuzzing_dir, xref_matrix_file_name)
-        for granularity, instance_file, sep in zip(["dll", "function", "dominator", "code blocks"], [dll_matrix, function_matrix, dominator_matrix, xref_matrix], [None, "#", "+", "$"]):
+        for granularity, instance_file, sep in zip(["dll", "function", "dominator", "code blocks"], [dll_matrix, function_matrix, dominator_matrix, xref_matrix], [None, "&", "&", "&"]):
         # for granularity, instance_file, sep in zip(["dll", "entry_points", "function", "xref"], [dll_matrix, entry_matrix, function_matrix, xref_matrix], [None, None, None, "$"]):
             print cve, granularity
-            base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(instance_file, sep)
-            if not added_results_header:
-                header += base_results.get_metrics_names()
-                csv_lines.append(header)
-                added_results_header = True
-            csv_lines.append([cve, granularity, "base"] + base_results.get_metrics_values())
-            csv_lines.append([cve, granularity, "remove_duplicate_tests"] + reduced_results.get_metrics_values())
-            csv_lines.append([cve, granularity, "merge_same_comps"] + merged_results.get_metrics_values())
-            csv_lines.append([cve, granularity, "remove_duplicate_tests&merge_same_comps"] + merged_reduced_results.get_metrics_values())
+            if not os.path.exists(instance_file):
+                continue
+            try:
+                base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(instance_file, sep)
+                if not added_results_header:
+                    header += base_results.get_metrics_names()
+                    csv_lines.append(header)
+                    added_results_header = True
+                csv_lines.append([cve, granularity, "base"] + base_results.get_metrics_values())
+                csv_lines.append([cve, granularity, "remove_duplicate_tests"] + reduced_results.get_metrics_values())
+                csv_lines.append([cve, granularity, "merge_same_comps"] + merged_results.get_metrics_values())
+                csv_lines.append([cve, granularity, "remove_duplicate_tests&merge_same_comps"] + merged_reduced_results.get_metrics_values())
+            except:
+                pass
     with open(results_file_name, "wb") as f:
         writer = csv.writer(f)
         writer.writerows(csv_lines)
@@ -204,7 +209,7 @@ def get_results_by_sep(instance, seperator=None):
 
 def get_results_for_project(base_dir):
     cves = os.listdir(base_dir)
-    full_results(base_dir, cves)
+    full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
 
 if __name__=="__main__":
     base_dir = sys.argv[1]

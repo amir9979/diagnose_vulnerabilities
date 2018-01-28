@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4a4c4c07-72e1-4f89-9b15-3fd1924d265b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" />
-      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
-      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
-      <change beforePath="$PROJECT_DIR$/consts.py" afterPath="$PROJECT_DIR$/consts.py" />
+      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py" />
+      <change beforePath="$PROJECT_DIR$/diagnoser/campaign_matrix.py" afterPath="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
+      <change beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/evaluation.py" />
+      <change beforePath="$PROJECT_DIR$/jasper.bat" afterPath="$PROJECT_DIR$/jasper.bat" />
       <change beforePath="$PROJECT_DIR$/reproduce_imagemagick.py" afterPath="$PROJECT_DIR$/reproduce_imagemagick.py" />
+      <change beforePath="$PROJECT_DIR$/tiff.bat" afterPath="$PROJECT_DIR$/tiff.bat" />
       <change beforePath="$PROJECT_DIR$/wrapper.py" afterPath="$PROJECT_DIR$/wrapper.py" />
     </list>
     <ignored path="diagnose_vulnerabilities.iws" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+            <state relative-caret-position="-528">
+              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,8 +44,18 @@
       <file leaf-file-name="campaign_matrix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="180" column="111" lean-forward="false" selection-start-line="180" selection-start-column="111" selection-end-line="180" selection-end-column="111" />
+            <state relative-caret-position="1139">
+              <caret line="71" column="112" lean-forward="false" selection-start-line="71" selection-start-column="112" selection-end-line="71" selection-end-column="112" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fuzzing_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -53,21 +64,29 @@
       <file leaf-file-name="wireshark_reproducer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wireshark_reproducer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-932">
+            <state relative-caret-position="153">
               <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ida.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
+      <file leaf-file-name="ida_consts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-298">
-              <caret line="159" column="40" lean-forward="false" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
-              <folding>
-                <element signature="e#20#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="391">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Diagnosis_Results.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Diagnosis_Results.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2482">
+              <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,23 +94,35 @@
       <file leaf-file-name="reproduce_imagemagick.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="793" column="66" lean-forward="false" selection-start-line="793" selection-start-column="66" selection-end-line="793" selection-end-column="66" />
+            <state relative-caret-position="6834">
+              <caret line="402" column="58" lean-forward="false" selection-start-line="402" selection-start-column="58" selection-end-line="402" selection-end-column="58" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#37185#40121#0" expanded="false" />
-                <element signature="e#40154#44011#0" expanded="false" />
+                <element signature="e#37390#40326#0" expanded="false" />
+                <element signature="e#40359#44216#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3077">
-              <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+            <state relative-caret-position="85">
+              <caret line="5" column="67" lean-forward="false" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gdl2nx.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="214" column="36" lean-forward="true" selection-start-line="214" selection-start-column="36" selection-end-line="214" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,38 +130,8 @@
       <file leaf-file-name="msec.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="2414">
               <caret line="156" column="46" lean-forward="false" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="debugger_base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="93" column="55" lean-forward="false" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda2/Lib/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="1036" column="4" lean-forward="false" selection-start-line="1036" selection-start-column="4" selection-end-line="1036" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -147,19 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>zlib</find>
-      <find>bz</find>
-      <find>HAVE_LIBCRYPTO</find>
-      <find>0093</find>
-      <find>libjp</find>
-      <find>crash.bz2</find>
-      <find>new_env</find>
-      <find>sfl_diagnoser</find>
-      <find>windbg_functions</find>
-      <find>cdb</find>
-      <find>lm</find>
-      <find>lm1m</find>
-      <find>get_binaries_to_diagnose</find>
       <find>IDA_XREFS_SCRIPT</find>
       <find>ida</find>
       <find>.go</find>
@@ -172,11 +160,24 @@
       <find>crashes</find>
       <find>filter_known_dlls</find>
       <find>imgi</find>
-      <find>binaries_to_diagnose</find>
       <find>config.</find>
       <find>extended_path</find>
       <find>create_config</find>
       <find>release</find>
+      <find>full_results</find>
+      <find>get_results_by_sep</find>
+      <find>domi</find>
+      <find>zlib</find>
+      <find>info</find>
+      <find>TIFFField</find>
+      <find>600</find>
+      <find>6850</find>
+      <find>save_ds_to_matrix_file</find>
+      <find>209_</find>
+      <find>dominator_matrix_file</find>
+      <find>binaries_to_diagnose</find>
+      <find>dll_instance</find>
+      <find>400000</find>
     </findStrings>
     <replaceStrings>
       <replace>C:\vulnerabilities\</replace>
@@ -213,19 +214,20 @@
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Experiment_Data.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py" />
-        <option value="$PROJECT_DIR$/evaluation.py" />
         <option value="$PROJECT_DIR$/call_graph/gdl2nx.py" />
         <option value="$PROJECT_DIR$/cve_description.py" />
         <option value="$PROJECT_DIR$/look_for_projects.py" />
         <option value="$PROJECT_DIR$/wireshark_reproducer.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" />
-        <option value="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py" />
         <option value="$PROJECT_DIR$/consts.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py" />
-        <option value="$PROJECT_DIR$/wrapper.py" />
+        <option value="$PROJECT_DIR$/evaluation.py" />
+        <option value="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
         <option value="$PROJECT_DIR$/reproduce_imagemagick.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py" />
+        <option value="$PROJECT_DIR$/wrapper.py" />
       </list>
     </option>
   </component>
@@ -253,7 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,13 +267,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SFL-diagnoser" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="SearchEverywhereHistoryKey" value="ida&#9;FILE&#9;file://C:/Users/User/Documents/GitHub/diagnose_vulnerabilities/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" />
+    <property name="SearchEverywhereHistoryKey" value="gdl2nx&#9;FILE&#9;file://C:/Users/amirelm/Documents/GitHub/diagnose_vulnerabilities/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py&#10;filter&#9;null&#9;null&#10;2nx&#9;null&#9;null&#10;ida&#9;FILE&#9;file://C:/Users/User/Documents/GitHub/diagnose_vulnerabilities/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -291,7 +293,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.reproduce_imagemagick">
-    <configuration name="cve_description" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -303,8 +305,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="diagnose_vulnerabilities" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cve_description.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation.py" />
+      <option name="PARAMETERS" value="&quot;C:\vulnerabilities\imageworsener_reproduce&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -518,17 +520,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
       <item index="1" class="java.lang.String" itemvalue="Python.look_for_projects" />
-      <item index="2" class="java.lang.String" itemvalue="Python.cve_description" />
-      <item index="3" class="java.lang.String" itemvalue="Python.wireshark_reproducer" />
-      <item index="4" class="java.lang.String" itemvalue="Python.wrapper" />
+      <item index="2" class="java.lang.String" itemvalue="Python.wireshark_reproducer" />
+      <item index="3" class="java.lang.String" itemvalue="Python.wrapper" />
+      <item index="4" class="java.lang.String" itemvalue="Python.evaluation" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
         <item index="1" class="java.lang.String" itemvalue="Python.wrapper" />
-        <item index="2" class="java.lang.String" itemvalue="Python.wireshark_reproducer" />
-        <item index="3" class="java.lang.String" itemvalue="Python.look_for_projects" />
-        <item index="4" class="java.lang.String" itemvalue="Python.cve_description" />
+        <item index="2" class="java.lang.String" itemvalue="Python.evaluation" />
+        <item index="3" class="java.lang.String" itemvalue="Python.wireshark_reproducer" />
+        <item index="4" class="java.lang.String" itemvalue="Python.look_for_projects" />
       </list>
     </recent_temporary>
   </component>
@@ -550,19 +552,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20484582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34565917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34565917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -651,43 +652,33 @@
           <option name="timeStamp" value="183" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py</url>
-          <line>139</line>
-          <option name="timeStamp" value="345" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py</url>
-          <line>138</line>
-          <option name="timeStamp" value="346" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>669</line>
+          <line>670</line>
           <option name="timeStamp" value="359" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>291</line>
+          <line>292</line>
           <option name="timeStamp" value="362" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>288</line>
+          <line>289</line>
           <option name="timeStamp" value="363" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>171</line>
+          <line>172</line>
           <option name="timeStamp" value="366" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>786</line>
+          <line>787</line>
           <option name="timeStamp" value="368" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>277</line>
+          <line>278</line>
           <option name="timeStamp" value="369" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -702,17 +693,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>242</line>
+          <line>243</line>
           <option name="timeStamp" value="392" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>177</line>
+          <line>178</line>
           <option name="timeStamp" value="393" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reproduce_imagemagick.py</url>
-          <line>272</line>
+          <line>273</line>
           <option name="timeStamp" value="394" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -722,12 +713,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/diagnoser/campaign_matrix.py</url>
-          <line>86</line>
+          <line>87</line>
           <option name="timeStamp" value="404" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>189</line>
+          <line>192</line>
           <option name="timeStamp" value="410" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -737,7 +728,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>167</line>
+          <line>168</line>
           <option name="timeStamp" value="416" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -752,8 +743,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>157</line>
+          <line>158</line>
           <option name="timeStamp" value="424" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/evaluation.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="428" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/wrapper.py</url>
+          <line>199</line>
+          <option name="timeStamp" value="430" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -763,7 +764,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="428" />
+      <option name="time" value="431" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -773,6 +774,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>diagnoser.campaign_matrix.create_matrix_for_dir(r&quot;C:\vulnerabilities\libtiff_reproduce1\CVE-2015-8784\fuzzing\function_working_dir&quot;, r&quot;C:\vulnerabilities\libtiff_reproduce1\CVE-2015-8784\fuzzing\function_diagnosis.txt&quot;, r&quot;C:\vulnerabilities\libtiff_reproduce1\CVE-2015-8784\fuzzing\function_matrix2.txt&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>diagnosed_components</expression-string>
         <language-id>Python</language-id>
@@ -808,6 +814,41 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>list_to_comps(diagnosis.diagnosis)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>seperator</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>seperator=&quot;&amp;&quot;</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>instance.get_named_diagnoses()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>instance.get_named_diagnoses</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>optimized_instance.calc_precision_recall()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>optimized_instance</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>tracing_data</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -817,51 +858,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>filter(lambda x: &quot;iwbmp_read_info_header&quot; in x, get_loaded_modules_traces(msec_file)[0])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>get_loaded_modules_traces(msec_file)[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>get_loaded_modules_traces(msec_file)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(set(ida_out))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>set(ida_out)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ida_out</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(set(map(lambda x: x.replace(&quot;\n&quot;, &quot;&quot;), ida_out)))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/drop.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -983,7 +982,6 @@
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/dynamicSpectrum.py" />
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Staccato.py" />
     <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/FullMatrix.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Diagnosis_Results.py" />
     <entry file="file://$PROJECT_DIR$/create_examples.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -991,21 +989,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/call_graph/gdl2nx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="127" column="20" lean-forward="false" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/call_graph/gdl2nx.py" />
     <entry file="file://$PROJECT_DIR$/run.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1018,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,100 +1024,120 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda2/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
+        <state relative-caret-position="17612">
           <caret line="1036" column="4" lean-forward="false" selection-start-line="1036" selection-start-column="4" selection-end-line="1036" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
+        <state relative-caret-position="2703">
           <caret line="159" column="40" lean-forward="false" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
-          <folding>
-            <element signature="e#20#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="180" column="111" lean-forward="false" selection-start-line="180" selection-start-column="111" selection-end-line="180" selection-end-column="111" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="306">
           <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/debugger_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="1513">
           <caret line="93" column="55" lean-forward="false" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/msec.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="2414">
           <caret line="156" column="46" lean-forward="false" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wireshark_reproducer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-932">
+        <state relative-caret-position="153">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Diagnosis_Results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="57" lean-forward="false" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="67" lean-forward="false" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="71" column="112" lean-forward="false" selection-start-line="71" selection-start-column="112" selection-end-line="71" selection-end-column="112" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="793" column="66" lean-forward="false" selection-start-line="793" selection-start-column="66" selection-end-line="793" selection-end-column="66" />
+        <state relative-caret-position="6834">
+          <caret line="402" column="58" lean-forward="false" selection-start-line="402" selection-start-column="58" selection-end-line="402" selection-end-column="58" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#37185#40121#0" expanded="false" />
-            <element signature="e#40154#44011#0" expanded="false" />
+            <element signature="e#37390#40326#0" expanded="false" />
+            <element signature="e#40359#44216#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/evaluation.py">
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3077">
-          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        <state relative-caret-position="391">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="214" column="36" lean-forward="true" selection-start-line="214" selection-start-column="36" selection-end-line="214" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-528">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding />
         </state>
       </provider>

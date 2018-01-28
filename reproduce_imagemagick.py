@@ -161,6 +161,7 @@ class Reproducer(object):
                         .replace(r"</ClCompile>", "<AdditionalOptions>-fsanitize=address %(AdditionalOptions)</AdditionalOptions></ClCompile>")
                         .replace(r"<PlatformToolset>v140</PlatformToolset>", r"<PlatformToolset>LLVM-vs2014_xp</PlatformToolset>")
                         .replace(r"<GenerateDebugInformation>false</GenerateDebugInformation>", r"<GenerateDebugInformation>true</GenerateDebugInformation>")
+                        .replace(r"<DebugInformationFormat></DebugInformationFormat>", r"<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>")
                         .replace(r"</Link>", r"<FullProgramDatabaseFile>true</FullProgramDatabaseFile></Link>")
                         .replace(r"<AdditionalIncludeDirectories>", r"<AdditionalIncludeDirectories>C:\include;")
                         .replace(r"..\..\libpng\Release\libpng.lib",r"C:\Program Files (x86)\GnuWin32\lib\libpng.lib")
@@ -356,35 +357,35 @@ def image_magick_reproduce():
               "identify", "{PROGRAM} {SEEDFILE}")
 
 def libarchive_reproduce():
-    libarchive_reproducer = Reproducer(r"C:\vulnerabilities\libarchive_reproduce",
+    libarchive_reproducer = Reproducer(r"C:\vulnerabilities\libarchive_reproduce1",
                                        r"C:\vulnerabilities\clean\libarchive",
                                        r"libarchive\libarchive.sln",
                                        r"libarchive",
                                        r"libarchive\bin\Release")
-    libarchive_reproducer.reproduce("CVE-2015-8933", "3c7a6dc", r"C:\vulnerabilities\attachments\libarchive-undefined-signed-overflow.tar",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-8689_2", "7f17c79", r"C:\vulnerabilities\attachments\118.crashes.zip",
-                                    "bsdtar", "{PROGRAM} -t -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-8688", "eec077f", r"C:\vulnerabilities\attachments\crash.bz2",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("760", "eec077f", r"C:\vulnerabilities\attachments\113.crashes.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("62", "eec077f", r"C:\vulnerabilities\attachments\62.crashes.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("25", "eec077f", r"C:\vulnerabilities\attachments\25.crashes.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-8687", "e37b620f", r"C:\vulnerabilities\attachments\9.crashes.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-7166", "6e06b1c89", r"C:\vulnerabilities\attachments\selfgz.gz",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-6250", "3014e198", r"C:\vulnerabilities\attachments\libarchiveOverflow.txt",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-5844", "3ad08e0", r"C:\vulnerabilities\attachments\libarchive-signed-int-overflow.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-5844_2", "e6c9668f", r"C:\vulnerabilities\attachments\libarchive-signed-int-overflow.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
-    libarchive_reproducer.reproduce("CVE-2016-5844_3", "e6c9668f", r"C:\vulnerabilities\attachments\libarchive-signed-int-overflow.zip",
-                                    "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2015-8933", "3c7a6dc", r"C:\vulnerabilities\attachments\libarchive-undefined-signed-overflow.tar",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-8689_2", "7f17c79", r"C:\vulnerabilities\attachments\118.crashes.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-8688", "eec077f", r"C:\vulnerabilities\attachments\crash.bz2",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("760", "eec077f", r"C:\vulnerabilities\attachments\113.crashes.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("62", "eec077f", r"C:\vulnerabilities\attachments\62.crashes.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("25", "eec077f", r"C:\vulnerabilities\attachments\25.crashes.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-8687", "e37b620f", r"C:\vulnerabilities\attachments\9.crashes.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-7166", "6e06b1c89", r"C:\vulnerabilities\attachments\selfgz.gz",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-6250", "3014e198", r"C:\vulnerabilities\attachments\libarchiveOverflow.txt",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-5844", "3ad08e0", r"C:\vulnerabilities\attachments\libarchive-signed-int-overflow.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-5844_2", "e6c9668f", r"C:\vulnerabilities\attachments\libarchive-signed-int-overflow.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
+    # libarchive_reproducer.reproduce("CVE-2016-5844_3", "e6c9668f", r"C:\vulnerabilities\attachments\libarchive-signed-int-overflow.zip",
+    #                                 "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
     libarchive_reproducer.reproduce("CVE-2016-4809", "fd7e0c0", r"C:\vulnerabilities\attachments\c014d4b4-1833-11e6-8ccf-b00bfbedb16c.png",
                                     "bsdtar", "{PROGRAM} -t -v -f {SEEDFILE}")
     libarchive_reproducer.reproduce("CVE-2016-4809_2", "fd7e0c0", r"C:\vulnerabilities\attachments\cc6569ea-1833-11e6-88fd-132060c69647.png",
@@ -555,7 +556,7 @@ def openjpeg_reproduce():
                                 "opj_compress", "{PROGRAM} -i {SEEDFILE} -o {TMP_FILE}.png")
 
 def jasper_reproduce():
-    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce",
+    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce1",
                                        r"C:\vulnerabilities\clean\jasper",
                                        r"jasper\src\msvc\JasPer.sln",
                                        r"jasper",
@@ -597,10 +598,10 @@ def jasper_reproduce():
     #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
     # jasper_reproducer.reproduce("CVE-2016-8885_2", "8f62b47", r"C:\vulnerabilities\attachments\10.crash",
     #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8885_3", "5d66894", r"C:\vulnerabilities\attachments\.crashes",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
-    # jasper_reproducer.reproduce("CVE-2016-8884", "5d66894", r"C:\vulnerabilities\attachments\5.crashes",
-    #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    # # jasper_reproducer.reproduce("CVE-2016-8885_3", "5d66894", r"C:\vulnerabilities\attachments\.crashes",
+    # #                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
+    jasper_reproducer.reproduce("CVE-2016-8884", "5d66894", r"C:\vulnerabilities\attachments\5.crashes",
+                                    "imginfo", "{PROGRAM} -f {SEEDFILE}")
     jasper_reproducer.reproduce("CVE-2016-8883", "33cc2cf", r"C:\vulnerabilities\attachments\jasper-assert-jpc_dec_tiledecode.jp2",
                                     "imginfo", "{PROGRAM} -f {SEEDFILE}")
     jasper_reproducer.reproduce("CVE-2016-8882", "69a1439", r"C:\vulnerabilities\attachments\jasper-nullptr-jpc_pi_destroy.jp2",
@@ -636,7 +637,7 @@ def jasper_reproduce():
     jasper_reproducer.reproduce("CVE-2016-10249", "988f836", r"C:\vulnerabilities\attachments\00001-jasper-heapoverflow-jpc_dec_tiledecode",
                                     "imginfo", "{PROGRAM} -f {SEEDFILE}")
 
-    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce",
+    jasper_reproducer = Reproducer(r"C:\vulnerabilities\jasper_reproduce1",
                                    r"C:\vulnerabilities\clean\jasper",
                                    r"jasper\bin\JasPer.sln",
                                    r"jasper",
@@ -660,7 +661,7 @@ def jasper_reproduce():
 
 
 def libtiff_reproduce():
-    libtiff_reproducer = Reproducer(r"C:\vulnerabilities\libtiff_reproduce",
+    libtiff_reproducer = Reproducer(r"C:\vulnerabilities\libtiff_reproduce1",
                                        r"C:\vulnerabilities\clean\libtiff",
                                        r"libtiff\tiff.sln",
                                        r"libtiff",
@@ -804,12 +805,12 @@ def wireshark_reproduce():
 
 if __name__ == "__main__":
     # opencv_reproduce()
-    wireshark_reproduce()
+    # wireshark_reproduce()
     # yara_reproduce()
     # lepton_reproduce()
     # image_magick_reproduce()
     # jasper_reproduce()
-    # libarchive_reproduce()
+    libarchive_reproduce()
     # openjpeg_reproduce()
     # libtiff_reproduce()
     # imageworsener_reproduce()

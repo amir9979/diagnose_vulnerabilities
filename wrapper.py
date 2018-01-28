@@ -28,7 +28,7 @@ def run_debugger_on_files(program, files, working_dir, config, granularity, bina
         debugger = MsecDebugger(program=program,
                                 cmd_args=cmdargs,
                                 outfile_base=out_file,
-                                timeout=600,
+                                timeout=60*4,
                                 killprocname=None,
                                 exception_depth=1,
                                 workingdir=None,
@@ -123,9 +123,10 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     dll_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR))
     dll_matrix_file = os.path.join(fuzzing_dir, consts.DLL_MATRIX)
     function_matrix_file = os.path.join(fuzzing_dir, consts.FUNCTION_MATRIX)
+    dominator_matrix_file = os.path.join(fuzzing_dir, consts.DOMINATOR_MATRIX)
     # entry_points_file = os.path.join(fuzzing_dir, consts.ENTRY_POINTS_MATRIX)
     utils.copy_files_to_dir(seedfiles_dir, instances_dir)
-    # utils.copy_files_to_dir(consts.EXAMPLES_DIR, instances_dir)
+    utils.copy_files_to_dir(consts.EXAMPLES_DIR, instances_dir)
     fuzz_project_dir(seedfiles_dir, instances_dir, consts.FUZZ_ITERATIONS)
 
     # dll diagnoses
@@ -135,24 +136,24 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
                                                     dll_matrix_file)
     dll_instance = readPlanningFile(dll_matrix_file)
     dll_instance.diagnose()
-    #
-    # # # entry points diagnoses
-    # # named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
-    # #                          dll_instance.get_named_diagnoses())
-    # # entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
-    # # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
-    # #                       ENTRY_POINTS_GRANULARITY,
-    # #                       get_binaries_to_diagnose(named_diagnoses, config), None)
-    # # diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
-    # #                                                 os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
-    # #                                                 entry_points_file)
-    # # entry_points_instance = readPlanningFile(entry_points_file)
-    # # entry_points_instance.diagnose()
-    #
-    # # function diagnosis
+    # # #
+    # # # # # entry points diagnoses
+    # # # # named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD or True,
+    # # # #                          dll_instance.get_named_diagnoses())
+    # # # # entry_points_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.ENTRY_POINTS_WORKING_DIR))
+    # # # # run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), entry_points_working_dir, config,
+    # # # #                       ENTRY_POINTS_GRANULARITY,
+    # # # #                       get_binaries_to_diagnose(named_diagnoses, config), None)
+    # # # # diagnoser.campaign_matrix.create_matrix_for_dir(entry_points_working_dir,
+    # # # #                                                 os.path.join(fuzzing_dir, consts.ENTRY_POINTS_DIAGNOSIS_RESULT),
+    # # # #                                                 entry_points_file)
+    # # # # entry_points_instance = readPlanningFile(entry_points_file)
+    # # # # entry_points_instance.diagnose()
+    # # #
+    # # # # function diagnosis
     named_diagnoses = filter(lambda diag: diag.probability > consts.DLL_DIAGNOSIS_THRESHOLD,dll_instance.get_named_diagnoses())
-    function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
     binaries_to_diagnose = get_binaries_to_diagnose(named_diagnoses, config)
+    function_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR))
     run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), function_working_dir, config, FUNCTION_GRANULARITY,
                           binaries_to_diagnose, None)
     diagnoser.campaign_matrix.create_matrix_for_dir(function_working_dir, os.path.join(fuzzing_dir,
@@ -163,7 +164,7 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     function_instance.diagnose()
 
     # dominators diagnosis
-    diagnosed_components = filter(lambda x: '&' in x
+    diagnosed_components = filter(lambda x: '&' in x and "crt" not in x and "sub_" not in x and "asan" not in x
                                   ,map(lambda x: x[0], function_instance.get_components_probabilities_by_name()))
     tracing_data = {}
     for comp in diagnosed_components:
@@ -172,7 +173,6 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
         tracing_data.setdefault(dll, []).append(address)
     dominator_working_dir = utils.mkdir_if_not_exists(os.path.join(fuzzing_dir, consts.DOMINATOR_WORKING_DIR))
     run_debugger_on_files(program, utils.get_files_in_dir(instances_dir), dominator_working_dir , config, DOMINATOR_GRANULARITY, binaries_to_diagnose, tracing_data)
-    dominator_matrix_file = os.path.join(fuzzing_dir, consts.DOMINATOR_MATRIX)
     diagnoser.campaign_matrix.create_matrix_for_dir(dominator_working_dir, os.path.join(fuzzing_dir,
                                                                                    consts.FUNCTION_DIAGNOSIS_RESULT),
                                                     dominator_matrix_file)
@@ -180,8 +180,11 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
     dominator_instance.diagnose()
 
     # xref diagnosis
-    diagnosed_components = filter(lambda x: '&' in x
-                                  ,map(lambda x: x[0], dominator_instance.get_components_probabilities_by_name()))
+    diagnosed_components = map(lambda x: x[0],
+                               filter(lambda x: '&' in x[0] and x[1] > 0.01,
+                                      dominator_instance.get_components_probabilities_by_name()))
+    diagnosed_components = map(lambda x: x[0], filter(lambda x: '&' in x[0],
+                                  sorted(dominator_instance.get_components_probabilities_by_name(), key=lambda x: x[1],reverse=True))[:20])
     tracing_data = {}
     for comp in diagnosed_components:
         address, function_dll = comp.split('&')

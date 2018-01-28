@@ -105,6 +105,7 @@ def get_dominance(g):
                     dom[i].extend(dom[j])
                     dom[j] = []
         dom = dict(filter(lambda tup: tup[1] != [], dom.items()))
+    map(lambda i: dom[i].append("0"), dom)
     return dom
 
 def read_map_file(map_path):
@@ -208,8 +209,9 @@ def get_labels_addrs(labels, mapping):
     for label in labels:
         value = labels[label]
         map_value = value
-        if  value.startswith("10"):
+        if value.startswith("10"):
             map_value = "{0:#0{1}x}".format(int(value,16) - int('10001000',16) + int("400000", 16),8).replace("0x","00")
+            # map_value = "{0:#0{1}x}".format(int(value,16) - int('10000000',16) + int("400000", 16),8).replace("0x","00")
         elif value.startswith("00"):
             map_value = value
         else:
@@ -227,8 +229,8 @@ def get_labels_addrs(labels, mapping):
     return addrs
 
 if __name__ == "__main__":
-    mapping = read_map_file(r"C:\Temp\f8fd4w\map.map")
     g = gdl2gexf(r"C:\Temp\f8fd4w\iwcmd_main.gdl", r"C:\Temp\graphs\g.gexf")
+    mapping = read_map_file(r"C:\Temp\f8fd4w\map.map")
     dom = get_dominance(g)
     labels = nx.get_node_attributes(g, "label")
     nodes_addrs = get_labels_addrs(labels, mapping)
