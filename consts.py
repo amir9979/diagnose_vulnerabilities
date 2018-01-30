@@ -17,6 +17,7 @@ ENTRY_POINTS_MATRIX = "entry_points_matrix.txt"
 DOMINATOR_MATRIX = "dominator_matrix.txt"
 XREF_MATRIX = "xref_matrix.txt"
 RESULTS_FILE = "results.csv"
+FUZZING_RESULTS_FILE = "fuzzing_influence.csv"
 FUZZ_ITERATIONS = 200
 DLL_DIAGNOSIS_THRESHOLD = 0.05
 FUNCTION_DIAGNOSIS_THRESHOLD = 0.02

@@ -141,21 +141,29 @@ def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
             print cve, granularity
             if not os.path.exists(instance_file):
                 continue
-            try:
-                base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(instance_file, sep)
-                if not added_results_header:
-                    header += base_results.get_metrics_names()
-                    csv_lines.append(header)
-                    added_results_header = True
-                csv_lines.append([cve, granularity, "base"] + base_results.get_metrics_values())
-                csv_lines.append([cve, granularity, "remove_duplicate_tests"] + reduced_results.get_metrics_values())
-                csv_lines.append([cve, granularity, "merge_same_comps"] + merged_results.get_metrics_values())
-                csv_lines.append([cve, granularity, "remove_duplicate_tests&merge_same_comps"] + merged_reduced_results.get_metrics_values())
-            except:
-                pass
+            csv_lines.extend(instance_diagnosis(added_results_header, cve, granularity, header, instance_file, sep))
+            added_results_header = True
     with open(results_file_name, "wb") as f:
         writer = csv.writer(f)
         writer.writerows(csv_lines)
+
+
+def instance_diagnosis(added_results_header, cve_id, granularity, header, instance_file, sep, additional_data=[]):
+    csv_lines = []
+    if 1 == 1:
+        base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(
+            instance_file, sep)
+        if not added_results_header:
+            header += base_results.get_metrics_names()
+            csv_lines.append(header)
+        csv_lines.append([cve_id, granularity, "base"] + additional_data + base_results.get_metrics_values())
+        csv_lines.append([cve_id, granularity, "remove_duplicate_tests"] + additional_data + reduced_results.get_metrics_values())
+        csv_lines.append([cve_id, granularity, "merge_same_comps"] + additional_data + merged_results.get_metrics_values())
+        csv_lines.append(
+            [cve_id, granularity, "remove_duplicate_tests&merge_same_comps"] + additional_data + merged_reduced_results.get_metrics_values())
+        return csv_lines
+    # except:
+    #     pass
 
 
 def check_fuzzing_for_dir(working_dir, results_file, number_files_to_read, matrix_path, sep):
@@ -166,22 +174,35 @@ def check_fuzzing_for_dir(working_dir, results_file, number_files_to_read, matri
         results.append([number, base_results.precision, base_results.recall, base_results.wasted, base_results.num_comps, reduced_results.num_tests])
     return results
 
-def check_fuzzing_influence(fuzzing_dir, results_file_name):
-    number_files_to_read = [ 5, 10, 20, 50, 100, 250 , 500, 750]
-    dll_matrix = tempfile.mktemp(dir=r"C:\temp", prefix= "dll")
-    print dll_matrix
-    results = [["granularity", "num_fuzzed_files", "precision", "recall", "wasted", "#comps", "distinct_tests"]]
-    results.extend(map(lambda result : ["dll"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, None)))
-    results.extend(map(lambda result : ["entry_points"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, None)))
-    results.extend(map(lambda result : ["function"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.FUNCTION_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, None)))
-    results.extend(map(lambda result : ["xref"] + result, check_fuzzing_for_dir(os.path.join(fuzzing_dir, consts.XREF_WORKING_DIR),
-                          os.path.join(fuzzing_dir,consts.FUNCTION_DIAGNOSIS_RESULT), number_files_to_read, dll_matrix, "$")))
-    with open(results_file_name, "wb") as f:
-        writer = csv.writer(f)
-        writer.writerows(results)
+def check_fuzzing_influence(base_dir, cves, results_file_name=None):
+
+    number_files_to_read = [20, 50, 100, 250 , 400]
+    tmp_matrix = tempfile.mktemp(dir=r"C:\temp", prefix="tmp_matrix")
+    print tmp_matrix
+    header = ["cve_number", "granularity", "matrix_type", "fuzzing_files"]
+    csv_lines = []
+    added_results_header = False
+    for cve in cves:
+        fuzzing_dir = os.path.join(base_dir, cve, "fuzzing")
+        if not os.path.exists(fuzzing_dir):
+            continue
+        dll_working_dir = os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR)
+        function_working_dir = os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR)
+        dominator_working_dir = os.path.join(fuzzing_dir, consts.DOMINATOR_WORKING_DIR)
+        xref_working_dir = os.path.join(fuzzing_dir, consts.XREF_WORKING_DIR)
+        dll_diagnosis = os.path.join(fuzzing_dir, consts.DLL_DIAGNOSIS_RESULT)
+        function_diagnosis = os.path.join(fuzzing_dir, consts.FUNCTION_DIAGNOSIS_RESULT)
+        for granularity, working_dir, bugged_file, sep in zip(["dll", "function", "dominator", "code blocks"],
+                                                   [dll_working_dir, function_working_dir, dominator_working_dir, xref_working_dir],
+                                                    [dll_diagnosis, function_diagnosis, function_diagnosis, function_diagnosis],
+                                                   [None, "&", "&", "&"]):
+            for number in number_files_to_read:
+                diagnoser.campaign_matrix.create_matrix_for_dir(working_dir, bugged_file, tmp_matrix, number)
+                csv_lines.extend(instance_diagnosis(added_results_header, cve, granularity, header, tmp_matrix, sep, [number]))
+                added_results_header = True
+        with open(results_file_name, "wb") as f:
+            writer = csv.writer(f)
+            writer.writerows(csv_lines)
 
 def get_results_by_sep(instance, seperator=None):
     def filter_comps(xref_comp):
@@ -209,7 +230,8 @@ def get_results_by_sep(instance, seperator=None):
 
 def get_results_for_project(base_dir):
     cves = os.listdir(base_dir)
-    full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
+    # full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
+    check_fuzzing_influence(base_dir, cves, results_file_name=os.path.join(base_dir, consts.FUZZING_RESULTS_FILE))
 
 if __name__=="__main__":
     base_dir = sys.argv[1]
