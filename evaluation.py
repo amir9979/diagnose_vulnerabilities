@@ -93,14 +93,13 @@ def summarize_results(cve_list, bugged_dll_file, bugged_function_file, dll_matri
         writer = csv.writer(f)
         writer.writerows(csv_lines)
 
-def get_results_objects_for_instance(instance_file, sep):
-    base_instance = readPlanningFile(instance_file)
+def get_results_objects_for_instance(instance_to_diagnose, sep):
     optimized_matrix = tempfile.mktemp(prefix="optimized_")
     reduced_matrix = tempfile.mktemp(prefix="reduced_")
     merged_matrix = tempfile.mktemp(prefix="merged_")
     merged_reduced_matrix = tempfile.mktemp(prefix="merged_reduced_")
 
-    save_ds_to_matrix_file(base_instance.initials_to_DS().optimize(), optimized_matrix)
+    save_ds_to_matrix_file(instance_to_diagnose.initials_to_DS().optimize(), optimized_matrix)
     optimized_instance = readPlanningFile(optimized_matrix)
     optimized_instance.diagnose()
     optimized_results = get_results_by_sep(optimized_instance, sep)
@@ -141,18 +140,18 @@ def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
             print cve, granularity
             if not os.path.exists(instance_file):
                 continue
-            csv_lines.extend(instance_diagnosis(added_results_header, cve, granularity, header, instance_file, sep))
+            csv_lines.extend(instance_diagnosis(added_results_header, cve, granularity, header, readPlanningFile(instance_file), sep))
             added_results_header = True
     with open(results_file_name, "wb") as f:
         writer = csv.writer(f)
         writer.writerows(csv_lines)
 
 
-def instance_diagnosis(added_results_header, cve_id, granularity, header, instance_file, sep, additional_data=[]):
+def instance_diagnosis(added_results_header, cve_id, granularity, header, instance_to_diagnose, sep, additional_data=[]):
     csv_lines = []
     if 1 == 1:
         base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(
-            instance_file, sep)
+            instance_to_diagnose, sep)
         if not added_results_header:
             header += base_results.get_metrics_names()
             csv_lines.append(header)
@@ -174,8 +173,10 @@ def check_fuzzing_for_dir(working_dir, results_file, number_files_to_read, matri
         results.append([number, base_results.precision, base_results.recall, base_results.wasted, base_results.num_comps, reduced_results.num_tests])
     return results
 
-def check_fuzzing_influence(base_dir, cves, results_file_name=None):
-
+def check_fuzzing_influence(base_dir, cves, dll_matrix_file_name=consts.DLL_MATRIX,
+                 function_matrix_file_name=consts.FUNCTION_MATRIX,
+                 dominator_matrix_file_name=consts.DOMINATOR_MATRIX,
+                 xref_matrix_file_name=consts.XREF_MATRIX, results_file_name=None):
     number_files_to_read = [20, 50, 100, 250 , 400]
     tmp_matrix = tempfile.mktemp(dir=r"C:\temp", prefix="tmp_matrix")
     print tmp_matrix
@@ -186,19 +187,19 @@ def check_fuzzing_influence(base_dir, cves, results_file_name=None):
         fuzzing_dir = os.path.join(base_dir, cve, "fuzzing")
         if not os.path.exists(fuzzing_dir):
             continue
-        dll_working_dir = os.path.join(fuzzing_dir, consts.DLL_WORKING_DIR)
-        function_working_dir = os.path.join(fuzzing_dir, consts.FUNCTION_WORKING_DIR)
-        dominator_working_dir = os.path.join(fuzzing_dir, consts.DOMINATOR_WORKING_DIR)
-        xref_working_dir = os.path.join(fuzzing_dir, consts.XREF_WORKING_DIR)
-        dll_diagnosis = os.path.join(fuzzing_dir, consts.DLL_DIAGNOSIS_RESULT)
-        function_diagnosis = os.path.join(fuzzing_dir, consts.FUNCTION_DIAGNOSIS_RESULT)
-        for granularity, working_dir, bugged_file, sep in zip(["dll", "function", "dominator", "code blocks"],
-                                                   [dll_working_dir, function_working_dir, dominator_working_dir, xref_working_dir],
-                                                    [dll_diagnosis, function_diagnosis, function_diagnosis, function_diagnosis],
-                                                   [None, "&", "&", "&"]):
+        dll_matrix = os.path.join(fuzzing_dir, dll_matrix_file_name)
+        function_matrix = os.path.join(fuzzing_dir, function_matrix_file_name)
+        # dominator_matrix = os.path.join(fuzzing_dir, dominator_matrix_file_name)
+        xref_matrix = os.path.join(fuzzing_dir, xref_matrix_file_name)
+        for granularity, instance_file, sep in zip(["dll", "function", "code blocks"],
+                                                   [dll_matrix, function_matrix, xref_matrix],
+                                                   [None, None, "$", "$"]):
             for number in number_files_to_read:
-                diagnoser.campaign_matrix.create_matrix_for_dir(working_dir, bugged_file, tmp_matrix, number)
-                csv_lines.extend(instance_diagnosis(added_results_header, cve, granularity, header, tmp_matrix, sep, [number]))
+                instance = readPlanningFile(instance_file)
+                instance.initial_tests = instance.initial_tests[:number]
+                print cve, granularity, number
+                csv_lines.extend(
+                    instance_diagnosis(added_results_header, cve, granularity, header, instance, sep, [number]))
                 added_results_header = True
         with open(results_file_name, "wb") as f:
             writer = csv.writer(f)
@@ -230,10 +231,14 @@ def get_results_by_sep(instance, seperator=None):
 
 def get_results_for_project(base_dir):
     cves = os.listdir(base_dir)
-    # full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
+    full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
     check_fuzzing_influence(base_dir, cves, results_file_name=os.path.join(base_dir, consts.FUZZING_RESULTS_FILE))
 
 if __name__=="__main__":
+    # inst = readPlanningFile(r"C:\vulnerabilities\exported\CVE-2016-8866\fuzzing\xref_matrix.txt")
+    # get_results_objects_for_instance(inst, "$")
+    # inst.diagnose()
+    # exit()
     base_dir = sys.argv[1]
     get_results_for_project(base_dir)
     exit() 
