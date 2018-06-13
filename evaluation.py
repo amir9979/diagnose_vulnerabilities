@@ -1,10 +1,10 @@
 import sys
-from SFL_diagnoser.Diagnoser.ExperimentInstance import ExperimentInstance
-from SFL_diagnoser.Diagnoser.Experiment_Data import Experiment_Data
-from SFL_diagnoser.Diagnoser.Diagnosis import Diagnosis
-import SFL_diagnoser.Diagnoser.ExperimentInstance
-from SFL_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile, save_ds_to_matrix_file, write_merged_matrix
-from SFL_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
+from sfl_diagnoser.Diagnoser.ExperimentInstance import ExperimentInstance
+from sfl_diagnoser.Diagnoser.Experiment_Data import Experiment_Data
+from sfl_diagnoser.Diagnoser.Diagnosis import Diagnosis
+import sfl_diagnoser.Diagnoser.ExperimentInstance
+from sfl_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile, save_ds_to_matrix_file, write_merged_matrix
+from sfl_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
 import diagnoser.campaign_matrix
 import os
 import csv
@@ -40,10 +40,10 @@ def xref_to_function(xref):
         return xref
 
 def xref_diagnose(xref_instance):
-    components_indices = range(max(reduce(list.__add__, SFL_diagnoser.Diagnoser.ExperimentInstance.POOL.values())))
-    components = list(set([xref_to_function(SFL_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[x]) for x in
+    components_indices = range(max(reduce(list.__add__, sfl_diagnoser.Diagnoser.ExperimentInstance.POOL.values())))
+    components = list(set([xref_to_function(sfl_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[x]) for x in
                            components_indices]))
-    bugged_components = [xref_to_function(SFL_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[b]) for b in SFL_diagnoser.Diagnoser.ExperimentInstance.BUGS]
+    bugged_components = [xref_to_function(sfl_diagnoser.Diagnoser.ExperimentInstance.COMPONENTS_NAMES[b]) for b in sfl_diagnoser.Diagnoser.ExperimentInstance.BUGS]
     validComps = [x for x in components if x not in bugged_components]
     recall_accum = 0
     precision_accum = 0
@@ -177,7 +177,7 @@ def check_fuzzing_influence(base_dir, cves, dll_matrix_file_name=consts.DLL_MATR
                  function_matrix_file_name=consts.FUNCTION_MATRIX,
                  dominator_matrix_file_name=consts.DOMINATOR_MATRIX,
                  xref_matrix_file_name=consts.XREF_MATRIX, results_file_name=None):
-    number_files_to_read = [20, 50, 100, 250 , 400]
+    number_files_to_read = range(1, 20) + [20, 50, 100, 250 , 400]
     tmp_matrix = tempfile.mktemp(dir=r"C:\temp", prefix="tmp_matrix")
     print tmp_matrix
     header = ["cve_number", "granularity", "matrix_type", "fuzzing_files"]
@@ -231,7 +231,7 @@ def get_results_by_sep(instance, seperator=None):
 
 def get_results_for_project(base_dir):
     cves = os.listdir(base_dir)
-    full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
+    # full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
     check_fuzzing_influence(base_dir, cves, results_file_name=os.path.join(base_dir, consts.FUZZING_RESULTS_FILE))
 
 if __name__=="__main__":
