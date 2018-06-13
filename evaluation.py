@@ -150,6 +150,7 @@ def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
 def instance_diagnosis(added_results_header, cve_id, granularity, header, instance_to_diagnose, sep, additional_data=[]):
     csv_lines = []
     if 1 == 1:
+    try:
         base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(
             instance_to_diagnose, sep)
         if not added_results_header:
@@ -163,6 +164,8 @@ def instance_diagnosis(added_results_header, cve_id, granularity, header, instan
         return csv_lines
     # except:
     #     pass
+    except:
+        return []
 
 
 def check_fuzzing_for_dir(working_dir, results_file, number_files_to_read, matrix_path, sep):
