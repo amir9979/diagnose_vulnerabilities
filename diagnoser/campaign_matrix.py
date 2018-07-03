@@ -6,7 +6,7 @@ import glob
 import pefile
 from  FOE2.certfuzz.debuggers.tracing.ida.ida_consts import BEGIN_BREAKPOINT_BLOCK, END_BREAKPOINT_BLOCK, BEGIN_TRACING
 try:
-    from SFL_diagnoser.Diagnoser.diagnoserUtils import write_planning_file
+    from sfl_diagnoser.Diagnoser.diagnoserUtils import write_planning_file
 except:
     from sfl_diagnoser.Diagnoser.diagnoserUtils import write_planning_file
 

@@ -6,7 +6,7 @@ import shutil
 import yaml
 import consts
 import glob
-from fuzzing_utils import fuzz_sedd_file
+from fuzzing_utils import fuzz_seed_file
 
 DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
 # DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
