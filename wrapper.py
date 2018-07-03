@@ -235,7 +235,7 @@ def generate_tracing_data(granularity, matrix_file=None):
             breakpoints_addrs.setdefault(function_dll, []).extend(address.split("+"))
     return TracingData(granularity, binaries_to_diagnose, breakpoints_addrs)
 
-def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzing_seed, fuzzed_files_per_iter=1):
+def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzing_seed, fuzzed_files_per_iter=1, stop_iter=500):
     seedfiles_dir = os.path.join(fuzzing_dir, consts.SEEDFILES)
     matrix_file = None
     for granularity in [DLL_GRANULARITY, FUNCTION_GRANULARITY, DOMINATOR_GRANULARITY, XREF_GRANULARITY]:
@@ -252,6 +252,7 @@ def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzin
             shutil.copy2(seed_example, instances_dir)
             instance_path = os.path.join(instances_dir, os.path.basename(seed_example))
             run_debugger_on_files(program, [instance_path], working_dir, config, granularity, tracing_data)
+        iter_ind = 0
         while abs(current_entropy - previous_entropy) > entropy_threshold:
             fuzzed_files = fuzz_project_dir(seedfiles_dir, instances_dir, fuzzed_files_per_iter, fuzzing_seed)
             run_debugger_on_files(program, fuzzed_files, working_dir, config, granularity, tracing_data)
@@ -261,6 +262,9 @@ def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzin
             results = Diagnosis_Results(sfl_matrix.diagnoses, sfl_matrix.initial_tests, sfl_matrix.error)
             previous_entropy = current_entropy
             current_entropy = results.entropy
+            iter_ind = iter_ind + 1
+            if iter_ind > stop_iter:
+                break
 
 def various_fuzzing_experiments(program, fuzzing_dir):
     entropy_thresholds = [0.1, 0.2] + map(scipy.log10, range(1, 11)) # maximum entropy value of finite set S is |log S|
