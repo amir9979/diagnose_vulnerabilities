@@ -149,7 +149,6 @@ def full_results(base_dir, cve_list, dll_matrix_file_name=consts.DLL_MATRIX,
 
 def instance_diagnosis(added_results_header, cve_id, granularity, header, instance_to_diagnose, sep, additional_data=[]):
     csv_lines = []
-    if 1 == 1:
     try:
         base_results, reduced_results, merged_results, merged_reduced_results = get_results_objects_for_instance(
             instance_to_diagnose, sep)
@@ -180,7 +179,7 @@ def check_fuzzing_influence(base_dir, cves, dll_matrix_file_name=consts.DLL_MATR
                  function_matrix_file_name=consts.FUNCTION_MATRIX,
                  dominator_matrix_file_name=consts.DOMINATOR_MATRIX,
                  xref_matrix_file_name=consts.XREF_MATRIX, results_file_name=None):
-    number_files_to_read = [20, 50, 100, 250 , 400]
+    number_files_to_read = range(1,20) + [20, 50, 100, 250 , 400]
     tmp_matrix = tempfile.mktemp(dir=r"C:\temp", prefix="tmp_matrix")
     print tmp_matrix
     header = ["cve_number", "granularity", "matrix_type", "fuzzing_files"]
@@ -192,11 +191,11 @@ def check_fuzzing_influence(base_dir, cves, dll_matrix_file_name=consts.DLL_MATR
             continue
         dll_matrix = os.path.join(fuzzing_dir, dll_matrix_file_name)
         function_matrix = os.path.join(fuzzing_dir, function_matrix_file_name)
-        # dominator_matrix = os.path.join(fuzzing_dir, dominator_matrix_file_name)
+        dominator_matrix = os.path.join(fuzzing_dir, dominator_matrix_file_name)
         xref_matrix = os.path.join(fuzzing_dir, xref_matrix_file_name)
-        for granularity, instance_file, sep in zip(["dll", "function", "code blocks"],
-                                                   [dll_matrix, function_matrix, xref_matrix],
-                                                   [None, None, "$", "$"]):
+        for granularity, instance_file, sep in zip(["dll", "function", "dominator", "code blocks"],
+                                                   [dll_matrix, function_matrix, dominator_matrix, xref_matrix],
+                                                   [None, None, "&", "&"]):
             for number in number_files_to_read:
                 instance = readPlanningFile(instance_file)
                 instance.initial_tests = instance.initial_tests[:number]
@@ -234,7 +233,7 @@ def get_results_by_sep(instance, seperator=None):
 
 def get_results_for_project(base_dir):
     cves = os.listdir(base_dir)
-    full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
+    # full_results(base_dir, cves, results_file_name=os.path.join(base_dir, consts.RESULTS_FILE))
     check_fuzzing_influence(base_dir, cves, results_file_name=os.path.join(base_dir, consts.FUZZING_RESULTS_FILE))
 
 if __name__=="__main__":
