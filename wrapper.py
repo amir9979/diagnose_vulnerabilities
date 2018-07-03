@@ -261,7 +261,7 @@ def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzin
             sfl_matrix.diagnose()
             results = Diagnosis_Results(sfl_matrix.diagnoses, sfl_matrix.initial_tests, sfl_matrix.error)
             previous_entropy = current_entropy
-            current_entropy = results.entropy
+            current_entropy = results.component_entropy
             iter_ind = iter_ind + 1
             if iter_ind > stop_iter:
                 break
