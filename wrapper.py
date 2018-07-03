@@ -1,4 +1,5 @@
 import shutil
+import scipy
 import sys
 import yaml
 import diagnoser.campaign_matrix
@@ -6,15 +7,16 @@ import utils
 from  FOE2.certfuzz.debuggers.msec import MsecDebugger
 from FOE2.certfuzz.debuggers.tracing.ida.ida_consts import *
 import consts
-from fuzzing_utils import fuzz_project_dir
+from fuzzing_utils import fuzz_project_dir, fuzz_seed_file
+from tracingdata import TracingData
 try:
     from SFL_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
 except:
     from sfl_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
+from sfl_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
 
 
-
-def run_debugger_on_files(program, files, working_dir, config, granularity, binaries_to_diagnose, tracing_data):
+def run_debugger_on_files(program, files, working_dir, config, granularity, tracing_data):
     for input_file in files:
         if not os.path.isfile(input_file):
             pass
@@ -34,8 +36,8 @@ def run_debugger_on_files(program, files, working_dir, config, granularity, bina
                                 workingdir=None,
                                 watchcpu=False,
                                 granularity=granularity,
-                                binaries_to_diagnose=binaries_to_diagnose,
-                                tracing_data=tracing_data,
+                                binaries_to_diagnose=tracing_data.binaries_to_diagnose,
+                                tracing_data=tracing_data.breakpoints_addrs,
                                 extended_path=extended_path)
         debugger.go()
 
@@ -88,8 +90,7 @@ def get_diagnoses_by_sep(instance_diagnoses, seperator="$"):
                 diagnoses_probabilities[key] = diagnosis
     return diagnoses_probabilities.values()
 
-def get_binaries_to_diagnose(diagnoses, config):
-    diagnosed_components = reduce(list.__add__, [diagnosis.diagnosis for diagnosis in diagnoses], [])
+def get_binaries_to_diagnose(diagnosed_components, config):
     bin_dir = os.path.dirname(config['target']['program'])
     binaries_to_diagnose = []
     print "diagnosed_components", diagnosed_components
@@ -196,10 +197,83 @@ def hierarchical_diagnosis(program, fuzzing_dir, is_continuous):
                                                                                    consts.FUNCTION_DIAGNOSIS_RESULT),
                                                     os.path.join(fuzzing_dir, consts.XREF_MATRIX))
 
+def get_binary_from_component_name(component_name):
+    if '#' in component_name:
+        return component_name.split('#')[1]
+    return component_name
+
+def generate_tracing_data(granularity, matrix_file=None):
+    if matrix_file is None or not os.path.exists(matrix_file):
+        return TracingData(granularity, None, None)
+    sfl_matrix = readPlanningFile(matrix_file)
+    sfl_matrix.diagnose()
+    binaries_probabilities = map(lambda comp: (get_binary_from_component_name(comp[0]), comp[1]), sfl_matrix.get_components_probabilities_by_name())
+    binaries = dict.fromkeys(set(map(lambda x: x[0], binaries_probabilities)), 0.0)
+    for binary in binaries:
+        binaries[binary] = sum(map(lambda comp: comp[1], filter(lambda comp: comp[0] == binary, binaries_probabilities)))
+    named_diagnoses = filter(lambda binary: binaries[binary] > consts.DLL_DIAGNOSIS_THRESHOLD, binaries)
+    binaries_to_diagnose = get_binaries_to_diagnose(named_diagnoses, config)
+    breakpoints_addrs = None
+    prev_instance = readPlanningFile(matrix_file)
+    prev_instance.diagnose()
+    if granularity == DOMINATOR_GRANULARITY:
+        diagnosed_components = filter(lambda x: '&' in x and "crt" not in x and "sub_" not in x and "asan" not in x
+                                      , map(lambda x: x[0], prev_instance.get_components_probabilities_by_name()))
+        breakpoints_addrs = {}
+        for comp in diagnosed_components:
+            dll = comp.split('#')[1]
+            address = comp.split('&')[0]
+            breakpoints_addrs.setdefault(dll, []).append(address)
+    elif granularity == XREF_GRANULARITY:
+        diagnosed_components = map(lambda x: x[0], filter(lambda x: '&' in x[0],
+                                                          sorted(
+                                                              prev_instance.get_components_probabilities_by_name(),
+                                                              key=lambda x: x[1], reverse=True))[:20])
+        breakpoints_addrs = {}
+        for comp in diagnosed_components:
+            address, function_dll = comp.split('&')
+            breakpoints_addrs.setdefault(function_dll, []).extend(address.split("+"))
+    return TracingData(granularity, binaries_to_diagnose, breakpoints_addrs)
+
+def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzing_seed, fuzzed_files_per_iter=1):
+    seedfiles_dir = os.path.join(fuzzing_dir, consts.SEEDFILES)
+    matrix_file = None
+    for granularity in [DLL_GRANULARITY, FUNCTION_GRANULARITY, DOMINATOR_GRANULARITY, XREF_GRANULARITY]:
+        instances_dir = utils.clear_dir(os.path.join(fuzzing_dir, consts.INSTANCES, granularity, str(entropy_threshold), str(fuzzing_seed)))
+        current_entropy = float('inf')
+        previous_entropy = float('-inf')
+        tracing_data = generate_tracing_data(granularity, matrix_file)
+        matrix_file = os.path.join(fuzzing_dir, consts.FUZZING_MATRIX.format("{0}_{1}_{2}".format(granularity, str(entropy_threshold), str(fuzzing_seed))))
+        if os.path.exists(matrix_file):
+            os.remove(matrix_file)
+        working_dir = utils.clear_dir(os.path.join(fuzzing_dir, consts.WORKING_DIR, granularity, str(entropy_threshold), str(fuzzing_seed)))
+        diagnosis_result = os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT if granularity == DLL_GRANULARITY else consts.FUNCTION_DIAGNOSIS_RESULT)
+        for seed_example in utils.get_files_in_dir(seedfiles_dir):
+            shutil.copy2(seed_example, instances_dir)
+            instance_path = os.path.join(instances_dir, os.path.basename(seed_example))
+            run_debugger_on_files(program, [instance_path], working_dir, config, granularity, tracing_data)
+        while abs(current_entropy - previous_entropy) > entropy_threshold:
+            fuzzed_files = fuzz_project_dir(seedfiles_dir, instances_dir, fuzzed_files_per_iter, fuzzing_seed)
+            run_debugger_on_files(program, fuzzed_files, working_dir, config, granularity, tracing_data)
+            diagnoser.campaign_matrix.create_matrix_for_dir(working_dir, diagnosis_result, matrix_file)
+            sfl_matrix = readPlanningFile(matrix_file)
+            sfl_matrix.diagnose()
+            results = Diagnosis_Results(sfl_matrix.diagnoses, sfl_matrix.initial_tests, sfl_matrix.error)
+            previous_entropy = current_entropy
+            current_entropy = results.entropy
+
+def various_fuzzing_experiments(program, fuzzing_dir):
+    entropy_thresholds = [0.1, 0.2] + map(scipy.log10, range(1, 11)) # maximum entropy value of finite set S is |log S|
+    fuzzing_seeds = [0.1, 0.2, 0.3]
+    for entropy_threshold in entropy_thresholds:
+        for fuzzing_seed in fuzzing_seeds:
+            diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzing_seed)
+
 if __name__ == "__main__":
     config = yaml.load(open(sys.argv[1]))
     program = config['target']['program']
     fuzzing_dir = os.path.dirname(config['directories']['results_dir'])
+    various_fuzzing_experiments(program, fuzzing_dir)
     # program = sys.argv[1]
     # fuzzing_dir = sys.argv[2]
-    hierarchical_diagnosis(program, fuzzing_dir, True)
+    # hierarchical_diagnosis(program, fuzzing_dir, True)

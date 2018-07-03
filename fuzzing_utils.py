@@ -21,17 +21,23 @@ FUZZERS = [BitMutFuzzer, ByteMutFuzzer, CopyFuzzer, CRLFMutFuzzer, CRMutFuzzer, 
            SwapFuzzer, TruncateFuzzer, WaveFuzzer]
 FUZZERS = [ByteMutFuzzer]
 
-def fuzz_sedd_file(example_file, output_dir, iterations):
+def fuzz_seed_file(example_file, output_dir, iterations, range_seed=None):
+    fuzzed_files = []
     for fuzzer_class in FUZZERS:
         for seed in range(iterations):
-            range_seed = random.randint(0, sys.maxint)
+            if range_seed is None:
+                range_seed = random.randint(0, sys.maxint)
             seedfile = SeedFile(output_dir, example_file)
             with fuzzer_class(seedfile, output_dir, range_seed, seed, {}) as fuzzer:
                 fuzzer.fuzz()
+                fuzzed_files.append(fuzzer.output_file_path)
+    return fuzzed_files
 
 
-def fuzz_project_dir(seedfiles_dir, output_dir, iterations):
+def fuzz_project_dir(seedfiles_dir, output_dir, iterations, range_seed=None):
+    fuzzed_files = []
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
     for seed_example in utils.get_files_in_dir(seedfiles_dir):
-        fuzz_sedd_file(seed_example, output_dir, iterations)
+        fuzzed_files.extend(fuzz_seed_file(seed_example, output_dir, iterations, range_seed))
+    return fuzzed_files

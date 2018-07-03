@@ -1,0 +1,12 @@
+[Description]
+default description
+[Components names]
+[(0, 'imagew.exe')]
+[Priors]
+[0.1]
+[Bugs]
+[0]
+[InitialTests]
+['1016-NULL-ptr-imagew-gif_223_5-0-1040551694.e1.msec']
+[TestDetails]
+1016-NULL-ptr-imagew-gif_223_5-0-1040551694.e1.msec;[0];0
