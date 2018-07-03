@@ -1,11 +1,11 @@
 #include <idc.idc>
 
-static genFunctionsGraphs(start, dirName)
+static genFunctionsGraphs(dirName)
 {
     auto ea, title, flags;
     auto end;
     
-    ea = start;
+    ea = 0x00000;
     while( ea != -1 )
     {
         title = GetFunctionName(ea);
@@ -27,7 +27,7 @@ static main()
 	auto map_file_path = fopen(ARGV[1], "w");
 	gen_file(OFILE_MAP, map_file_path, 0x00000, 0xFFFFFFFF, GENFLG_MAPNAME | GENFLG_MAPDMNG | GENFLG_MAPLOC);
 	fclose(map_file_path);
-	genFunctionsGraphs(0x00000, ARGV[2]);
+	genFunctionsGraphs(ARGV[2]);
 	//GenCallGdl(ARGV[3], "call graph", CHART_GEN_GDL | CHART_NOLIBFUNCS);
     Exit(0); 
 }

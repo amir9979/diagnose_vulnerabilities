@@ -266,6 +266,7 @@ def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzin
             if iter_ind > stop_iter:
                 break
 
+
 def various_fuzzing_experiments(program, fuzzing_dir):
     entropy_thresholds = [0.1, 0.2] + map(scipy.log10, range(1, 21)) # maximum entropy value of finite set S is |log S|
     fuzzing_seeds = [0.1, 0.2, 0.3]
