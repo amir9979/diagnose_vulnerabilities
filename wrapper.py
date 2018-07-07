@@ -235,26 +235,30 @@ def generate_tracing_data(granularity, matrix_file=None):
             breakpoints_addrs.setdefault(function_dll, []).extend(address.split("+"))
     return TracingData(granularity, binaries_to_diagnose, breakpoints_addrs)
 
-def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzing_seed, fuzzed_files_per_iter=1, stop_iter=500):
+
+def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, ratio_min, ratio_max,
+                                 fuzzed_files_per_iter=10, stop_iter=500, pre_fuzz_count=0):
     seedfiles_dir = os.path.join(fuzzing_dir, consts.SEEDFILES)
     matrix_file = None
     for granularity in [DLL_GRANULARITY, FUNCTION_GRANULARITY, DOMINATOR_GRANULARITY, XREF_GRANULARITY]:
-        instances_dir = utils.clear_dir(os.path.join(fuzzing_dir, consts.INSTANCES, granularity, str(entropy_threshold), str(fuzzing_seed)))
+        instances_dir = utils.clear_dir(os.path.join(fuzzing_dir, consts.INSTANCES, granularity, str(entropy_threshold)))
         current_entropy = float('inf')
         previous_entropy = float('-inf')
         tracing_data = generate_tracing_data(granularity, matrix_file)
-        matrix_file = os.path.join(fuzzing_dir, consts.FUZZING_MATRIX.format("{0}_{1}_{2}".format(granularity, str(entropy_threshold), str(fuzzing_seed))))
+        matrix_file = os.path.join(fuzzing_dir, consts.FUZZING_MATRIX.format("{0}_{1}".format(granularity, str(entropy_threshold))))
         if os.path.exists(matrix_file):
             os.remove(matrix_file)
-        working_dir = utils.clear_dir(os.path.join(fuzzing_dir, consts.WORKING_DIR, granularity, str(entropy_threshold), str(fuzzing_seed)))
+        working_dir = utils.clear_dir(os.path.join(fuzzing_dir, consts.WORKING_DIR, granularity, str(entropy_threshold)))
         diagnosis_result = os.path.join(fuzzing_dir,consts.DLL_DIAGNOSIS_RESULT if granularity == DLL_GRANULARITY else consts.FUNCTION_DIAGNOSIS_RESULT)
         for seed_example in utils.get_files_in_dir(seedfiles_dir):
             shutil.copy2(seed_example, instances_dir)
             instance_path = os.path.join(instances_dir, os.path.basename(seed_example))
             run_debugger_on_files(program, [instance_path], working_dir, config, granularity, tracing_data)
+        fuzzed_files = fuzz_project_dir(seedfiles_dir, instances_dir, pre_fuzz_count, ratio_min, ratio_max)
+        run_debugger_on_files(program, fuzzed_files, working_dir, config, granularity, tracing_data)
         iter_ind = 0
         while abs(current_entropy - previous_entropy) > entropy_threshold:
-            fuzzed_files = fuzz_project_dir(seedfiles_dir, instances_dir, fuzzed_files_per_iter, fuzzing_seed)
+            fuzzed_files = fuzz_project_dir(seedfiles_dir, instances_dir, fuzzed_files_per_iter, ratio_min, ratio_max)
             run_debugger_on_files(program, fuzzed_files, working_dir, config, granularity, tracing_data)
             diagnoser.campaign_matrix.create_matrix_for_dir(working_dir, diagnosis_result, matrix_file)
             sfl_matrix = readPlanningFile(matrix_file)
@@ -268,11 +272,11 @@ def diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzin
 
 
 def various_fuzzing_experiments(program, fuzzing_dir):
-    entropy_thresholds = [0.1, 0.2] + map(scipy.log10, range(1, 21)) # maximum entropy value of finite set S is |log S|
-    fuzzing_seeds = [0.1, 0.2, 0.3]
+    ratio_min = 0.05
+    ratio_max = 0.05
+    entropy_thresholds = map(lambda x: 0.1 * x, range(1, 30))
     for entropy_threshold in entropy_thresholds:
-        for fuzzing_seed in fuzzing_seeds:
-            diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, fuzzing_seed)
+            diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, ratio_min, ratio_max, pre_fuzz_count=0)
 
 if __name__ == "__main__":
     config = yaml.load(open(sys.argv[1]))

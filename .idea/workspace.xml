@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a4c4c07-72e1-4f89-9b15-3fd1924d265b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/fuzzing_by_entropy.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fuzzing_matrix.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tracingdata.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/diagnose_vulnerabilities.iml" afterPath="$PROJECT_DIR$/.idea/diagnose_vulnerabilities.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/consts.py" afterPath="$PROJECT_DIR$/consts.py" />
-      <change beforePath="$PROJECT_DIR$/diagnoser/campaign_matrix.py" afterPath="$PROJECT_DIR$/diagnoser/campaign_matrix.py" />
-      <change beforePath="$PROJECT_DIR$/evaluation.py" afterPath="$PROJECT_DIR$/evaluation.py" />
+      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile.py" />
+      <change beforePath="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/bytemut.py" afterPath="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/bytemut.py" />
       <change beforePath="$PROJECT_DIR$/fuzzing_utils.py" afterPath="$PROJECT_DIR$/fuzzing_utils.py" />
-      <change beforePath="$PROJECT_DIR$/reproduce_imagemagick.py" afterPath="$PROJECT_DIR$/reproduce_imagemagick.py" />
-      <change beforePath="$PROJECT_DIR$/utils.py" afterPath="$PROJECT_DIR$/utils.py" />
       <change beforePath="$PROJECT_DIR$/wrapper.py" afterPath="$PROJECT_DIR$/wrapper.py" />
     </list>
     <ignored path="diagnose_vulnerabilities.iws" />
@@ -39,28 +31,8 @@
       <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ida.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="campaign_matrix.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnoser/campaign_matrix.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2788">
-              <caret line="168" column="47" lean-forward="false" selection-start-line="168" selection-start-column="47" selection-end-line="168" selection-end-column="47" />
+            <state relative-caret-position="88">
+              <caret line="276" column="42" lean-forward="false" selection-start-line="276" selection-start-column="42" selection-end-line="276" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -69,77 +41,93 @@
       <file leaf-file-name="fuzzing_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+            <state relative-caret-position="153">
+              <caret line="37" column="58" lean-forward="true" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ida_consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/ida_consts.py">
+      <file leaf-file-name="seedfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rangefinder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzztools/rangefinder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scorable_set.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/scoring/scorable_set.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="86" column="35" lean-forward="false" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bytemut.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/bytemut.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="105" column="31" lean-forward="false" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fuzzer_base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Experiment_Data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Experiment_Data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Diagnosis_Results.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Diagnosis_Results.py">
+        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="139">
+              <caret line="166" column="28" lean-forward="false" selection-start-line="166" selection-start-column="28" selection-end-line="166" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+                <element signature="e#2600#3218#0" expanded="false" />
+                <element signature="e#3265#3838#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ochiai_Rank.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Ochiai_Rank.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reproduce_imagemagick.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6834">
-              <caret line="402" column="58" lean-forward="false" selection-start-line="402" selection-start-column="58" selection-end-line="402" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#37390#40326#0" expanded="false" />
-                <element signature="e#40359#44216#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3553">
-              <caret line="209" column="49" lean-forward="false" selection-start-line="209" selection-start-column="49" selection-end-line="209" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gdl2nx.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-239">
-              <caret line="231" column="74" lean-forward="false" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -155,36 +143,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>extract_functions_list</find>
-      <find>domina</find>
-      <find>iwbmp_read_info_header</find>
-      <find>xref</find>
-      <find>timer 600</find>
-      <find>crashes</find>
-      <find>filter_known_dlls</find>
-      <find>imgi</find>
-      <find>config.</find>
-      <find>extended_path</find>
-      <find>create_config</find>
-      <find>release</find>
-      <find>get_results_by_sep</find>
-      <find>domi</find>
-      <find>zlib</find>
-      <find>info</find>
-      <find>TIFFField</find>
-      <find>600</find>
-      <find>6850</find>
-      <find>save_ds_to_matrix_file</find>
-      <find>209_</find>
-      <find>dominator_matrix_file</find>
-      <find>binaries_to_diagnose</find>
-      <find>dll_instance</find>
-      <find>400000</find>
-      <find>full_results</find>
-      <find>instance_diagnosis</find>
       <find>if 1</find>
       <find>check_fuzzing_influence</find>
       <find>gdl</find>
+      <find>component_entropy</find>
+      <find>readPlanningFile</find>
+      <find>fuzzing_seed</find>
+      <find>self.range</find>
+      <find>self.range =</find>
+      <find>output_dir</find>
+      <find>self.output_dir</find>
+      <find>self.logfile</find>
+      <find>ratio</find>
+      <find>add_item</find>
+      <find>_fuzz(</find>
+      <find>def _fuzz(self, **kwargs)</find>
+      <find>_fuzz</find>
+      <find>_set_logger</find>
+      <find>name</find>
+      <find>get_components_probabilities</find>
+      <find>compon</find>
+      <find>component_e</find>
+      <find>random.seed</find>
+      <find>self.rng_seed</find>
+      <find>failed</find>
+      <find>disti</find>
+      <find>initial_</find>
+      <find>ini</find>
+      <find>ochai</find>
+      <find>__repr__</find>
+      <find>entropy_threshold</find>
     </findStrings>
     <replaceStrings>
       <replace>C:\vulnerabilities\</replace>
@@ -209,17 +197,14 @@
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/dll_tracing.py" />
         <option value="$PROJECT_DIR$/hierarchy/first_diagnosis.py" />
         <option value="$PROJECT_DIR$/FOE2/certfuzz/campaign/campaign.py" />
-        <option value="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py" />
         <option value="$PROJECT_DIR$/basic_debuggers/run_examples.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/hierarchy/second_diagnosis.py" />
         <option value="$PROJECT_DIR$/create_examples.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/diagnoserUtils.py" />
-        <option value="$PROJECT_DIR$/fuzzing_utils.py" />
         <option value="$PROJECT_DIR$/reproduce/find_cves.py" />
         <option value="$PROJECT_DIR$/reproduce/find_sln.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Experiment_Data.py" />
-        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py" />
         <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py" />
         <option value="$PROJECT_DIR$/call_graph/gdl2nx.py" />
         <option value="$PROJECT_DIR$/cve_description.py" />
@@ -234,6 +219,13 @@
         <option value="$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/ida/gdl2nx.py" />
         <option value="$PROJECT_DIR$/consts.py" />
         <option value="$PROJECT_DIR$/evaluation.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/fuzztools/rangefinder.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile.py" />
+        <option value="$PROJECT_DIR$/FOE2/certfuzz/fuzzers/bytemut.py" />
+        <option value="$PROJECT_DIR$/fuzzing_utils.py" />
+        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py" />
+        <option value="$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Ochiai_Rank.py" />
         <option value="$PROJECT_DIR$/wrapper.py" />
       </list>
     </option>
@@ -299,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.reproduce_imagemagick">
+  <component name="RunManager" selected="Python.wrapper">
     <configuration name="evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -349,7 +341,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="diagnose_vulnerabilities" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reproduce_imagemagick.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="C:\vulnerabilities\jasper_reproduce1\CVE-2016-10250\fuzzing\config.yaml" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -533,8 +525,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
-        <item index="1" class="java.lang.String" itemvalue="Python.wrapper" />
+        <item index="0" class="java.lang.String" itemvalue="Python.wrapper" />
+        <item index="1" class="java.lang.String" itemvalue="Python.reproduce_imagemagick" />
         <item index="2" class="java.lang.String" itemvalue="Python.evaluation" />
         <item index="3" class="java.lang.String" itemvalue="Python.wireshark_reproducer" />
         <item index="4" class="java.lang.String" itemvalue="Python.look_for_projects" />
@@ -561,22 +553,22 @@
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20457903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18463811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32018927" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39871383" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34565917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3488746" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24605678" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -761,8 +753,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>199</line>
-          <option name="timeStamp" value="430" />
+          <line>259</line>
+          <option name="timeStamp" value="440" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -772,7 +764,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="431" />
+      <option name="time" value="441" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -820,96 +812,92 @@
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>FUNCTION_GRANULARITY == granularity and iter_ind == 2</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>FUNCTION_GRANULARITY == granularity or iter_ind == 3</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>FUNCTION_GRANULARITY == granularity or iter_ind == 2</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>FUNCTION_GRANULARITY == granularity</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>print abs(current_entropy - previous_entropy)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>print abs(current_entropy - previous_entropy) is None</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>list_to_comps(diagnosis.diagnosis)</expression-string>
+        <expression-string>abs(current_entropy - previous_entropy)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>seperator</expression-string>
+        <expression-string>entropy_threshold</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>seperator=&quot;&amp;&quot;</expression-string>
+        <expression-string>print instances_dir</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>instance.get_named_diagnoses()</expression-string>
+        <expression-string>fuzzed_files</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>instance.get_named_diagnoses</expression-string>
+        <expression-string>len(fuzzed_files)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>optimized_instance.calc_precision_recall()</expression-string>
+        <expression-string>print fuzzer.output_file_path</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>optimized_instance</expression-string>
+        <expression-string>fuzzer.output_file_path</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tracing_data</expression-string>
+        <expression-string>working_dir</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>filter(lambda x: &quot;iwbmp_read_info_header&quot; in x, modules)</expression-string>
+        <expression-string>print fuzzed_files[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/drop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/truncate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="94" column="15" lean-forward="false" selection-start-line="94" selection-start-column="15" selection-end-line="94" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/file_handlers/basicfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="75" column="43" lean-forward="false" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/random.py" />
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile_set.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="158" column="8" lean-forward="false" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/bytemut.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="116" column="52" lean-forward="false" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -936,16 +924,9 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Anaconda2/Lib/abc.py" />
-    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3179">
-          <caret line="199" column="8" lean-forward="false" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/TF.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Singelton.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Barinel.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/TF.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Singelton.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Barinel.py" />
     <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/debuggers/tracing/radare.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -985,11 +966,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Experiment_Data.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/diagnoserUtils.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/dynamicSpectrum.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Staccato.py" />
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/FullMatrix.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/diagnoserUtils.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/dynamicSpectrum.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Staccato.py" />
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/FullMatrix.py" />
     <entry file="file://$PROJECT_DIR$/create_examples.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1028,7 +1008,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/ExperimentInstance.py">
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/ExperimentInstance.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
@@ -1060,26 +1040,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6834">
-          <caret line="402" column="58" lean-forward="false" selection-start-line="402" selection-start-column="58" selection-end-line="402" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#37390#40326#0" expanded="false" />
-            <element signature="e#40359#44216#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/SFL_diagnoser/Diagnoser/Diagnosis_Results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1120,7 +1073,7 @@
         <state relative-caret-position="3553">
           <caret line="209" column="49" lean-forward="false" selection-start-line="209" selection-start-column="49" selection-end-line="209" selection-end-column="49" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1138,15 +1091,110 @@
         <state relative-caret-position="-239">
           <caret line="231" column="74" lean-forward="false" selection-start-line="231" selection-start-column="53" selection-end-line="231" selection-end-column="74" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reproduce_imagemagick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="275" column="23" lean-forward="true" selection-start-line="275" selection-start-column="23" selection-end-line="275" selection-end-column="23" />
+          <folding>
+            <element signature="e#37390#40326#0" expanded="false" />
+            <element signature="e#40359#44216#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzztools/filetools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="109" column="4" lean-forward="false" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/scoring/scorable_set.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="86" column="35" lean-forward="false" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzztools/rangefinder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Experiment_Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/file_handlers/seedfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/fuzzer_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FOE2/certfuzz/fuzzers/bytemut.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="105" column="31" lean-forward="false" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzzing_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="37" column="58" lean-forward="true" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Diagnosis_Results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="166" column="28" lean-forward="false" selection-start-line="166" selection-start-column="28" selection-end-line="166" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+            <element signature="e#2600#3218#0" expanded="false" />
+            <element signature="e#3265#3838#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../SFL-diagnoser/sfl_diagnoser/Diagnoser/Ochiai_Rank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="276" column="42" lean-forward="false" selection-start-line="276" selection-start-column="42" selection-end-line="276" selection-end-column="42" />
           <folding />
         </state>
       </provider>

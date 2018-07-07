@@ -120,8 +120,8 @@ class ByteMutFuzzer(MinimizableFuzzer):
         self.fuzzed = fuzz(fuzz_input=self.input,
                            seed_val=self.rng_seed,
                            jump_idx=self.iteration,
-                           ratio_min=self.range.min,
-                           ratio_max=self.range.max,
+                           ratio_min=self.sf.ratio_min,
+                           ratio_max=self.sf.ratio_max,
                            range_list=range_list,
                            fuzzable_chars=self.fuzzable_chars,
                            )
