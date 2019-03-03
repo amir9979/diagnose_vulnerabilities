@@ -4,17 +4,18 @@ import sys
 import yaml
 import diagnoser.campaign_matrix
 import utils
-from  FOE2.certfuzz.debuggers.msec import MsecDebugger
+from FOE2.certfuzz.debuggers.msec import MsecDebugger
 from FOE2.certfuzz.debuggers.tracing.ida.ida_consts import *
 import consts
 from fuzzing_utils import fuzz_project_dir, fuzz_seed_file
 from tracingdata import TracingData
+from math import log
 try:
     from SFL_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
 except:
     from sfl_diagnoser.Diagnoser.diagnoserUtils import readPlanningFile
 from sfl_diagnoser.Diagnoser.Diagnosis_Results import Diagnosis_Results
-
+import csv
 
 def run_debugger_on_files(program, files, working_dir, config, granularity, tracing_data):
     for input_file in files:
@@ -278,11 +279,40 @@ def various_fuzzing_experiments(program, fuzzing_dir):
     for entropy_threshold in entropy_thresholds:
             diagnosis_by_fuzzing_entropy(program, fuzzing_dir, entropy_threshold, ratio_min, ratio_max, pre_fuzz_count=0)
 
+
+def various_fuzzing_results(program, fuzzing_dir):
+    header = ["granularity", "entropy_threshold"]
+    add_header_results = False
+    lines = []
+    entropy_thresholds = map(lambda x: 0.1 * x, range(1, 30))
+    for entropy_threshold in entropy_thresholds:
+        for granularity in [DLL_GRANULARITY, FUNCTION_GRANULARITY, DOMINATOR_GRANULARITY, XREF_GRANULARITY]:
+            matrix_file = os.path.join(fuzzing_dir, consts.FUZZING_MATRIX.format(
+                "{0}_{1}".format(granularity, str(entropy_threshold))))
+            sfl_matrix = readPlanningFile(matrix_file)
+            sfl_matrix.diagnose()
+            results = Diagnosis_Results(sfl_matrix.diagnoses, sfl_matrix.initial_tests, sfl_matrix.error)
+            print results.component_entropy / log(results.num_comps)
+            if not add_header_results:
+                header.extend(results.get_metrics_names())
+                lines.append(header)
+                add_header_results = True
+            lines.append([granularity, entropy_threshold] + results.get_metrics_values())
+    with open(os.path.join(fuzzing_dir, "fuzzing_results.csv"), "wb") as f:
+        writer = csv.writer(f)
+        writer.writerows(lines)
+
+
 if __name__ == "__main__":
     config = yaml.load(open(sys.argv[1]))
     program = config['target']['program']
     fuzzing_dir = os.path.dirname(config['directories']['results_dir'])
-    various_fuzzing_experiments(program, fuzzing_dir)
+    # various_fuzzing_experiments(program, fuzzing_dir)
+    for dir in [r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-10250\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-10251\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-8887\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-9388\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-9389\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-9393\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-8691\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-8692\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-8882\fuzzing", r"C:\vulnerabilities\jasper_reproduce1\CVE-2016-8883\fuzzing"]:
+        config = yaml.load(open(os.path.join(dir, "config.yaml")))
+        program = config['target']['program']
+        fuzzing_dir = os.path.dirname(config['directories']['results_dir'])
+        various_fuzzing_results(program, fuzzing_dir)
     # program = sys.argv[1]
     # fuzzing_dir = sys.argv[2]
     # hierarchical_diagnosis(program, fuzzing_dir, True)

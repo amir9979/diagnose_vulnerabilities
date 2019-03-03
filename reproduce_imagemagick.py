@@ -6,10 +6,13 @@ import shutil
 import yaml
 import consts
 import glob
+import time
+import ctypes
+from threading import Timer
 from fuzzing_utils import fuzz_seed_file
 
 DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
-# DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
+DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
 BASE_CONFIG = r"C:\vulnerabilities\config.yaml"
 BUILD = r'/build'
 DEBUG = r'Debug|x86'
@@ -34,8 +37,10 @@ NOT_AN_EXCEPTION = r"Exploitability Classification: NOT_AN_EXCEPTION"
 # "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" Boost.Hana.sln /p:Configuration=Debug /p:Platform=Win32 /v:m /m
 # "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" RUN_TESTS.vcxproj /p:Configuration=Debug /p:Platform=Win32
 
+
 class Reproducer(object):
-    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path, extended_path=None, dsw_path=None):
+    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path,
+                 extended_path=None, dsw_path=None, cmake_command=CMAKE):
         self.exploits_dir = exploits_dir
         self.sources_dir = sources_dir
         self.sln_path = sln_path
@@ -43,6 +48,7 @@ class Reproducer(object):
         self.bin_path = bin_path
         self.extended_path = extended_path
         self.dsw_path = dsw_path
+        self.cmake_command = cmake_command
 
     def copy_and_overwrite(self, src_path, dst_path):
         if os.path.exists(dst_path):
@@ -55,14 +61,13 @@ class Reproducer(object):
         build_dir = os.path.dirname(sln_path)
         if not os.path.exists(build_dir):
             os.mkdir(build_dir)
-        print build_dir
         if self.dsw_path:
             for path in [self.dsw_path, self.sln_path]:
                 path_to_update = os.path.join(base_dir, "vulnerable", path)
                 p = subprocess.Popen([DEVENV, path_to_update, UPGRADE],
                                      cwd=os.path.dirname(path_to_update), shell=True)  # , stdout=subprocess.PIPE,  stderr=subprocess.PIPE)
                 p.wait()
-        p = subprocess.Popen(CMAKE, cwd=build_dir, shell=True)# , stdout=subprocess.PIPE,  stderr=subprocess.PIPE)
+        p = subprocess.Popen(self.cmake_command, cwd=build_dir, shell=True)# , stdout=subprocess.PIPE,  stderr=subprocess.PIPE)
         p.wait()
         self.edit_vcsproj_file(base_dir)
         clean_sln = [DEVENV, sln_path, CLEAN]
@@ -70,7 +75,7 @@ class Reproducer(object):
         p = subprocess.Popen(clean_sln, cwd=os.path.dirname(sln_path))
         p.wait()
         build_sln = [DEVENV, BUILD, RELEASE, sln_path]
-        print build_sln
+        print " ".join(build_sln)
         p = subprocess.Popen(build_sln, cwd=os.path.dirname(sln_path))
         p.wait()
 
@@ -94,7 +99,9 @@ class Reproducer(object):
         with open(self.get_log_file(base_dir)) as log:
             content = log.read()
             file_name = "failed"
-            if EXPLOITABILITY_START in content and NOT_AN_EXCEPTION not in content:
+            if "The system cannot find the file specified." in content:
+                file_name = "error"
+            elif EXPLOITABILITY_START in content and NOT_AN_EXCEPTION not in content:
                 file_name = "success"
             with open(os.path.join(base_dir, file_name), "wb") as success:
                 success.write(file_name)
@@ -173,18 +180,30 @@ class Reproducer(object):
                                  r"Exists('..\packages\yara-vs2015-binary-dependencies.0.0.1\build\native\yara-vs2015-binary-dependencies.targets')"))
 
     def fix_by_replace(self, base_dir, files_to_fix, text_to_replace, replace):
+        """
+        fix only if all files exists
+        :param base_dir:
+        :param files_to_fix:
+        :param text_to_replace:
+        :param replace:
+        :return:
+        """
+        paths = dict.fromkeys(files_to_fix)
         for root, dirs, files in os.walk(os.path.join(base_dir, "vulnerable")):
                 for file_to_fix in files_to_fix:
                     if file_to_fix in files:
-                        path = os.path.join(root, file_to_fix)
-                        data = ""
-                        with open(path, "r") as f:
-                            data = f.read()
-                        with open(path, "wb") as f:
-                            data = data.replace(text_to_replace, replace)
-                            if text_to_replace != text_to_replace.lower():
-                                data = data.replace(text_to_replace.lower(), replace.lower())
-                            f.write(data)
+                        paths[file_to_fix] = os.path.join(root, file_to_fix)
+        if None in paths.values():
+            return
+        for path in paths.itervalues():
+            data = ""
+            with open(path, "r") as f:
+                data = f.read()
+            with open(path, "wb") as f:
+                data = data.replace(text_to_replace, replace)
+                if text_to_replace != text_to_replace.lower():
+                    data = data.replace(text_to_replace.lower(), replace.lower())
+                f.write(data)
 
     def fix_int64_t(self, base_dir):
         self.fix_by_replace(base_dir, ["bsdtar.h"], "const char *tar_i64toa(int64_t);", " const char *tar_i64toa(long long);")
@@ -252,6 +271,12 @@ class Reproducer(object):
         self.fix_by_replace(base_dir, ["tiffcp.c"],
                             "COMPRESSION_LZMA", "34925")
 
+    def fix_wireshark(self, base_dir):
+        files_to_fix = ["capture_ifinfo.c", "dumpcap.c", "addr_resolv.c", "address_types.c", "text2pcap.c", "inet_ntop.c",
+              "inet_pton.c", "inet_v6defs.h"]
+        self.fix_by_replace(base_dir, files_to_fix, "inet_ntop", "inet_ntop2")
+        self.fix_by_replace(base_dir, files_to_fix, "inet_pton", "inet_pton2")
+
     def fixes(self, base_dir):
         self.fix_int64_t(base_dir)
         self.fix_setmod(base_dir)
@@ -267,13 +292,21 @@ class Reproducer(object):
         self.fix_imagemagick(base_dir)
         self.fix_sll(base_dir)
         self.fix_int64(base_dir)
+        self.fix_wireshark(base_dir)
 
+    def kill(self, pid, returncode):
+        """kill function for Win32"""
+        kernel32 = ctypes.windll.kernel32
+        handle = kernel32.OpenProcess(1, 1, pid)
+        ret = kernel32.TerminateProcess(handle, returncode)
+        kernel32.CloseHandle(handle)
+        return (0 != ret)
 
     def reproduce(self, cve_number, git_commit, exploit, bin_file_to_run, cmd_line="{PROGRAM} {SEEDFILE} NUL"):
         base_dir = os.path.join(self.exploits_dir, cve_number)
         program = self.get_bin_file_path(base_dir, bin_file_to_run)
-        self.create_dirs(base_dir, self.sources_dir)
-        self.create_config(base_dir, cmd_line, program)
+        # self.create_dirs(base_dir, self.sources_dir)
+        # self.create_config(base_dir, cmd_line, program)
         self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
         self.fixes(base_dir)
         self.compile(base_dir)
@@ -290,7 +323,11 @@ class Reproducer(object):
             windbg_run = [CDB_EXE, "-amsec.dll", "-hd", "-xd", "gp", "-logo", self.get_log_file(base_dir), "-o", "-c",
                           CDB_COMMAND] + run_line.split()
             p = subprocess.Popen(windbg_run, env=new_env)
+            t = Timer(60, self.kill, args=[p.pid, 99])
+            t.start()
             p.wait()
+            t.cancel()
+
             if self.check_success(base_dir):
                 print "start python.exe wrapper.py", program, os.path.join(base_dir, "fuzzing")
 
@@ -790,27 +827,31 @@ def opencv_reproduce():
                                  "opencv_test", "{PROGRAM} {SEEDFILE}")
 
 def wireshark_reproduce():
-    wireshark_reproducer = Reproducer(r"C:\vulnerabilities\wireshark_reproduce1",
+    wireshark_reproducer = Reproducer(r"C:\vulnerabilities\wireshark_reproduce2",
                                        r"C:\vulnerabilities\clean\wireshark",
                                        r"wireshark\wireshark.sln",
                                        r"wireshark",
                                        r"wireshark\run\Release",
-                                      dsw_path=r"wireshark\wireshark.sln")
+                                      dsw_path=r"wireshark\wireshark.sln",
+                                      cmake_command=r'cmake -DENABLE_ZLIB=OFF -DENABLE_LUA=OFF -DBUILD_wireshark_gtk=ON')
     wireshark_data_file = r"C:\temp\wireshark.csv"
     data = []
     with open(wireshark_data_file) as f:
         data = list(csv.reader(f))[1:]
-    for cve, reproduce_file_name, commit in list(reversed(data))[4::5]:
-        wireshark_reproducer.reproduce(cve, commit, reproduce_file_name, "tshark", "{PROGRAM} -r {SEEDFILE}")
+    for cve, reproduce_file_name, commit in list(data):
+        try:
+            wireshark_reproducer.reproduce(cve, commit, reproduce_file_name, "tshark", "{PROGRAM} -r {SEEDFILE}")
+        except:
+            pass
 
 if __name__ == "__main__":
     # opencv_reproduce()
-    # wireshark_reproduce()
+    wireshark_reproduce()
     # yara_reproduce()
     # lepton_reproduce()
     # image_magick_reproduce()
     # jasper_reproduce()
-    libarchive_reproduce()
+    # libarchive_reproduce()
     # openjpeg_reproduce()
     # libtiff_reproduce()
     # imageworsener_reproduce()
