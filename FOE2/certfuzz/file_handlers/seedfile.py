@@ -86,7 +86,7 @@ class SeedFile(BasicFile, ScorableThing):
     '''
     '''
 
-    def __init__(self, output_base_dir, *args):
+    def __init__(self, output_base_dir, ratio_min=0.0, ratio_max=1.0, *args):
         '''
         Creates an output dir for this seedfile based on its md5 hash.
         @param output_base_dir: The base directory for output files
@@ -112,6 +112,9 @@ class SeedFile(BasicFile, ScorableThing):
             filetools.make_directories(self.output_dir)
 
         self.rangefinder = self._get_rangefinder()
+
+        self.ratio_min = ratio_min
+        self.ratio_max = ratio_max
 
     def _get_rangefinder(self):
         rf_log = os.path.join(self.output_dir, 'rangefinder.log')
