@@ -6,7 +6,21 @@ import re
 path = r"C:\Temp\all.gdl"
 GEXF_GRAPH = "c:\\temp\\graphFull.gexf"
 REDUCED_GRAPH = "c:\\temp\\graphReduced.gexf"
+LINE_DELIMETER = "LD_LD"
 
+class AsmLine(object):
+    def __init__(self, line):
+        splitted_lines = line.split()
+        self.opcode = splitted_lines[0]
+        self.operands = "".join(splitted_lines[1:]).split(',')
+
+    def __repr__(self):
+        return "{0} {1}".format(self.opcode, ",".join(self.operands))
+
+    def has_memory_operand(self):
+        for operand in self.operands:
+            if "[" in operand and "]" in operand:
+                return True
 
 def get_function_signature(name):
     run_commands = [r"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\undname.exe"]
@@ -24,7 +38,7 @@ def filter_lines(lines):
             if "}" in x:
                 return x.split(";")[0] + "}"
             else:
-                return x.split(";")[0] + "}"
+                return x.split(";")[0]
         else:
             return x
     new_lines = []
@@ -33,11 +47,12 @@ def filter_lines(lines):
             new_lines.append(x)
     return map(lambda x: x.replace("\n", ""), map(remove_comment, new_lines))
 
-def fixes(graph_string):
-        return graph_string.replace("graph:", "graph").replace("node:", "node").replace("edge:", "edge")
+def fixes(graph_string, line_delimeter):
+        return graph_string.replace(line_delimeter + "graph:", "graph")\
+            .replace(line_delimeter + "node:", "node").replace(line_delimeter + "edge:", "edge").replace("vertical_order: 0", "")
 
 def get_graph_elements(lines):
-    all_lines = fixes(" ".join(lines))
+    all_lines = fixes(LINE_DELIMETER.join(lines), LINE_DELIMETER)
     ind = all_lines.find("node")
     all_lines = all_lines[ind:]
     return map(lambda elem: elem.strip() + "}", all_lines.split("}"))
@@ -46,9 +61,11 @@ def get_graph_elements(lines):
 def node_to_dict(bunch):
     # input example : { title: "244" label: "__imp____acrt_iob_func" color: 80 bordercolor: black }
     # output example : { title: "244", label: "__imp____acrt_iob_func" ,color: 80 ,bordercolor: black }
-    elements = re.sub(r"\f[0-9][0-9]", "", bunch).replace("{","").replace("}","").replace('"',"").replace(":","").lstrip().split(";")[0].split()
-    items = zip(elements[::2], elements[1::2])
-    return dict(items)
+    lines = re.sub(r"\f[0-9][0-9]", "", bunch).replace("{","").replace("}","").replace('"',"").replace(":","").lstrip().split(";")[0].split(LINE_DELIMETER)
+    metadate_lines = lines[0].split()
+    items = dict(zip(metadate_lines[::2], metadate_lines[1::2]))
+    items['lines'] = map(AsmLine, lines[1:])
+    return items
 
 
 def bunch_to_dict(bunch):
@@ -229,7 +246,9 @@ def get_labels_addrs(labels, mapping):
     return addrs
 
 if __name__ == "__main__":
-    g = gdl2gexf(r"C:\Temp\f8fd4w\iwcmd_main.gdl", r"C:\Temp\graphs\g.gexf")
+    g = gdl2gexf(r"C:\Temp\mnuyxz\WritePSDImage.gdl", r"C:\Temp\graphs\g.gexf")
+    non_memory = filter(lambda x: not x[0],
+           map(lambda node: (any(map(lambda asm: asm.has_memory_operand(), node['lines'])),node), g.node.values()))
     mapping = read_map_file(r"C:\Temp\f8fd4w\map.map")
     dom = get_dominance(g)
     labels = nx.get_node_attributes(g, "label")
