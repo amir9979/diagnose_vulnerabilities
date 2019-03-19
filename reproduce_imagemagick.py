@@ -43,9 +43,7 @@ NOT_AN_EXCEPTION = r"Exploitability Classification: NOT_AN_EXCEPTION"
 
 
 class Reproducer(object):
-    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path, extended_path=None, dsw_path=None, cmake_add=None):
-    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path,
-                 extended_path=None, dsw_path=None, cmake_command=CMAKE):
+    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path, extended_path=None, dsw_path=None, cmake_add=None, cmake_command=CMAKE):
         self.exploits_dir = exploits_dir
         self.sources_dir = sources_dir
         self.sln_path = sln_path
