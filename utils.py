@@ -13,7 +13,7 @@ def mkdir_if_not_exists(dir_path):
     return dir_path
 
 def get_files_in_dir(dir_path):
-    return glob.glob(os.path.join(dir_path, "*"))
+    return reduce(list.__add__, map(lambda x: map(lambda y: os.path.join(x[0], y), x[2]), os.walk(dir_path)))
 
 def copy_files_to_dir(src, dst):
     mkdir_if_not_exists(dst)

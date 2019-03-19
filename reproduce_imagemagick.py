@@ -6,10 +6,13 @@ import shutil
 import yaml
 import consts
 import glob
-from fuzzing_utils import fuzz_seed_file
+import patoolib
+from zipfile import is_zipfile, ZipFile
+from rarfile import is_rarfile
+from itertools import product
 
 DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe"
-# DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
+DEVENV = r"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe"
 BASE_CONFIG = r"C:\vulnerabilities\config.yaml"
 BUILD = r'/build'
 DEBUG = r'Debug|x86'
@@ -26,7 +29,7 @@ CMAKE = r'cmake -G "Visual Studio 14" -T LLVM-vs2014'
 # CMAKE = r'cmake -DENABLE_ZLIB=OFF -DBUILD_wireshark_gtk=ON'
 # CMAKE = r'cmake .. -G "Visual Studio 14"'
 CDB_EXE = r"C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\cdb.exe"
-CDB_EXE = r"C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\cdb.exe"
+# CDB_EXE = r"C:\Program Files (x86)\Windows Kits\8.1\Debuggers\x86\cdb.exe"
 CDB_COMMAND = ".load msec;g;!exploitable -v;q"
 EXPLOITABILITY_START = r"Exploitability Classification:"
 NOT_AN_EXCEPTION = r"Exploitability Classification: NOT_AN_EXCEPTION"
@@ -35,7 +38,7 @@ NOT_AN_EXCEPTION = r"Exploitability Classification: NOT_AN_EXCEPTION"
 # "C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe" RUN_TESTS.vcxproj /p:Configuration=Debug /p:Platform=Win32
 
 class Reproducer(object):
-    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path, extended_path=None, dsw_path=None):
+    def __init__(self, exploits_dir, sources_dir, sln_path, git_path, bin_path, extended_path=None, dsw_path=None, cmake_add=None):
         self.exploits_dir = exploits_dir
         self.sources_dir = sources_dir
         self.sln_path = sln_path
@@ -43,10 +46,12 @@ class Reproducer(object):
         self.bin_path = bin_path
         self.extended_path = extended_path
         self.dsw_path = dsw_path
+        self.cmake_add = "" if not cmake_add else cmake_add
 
     def copy_and_overwrite(self, src_path, dst_path):
         if os.path.exists(dst_path):
-            shutil.rmtree(dst_path)
+            return
+            # shutil.rmtree(dst_path)
         # subprocess.Popen("XCOPY {src} {dst} /s /e".format(src=src_path,dst=dst_path))
         shutil.copytree(src_path, dst_path)
 
@@ -62,15 +67,13 @@ class Reproducer(object):
                 p = subprocess.Popen([DEVENV, path_to_update, UPGRADE],
                                      cwd=os.path.dirname(path_to_update), shell=True)  # , stdout=subprocess.PIPE,  stderr=subprocess.PIPE)
                 p.wait()
-        p = subprocess.Popen(CMAKE, cwd=build_dir, shell=True)# , stdout=subprocess.PIPE,  stderr=subprocess.PIPE)
+        p = subprocess.Popen(CMAKE + self.cmake_add, cwd=build_dir, shell=True)# , stdout=subprocess.PIPE,  stderr=subprocess.PIPE)
         p.wait()
         self.edit_vcsproj_file(base_dir)
         clean_sln = [DEVENV, sln_path, CLEAN]
-        print clean_sln
         p = subprocess.Popen(clean_sln, cwd=os.path.dirname(sln_path))
         p.wait()
         build_sln = [DEVENV, BUILD, RELEASE, sln_path]
-        print build_sln
         p = subprocess.Popen(build_sln, cwd=os.path.dirname(sln_path))
         p.wait()
 
@@ -83,6 +86,13 @@ class Reproducer(object):
 
     def save_exploit_file(self, base_dir, exploit):
         exploit_dir = os.path.join(base_dir, "exploit")
+        if is_zipfile(exploit) or is_rarfile(exploit):
+            if is_zipfile(exploit):
+                with ZipFile(exploit) as z:
+                    z.extractall(exploit_dir)
+            if is_rarfile(exploit):
+                patoolib.extract_archive(exploit, outdir=exploit_dir, interactive=False)
+            return os.path.join(exploit_dir, os.listdir(exploit_dir)[0])
         exploit_path = os.path.join(exploit_dir, os.path.basename(exploit))
         shutil.copyfile(exploit, exploit_path)
         return exploit_path
@@ -240,17 +250,58 @@ class Reproducer(object):
         self.fix_by_replace(base_dir, ["archive_cryptor_private.h", "archive_cryptor.c", "archive_hmac_private.h", "archive_hmac.c"],
                             "#elif defined(HAVE_LIBCRYPTO)", "#elif defined(HAVE_LIBCRYPTO) && FALSE")
 
+    def fix_libtiff(self, base_dir):
+        self.fix_by_replace(base_dir, ["tiffcp.c"],
+                            "TIFFTAG_WEBP_LEVEL", "65568")
+        self.fix_by_replace(base_dir, ["tiffcp.c"],
+                            "TIFFTAG_WEBP_LOSSLESS", "65569")
+        self.fix_by_replace(base_dir, ["tiffcp.c"],
+                            "TIFFTAG_ZSTD_LEVEL", "65564")
+        self.fix_by_replace(base_dir, ["tiffcp.c"],
+                            "COMPRESSION_WEBP", "50001")
+        self.fix_by_replace(base_dir, ["tiffcp.c"],
+                            "COMPRESSION_ZSTD", "50000")
+        self.fix_by_replace(base_dir, ["tiffio.c", "tiffio.h"],
+                            "typedef TIFF_SSIZE_T size_t;", "typedef TIFF_SIZE_T size_t;")
+        self.fix_by_replace(base_dir, ["tiffiop.h", "tiff_dir.h"],
+                            "typedef TIFF_SSIZE_T size_t;", "typedef TIFF_SIZE_T size_t;")
+
     def fix_int64(self, base_dir):
-        self.fix_by_replace(base_dir, ["tiffcp.c", "tiffsplit.c"],
-                            "uint64", "int64")
-        self.fix_by_replace(base_dir, ["tiffcp.c", "tiffsplit.c"],
-                            "int64", "__int64")
-        self.fix_by_replace(base_dir, ["tiffsplit.c"],
-                            "tmsize_t", "size_t")
+        uint_fix = ['tif_lzw.c', 'tif_dirinfo.c', 'tif_print.c', 'custom_dir.c', 'tif_zip.c', 'tif_read.c', 'tiffiop.h',
+                    'tif_dif.h', 'tif_ojpeg.c', 'tif_dirread.c', 'tif_strip.c', 'tiffdump.c', 'tif_dirwrite.c',
+                    'tiffsplit.c', 'tif_stream.cxx', 'tiffinfo.c', 'tiff.h', 'tiffcrop.c', 'tiffio.h', 'tif_dir.h',
+                    'tiffconf.h', 'tif_webp.c', 'rewrite_tag.c', 'tiffset.c', 'tif_aux.c', 'tif_lzma.c', 'tif_dir.c',
+                    'tif_swab.c', 'tiff2pdf.c', 'tif_tile.c', 'tiffcp.c', 'tif_unix.c', 'tif_flush.c', 'tif_jpeg.c',
+                    'tiff2ps.c', 'tif_write.c', 'tif_open.c', 'thumbnail.c', 'tif_pixarlog.c']
+        self.fix_by_replace(base_dir, uint_fix,
+                            "__int64", "int64")
+        self.fix_by_replace(base_dir, uint_fix,
+                            "unsigned int64", "uint64")
+        self.fix_by_replace(base_dir, uint_fix,
+                            "uint64", "TIFF_UINT64_T")
+        self.fix_by_replace(base_dir, uint_fix,
+                            "int64", "TIFF_INT64_T")
+        self.fix_by_replace(base_dir, uint_fix,
+                            "____", "__")
+        size_T = ['tiff2bw.c', 'tif_extension.c', 'tif_predict.c', 'tif_predict.h', 'tif_luv.c', 'tif_compress.c', 'tif_zip.c',
+                  'tif_packbits.c', 'tif_read.c', 'tiffiop.h', 'tiffdither.c', 'tif_ojpeg.c', 'tif_dirread.c',
+                  'tif_jbig.c', 'tif_strip.c', 'tif_zstd.c', 'pal2rgb.c', 'tif_dirwrite.c', 'tif_thunder.c',
+                  'tif_fax3.c', 'tiffsplit.c', 'tif_stream.cxx', 'tiffinfo.c', 'tif_jpeg.c', 'tif_dumpmode.c',
+                  'tiffio.h', 'ppm2tiff.c', 'tif_webp.c', 'tiffdump.c', 'fax2tiff.c', 'tif_aux.c', 'tif_lzma.c',
+                  'tif_getimage.c', 'tif_dir.c', 'tif_swab.c', 'tiff2pdf.c', 'tif_tile.c', 'tif_next.c', 'tif_unix.c',
+                  'tif_lzw.c', 'tiff2ps.c', 'tif_write.c', 'tif_pixarlog.c', 'thumbnail.c', 'tif_open.c']
+        self.fix_by_replace(base_dir,
+                            size_T,
+                            "tmsize_t", "int32")
         self.fix_by_replace(base_dir, ["tiffcp.c"],
                             "TIFFTAG_LZMAPRESET", "65562")
         self.fix_by_replace(base_dir, ["tiffcp.c"],
                             "COMPRESSION_LZMA", "34925")
+        self.fix_by_replace(base_dir, ["tiff.h"],
+                            "typedef TIFF_INT64_T  TIFF_INT64_T;", "typedef TIFF_INT64_T signed __int64;")
+        self.fix_by_replace(base_dir, ["tiff.h"],
+                            "typedef TIFF_UINT64_T TIFF_UINT64_T;", "typedef TIFF_UINT64_T unsigned __int64;")
+
 
     def fixes(self, base_dir):
         self.fix_int64_t(base_dir)
@@ -267,23 +318,33 @@ class Reproducer(object):
         self.fix_imagemagick(base_dir)
         self.fix_sll(base_dir)
         self.fix_int64(base_dir)
+        self.fix_libtiff(base_dir)
 
 
-    def reproduce(self, cve_number, git_commit, exploit, bin_file_to_run, cmd_line="{PROGRAM} {SEEDFILE} NUL"):
+    def reproduce(self, cve_number, git_commit, attachments_dir, bin_file_to_run, cmds=None):
         base_dir = os.path.join(self.exploits_dir, cve_number)
-        program = self.get_bin_file_path(base_dir, bin_file_to_run)
+        success = os.path.join(self.exploits_dir, "success")
+        if os.path.exists(success):
+            return
         self.create_dirs(base_dir, self.sources_dir)
-        self.create_config(base_dir, cmd_line, program)
-        self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
-        self.fixes(base_dir)
-        self.compile(base_dir)
-        exploit_path = self.save_exploit_file(base_dir, exploit)
-        exploit_dir = os.path.dirname(exploit_path)
+        program = self.get_bin_file_path(base_dir, bin_file_to_run)
+        all_attachments = [attachments_dir]
+        if os.path.isdir(attachments_dir):
+            all_attachments = glob.glob(os.path.join(attachments_dir, "*"))
+        exploit_path = map(lambda exploit: self.save_exploit_file(base_dir, exploit), all_attachments)
+        if not exploit_path:
+            return
+        exploit_dir = os.path.dirname(exploit_path[0])
+        self.compile_vulnerable_commit(cve_number, git_commit)
         new_env = os.environ.copy()
         if self.extended_path:
             new_env['PATH'] = os.path.join(base_dir, os.path.join(r"vulnerable",self.extended_path)) + ";" + new_env['PATH']
         # fuzz_sedd_file(exploit_path, exploit_dir, consts.FUZZ_ITERATIONS)
-        for seedfile in glob.glob(os.path.join(exploit_dir, "*")):
+        exploits = reduce(list.__add__, map(lambda x: map(lambda y: os.path.join(x[0], y), x[2]),os.walk(exploit_dir)))
+        exes = [cmds]
+        if isinstance(cmds, list):
+            exes = cmds
+        for seedfile, cmd_line in product(exploits, exes):
             run_line = cmd_line.format(PROGRAM=program,
                                        SEEDFILE=seedfile,
                                        TMP_FILE=r"C:\temp\tempfile")
@@ -292,7 +353,17 @@ class Reproducer(object):
             p = subprocess.Popen(windbg_run, env=new_env)
             p.wait()
             if self.check_success(base_dir):
+                self.create_config(base_dir, cmd_line, program)
                 print "start python.exe wrapper.py", program, os.path.join(base_dir, "fuzzing")
+                return
+
+    def compile_vulnerable_commit(self, cve_number, git_commit):
+        base_dir = os.path.join(self.exploits_dir, cve_number)
+        self.create_dirs(base_dir, self.sources_dir)
+        self.revert_to_commit(os.path.join(base_dir, r"vulnerable", self.git_path), git_commit)
+        self.fixes(base_dir)
+        self.compile(base_dir)
+
 
 IMAGEMAGICK_DIR =r"C:\vulnerabilities\ImageMagick_exploited"
 SOURCES =r"C:\vulnerabilities\ImageMagick_exploited\clean\ImageMagick-Windows"
@@ -660,8 +731,41 @@ def jasper_reproduce():
                                 "imginfo", "{PROGRAM} -f {SEEDFILE}")
 
 
+def libtiff_reproduce_new(input_file):
+    libtiff_reproducer = Reproducer(r"C:\vulnerabilities\libtiff_reproduce2",
+                                       r"C:\vulnerabilities\clean\libtiff",
+                                       r"libtiff\tiff.sln",
+                                       r"libtiff",
+                                       r"libtiff\tools\Release",
+                                       r"libtiff\libtiff\Release", cmake_add="")
+    exes_cmds = {'bmp2tiff': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'fax2ps': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'fax2tiff': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'gif2tiff': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'pal2rgb': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'ppm2tiff': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'raw2tiff': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'rgb2ycbcr': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'tiff2bw': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'tiff2pdf': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'tiff2ps': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'tiff2rgba': ['{PROGRAM} {SEEDFILE} {TMP_FILE}', '{PROGRAM} {SEEDFILE}'],
+                 'tiffcp': ['{PROGRAM} -i {SEEDFILE} {TMP_FILE}', "{PROGRAM} -p separate {SEEDFILE} {TMP_FILE}"],
+                 'tiffcrop': ['{PROGRAM} -i {SEEDFILE} {TMP_FILE}'],
+                 'tiffinfo': ['{PROGRAM} -d {SEEDFILE}', '{PROGRAM} -s {SEEDFILE}'],
+                 'tiffset': ['{PROGRAM} {SEEDFILE}'],
+                 'tiffsplit': ['{PROGRAM} {SEEDFILE}']}
+    with open(input_file) as f:
+        for cve_id, commit, attachments_dir, exe_files in csv.reader(f):
+            for exe_id, exe_file in enumerate(exe_files.split('@')):
+                try:
+                    libtiff_reproducer.reproduce(cve_id + "_{0}".format(exe_id), commit, attachments_dir, exe_file, exes_cmds[exe_file])
+                except:
+                    pass
+
+
 def libtiff_reproduce():
-    libtiff_reproducer = Reproducer(r"C:\vulnerabilities\libtiff_reproduce1",
+    libtiff_reproducer = Reproducer(r"C:\vulnerabilities\libtiff_reproduce3",
                                        r"C:\vulnerabilities\clean\libtiff",
                                        r"libtiff\tiff.sln",
                                        r"libtiff",
@@ -810,9 +914,10 @@ if __name__ == "__main__":
     # lepton_reproduce()
     # image_magick_reproduce()
     # jasper_reproduce()
-    libarchive_reproduce()
+    # libarchive_reproduce()
     # openjpeg_reproduce()
-    # libtiff_reproduce()
+    # libtiff_reproduce_new(r"C:\vulnerabilities\libtiff_reproduce.csv")
+    libtiff_reproduce()
     # imageworsener_reproduce()
 
 
